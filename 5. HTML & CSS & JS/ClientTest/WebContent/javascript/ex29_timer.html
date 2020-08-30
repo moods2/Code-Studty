@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>타이머</h1>
+    <form name="form1">
+        <input type="text" name="txt1">
+        <hr>
+        <input type="button" value="버튼1" name="btn1">
+        <input type="button" value="버튼2" name="btn2">
+        <hr>
+        <img src="../images/catty01.png" name="img1">
+    </form>
+
+    <script>
+
+        var txt1 = document.form1.txt1;
+        var btn1 = document.form1.btn1;
+        var btn2 = document.form1.btn2;
+        var img1 = document.images["img1"];
+        var n = 0;
+        var timer = 0;
+        var tlist = [];
+
+        var colors = [ "red", "orange", "yellow", "green", "blue", "indigo", "violet" ];
+
+        //타이머
+        // - 지정된 시간이 지나면 미리 준비해둔 코드를 실행하는 도구 > setTimeout() + 실행횟수 1회
+        // - 지정된 시간이 지날 때마다 미리 준비해둔 코드를 실행하는 도구 > setInterval() + 실행횟수 N회
+
+        btn1.onclick = function() {
+            // setTimeout(function() {
+            //     console.log("따르릉");
+            // }, 3000);
+
+            // setInterval(function() {
+            //     console.log("띵동");
+            // }, 3000);
+
+            // test();
+
+            // setInterval(function() {
+            //     txt1.value = (new Date()).toLocaleTimeString();
+            // }, 1000);
+
+            // setInterval(function() {
+            //     txt1.value = n;
+            //     n++;
+            // }, 1000);
+
+            // timer = setInterval(function() {
+			// 	txt1.value = n;
+			// 	n++;
+			// }, 100);
+
+            // tlist.push(timer); //배열 누적 메소드(add)
+
+			// console.log(timer);
+
+            if (timer == 0) {
+                timer = setInterval(function() {
+                // txt1.value = n;
+                // n++;
+
+                // txt1.size = n;
+                // n++;
+
+                document.body.bgColor = colors[n];
+                n++;
+                if (n>6) n=0;
+
+                }, 100);
+            }            
+            
+        };
+
+
+        btn2.onclick = function() {
+            //타이머 중지
+            //setTimeOut() -> clearTimeout(timer id)
+            //setInterval() -> clearInterval(timer id)
+
+            // clearInterval(timer);
+
+            //한번에 삭제하기(모든 타이머 중지시키기)
+            // for (var i=0; i<tlist.length; i++) {
+            //     clearInterval(tlist[i]);
+            // }
+
+            //한번 클릭 -> 1개의 타이머 삭제하기
+            // -> 한번 클릭 -> 배열에서 1개만 꺼내고 배열에서 삭제
+
+            //push() : 배열의 마지막에 추가하기
+            //pop() : 배열의 마지막 항목을 꺼내고 제거(Stack)
+            //shift() : 배열의 첫번째 항목을 꺼내고 제거(Queue)
+
+            // if (tlist.length > 0) {
+            //     clearInterval(tlist.shift());
+            // } else {
+            //     console.log("empty tlist")
+            // }
+
+            clearInterval(timer);
+            timer = 0; //초기화
+        }
+
+        function test() {
+            console.log("안녕하세요.");
+            //재귀 호출 -> setInterval()과 같은 동작
+            setTimeout(test, 3000);
+        }
+
+        img1.onclick = function() {
+            if (timer == 0) {
+                timer = setInterval(function() {
+                n++;
+                if (n>9) n=1;
+                img1.src = "../images/catty0" + n + ".png";
+                }, 10);
+            } else {
+                clearInterval(timer);
+                timer = 0; //초기화
+            }
+        }
+
+    </script>
+
+</body>
+</html>

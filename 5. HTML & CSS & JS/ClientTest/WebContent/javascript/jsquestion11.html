@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            border: 0px solid black;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #box1, #box2, #box3 {
+            border: 1px solid gray;
+            display: inline-block;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        #box1, #box3 { width: 205px; font-weight: bold; color: #444; }
+        #box3 { margin-left: -6px; }
+        #box2 { 
+            width: 170px; 
+            margin-left: -7px;
+            padding: 97px 0;
+            position: relative;
+            bottom: 100px;
+        }
+
+        #box2 > input {
+            display: inline-block;
+            width: 145px;
+            font-size: 17px;
+            margin: 10px 0;
+            padding: 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+
+        select {
+            width: 150px;
+            font-size: 18px;
+            height: 340px;
+            margin: 15px 0 20px 0;
+        }
+
+        select > option {
+            font-weight: bold;
+            padding: 5px;
+            color: #444;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form1">
+        <div id="box1">차단된 친구
+            <select name="sel1" size="10">
+                <option value="1">권예진</option>
+                <option value="2">권준혁</option>
+                <option value="3">김동식</option>
+                <option value="4">김세진</option>
+                <option value="5">김여정</option>
+                <option value="6">노형준</option>
+                <option value="7">박민선</option>
+                <option value="8">백강현</option>
+                <option value="9">변기현</option>
+            </select>
+        </div>
+        <div id="box2">
+            <input type="button" value="Add ▷" name="Add">
+            <input type="button" value="◁ Remove" name="Remove">
+            <input type="button" value="Add All ▷ ▷" name="AddAll">
+            <input type="button" value="◁ ◁ Remove All" name="RemoveAll">
+        </div>
+        <div id="box3">허용된 친구
+            <select name="sel2" size="10" ondblclick="remove()"></select>
+        </div>
+    </form>
+
+    <script>
+
+        var sel1 = document.form1.sel1;
+        var sel2 = document.form1.sel2;
+        var option = document.form1.option;
+
+        var btnAdd = document.form1.Add;
+        var btnRemove = document.form1.Remove;
+        var btnAddAll = document.form1.AddAll;
+        var btnRemoveAll = document.form1.RemoveAll;
+
+
+        for (var i=0; i<sel1.options.length; i++) {
+            sel1.options[i].ondblclick = function() {
+                var op = new Option();
+                op.value = sel1[sel1.selectedIndex].value;
+                op.text = sel1[sel1.selectedIndex].text;
+                sel2.options.add(op);
+
+                sel1.options.remove(sel1.selectedIndex);
+            }
+        }
+
+        function remove() {
+            var op = new Option();
+            op.value = sel2[sel2.selectedIndex].value;
+            op.text = sel2[sel2.selectedIndex].text;
+            sel1.options.add(op);
+
+            sel2.options.remove(sel2.selectedIndex);
+        }
+
+        btnAdd.onclick = function() {
+            var op = new Option();
+            op.value = sel1[sel1.selectedIndex].value;
+            op.text = sel1[sel1.selectedIndex].text;
+            sel2.options.add(op);
+
+            sel1.options.remove(sel1.selectedIndex);
+        }
+
+        btnRemove.onclick = function() {
+            var op = new Option();
+            op.value = sel2[sel2.selectedIndex].value;
+            op.text = sel2[sel2.selectedIndex].text;
+            sel1.options.add(op);
+
+            sel2.options.remove(sel2.selectedIndex);
+        }
+
+        btnAddAll.onclick = function() {
+            for (i=0; i<sel1.options.length; i++) {
+                var op = new Option();
+                op.value = sel1[i].value;
+                op.text = sel1[i].text;
+                sel2.options.add(op);
+            }
+            for (i=0; i<sel2.options.length; i++) {
+                sel1.options.remove(0);
+            }
+        }
+
+        btnRemoveAll.onclick = function() {
+            for (var i=0; i<sel2.options.length; i++) {
+                var op = new Option();
+                op.value = sel2[i].value;
+                op.text = sel2[i].text;
+                sel1.options.add(op);
+            }
+            for (i=0; i<sel1.options.length; i++) {
+                sel2.options.remove(0);
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

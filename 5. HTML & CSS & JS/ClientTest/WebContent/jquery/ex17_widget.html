@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <style>
+
+        #a1 {
+            width: 400px;
+        }
+
+        #p1 > div {
+            transition: width 1s;
+            transition-timing-function: linear;
+        }
+
+        .slider {
+            margin: 20px;
+        }
+
+        * {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Widgets</h1>
+
+    <h2>Tabs</h2>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab1">HTML</a></li>
+            <li><a href="#tab2">CSS</a></li>
+            <li><a href="#tab3">JavaScript</a></li>
+        </ul>
+        <div id="tab1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur vero ipsam recusandae aliquam optio laboriosam perferendis hic beatae, perspiciatis enim porro, est libero totam quia eum doloremque ea doloribus veniam?</div>
+        <div id="tab2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, obcaecati. Ea sapiente aspernatur illo, beatae amet nam ad delectus ipsam, qui earum quas perferendis eius tenetur pariatur. Facilis, necessitatibus porro?</div>
+        <div id="tab3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, doloremque maxime, placeat veniam iste nihil culpa ad molestias excepturi asperiores eum possimus consectetur necessitatibus expedita sapiente aliquam sed? Itaque, atque.</div>
+    </div>
+
+
+    <h2>Spinner</h2>
+
+    <input type="text" id="age" title="나이 입력">
+
+
+    <h2>Slider</h2>
+
+    <div id="slider5" class="slider" title="펜션 가격 선택"></div>
+
+    <div id="slider1" class="slider" title="화면 회전"></div>
+    <fieldset>
+        <div id="slider2" class="slider" title="빨강"></div>
+        <div id="slider3" class="slider" title="녹색"></div>
+        <div id="slider4" class="slider" title="파랑"></div>
+    </fieldset>
+
+
+    <h2>Dialog</h2>
+
+    <input type="button" value="확인" id="btn4">
+    <div id="dialog1">
+        안녕하세요.
+        <!-- <button>버튼</button> -->
+    </div>
+
+
+    <h2>Datepicker</h2>
+
+    <input type="text" id="date1">
+
+
+    <h2>Progressbar</h2>
+
+    <input type="button" value="버튼" id="btn3">
+    <div id="p1"></div>
+
+
+    <h2>Checkbox & Radio</h2>
+
+    <h3>취미를 선택하세요.</h3>
+
+    <div id="set1">
+        <label for="cb1">코딩</label>
+        <input type="checkbox" id="cb1" class="cb">
+
+        <label for="cb2">먹기</label>
+        <input type="checkbox" id="cb2" class="cb">
+
+        <label for="cb3">낮잠자기</label>
+        <input type="checkbox" id="cb3" class="cb">
+    </div>
+
+    <h2>Checkbox & Radio</h2>
+
+    <h3>성별을 선택하세요.</h3>
+
+    <div id="set2">
+        <label for="rb1">남자</label>
+        <input type="radio" id="rb1" class="rb" name="rb">
+
+        <label for="rb2">여자</label>
+        <input type="radio" id="rb2" class="rb" name="rb">
+    </div>
+
+    <h2>Buttons</h2>
+
+    <div id="btns">
+        <input type="button" value="등록하기" id="btn1" class="btn">
+        <input type="button" value="취소하기" id="btn2" class="btn">
+        <a href="#" class="btn">링크 버튼</a>
+    </div>
+
+    <h2>Accordion</h2>
+
+    <div id="a1">
+        <h3>HTML</h3>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione deleniti accusantium voluptates esse corrupti consectetur rem, cum sint aliquam debitis quibusdam itaque sapiente dolores, et pariatur consequatur obcaecati laudantium.</div>
+        <h3>CSS</h3>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum quaerat laboriosam magnam nobis amet dolorem asperiores. Assumenda illum dignissimos perferendis dolores unde? A perspiciatis labore voluptatum quidem inventore quaerat quasi?</div>
+        <h3>JavaScript</h3>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero soluta aut at fugit quasi distinctio ducimus obcaecati dolores in quisquam reprehenderit voluptatum aliquam, iusto aliquid rerum animi pariatur sunt ipsam!</div>
+    </div>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+
+        $("#a1").accordion();
+
+        $(".btn").button();
+
+        $(".cb").checkboxradio();
+        $(".rb").checkboxradio();
+
+        $("#set1, #set2, #btns").controlgroup();
+
+        $("#p1").progressbar({
+            value: 0
+        });
+
+        $("#btn3").click(function() {
+            $("#p1").progressbar({
+                value: 50
+            });
+        });
+
+        $("#date1").datepicker({
+            dateFormat: "yy-mm-dd",
+            // minDate: "2020-07-06",
+            // minDate: "2020-07-08"
+            // minDate: "-5", //일
+            // maxDate: "+5" //일
+            minDate: "-1M -5D",
+            maxDate: "+1M +5D"
+        });
+
+        $("#dialog1").hide();
+
+        $("#btn4").click(function() {
+
+            //대화 상자 종류(JavaScript)
+            // - alert(), confirm(), prompt()
+
+            //대화 상자 종류(일반)
+            //1. modal
+            //  - 팝업이 포커스를 독점한다.
+            //  - 팝업을 작업 중인 경우 부모로 포커스를 이동 시킬 수 없다.
+            //  - 팝업 업무 -> 부모 업무
+            //2. modeless
+            //  - 팝업과 부모창의 포커스 전환이 자유롭다.
+            //  - 팝업의 업무와 부모창의 업무가 서로 종속적이지 않을 때
+
+            $("#dialog1").dialog({
+                title: "인삿말",
+                width: 300,
+                height: 250,
+                draggable: false,
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "확인": function() {
+                        alert("파일을 삭제했습니다.");
+                    },
+                    "취소": function() {
+                        $("#dialog1").dialog("close");
+                    }
+                }
+            });
+
+        });
+
+        $("#slider1").slider({
+            min: 0,
+            max: 1000,
+            step: 10,
+            slide: function(event, ui) {
+                console.log(ui.value);
+                $("body").css("transform", `rotate(${ui.value}deg)`);
+            }
+        });
+
+        $("#slider2, #slider3, #slider4").slider({
+            //RGB
+            min: 0,
+            max: 255,
+            value: 255,
+            slide: function(event, ui) {
+                var r = $("#slider2").slider("value");
+                var g = $("#slider3").slider("value");
+                var b = $("#slider4").slider("value");
+                $("body").css("background-color", `rgb(${r}, ${g}, ${b})`);
+            }
+        });
+
+        $("#slider5").slider({
+            // orientation: "vertical"
+            range: true,
+            min: 10000,
+            max: 300000,
+            step: 10000,
+            values: [50000, 200000],
+            change: function(event, ui) {
+                // ui.value = 엄지 버튼 1개일 때
+                console.log(ui.values[0], ui.values[1]);
+            }
+        });
+
+        $("#age").spinner({
+            min: 15,
+            max: 150,
+            step: 10
+        });
+
+        //이벤트
+        //1. 마우스를 객체에 바로 올릴 때 발생 -> mouseover, mouseenter
+        //2. 마우스를 객체에 올린 후 일정 시간이 흐른 후 발생 -> hover
+
+        $("*[title]").tooltip({
+            track: true,
+            show: {
+                effect: "slideDown",
+                delay: 250
+            },
+            hide: {
+                effect: "slideUp",
+                delay: 0
+            }
+        });
+
+        $("#tabs").tabs({
+            active: 0
+        });
+
+    </script>
+    
+</body>
+</html>

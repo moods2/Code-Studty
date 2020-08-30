@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl { border-collapse: collapse; }
+
+        #tbody td {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table id="tbl">
+        <tbody id="tbody">
+            <tr>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+            </tr>
+            <tr>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+            </tr>
+            <tr>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+            </tr>
+            <tr>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+            </tr>
+            <tr>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+                <td data-color="255"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var td = document.getElementsByTagName("td");
+
+        for (var i=0; i<td.length; i++) {
+            
+            td[i].onclick = function() {
+                
+                if (event.srcElement.nodeName == "TD") {
+
+                    for (var j=0; j<td.length; j++) {
+                        td[j].innerHTML = "";
+                    }
+                    
+                    var color = event.srcElement.dataset["color"] - 25;
+    
+                    event.srcElement.style.backgroundColor = "rgb(" + color +", " + color + ", " + color + ")";
+    
+                    event.srcElement.innerHTML = "<img src='../images/dog-foot.png'>"
+    
+                    event.srcElement.dataset["color"] = color;
+
+                }
+
+                if (color < 0) {
+                    event.srcElement.onclick = null;
+                }
+    
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

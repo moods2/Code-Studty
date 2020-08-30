@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body { margin-bottom: 300px; }
+        fieldset { width: 200px; border: 1px solid gray; }
+        fieldset > div { margin: 5px; }
+
+        #tbl1 { 
+            border: 1px solid gray;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        #tbl1 td {
+            border: 1px solid gray;
+            width: 60px;
+            height: 45px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>테이블</h1>
+
+    <fieldset>
+        <legend>입력</legend>
+        <div>색상코드: <input type="color" id="color"></div>
+        <div>색상명: <input type="text" id="txtName" size="12"></div>
+    </fieldset>
+
+    <table id="tbl1">
+        <thead>
+            <tr>
+                <th>색상명</th>
+                <th>미리보기</th>
+            </tr>
+        </thead>
+        <tbody id="tbody1">
+            <tr>
+                <td>토마토</td>
+                <td bgcolor="tomato">#FF6347</td>
+            </tr>
+            <tr>
+                <td>골드</td>
+                <td bgcolor="gold">#FFD700</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var color = document.getElementById("color");
+        var txtName = document.getElementById("txtName");
+        var tbody1 = document.getElementById("tbody1");
+
+        txtName.onkeyup = function() {
+
+            //엔터 입력
+            if (event.keyCode == 13) {
+
+                console.log(txtName.value);
+                console.log(color.value);
+
+                var temp = "";
+
+                temp += "<tr>";
+                    temp += "<td>";
+                    temp += txtName.value;
+                    temp += "</td>";            
+                    temp += "<td bgcolor='" + color.value + "'>";
+                    temp += color.value;
+                    temp += "</td>";
+                temp += "</tr>";
+
+                tbody1.innerHTML += temp;
+
+                //다른 색을 입력하기 위해 -> 입력 초기화
+                color.value = "#000000";
+                txtName.value = "";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

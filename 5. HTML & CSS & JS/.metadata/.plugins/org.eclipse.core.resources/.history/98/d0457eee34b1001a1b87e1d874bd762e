@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="pink">
+	
+	<!-- 
+	
+		<body> 태그
+		- 화면에 출력되는 모든 내용(텍스트 or 이미지 or 영상 등)을 가지는 요소
+		- 혼합형(태그 + 텍스트)
+		
+		<body> 속성
+		- bgcolor 속성 : 문서 배경색
+		
+		HTML의 색상 표현 방법(***)
+	
+	 -->
+	 
+</body>
+</html>

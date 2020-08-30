@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #p1:hover {
+            /* text-shadow: h-shadow v-shadow blur color */
+            text-shadow: 3px 3px 20px red;
+        }
+
+        /* #p2 {
+            border: 1px solid white;
+        } */
+
+        #p2:hover {
+            border: 1px solid #777;
+            box-shadow: 3px 3px 2px #777;
+        }
+
+        .icon:hover {
+            box-shadow: 0px 5px 5px #555;
+            /* margin-top: -3px; */
+            transform: translate(0px, -5px);
+        }
+
+        #list li:hover {
+            /* color: red; */
+            /* border: 10px solid red; */
+            outline: 10px solid red;
+        }
+
+        #box1, #box2 {
+            border: 1px solid black;
+            width: 300px;
+            /* height: 20px; */
+            overflow: hidden;
+            white-space: nowrap;
+
+            margin-bottom: 50px;
+        }
+
+        #box1 { text-overflow: clip; }
+        #box2 { text-overflow: ellipsis; }
+
+    </style>
+</head>
+<body>
+    
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eum maiores optio rem quidem obcaecati reprehenderit reiciendis. Laudantium, accusamus? Sequi beatae omnis, minus rem unde aliquam porro odio hic doloribus.</p>
+    <p id="p2">Voluptatem explicabo, illum dicta placeat facilis adipisci illo cupiditate, dolore, dolor eius culpa sint sit reiciendis aliquam dolores accusantium quod ipsam voluptate eaque? Officiis ipsam voluptatibus fuga dolore doloremque ea.</p>
+    <p id="p3">Nostrum, aperiam earum quas labore necessitatibus minima fuga in quam impedit amet asperiores velit ad beatae. Architecto nihil velit suscipit, saepe nesciunt, pariatur facere quia repudiandae aut, soluta facilis reiciendis.</p>
+
+    <hr>
+
+    <img src="../images/rect_icon07.png" class="icon">
+    <img src="../images/rect_icon08.png" class="icon">
+    <img src="../images/rect_icon09.png" class="icon">
+    <img src="../images/rect_icon10.png" class="icon">
+    <img src="../images/rect_icon11.png" class="icon">
+
+    <hr>
+
+    <h1>오늘의 할일</h1>
+
+    <ul id="list">
+        <li>빨리 집에 가기</li>
+        <li>밥먹기</li>
+        <li>잠자기</li>
+        <li>쪼금 공부하기</li>
+    </ul>
+
+    <hr>
+
+    <div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Ipsam, dolor.</div>
+    <div id="box2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+         Accusantium, sit.</div>
+
+</body>
+</html>

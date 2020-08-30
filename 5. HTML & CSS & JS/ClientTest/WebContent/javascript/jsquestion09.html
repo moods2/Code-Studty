@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl1 {
+            border: 0px solid black;
+            width: 600px;
+            margin: 50px auto;
+            border-collapse: collapse;
+        }
+
+        .left {
+            border: 1px solid black;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #EEEEEE;
+            color: #444444;
+        }
+
+        .right {
+            border: 1px solid black;
+            padding-left: 10px;
+            font-weight: bold;
+            color: #444444;
+        }
+
+        input {
+            font-size: 17px;
+            outline: none;
+        }
+
+        #front, #back {
+            width: 75px;
+        }
+
+        #year {
+            width: 60px;
+        }
+
+        #month, #date {
+            width: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <table id="tbl1">
+        <tr>
+            <td class="left">주민번호</td>
+            <td class="right">
+                <input type="text" name="front" id="front" maxlength="6">
+                -
+                <input type="text" name="back" id="back" maxlength="7">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">생년월일</td>
+            <td class="right">
+                <input type="text" name="year" id="year"> 년
+                <input type="text" name="month" id="month"> 월
+                <input type="text" name="date" id="date"> 일
+            </td>
+        </tr>
+        <tr>
+            <td class="left">성별</td>
+            <td class="right">
+                <input type="radio" name="gender"> 남자
+                <input type="radio" name="gender"> 여자
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        var front = document.all.front;
+        var back = document.all.back;
+        var year = document.all.year;
+        var month = document.all.month;
+        var date = document.all.date;
+        var gender = document.all.gender;
+
+        front.onkeyup = function() {
+
+            if (front.value.length == 6) {
+                year.value = "19" + front.value.substring(0, 2);
+                month.value = front.value.substring(2, 4);
+                date.value = front.value.substring(4, 6);
+                back.focus();
+            }
+
+        }
+
+        back.onkeyup = function() {
+
+            if (back.value.length == 1 && back.value % 2 == 1) {
+                gender[0].checked = true;
+            } else if (back.value.length == 1 && back.value % 2 == 0) {
+                gender[1].checked = true;
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

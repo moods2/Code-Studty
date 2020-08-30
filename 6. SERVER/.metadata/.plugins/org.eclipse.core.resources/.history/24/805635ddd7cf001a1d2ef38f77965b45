@@ -1,0 +1,136 @@
+JSP, Java Server Pages
+- 서블릿의 다음 버전
+
+서블릿 장점
+- 자바를 사용할 수 있다. > 웹 적용
+- 자바 기반
+
+서블릿 단점
+- HTML, CSS, JavaScript 작성이 힘듬 > 문자열 취급
+
+JSP 장점
+- HTML, CSS, JavaScript 작성이 쉬움
+- 웹 페이지 기반
+
+JSP 단점
+- 자바 작업이 좀 불편하다. > 툴 기능 부족
+
+
+
+
+JSP 기본 요소
+1. JSP 지시자(지시어), JSP Directive
+2. 스크립트 요소, Scripting Elements
+3. 액션 태그, Action Tags
+
+
+1. JSP 지시자(지시어, JSP Directive
+- <%@ XXX %>
+- JSP 페이지를 실행하기 위해 JSP 컨테이너(톰캣)에게 
+해당 JSP를 처리하기 위한 여러가지 환경 설정을 한다.
+	a. page 지시자
+	b. include 지시자
+	c. taglib 지시자
+
+	
+2. 스크립트 요소, Scripting Elements
+- <% %>
+- 자바 구문을 쓸 수 있게 해준다.(자바 환경을 만든다.)
+	a. 스크립틀릿, Scriptlet(Script + Applet)
+	b. 표현식, Expression
+	c. 선언부, Declaration
+	
+	
+3. 액션 태그, Action Tags
+- <jsp:XXX>, <c:XXX>
+- 프로그래밍 기능을 하는 태그
+- <c:if>, <c:forEach>
+	a. JSP 기본 액션 태그
+	b. JSTL 확장 액션 태그
+	c. 사용자 커스텀 액션 태그
+
+
+
+
+page 지시자
+- <%@ page 속성="값" 속성="값" 속성="값".. %>
+- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+a. language
+	- JSP 페이지에서 사용할 프로그래밍 언어 지정
+
+b. contentType
+	- 현재 페이지 콘텐츠에 대한 기술
+	- contentType="text/html; charset=UTF-8" //현재 개발 환경
+	- contentType="text/html; charset=ISO-8859-1"
+	- text/html : MIME Type 열거형, 웹서버가 브라우저에게 웹 페이지를 전달할 때
+	이 페이지는 이런 형식의 페이지다.. 라고 알려주는 역할
+	- text/xml, image/jpeg, image/png, image/gif 등..
+	- charset : 웹서버가 현재 JSP 페이지를 해석할 때 사용할 인코딩 방식
+	
+c. pageEncoding
+	- 웹서버가 브라우저에게 페이지를 해석할 때 사용할 인코딩 방식
+	
+d. import
+	- 패키지 or 클래스 참조
+	- 자바의 import와 동일한 역할
+	
+e. session
+
+f. buffer
+
+g. autoFlush
+
+h. info
+
+i. errorPage
+	- 에러 페이지로 사용할 페이지 URL 지정
+
+
+
+include 지시자
+- <%@ include file="URL" %>
+- 특정 JSP/HTML 페이지를 해당 JSP 페이지의 일부 영역에 삽입하는 기술
+- 조각 페이지
+- <iframe> 태그와 유사한 역할
+
+
+taglib 지시자
+- 액션 태그에서 사용
+
+
+
+
+스크립틀릿, Scriptlet(Script + Applet)
+- <% %>
+- 이 영역은 자바 영역이다.
+- 비즈니스 코드 작업
+	a. 데이터 가공/처리(Oracle)
+	b. 동적 HTML(CSS, JavaScript)
+
+
+표현식, Expression
+
+
+
+선언부, Declaration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

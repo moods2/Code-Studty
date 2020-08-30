@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl1 {
+            border: 0px solid gray;
+            width: 600px;
+            border-collapse: collapse;
+        }
+
+        #tbl1 td:first-child {
+            border: 1px solid gray;
+            width: 120px;
+            height: 50px;
+            background-color: #DEDEDE;
+            font-weight: bold;
+            color: #444444;
+            text-align: center;
+        }
+
+        #tbl1 td:last-child {
+            border: 1px solid gray;
+            width: 480px;
+            height: 50px;
+            padding-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 style="color: #444444;">우편 번호 검색</h1>
+
+    <form name="form1">
+        <table id="tbl1">
+            <tr>
+                <td>우편번호</td>
+                <td><input type="text" name="addressNum">
+                <input type="button" value="우편번호검사하기" name="btn1"></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>상세주소</td>
+                <td><input type="text" name="detail"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+
+        var addressNum = document.form1.addressNum;
+        var btn1 = document.form1.btn1;
+        var address = document.form1.address;
+        var detail = document.form1.detail;
+
+        btn1.onclick = function() {
+            window.open("jsquestion04_1.html", "check", "width=300, height=200");
+        }
+
+
+
+    </script>
+
+</body>
+</html>

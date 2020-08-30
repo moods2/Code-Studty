@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            border: 0px solid gray;
+            width: 600px;
+            margin: 50px auto;
+        }
+
+        #tbl1 {
+            border-collapse: collapse;
+            width: 600px;
+        }
+
+        tr > th, tr > td {
+            border: 1px solid gray;
+            padding: 7px 0;
+            text-align: center;
+            color: #444;
+        }
+
+        tr > th {
+            background-color: #EEE;
+        }
+
+        tr > th:first-child, tr > th:last-child {
+            width: 47px;
+        }
+
+        .txt {
+            width: 450px;
+            padding: 3px;
+            outline: none;
+        }
+
+        .txt:read-only {
+            background-color: #eee;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form1">
+        <h1 style="font-size: 25px; color: #444;">입력하기</h1>
+        <table id="tbl1">
+            <tr>
+                <th>번호</th>
+                <th>입력</th>
+                <th>잠금</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="txt" class="txt" data-num="0"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="0"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" name="txt" class="txt" data-num="1"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="1"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" name="txt" class="txt" data-num="2"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="2"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text" name="txt" class="txt" data-num="3"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="3"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input type="text" name="txt" class="txt" data-num="4"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="4"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><input type="text" name="txt" class="txt" data-num="5"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="5"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><input type="text" name="txt" class="txt" data-num="6"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="6"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><input type="text" name="txt" class="txt" data-num="7"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="7"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><input type="text" name="txt" class="txt" data-num="8"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="8"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><input type="text" name="txt" class="txt" data-num="9"></td>
+                <td><input type="checkbox" name="cb" class="cb" data-num="9"></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+
+        var txt = document.form1.txt;
+        var cb = document.form1.cb;
+
+        for (var i=0; i<cb.length; i++) {
+
+            cb[i].onchange = function() {
+                if (event.srcElement.checked) {
+                    txt[event.srcElement.dataset["num"]].readOnly = true;
+                } else {
+                    txt[event.srcElement.dataset["num"]].readOnly = false;
+                }
+            }
+
+            txt[i].onkeyup = function() {
+                if (event.keyCode == 13) {
+                    cb[event.srcElement.dataset["num"]].click();
+                }
+            }
+
+            txt[i].ondblclick = function() {
+                cb[event.srcElement.dataset["num"]].click();
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

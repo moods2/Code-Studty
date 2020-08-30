@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.header {
+	border-bottom: 1px solid gray;
+	
+}
+
+.content {
+	
+}

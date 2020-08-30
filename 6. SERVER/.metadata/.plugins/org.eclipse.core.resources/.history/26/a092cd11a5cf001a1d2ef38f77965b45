@@ -1,0 +1,23 @@
+Dynamic Web Project 구조
+
+1. Java Resources
+	a. src : 자바 소스 폴더
+	b. Libraries
+		1. Apache Tomcat(필수)
+			- 웹사이트 관련 jar
+		2. JRE(필수)
+			- 자바 관련 jar
+			
+2. bulid > classes
+	- src내의 자바 파일의 컴파일 결과를 저장하는 폴더
+	- *.class 폴더
+	
+3. WebContent
+	- 모든 웹 자원을 관리하는 루트 폴더
+	a. META-INF : 아파치 톰캣 폴더
+	b. WEB-INF(**********)
+		- 사이트 전반에 관련 설정을 관리하는 폴더
+		- 외부에 비공개 폴더(보안)
+	c. WEB-INF > lib
+		- 외부 jar 참조 폴더
+		- ojdbc6.jar

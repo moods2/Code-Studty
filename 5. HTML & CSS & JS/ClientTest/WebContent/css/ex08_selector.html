@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* 속성 충돌 */
+
+        /* #box1 { color: red; font-style: italic; }
+        #box1 { color: yellow; } */
+
+        /* 
+            선택자 우선 순위
+                - 서로 다른 선택자가 하나의 태그를 선택했을 때 + 같은 속성을 선언했을 때
+                    -> 누구를 적용해야 하는지??
+                - 구체적인 표현이 적용된다.(*********)
+
+            점수 계산
+                - 단일 or 다중 선택자를 구성하는 요소의 검수 합이 가장 높은 선택자가
+                적용된다.
+                - 태그 선택자 : 개당 1점
+                - 클래스 선택자 : 개당 10점
+                - 아이디 선택자 : 개당 100점
+                - 추상적인 개념(태그가 아무리 많아도 클래스를 이길 수 없음)
+                - 점수계산은 동급일 때 가능
+        */
+
+        /* #box1 { color: orange; }
+        .box { color: yellow; }
+        div { color: red; } */
+
+        div { color: red; }
+        div > div { color: orange; }
+        div div { color: yellow; }
+
+        #parent > div { color: purple; }
+
+        #box1.box { color: orange; }
+
+        /* 비권장 : 최후의 수단(모든 규칙 무시해버리는 도구) */
+        div { color: red !important; }
+        
+    </style>
+</head>
+<body>
+    
+    <div id="parent">
+        <div id="box1" class="box">상자</div>
+    </div>
+
+</body>
+</html>

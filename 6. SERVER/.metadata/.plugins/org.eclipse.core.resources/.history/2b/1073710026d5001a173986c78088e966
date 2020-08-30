@@ -1,0 +1,56 @@
+package com.test.codestudy.member;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+@WebServlet("/member/registerok.do")
+public class RegisterOk extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//1. 데이터 가져오기
+		//2. 파일 업로드 처리
+		//2. DB 작업 > insert
+		//3. 결과 반환 > JSP 호출하기(X)
+		
+		//1.
+		req.setCharacterEncoding("UTF-8");
+		
+		//1. + 2.
+		String id = "";
+		String name = "";
+		String email = "";
+		String pw = "";
+		String pic = "";
+		
+		try {
+			
+			MultipartRequest multi = new MultipartRequest(
+										req,
+										req.getRealPath("/pic"),
+										1024 * 1024 * 10,
+										"UTF-8",
+										new DefaultFileRenamePolicy());
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/registerok.jsp");
+		dispatcher.forward(req, resp);
+		
+	}
+	
+}

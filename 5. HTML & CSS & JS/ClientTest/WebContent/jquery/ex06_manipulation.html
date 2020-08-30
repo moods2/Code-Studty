@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#box1 {
+			border: 10px solid black;
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+		}
+
+		.one {
+			color: orange;
+			text-decoration: underline;
+			width: 500px;
+		}
+		.two {
+			/* height: 50px; */
+			text-align: center;
+		}
+		.three {
+			opacity: .3;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>조작</h1>
+
+	<input type="button" value="버튼1" id="btn1">
+	<input type="button" value="버튼2" id="btn2">
+	<input type="button" value="버튼3" id="btn3">
+	<input type="button" value="버튼4" id="btn4">
+	<input type="button" value="버튼5" id="btn5">
+	<hr>
+
+	<div id="box1">상자</div>
+
+	<hr>
+
+	<input type="text" id="txt1">
+
+	<hr>
+
+	<a href="http://naver.com" target="_blank" id="link1">네이버</a>
+
+	<hr>
+
+	<div id="list">
+		<img src="../images//catty01.png">
+		<img src="../images//catty02.png">
+		<img src="../images//catty03.png">
+	</div>
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script>
+
+		$("#btn1").click(function() {
+			/*
+			
+			jQuery 함수 패턴
+
+			1. A 타입
+				- 전용 함수
+				a. obj.test() 		// getter, 읽기
+				b. obj.test(value)	// setter, 쓰기
+
+			2. B 타입
+				- 범용 함수
+				a. obj.test(name)			//getter, 읽기
+				b. obj.test(name, value)	//setter, 쓰기
+			
+			*/
+
+			//A 타입
+			console.log($("#txt1").val());
+			$("#txt1").val("홍길동");
+
+			//B 타입
+			// $("#txt1").css("100px");
+			// $("#txt1").click(함수);
+			// $("#txt1").on(함수);
+
+			$("#txt1").css("color", "red"); //setter
+			console.log($("#txt1").css("color")); //getter
+
+		});
+
+
+		$("#btn2").click(function() {
+		
+			//조작
+			//1. 콘텐츠 조작
+			// - innerText -> text()
+			// - innerHTML -> html()
+			// - value -> val()
+
+			//console.log($("#box1").text());
+			//$("#box1").text("안녕하세요.");
+			//$("#box1").text("<i>안녕하세요.</i>");
+
+			//$("#box1").html("<i>안녕하세요.</i>");
+
+			//box1.innerHTML = box1.innerHTML + "새내용";
+
+			//$("#box1").html($("#box1").html() + "<div>" + new Date() + "</div>");
+
+			//DOM -> innerHTML + appendChild
+			//$("#box1").append("<div>" + new Date() + "</div>");
+
+			//$("#box1").prepend("<div>" + new Date() + "</div>");
+
+
+			//$("#txt1").val(); //읽기
+			$("#txt1").val(new Date()); //쓰기
+
+
+		});
+
+		$("#btn3").click(function() {
+
+			//속성 조작
+			//1. BOM
+			// - obj.prop		//읽기
+			// - obj.prop = 값 	//쓰기
+
+			//2. DOM
+			// - obj.getAttribute("prop")		//읽기
+			// - obj.setAttribute("prop", 값)	//쓰기
+
+			//3. jQuery
+			// - obj.attr("prop")		//읽기
+			// - obj.attr("prop", 값)	//쓰기
+			// - obj.prop("prop")		//읽기
+			// - obj.prop("prop", 값) 	//쓰기
+
+			console.log($("#link1").attr("href"));
+			$("#link1").attr("href", "http://google.com");
+
+			console.log($("#link1").prop("target"));
+			$("#link1").prop("target", "_self");
+
+
+			$("#list").append("<img src='../images/catty04.png'>");
+			$("#list").prepend("<img src='../images/catty05.png'>");
+
+			//DOM(removeChild) vs jQuery(remove)
+			$("#list img").click(function() {
+				//alert();
+				$(this).remove();
+			});
+
+			$("#list").empty();
+
+			$(document.body).empty();
+
+
+		});//btn3
+
+		//1. 콘텐츠 조작
+		// - obj.text()
+		// - obj.html()
+		// - obj.val()
+
+		//2. 속성 조작
+		// - obj.attr()
+		// - obj.prop()
+
+		//3. 태그 조작
+		// - append()
+		// - prepend()
+		// - remove()
+		// - empty()
+
+		//4. CSS 조작
+		// - css()
+
+		$("#btn4").click(function() {
+
+			$("#list").append("<img src='../images/catty06.png' title='새장의 안의 고양이' style='border:1px solid black;' onclick='$(this).remove();'>");
+
+			$("#list").append($("<img>")
+						.attr("src", "../images/catty07.png")
+						.attr("title", "고양이")
+						.css("border", "1px solid black")
+						.click(function() {
+							$(this).remove();
+						}));
+
+			//jQuery 함수 용법
+			//1. $("CSS 선택자")
+			//2. $(JavaScript 객체)
+			//3. $("HTML 코드")
+			
+			//var temp = $("<input>");
+			//$("#list").append(temp);
+
+			//$("#list").append("<input>");
+
+		});
+		
+
+		$("#btn5").click(function() {
+
+			//console.log($("#box1").css("background-color"));
+			//$("#box1").css("color", "white");
+
+			// $("#box1")
+			// 	.css("color", "white")
+			// 	.css("font-size", "3em")
+			// 	.css("font-style", "italic");
+
+			// $("#box1").css({
+			// 	"color": "red",
+			// 	"font-size": "5em",
+			// 	"font-weight": "bold"
+			// });
+
+
+			//obj.className = "one"
+
+			// $("#box1").addClass("one");
+			// $("#box1").addClass("two");
+			// $("#box1").addClass("three");
+
+			// $("#box1").removeClass("one");
+
+			$("#box1").toggleClass("one");
+
+		});
+
+
+	</script>
+</body>
+</html>

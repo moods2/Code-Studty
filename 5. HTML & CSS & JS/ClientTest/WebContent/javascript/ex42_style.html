@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box {
+            width: 150px; height: 150px;
+            position: absolute; left: 10px; top: 50px;
+        }
+
+        #box1 { background: tomato; }
+        #box2 { background: gold; }
+        #box3 { background: orange; }
+        #box4 { background: cornflowerblue; }
+        #box5 { background: palegreen; }
+
+    </style>
+</head>
+<body>
+    
+    <input type="button" value="버튼" id="btn1">
+    <hr>
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <div id="box4" class="box">상자4</div>
+    <div id="box5" class="box">상자5</div>
+
+    <script>
+
+        var btn1 = document.getElementById("btn1");
+        var box1 = document.getElementById("box1");
+        var box2 = document.getElementById("box2");
+        var box3 = document.getElementById("box3");
+        var box4 = document.getElementById("box4");
+        var box5 = document.getElementById("box5");
+
+        btn1.onclick = function() {
+
+            box5.style.left = "300px";
+            box5.style.top = "250px";
+
+            box1.style.left = "400px";
+            box1.style.top = "550px";
+
+            box2.style.left = "600px";
+            box2.style.top = "150px";
+
+            box3.style.left = "100px";
+            box3.style.top = "100px";
+
+            box3.style.zIndex = 1;
+
+        };
+
+        var index = 0;
+        var zindex = 1;
+        var list = document.getElementsByClassName("box");
+
+        window.addEventListener("mousedown", function() {
+            //클릭한 좌표
+            // - position: absolute
+            // box5.style.left = event.clientX - 75 + "px";
+            // box5.style.top = event.clientY - 75 + "px";
+
+            list[index].style.left = event.clientX - 75 + "px";
+            list[index].style.top = event.clientY - 75 + "px";
+            list[index].style.zIndex = zindex;
+
+            index++;
+            zindex++;
+
+            if (index >= list.length) index = 0;
+            
+        })
+
+    </script>
+
+</body>
+</html>

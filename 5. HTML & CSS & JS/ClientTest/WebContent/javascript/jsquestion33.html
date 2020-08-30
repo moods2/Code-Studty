@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #cat {
+            position: absolute;
+            transition: all 1s;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="../images/catty01.png" id="cat">
+
+    <script>
+
+        var cat = document.getElementById("cat");
+        var oldX, oldY;
+
+        window.onmousedown = function() {
+
+            cat.style.left = event.clientX - 75 + "px";
+            cat.style.top = event.clientY - 75 + "px";
+
+        };
+
+    </script>
+
+</body>
+</html>

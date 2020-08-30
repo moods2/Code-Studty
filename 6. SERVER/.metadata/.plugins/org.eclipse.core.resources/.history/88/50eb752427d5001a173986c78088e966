@@ -1,0 +1,13 @@
+package com.test.codestudy.member;
+
+//DB 작업 담당 객체
+// - 서블릿 X
+// - 일반 클래스 O
+public class MemberDAO {
+	
+	public MemberDAO() {
+		//DB 연결
+		
+	}
+
+}

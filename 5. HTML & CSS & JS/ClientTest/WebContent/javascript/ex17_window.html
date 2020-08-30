@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>window 객체</h1>
+
+    <form name="form1">
+        <input type="button" value="자식창 띄우기" name="btn1">
+        <input type="button" value="자식창 닫기" name="btn2">
+    </form>
+
+    <hr>
+
+    <h1>회원 가입</h1>
+
+    <form name="form2">
+        아이디: <input type="text" name="txtID">
+        <input type="button" value="아이디 중복 검사" name="btnCheck">
+    </form>
+
+    <script>
+
+        var btn1 = window.document.form1.btn1;
+        var btn2 = window.document.form1.btn2;
+        var child;
+        var btnCheck = window.document.form2.btnCheck;
+
+        btn1.onclick = function() {
+            //새창 띄우기
+            // window.open("URL", "name", "options");
+            // window.open("ex15_event.html", "ex15", "");
+
+            //반환값 - 자식 window 객체
+            child = window.open("http://naver.com", "naver", "width=300, height=300");
+        };
+
+        btn2.onclick = function() {
+            //창 닫기
+            //window.close();
+            child.close();
+        }
+
+        btnCheck.onclick = function() {
+            child = window.open("ex17_child.html", "check", "width=330, height=230");
+        }
+
+        // window.open("http://naver.com", "naver", "width=300, height=300");
+
+    </script>
+
+</body>
+</html>

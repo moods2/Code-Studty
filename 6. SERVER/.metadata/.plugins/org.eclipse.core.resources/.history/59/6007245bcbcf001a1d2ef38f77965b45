@@ -1,0 +1,17 @@
+JSP, Java Server Pages
+- 서블릿의 다음 버전
+
+서블릿 장점
+- 자바를 사용할 수 있다. > 웹 적용
+- 자바 기반
+
+서블릿 단점
+- HTML, CSS, JavaScript 작성이 힘듬 > 문자열 취급
+
+JSP 장점
+- HTML, CSS, JavaScript 작성이 쉬움
+- 웹 페이지 기반
+
+JSP 단점
+- 자바 작업이 좀 불편하다. > 툴 기능 부족
+

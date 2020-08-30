@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+
+        * { outline: none; }
+        #btnpoint, #btninfo, #btncalendar { outline: none; }
+        body { margin: 0 auto; }
+        h1, h2 { font-family: "Arial Black"; font-weight: bold; }
+        #main { width: 100%; }
+        #top {
+            /* border: 1px solid black; */
+            min-width: 1300px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        #middle {
+            /* border: 1px solid black; */
+            width: 1245px;
+            min-height: 1100px;
+            margin: 0 auto;
+            padding: 60px;
+        }
+        #bottom {
+            /* border: 1px solid black; */
+            width: 100%;
+            min-width: 1300px;
+            height: 200px;
+            background-color: #eee;
+            color: white;
+        }
+        #topmenu {
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+            width: 100%;
+            min-width: 1300px;
+            height: 40px;
+            color: black;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 40px 0;
+            position: absolute;
+        }
+        .menubar {
+            margin: 0 5px;
+            cursor: pointer;
+        } 
+        #topleft {
+            display: inline-block;
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 65px;
+            background-image: url("../images//title.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            left : 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #topright {
+            font-size: 13px;
+            position: absolute;
+            right : 5px;
+            top: 42px;
+            cursor: pointer;
+        }
+        #search {
+            border: 0;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            outline: none;
+            color: black;
+        }
+
+        #left {
+            /* border: 1px solid black; */
+            width: 250px;
+            height: 1000px;
+            float: left;
+        }
+        #left > div {
+            border: 1px solid #C7C7C7;
+            width: 100%;
+            height: 200px;
+            background-color: #FDFDFD;
+        }
+        #left > div:first-child {height: 210px; margin-bottom: 35px;}
+        #left > div:nth-child(3) {height: 278px; margin-bottom: 35px;}
+        #userinfo #infohead {
+            background-color: #eee;
+            font-size: 1.7em;
+            font-weight: bold;
+            color: #444;
+            padding: 10px 0 10px 15px;
+            border-top: 2px solid black;
+            border-bottom: 1px solid #C7C7C7;
+            cursor: pointer;
+        }
+        #userinfo p:nth-child(2) {
+            padding: 2px 15px;
+        }
+        #userinfo p:nth-child(2) span {
+            font-weight: bold;
+        }
+        #point p {
+            border: 1px solid #DBE4F3;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 5px 15px 5px;
+        }
+        #userinfo div:last-child {
+            text-align: center;
+        }
+        #left > div:nth-child(2) {
+            border: 5px solid #7A98B4;
+            padding: 15px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 35px;
+        }
+        #left > div:nth-child(2) > p {
+            border-bottom: 1px dotted #DBE4F3;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        #left > div:nth-child(2) > p > span {
+            float: right;
+        }
+        #left > div:nth-child(3) > p:first-child {
+            border-bottom: 1px solid #DBE4F3;
+            font-size: 1.2em;
+            text-decoration: underline;
+            color: rgb(71, 125, 224);
+            font-weight: bold;
+            padding: 8px 10px;
+            margin-bottom: -10px;
+            background-color: #EEEEEE;
+        }
+        #left > div:nth-child(3) > .personaltitle {
+            padding: 5px 15px;
+            margin-top: 10px;
+            border-top: 1px solid #DBE4F3;
+            border-bottom: 1px solid #DBE4F3;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #left > div:nth-child(3) > p:nth-child(2) {
+            border-top: 0;
+        }
+        #left > div:nth-child(3) > a {
+            font-size: 11px;
+            margin-left: 5px;
+            text-decoration: none;
+            color: black;
+        }
+        #left > div:nth-child(3) > a:hover {
+            text-decoration: underline;
+        }
+
+        #left > div:last-child p:first-child {
+            border-bottom: 1px solid #DBE4F3;
+            padding: 5px 0 5px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        #left > div:last-child p:first-child > span {
+            color: #444;
+            font-size: 1.3em;
+        }
+        #left > div:last-child p:nth-child(2) {
+            text-align: center;
+            font-size: 3em;
+        }
+        .time {
+            /* text-align: center; */
+            border-left: 1px solid #888;
+            margin-bottom: -2px;
+            margin-left: 35px;
+            padding-left: 10px;
+        }
+
+        #right {
+            /* border: 1px solid black; */
+            float: right;
+            width: 850px;
+            height: 993px;
+            margin-left: 15px;
+        }
+        #right > h1 {
+            font-size: 18px;
+            margin-top: 0px;
+            color: #444;
+        }
+        #right > h2 {
+            font-size: 16px;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+        #right > ul > li {
+            display: inline-block;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        #right > ul > li > span {
+            font-size: 10px;
+        }
+        #right > ul {
+            margin-left: -35px;
+        }
+        #right > ul > li:first-child {
+            border: 2px solid #7A98B4;
+            border-bottom: 1px solid white;
+        }
+        #right > ul > li:last-child {
+            border: 1px solid #ddd;
+            background-color: #eee;
+            font-size: 13px;
+            margin-left: -1px;
+            cursor: pointer;
+        }
+        #right > p {
+            padding: 5px 10px;
+            font-size: 13px;
+        }
+        #right > p > i {
+            font-size: 10px;
+            border: 1px solid #7A98B4;
+            border-radius: 50%;
+            background-color: #7A98B4;
+            color: white;
+            margin-right: 5px;
+        }
+        #right > p > span {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #coupon {
+            border: 1px solid #ccc;
+            border-left: 0;
+            border-right: 0;
+            text-align: center;
+            background-color: rgb(248, 248, 248);
+            padding: 50px 0;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        #coupon > input {
+            outline: none;
+        }
+        #coupontxt {
+            padding: 5px 10px;
+            border: 4px solid #777;
+            text-align: center;
+            color: #777;
+            width: 300px;
+            font-size: 13px;
+            height: 35px;
+            margin-right: 10px;
+        }
+        #tbl1 {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #tbl1 th, #tbl1 td {
+            border: 1px solid #D3D3D3;
+            text-align: center;
+            font-size: 13px;
+            color: #444;
+            padding: 10px 0;
+        }
+        #tbl1 th {
+            background-color: #EEE;
+            border-top: 3px solid #666;
+            border-bottom: 1px solid #CCC;
+        }
+        #tbl1 th:first-child {
+            width: 30%;
+        }
+        #paging {
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 40px 0;
+        }
+        #precaution {
+            border-top: 2px solid #666;
+            padding: 20px 10px 10px 10px;
+            border-bottom: 2px solid #CCC;
+            background-color: rgb(248, 248, 248);
+        }
+        #precaution > p {
+            font-size: 12px;
+            letter-spacing: -1px;
+        }
+        #precaution > p:first-child {
+            font-weight: bold;
+        }
+        #precaution > p > i {
+            margin-right: 5px;
+        }
+        #precaution > p:nth-child(5) {
+            margin-top: -7px;
+        }
+        #line {
+            border: 1px solid #7A98B4;
+            margin-left: 5px;
+            margin-top: -10px;
+        }
+        
+
+        #movetop {
+            width: 40px;
+            height: 40px;
+            background-color: gray;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            padding-top: 3px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        #movetop:hover {
+            background-color: orange;
+            cursor: pointer;
+        }
+        #frogue-container, .frogue-chat {
+            position: absolute;
+            left:20px;
+            bottom: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+<!-------------------------------- 화면 상단부 -------------------------------->
+        <div id="top">
+            <div id="topmenu">
+                <!-- 상단메뉴 좌측(메인화면으로 돌아가기) -->
+                <a href="main.html" id="topleft"></a>
+                <!-- 상단메뉴 센터(콘서트, 뮤지컬, 연극, 클래식, 전시) -->
+                <span data-lo="user_concert.html" class="menubar">콘서트</span>
+                <span data-lo="user_musical.html" class="menubar">뮤지컬</span>
+                <span data-lo="user_theater.html" class="menubar">연극</span>
+                <span data-lo="user_classic.html" class="menubar">클래식</span>
+                <span data-lo="user_Exhibition.html" class="menubar">전시</span>
+                <!-- 상단메뉴 우측(랭킹, 이벤트, 검색창, 마이페이지) -->
+                <div id="topright">
+                    <span data-lo="user_ranking.html" class="menubar">랭킹</span>
+                    <span data-lo="user_event.html" class="menubar">이벤트</span>
+                    <input type="text" value="" id="search">
+                    <label for="search" class="glyphicon glyphicon-search"
+                        style="font-size: 14px; cursor: pointer;"></label>
+                    <div class="glyphicon glyphicon-user" id="mypage" 
+                        style="font-size: 14px; cursor: pointer; margin: 0 10px; "></div>
+                </div>
+            </div>
+        </div>
+<!-------------------------------- 내용부분 -------------------------------->
+        <div id="middle">
+            <!-- 마이페이지 좌측 -->
+            <div id="left">
+                <!-- 유저 정보 -->
+                <div id="userinfo">
+                    <p id="infohead">MY공연<small style="color: #BBB"> | MYPAGE</small></p>
+                    <p><span>장x우</span>님은 <span>일반회원</span>입니다.</p>
+                    <div id="point">
+                        <p>Egg포인트 : 0원</p>
+                    </div>
+                    <div>
+                        <input type="button" class="btn btn-default btn-sm" value="포인트 안내▶" id="btnpoint">
+                        <input type="button" class="btn btn-default btn-sm" value="회원정보 수정▶" id="btninfo">
+                    </div>
+                </div>
+                <!-- 유저 메뉴 -->
+                <div id="usermenu">
+                    <p class="usermenu" data-lo="mypage_reservation.html">예매확인/취소<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_coupon.html">할인쿠폰/예매권<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_interest.html">나의 관심 공연<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_watched.html">나의 관람 공연<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_personalize.html">나의 맞춤 설정<span>▶</span></p>
+                </div>
+                <!-- 맞춤별 예매 -->
+                <div id="personalize">
+                    <p><span class="glyphicon glyphicon-hand-up
+                        "></span> 맞춤별 예매</p>
+                    <p class="personaltitle">지역별예매</p>
+                    └<a href="#">서울</a>,<a href="#">경기/인천</a>,<a href="#">대전/충청/강원</a>,<br><a href="#">부산/대구/울산/경상</a>,<a href="#">광주/전라</a>,<a href="#">제주</a>
+                    <p class="personaltitle" style="margin-top: 20px;">공연장별예매</p>
+                    └<a href="#">세종문화회관</a>,<a href="#">광림아트센터</a>,<a href="#">예술의전당</a>,<br><a href="#">샤롯데씨어터</a>,<a href="#">한전아트센터</a>
+                    <p class="personaltitle" style="margin-top: 20px;">날짜별예매 <input type="button" value="달력보기" class="btn btn-default btn-xs" id="btncalendar"></p>
+                </div>
+                <!-- 고객센터 -->
+                <div id="service">
+                    <p><span>☎</span> 고객센터 전화상담</p>
+                    <p>1544-6399</p>
+                    <p class="time">평일 09:00 ~ 18:00</p>
+                    <p class="time">토요일 09:00 ~ 17:00</p>
+                    <p class="time">일요일 공휴일 휴무</p>
+                </div>
+            </div>
+
+<!----------------------------------------------------------------------------->
+
+            <!-- 마이페이지 우측 -->
+            <div id="right">
+                <h1>할인쿠폰/예매권</h1>
+                <ul>
+                    <li><span>▶</span> 공연 할인쿠폰</li>
+                    <li id="ticket"><span>▶</span> 공연 예매권</li>
+                </ul>
+                <div id="line"></div>
+                <p><i class="glyphicon glyphicon-menu-right
+                    "></i><span>장x우</span>님이 가지고 계신 <span style="color: #7A98B4">할인쿠폰 번호 12자리</span>를 입력해 주세요.
+                </p>
+                <div id="coupon">
+                    공연 할인쿠폰 <input type="text" id="coupontxt" placeholder="할인쿠폰 번호 12자리"><input type="button" value="등록하기" class="btn btn-default" id="btncoupon">
+                </div>
+                <h2>사용가능한 쿠폰</h2>
+                <p><i class="glyphicon glyphicon-menu-right
+                    "></i>현재 사용 가능한 공연 할인 쿠폰은 <span style="color: red;">0</span>매 입니다.
+                </p>
+                <table id="tbl1">
+                    <thead>
+                        <th>쿠폰</th>
+                        <th>할인금액</th>
+                        <th>사용조건</th>
+                        <th>사용기간</th>
+                        <th>등록일</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5">사용 가능한 쿠폰 목록이 없습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="paging">
+                    <button class="glyphicon glyphicon-menu-left left"></button>
+                    <span>1</span>
+                    <span>(<span>1</span>/1)</span>
+                    <button class="glyphicon glyphicon-menu-right right"></button>
+                </div>
+                <div id="precaution">
+                    <p><i class="glyphicon glyphicon-ok-sign"></i>공연 할인쿠폰 사용 안내</p>
+                    <p>- 쿠폰은 사용조건에 따라 장르 , 특정 공연, 회차, 좌석등급 등에 대한 제한이 있을 수 있으니, 사용조건을 반드시 확인해주시기 바랍니다.</p>
+                    <p>- 예매 시 사용하실 쿠폰을 클릭하시면 결제 시점에 자동으로 할인가격 만큼 차감되어 결제 총 금액에 표시됩니다.</p>
+                    <p>- 예매 취소 시 해당 공연에 적용된 할인금액을 제외하고 실 결제금액만큼 환불됩니다.</p>
+                    <p>(단, 쿠폰을 사용한 경우 부분취소는 불가합니다. 부분취소를 원할 경우 고객센터로 문의해주세요.)</p>
+                    <p>- 사용기간이 지난 쿠폰은 사용하실 수 없습니다.</p>
+                </div>
+            </div>
+
+            <!-- 챗봇 : 단비봇 -->
+            <div id="frogue-container" class="position-right-bottom"
+                data-chatbot="e4957de9-dad9-448d-a709-e43eeb644f63"
+                data-user="사용자ID"
+                data-init-key="value">
+            </div>
+            <!-- data-init-식별키=값 으로 셋팅하면 챗플로우에 파라미터와 연동가능. 식별키는 소문자만 가능 -->
+            <script>
+                (function(d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'frogue-embed'));
+            </script>
+            <!-- 제일 위로 돌아가기 버튼 -->
+            <div id="movetop">↑</div>
+        </div>
+<!-------------------------------- 화면 하단부 -------------------------------->
+        <div id="bottom">
+            <div style="width: 100%; min-width: 1300px; margin: auto;">
+                <!-- 회사 마크 -->
+                <img src="../images/title2.png" style="transform: translate(0, 40px);">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        //상단 메뉴 css
+        $(".menubar").mouseover(function() {
+            $(this).css("border-bottom", "5px solid orange");
+        });
+        $(".menubar").mouseout(function() {
+            $(this).css("border-bottom", "");
+        });
+        //상단 메뉴 클릭시
+        $(".menubar").click(function() {
+            location.href = $(this).data("lo");
+        });
+
+        //MY공연 클릭 시
+        $("#infohead").click(function() {
+            location.href = "mypage.html";
+        });
+
+        //마이페이지 클릭시 이동
+        $("#mypage").click(function() {
+            location.href = "mypage.html";
+        });
+
+        //유저메뉴 css
+        $(".usermenu").mouseover(function() {
+            $(this).css("color", "#4E7AD1");
+        });
+        $(".usermenu").mouseout(function() {
+            $(this).css("color", "");
+        });
+        //유저메뉴 클릭시 이동
+        $(".usermenu").click(function() {
+            // console.log($(this).data("lo"));
+            location.href = $(this).data("lo");
+        });
+
+        //공연 예매권 클릭시 이동
+        $("#ticket").click(function() {
+            location.href = "mypage_ticket.html";
+        });
+
+        //할인쿠폰 등록 시
+        $("#btncoupon").click(function() {
+            console.log($("#coupontxt").val());
+        });
+
+        //movetop
+        $("#movetop").click(function() {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        //회원정보 수정 클릭시
+        $("#btninfo").click(function() {
+            location.href = "mypage_revision.html";
+        });
+
+
+    </script>
+
+</body>
+</html>

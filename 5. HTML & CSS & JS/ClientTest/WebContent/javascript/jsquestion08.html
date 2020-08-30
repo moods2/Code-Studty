@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            border: 0px solid black;
+            width: 600px;
+            margin : 50px auto;
+            color: #444;
+        }
+
+        #checkbox {
+            margin: 10px 0 10px 10px;
+        }
+
+        h1 {
+            font-size: 18px;
+        }
+
+        fieldset, #checkbox, input {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            margin-top: 5px;
+            padding: 2px 3px;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form1">
+        <h1>주문하기</h1>
+        <fieldset>
+            <legend>주문하시는 분</legend>
+                이름 : <input type="text" name="name"><br>
+                주소 : <input type="text" name="address">
+        </fieldset>
+        <div id="checkbox">
+            <input type="checkbox" name="btn1" id="btn1" onclick="copy();">
+            <label for="check">주문하신분과 정보가 동일합니다.</label>
+        </div>
+        <fieldset>
+            <legend>받으시는 분</legend>
+            이름 : <input type="text" name="copyname"><br>
+            주소 : <input type="text" name="copyaddress">
+        </fieldset>
+    </form>
+
+    <script>
+
+        var originname = document.form1.name;
+        var originaddress = document.form1.address;
+        var copyname = document.form1.copyname;
+        var copyaddress = document.form1.copyaddress;
+
+        var btn1 = document.form1.btn1;
+
+        function copy() {
+            if (btn1.checked) {
+                copyname.value = originname.value;
+                copyaddress.value = originaddress.value;
+            } else {
+                copyname.value = "";
+                copyaddress.value = "";
+                copyname.focus();
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

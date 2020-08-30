@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+    </style>
+</head>
+<body>
+
+   <input type="button" value="버튼" id="btn1" name="btn1">
+
+   <input type="button" value="버튼" id="btn2" name="btn2">
+   <hr>
+
+   <img src="../images/catty01.png" id="img1">
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+
+        //1. BOM
+        // document.all.btn1.onclick = function() {};
+
+        //2. DOM
+        // document.getElementById("btn1").addEventListener("click", function() {});
+
+        //1 + 2
+        // document.getElementById("btn1").onclick = function() {};
+
+        //3. jQuery
+        //  a. 전용 이벤트 함수
+        //  b. 범용 이벤트 함수
+
+        // jQuery("#btn1").click(function() {
+        //     alert();
+        // });
+
+        jQuery("#btn1").on("click", function() {
+            alert();
+        });
+
+        // btn1.onclick = null;
+        // btn1.removeEventListner("click");
+
+        jQuery("#btn1").off("click");
+
+        // jQuery("#img1").mouseover(function() {
+            
+        // })
+
+        // jQuery("#img1").mouseenter(function() {
+        //     jQuery("#img1").css("opacity", ".3");
+        // })
+
+        // jQuery("#img1").mouseleave(function() {
+        //     jQuery("#img1").css("opacity", "1");
+        // })
+
+        // jQuery("#img1")
+        //     .mouseenter(function() {
+        //     jQuery("#img1").css("opacity", ".3");
+        //     })
+        //     .mouseleave(function() {
+        //     jQuery("#img1").css("opacity", "1");
+        //     })
+
+        //jQuery -> 객체(일괄적용), 함수위주 패턴, 객체 표현식
+        jQuery("#img1").on({
+            mouseenter: function() {
+                jQuery("#img1").css("opacity", ".3");
+            },
+            mouseleave: function() {
+                jQuery("#img1").css("opacity", "1");
+            }
+        });
+
+
+        //this : window
+		//object : this -> object
+		var obj = {
+			name: "홍길동",
+			foo: function() {
+				console.log(this);//객체 자신
+			}
+		};
+
+		// document.getElementById("btn2").onclick = function() {
+		// 	//누른 버튼 참조
+		// 	console.log(event.srcElement.id);
+		// 	console.log(this);
+        //     console.log(event.srcElement == this);
+		// };
+
+		jQuery("#btn1").click(function() {
+            //console.log(event.srcElement.id);
+            // console.log(this.id);
+
+            //자료형 -> 자바스크립트 기반
+            // this.css("color", "blue");
+
+            //순수 자바스크립트 객체 -> jQuery 객체 변환
+            jQuery(this).css("color", "blue");
+
+            // jQuery(window);
+            // jQuery(document);
+
+            // jQuery(this)[0].css()
+            // jQuery(this)[0].style.color = "red";
+
+            //자바스크립트 객체 -> jQuery 객체
+            //=> jQuery(자바스크립트)
+
+            //jQuery 객체 -> 자바스크립트 객체
+            //=> jQuery객체[0]
+		});
+
+    </script>
+    
+</body>
+</html>

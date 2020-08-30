@@ -1,0 +1,44 @@
+새 프로젝트 생성
+1. Dynamic Web Project > "Address"
+2. 필기.txt
+3. 패키지 : com.test.address
+4. 뷰폴더 : WebContent > WEB-INF > "views" 폴더 생성
+5. lib
+	- taglibs-standard-impl-1.2.5.jar
+	- ojdbc6.jar (C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib)
+6. Bootstrap
+	- WebContent > css
+	- WebContent > font
+	- WebContent > js
+7. WebContent > inc 폴더 생성
+	- asset.jsp
+8. Template 작업
+	- com.test.address > Template.java
+	- WebContent > WEB-INF > views > template.jsp
+
+
+주소록(***** 암기)
+- CRUD
+- MVC
+- Oracle
+
+- DB 작업
+
+1. 주소록 쓰기
+	a. 쓰기 폼 페이지
+		- com.test.address.Add.java
+		- views > add.jsp
+	b. 쓰기 DB 페이지
+		- com.test.address.AddOk.java
+		- views > addok.jsp
+	c. web.xml
+		- /add.do
+		- /addok.do
+	
+2. 주소록 읽기
+	a. 목록
+		- com.test.address > List.java
+		- views > list.jsp
+
+3. 주소록 수정하기
+4. 주소록 삭제하기

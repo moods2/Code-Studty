@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#box {
+			border: 10px solid black;
+			width: 500px;
+			height: 800px;
+		}
+		#ball1, #ball2, #ball3 {
+
+			width: 100px;
+			height: 100px;
+			background: cornflowerblue;
+			border-radius: 50%;
+			/* display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			color: white;
+			font-size: 3em;
+			font-weight: bold; */
+
+			/* margin-left: 200px; */
+
+		}
+
+		#ball1 { position: absolute; left: 50px; 
+					animation-duration: .5s; }
+		#ball2 { position: absolute; left: 200px; 
+					animation-duration: .6s; }
+		#ball3 { position: absolute; left: 350px; 
+					animation-duration: .75s; }
+
+		#box:hover #ball1, 
+		#box:hover #ball2, 
+		#box:hover #ball3 {
+			animation-name: key1;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in;
+		}
+
+		@keyframes key1 {
+			from { transform: translate(0px, 0px); }
+			to { transform: translate(0px, 700px); }
+		}
+
+		.btn:hover {
+			animation: keyBtn2 .1s 5 alternate;
+		}
+
+		@keyframes keyBtn2 {
+			0% { box-shadow: 0px 0px 0px #fff; }
+			100% { box-shadow: 2px 2px 2px #aaa; }
+		}
+
+		@keyframes keyBtn {
+			0% { transform: translate(0px, 0px); }
+			25% { transform: translate(5px, 0px); }
+			50% { transform: translate(0px, 0px); }
+			75% { transform: translate(-5px, 0px); }
+			100% { transform: translate(0px, 0px); }
+		}
+
+
+	</style>
+</head>
+<body>
+	<!-- ex47_animation.html -->
+	<div id="box">
+		<div id="ball1"></div>
+		<div id="ball2"></div>
+		<div id="ball3"></div>
+	</div>
+
+	<hr>
+
+	<input type="button" value=" 글쓰기 " class="btn">
+	<input type="button" value=" 목록 보기 " class="btn">
+	<input type="button" value=" 삭제하기 " class="btn">
+</body>
+</html>

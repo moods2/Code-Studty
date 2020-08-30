@@ -1,0 +1,7 @@
+1588741698304	Extract method 'listName'
+1588813487224	Encapsulate field 'name'
+1588813489973	Encapsulate field 'size'
+1588818944399	Extract method 'checkLength'
+1588828906804	Extract method 'checkLength'
+1588905891659	Extract method 'countFile'
+1588922253465	Extract method 'deleteFile'

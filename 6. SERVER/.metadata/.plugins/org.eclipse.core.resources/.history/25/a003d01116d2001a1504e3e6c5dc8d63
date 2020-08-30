@@ -1,0 +1,11 @@
+/* WebContent > css > main.css */
+
+.header {
+	border-bottom: 1px solid #DDD;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.content {
+	
+}

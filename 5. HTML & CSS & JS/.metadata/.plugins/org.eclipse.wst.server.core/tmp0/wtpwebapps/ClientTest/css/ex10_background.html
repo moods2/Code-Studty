@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*
+        CSS 색상 표현법
+        1. Color Name: red, blue...
+        2. RGB Color(HEX) : #FFFFFF
+        3. RGB Color(DEC) : rgb (255, 0, 0)
+        4. RGBA Color(DEC) : rgba(255, 0, 0, 1) - A(alpha channel - 투명도, 0~1)
+        */
+
+        /* body {
+            background-color: yellow;
+        } */
+
+        /* #box1 {
+            background-color: thistle;
+            background-color: #ff27c0;
+            background-color: rgb(255, 0, 129);
+            background-color: rgba(255, 0, 0, .5);
+
+            background-image: url(../images/catty01.png);
+
+        } */
+
+        /* 
+            position
+            - x : left, center, top
+            - y : top, center, bottom
+        */
+
+        body {
+            /* background-color: yellow; */
+            background-image: url(../images/catty01.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        #txt1 {
+
+            /* background-color: yellow; */
+            background-image: url(../images/catty01.png);
+
+        }
+
+        #btn1 {
+            background-image: url(../images/catty01.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 150px;
+            height: 150px;
+        }
+
+        #search {
+
+            background-image: url(../images/hangame.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+
+        /* 가상(의사) 클래스 */
+        #search:focus {
+            background-image: url();
+        }
+
+        #btnSearch {
+            background-image: url(../images/bullet04.png);
+            background-repeat: no-repeat;
+            background-position: 5px center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- 
+
+        HTML의 서식
+        - 특정 태그만 특정 서식을 가진다.
+
+        CSS의 서식
+        - 모든 태그가 모든 서식을 가진다.
+
+        배경 CSS
+        1. 배경색
+            - background-color
+        2. 배경 이미지
+            - background-image
+
+    -->
+    
+    <!-- <div 배경색(X) 글자색(X) 크기지정(X)></div>
+    <div id="" class="" title=""></div>
+    <body bgcolor=""></body>
+    <font color></font>
+    <img width="" height=""> -->
+
+    <!-- <img style="width:100px;">
+    <div style="width:100px;"></div> -->
+
+    <input type="text" id="search">
+    <input type="button" value="   검색" id="btnSearch">
+    <button value="button" id="btnSearch2">
+            <img src="../images/bullet04.png">검색
+    </button>
+
+    <hr>
+
+    <input type="text" id="txt1">
+    <input type="text">
+    <br><br>
+    <input type="button" id="btn1" value="버튼">
+    <input type="button" value="버튼">
+
+    <hr>
+
+    <div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliaccusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipuam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipuam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipuam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetvero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsum reiciendis distinctio quaerat! Officia, soluta! Quae sequi accusantium rem aliquam numquam ab mollitia enim, culpa ducimus commodi nemo temporibus vero.</div>
+
+</body>
+</html>

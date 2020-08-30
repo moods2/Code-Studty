@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #img {
+            position: absolute;
+            /* left: 200px; top: 300px; */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="../images/face10.png" id="img">
+
+    <script>
+
+        var img = document.getElementById("img");
+
+        img.style.left = "200px";
+        img.style.top = "300px";
+        
+        img.onmouseover = function() {
+
+            var x = parseInt(img.style.left);
+            var y = parseInt(img.style.top);
+            var cx = event.clientX;
+            var cy = event.clientY;
+            
+            console.log(event.clientX);
+            console.log(event.clientY);
+
+            if ((cx >= x && cx <= x + 63) && 
+                (cy >= y + 36 && cy <= y + 86)) {
+                img.style.left = x + 30 + "px";
+            } else if ((cx >= x + 64 && cx <= x + 127) && 
+                        (cy >= y + 36 && cy <= y + 86)) {
+                img.style.left = x - 30 + "px";
+            } else if ((cy >= y && cy <= y + 63) 
+                && (cx >= x + 20 && cx <= x + 107)) {
+                img.style.top = y + 30 + "px";
+            } else if ((cy >= y + 64 && cy <= y + 127)
+                && (cx >= x + 20 && cx <= x + 107)) {
+                img.style.top = y - 30 + "px";
+            }
+
+            // if ((event.clientX >= x && event.clientX <= x + 120) &&
+            //     (event.clientY >= y + 53 && event.clientY <= y + 126)) {
+            //         img.style.left = x + "px";
+            //         img.style.top = y - 30 + "px";
+            // }
+
+        }
+
+    </script>
+
+</body>
+</html>

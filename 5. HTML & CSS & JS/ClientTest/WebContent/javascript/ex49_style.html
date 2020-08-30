@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box {
+            width: 250px;
+            height: 188px;
+            border: 10px solid black;
+            overflow: hidden;
+        }
+
+        #list {
+            width: 2500px;
+            transition: all 1s linear;
+        }
+
+        #list img { float: left; }
+
+        #sel1 {
+            outline: none;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px;
+        }
+
+        /* #box:hover #list {
+            transform: translate(-500px, 0);
+        } */
+
+    </style>
+</head>
+<body>
+    
+    <h1>애완 동물</h1>
+    <div id="box">
+        <div id="list">
+            <img src="../images/cat01.jpg">
+            <img src="../images/cat02.jpg">
+            <img src="../images/cat03.jpg">
+            <img src="../images/cat04.jpg">
+            <img src="../images/cat05.jpg">
+            <img src="../images/dog01.jpg">
+            <img src="../images/dog02.jpg">
+            <img src="../images/dog03.jpg">
+            <img src="../images/dog04.jpg">
+            <img src="../images/dog05.jpg">
+        </div>
+    </div>
+    <hr>
+    <input type="button" value="버튼" id="btn1">
+
+    <select id="sel1">
+        <option value="0">고양이1</option>
+        <option value="1">고양이2</option>
+        <option value="2">고양이3</option>
+        <option value="3">고양이4</option>
+        <option value="4">고양이5</option>
+        <option value="5">강아지1</option>
+        <option value="6">강아지2</option>
+        <option value="7">강아지3</option>
+        <option value="8">강아지4</option>
+        <option value="9">강아지5</option>
+    </select>
+
+    <script>
+
+        var btn1 = document.getElementById("btn1");
+        var list = document.getElementById("list");
+        var sel1 = document.getElementById("sel1");
+        var oldX = 0; //이전 선택 동물
+        var newX = 0; //현재 선택 동물
+
+        btn1.onclick = function() {
+            list.style.transform = "translate(-2250px, 0)";
+        }
+
+        sel1.onchange = function() {
+            // console.log(sel1.value);
+            newX = sel1.value;
+
+            list.style.transitionDuration = Math.abs(newX - oldX) / 2 + "s";
+
+            list.style.transform = "translate(-" + (250 * sel1.value) + "px, 0)";
+
+            oldX = newX;
+        }
+
+    </script>
+
+</body>
+</html>

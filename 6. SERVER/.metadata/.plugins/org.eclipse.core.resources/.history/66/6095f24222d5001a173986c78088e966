@@ -1,0 +1,6 @@
+package com.test.codestudy.member;
+
+@WebServlet("/member/registerok.do");
+public class RegisterOk {
+
+}

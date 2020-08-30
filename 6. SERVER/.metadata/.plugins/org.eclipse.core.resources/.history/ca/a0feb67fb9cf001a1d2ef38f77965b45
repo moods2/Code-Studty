@@ -1,0 +1,27 @@
+package com.test.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//서블릿 클래스
+public class Ex01 extends HttpServlet {
+	
+	//2. doGet/doPost
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//3. PrintWriter
+		PrintWriter writer = resp.getWriter();
+		
+		//4. 페이지 작성
+		// - 구구단 출력하기(랜덤)
+		
+		
+	}
+
+}

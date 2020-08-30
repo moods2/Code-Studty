@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #table {
+            margin: 0 auto;
+            width: 660px;
+        }
+
+        #about {
+            border-left: 3px dotted #808080;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        #box {
+            border: 10px solid black;
+            height: 800px;
+            margin-bottom: 30px;
+            padding-left: 20px;
+        }
+
+        #ball1, #ball2, #ball3, #ball4, #ball5, #ball6, #ball7 {
+            border: 10px solid black;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        #ball1 { background-color: red; animation-duration: .6s; }
+        #ball2 { background-color: orange; animation-duration: .5s; }
+        #ball3 { background-color: yellow; animation-duration: .7s; }
+        #ball4 { background-color: green; animation-duration: .8s; }
+        #ball5 { background-color: blue; animation-duration: .7s; }
+        #ball6 { background-color: purple; animation-duration: .8s; }
+        #ball7 { background-color: pink; animation-duration: .9s; }
+
+        #box #ball1, #box #ball2, #box #ball3,
+        #box #ball4, #box #ball5, #box #ball6,
+        #box #ball7 {
+            animation-name: key1;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in;
+        }
+
+        @keyframes key1 {
+            from { transform: translate(0px, 0px); }
+			to { transform: translate(0px, 700px); }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="table">
+    <div id="title"><h1>animation + keyframe</h1></div>
+        <div id="about">
+            공 튀기시오.
+        </div>
+        <div id="box">
+            <div id="ball1"></div>
+            <div id="ball2"></div>
+            <div id="ball3"></div>
+            <div id="ball4"></div>
+            <div id="ball5"></div>
+            <div id="ball6"></div>
+            <div id="ball7"></div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+        정렬, Alignment
+        - 수평 정렬
+        - 인라인 태그와 블럭 태그의 수평 정렬
+
+        1. 인라인 태그
+            - 내용물의 수평 정렬을 할 수 없다.
+            - 영역의 크기가 내용물의 크기 > 공간의 여유가 없어서
+            정렬이 불가능하다.
+            - 부모인 블럭태그를 통해서 text-align 속성을 사용한다.
+            (유일한 방법)
+            - float는 정렬의 용도가 아니다.(흐름을 깨버리기 때문에)
+
+        2. 블럭 태그
+            - 수평 정렬의 개념이 없다.(너비가 100%이기 때문에)
+            - 편법 사용
+
+        */
+
+        b {
+            /* width: 300px;
+            text-align: center; */
+            background-color: yellow;
+            /* float: right; */
+        }
+
+        #box1 {
+            text-align: center;
+            background-color: blue;
+        }
+
+        #box2 {
+            background-color: teal;
+            color: white;
+            width: 100px;
+            height: 100px;
+            /* text-align: center; */
+            /* margin-left: auto;
+            margin-right: auto; */
+
+            margin: 0px auto;
+        }
+
+        #box3 {
+            background-color: aquamarine;
+            padding: 5px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="box1">
+        <b>홍길동</b>
+    </div>
+
+    <hr>
+
+    <div id="box3">
+        <div id="box2">상자2</div>
+    </div>
+
+</body>
+</html>

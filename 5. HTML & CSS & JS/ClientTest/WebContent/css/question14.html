@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            overflow-y: scroll;
+            margin-bottom: 30px;
+        }
+
+        #table {
+            width: 1400px;
+            padding-right: 10px;
+        }
+
+        #about {
+            border-left: 3px dotted #808080;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        #line1, #line2, #line3, #line4, #line5 {
+            border: 1px solid black;
+            height: 150px;
+            margin-bottom: -1px;
+        }
+
+        #box1, #box2, #box3, #box4, #box5 {
+            border: 1px solid black;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 0;
+            bottom: -48px;
+            border-radius: 50%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 70px;
+            transition: all 5s;
+        }
+
+        #box1 { background-color: tomato; transition-duration: 6s; }
+        #box2 { background-color: gold; transition-duration: 4s; }
+        #box3 { background-color: orange; transition-duration: 5s; }
+        #box4 { background-color: greenyellow; transition-duration: 7s; }
+        #box5 { background-color: cornflowerblue; transition-duration: 4.5s; }
+
+        #game:hover #box1, #game:hover #box2, #game:hover #box3,
+        #game:hover #box4, #game:hover #box5 {
+            transform: translate(1295px, 0px) rotate(3600deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="table">
+    <div id="title"><h1>:hover + position(absolute) + transform(rotate) + transition</h1></div>
+        <div id="about">
+            공를 회전시키면서 우측으로 이동하시오.
+        </div>
+        <div id="game">
+            <div id="line1">
+                <div id="box1">A</div>
+            </div>
+            <div id="line2">
+                <div id="box2">B</div>
+            </div>
+            <div id="line3">
+                <div id="box3">C</div>
+            </div>
+            <div id="line4">
+                <div id="box4">D</div>
+            </div>
+            <div id="line5">
+                <div id="box5">E</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

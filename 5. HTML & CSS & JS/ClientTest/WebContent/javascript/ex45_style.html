@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#tbl1 { border: 1px solid black; 
+				border-collapse: collapse; }
+		#tbl1 td { border: 1px solid black; 
+				width: 100px; height: 100px; }
+	</style>
+</head>
+<body>
+
+	<table id="tbl1">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<script>
+
+		var index = 0;
+		var td = document.getElementsByTagName("td");
+
+		td[index].style.backgroundColor = "gold";
+
+        window.onkeydown = function() {
+            if (event.keyCode == 37) {
+                //왼쪽
+                clear()
+                index--;
+                if (index < 0) index = td.length - 1;
+
+            } else if (event.keyCode == 39) {
+                //오른쪽
+                clear()
+                index++;
+                if (index >= td.length) index = 0; //index = td.length - 1
+            }
+                td[index].style.backgroundColor = "gold";
+        }
+
+        function clear() {
+            for (var i=0; i<td.length; i++) {
+                td[i].style.backgroundColor = "transparent";
+            }
+        }
+
+
+	</script>
+
+</body>
+</html>

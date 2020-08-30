@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="/jsp/css/bootstrap.css">
+<script src="/js/js/jquery-1.12.4.js"></script>
+<script src="/js/js/bootstrap.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+	<div class="container">
+	
+		
+	
+	</div>
+	
+	<script>
+	
+	</script>
+	
+</body>
+</html>

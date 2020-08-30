@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 
+	<head>
+	- 문서의 내부 정보를 가진다.
+	- 브라우저에게 제공된다.
+	
+	<head>의 자식
+	- <meta>
+		- 페이지와 관련된 여러가지 정보들을 기술한다.
+	- <title>
+	- <style>
+	- <script>	
+	 -->
+	<meta charset="UTF-8">
+	<meta name="author" content="홍길동">
+	<meta name="keyword" content="HTML,수업예제,head태그">
+	<meta name="description" content="HTML의 head태그 예제입니다.">
+	<meta name="generator" content="Eclipse 2020.03">
+	<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

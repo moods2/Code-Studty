@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body { background-color: #444; }
+
+        #fire {
+            border: 10px solid black;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        #hori {
+            border-bottom: 3px solid red;
+            position: relative;
+            top: 350px;
+        }
+
+        #verti {
+            border-left: 3px solid red;
+            height: 700px;
+            position: relative;
+            bottom: 3px;
+            left: 350px;
+        }
+
+        img {
+            position: relative;
+            right: 200px;
+            bottom: 425px;
+            transition: all 1s;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="fire">
+        <div id="hori"></div>
+        <div id="verti"></div>
+    </div>
+
+    <script>
+
+        var fire = document.getElementById("fire");
+        var cattimer = 0;
+        var shoottimer = 0;
+        var img;
+        var speed = [5, 10, 20, 30, 50, 100, 300, 500];
+
+        shoottimer = setInterval(shoot(), 2000);
+
+        function shoot() {
+
+            if(img != null) {
+                fire.removeChild(img);
+                clearInterval(cattimer);
+            }
+            
+            img = document.createElement("img");
+            img.src = "../images/catty0"+ (parseInt(Math.random() * 5) + 1) + ".png";
+            img.style.position = "relative";
+            img.style.left = "-200px";
+            img.style.top = "-430px";
+            fire.appendChild(img);
+            
+            cattimer = setInterval(function() {
+                img.style.left = parseInt(img.style.left) + speed[parseInt(Math.random() * 8)+1] + "px";
+            }, 30);
+
+        };        
+
+    </script>
+
+</body>
+</html>

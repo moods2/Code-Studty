@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.main {
+			border: 1px solid #EEEEEE;
+			background-color: #EAEAEB;
+			width: 500px;
+			height: 300px;
+			margin: 0px auto;
+			position: relative;
+			left: 0px;
+			top: 0px;
+		}
+		
+		.back {
+			position: absolute;
+			left: 50px;
+			top: 20px;
+			background-color: #EC3E05;
+			width: 400px;
+			height: 260px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		
+		.white {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			left: 100px;
+			top: 5px;
+			background-color: #F9FEFE;
+			border-radius: 50%;
+            transition: all 2s linear;
+            transform-origin: center 125px;
+            transition-delay: .2s;
+		}
+		
+		.black {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			left: 150px;
+			top: 15px;
+			background-color: #85310F;
+			border-radius: 50%;
+            transition: all 2s linear;
+            transform-origin: center 115px;
+            transition-delay: .2s;
+		}
+		
+		.top, .bottom {
+			position: absolute;
+			width: 400px;
+			height: 130px;
+			background-color: #D5491A;
+            transition: all .5s;
+		}
+		
+		.top {
+			top: 0px;
+			transform: translate(0px, -130px); 
+		}
+		
+		.bottom {
+			top: 130px;
+			transform: translate(0px, 130px);
+		}
+		
+		.main:hover .white {
+            transform: rotate(720deg);
+            transition-delay: 0;
+		}
+		
+		.main:hover .black {
+            transform: rotate(720deg);
+            transition-delay: 0;
+		}
+		
+		.main:hover .top {
+            transform: translate(0px, 0px);
+            transition-delay: 1.8s;
+		}
+		
+		.main:hover .bottom {
+            transform: translate(0px, 0px);
+            transition-delay: 1.8s;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width: 700px; margin: 30px auto;">
+		<h1 style="margin-top: 0px;">transition + transition-duration + transition-origin + position(absolute)</h1>
+		<div style="margin: 20px 0px; border-left: 3px dotted gray; padding-left: 10px;">
+			눈알..
+		</div>
+		<div class="main">
+			<div class="back">
+				<div class="white"></div>
+				<div class="black"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+		<!--
+		<div class="main" style="margin-top: -20px;">
+			<div class="back">
+				<div class="white"></div>
+				<div class="black"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+		-->
+	</div>
+</body>
+</html>
+	

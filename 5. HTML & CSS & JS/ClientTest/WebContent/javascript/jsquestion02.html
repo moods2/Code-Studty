@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <hr>
+    <div style="width: 100%;">
+        <img src="../images/cat01.jpg" name="cat1" data-file="dog01.jpg"
+         data-origin="cat01.jpg">
+        <img src="../images/cat02.jpg" name="cat2" data-file="dog02.jpg"
+         data-origin="cat02.jpg">
+        <img src="../images/cat03.jpg" name="cat3" data-file="dog03.jpg"
+         data-origin="cat03.jpg">
+        <img src="../images/cat04.jpg" name="cat4" data-file="dog04.jpg"
+         data-origin="cat04.jpg">
+        <img src="../images/cat05.jpg" name="cat5" data-file="dog05.jpg"
+         data-origin="cat05.jpg">
+    </div>
+
+    <script>
+
+       function catdog() {
+            for (var i=1; i<=5; i++) {
+                document.images["cat" + i].onmouseover = function() {
+                    event.srcElement.src="../images/" + event.srcElement.dataset["file"];
+                };
+                document.images["cat" + i].onmouseout = function() {
+                    event.srcElement.src="../images/" + event.srcElement.dataset["origin"];
+                };
+            };
+       }
+       catdog();
+
+    </script>
+
+</body>
+</html>

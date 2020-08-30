@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+
+	//1. 클라이언트(브라우저) : UTF-8
+	//2. 데이터 전송
+	//3. 인터넷(WEB) ~~ 서버 도착 : ISO-8859-1
+	//4. 서버 수신 : UTF-8
+
+	//데이터 수신하기
+	request.setCharacterEncoding("UTF-8");
+
+	String name = request.getParameter("name");
+	String age = request.getParameter("age");
+	
+	//텍스트 박스
+	String txt1 = request.getParameter("txt1");
+	
+	//암호 박스
+	String pw1 = request.getParameter("pw1");
+	
+	//다중 라인
+	String txt2 = request.getParameter("txt2");
+	txt2 = txt2.replace("\n", "<br>");
+	
+	//체크 박스
+	//1. value O
+	// - 체크O : value
+	// - 체크X : null
+	//2. value X
+	// - 체크O : "on"
+	// - 체크X : null
+	String cb1 = request.getParameter("cb1");
+	
+	String cb2 = request.getParameter("cb2");
+	String cb3 = request.getParameter("cb3");
+	String cb4 = request.getParameter("cb4");
+	
+	String temp = "";
+	
+	for (int i=2; i<=4; i++) {
+		temp += request.getParameter("cb" + i) + ", ";
+	}
+
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+
+</style>
+</head>
+<body>
+
+	<h1>데이터 수신하기</h1>
+	
+	<div>이름 : <%= name %></div>
+	<div>나이 : <%= age %></div>
+	
+	
+	<h1>폼 데이터 수신하기</h1>
+	<div>텍스트박스 : <%= txt1 %></div>
+	<div>암호박스 : <%= pw1 %></div>
+	<div>다중라인 : <%= txt2 %></div>
+	<div>체크박스 : <%= cb1 %></div>
+	
+	<div>체크박스 : <%= cb2 %></div>
+	<div>체크박스 : <%= cb3 %></div>
+	<div>체크박스 : <%= cb4 %></div>
+	
+	<div>체크박스 : <%= temp %></div>
+	
+	<script>
+	
+	</script>
+	
+</body>
+</html>

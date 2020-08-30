@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body { margin-bottom: 300px; }
+
+        .box {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        #box1 { border-radius: 100px; }
+
+        #box2 { height: 300px; border-radius: 150px;}
+
+        #box3 {
+            border-top-left-radius: 150px;
+            border-bottom-right-radius: 150px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        #box4 {
+            border-radius: 50%;
+        }
+
+        #box5 {
+            border-radius: 100px;
+        }
+
+        #list > img {
+            border-radius: 50%;
+        }
+
+        #list > img:hover {
+            border-radius: 0;
+        }
+
+        #txt1 {
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 100px;
+            padding: 4px 10px;
+        }
+
+        #btn1 {
+            margin-top: 50px;
+            border-radius: 3px;
+            border: 0px solid gray;
+            background-color: cornflowerblue;
+            color: white;
+            /* width: 100px;
+            height: 30px; */
+            padding: 8px 45px;
+        }
+        
+        #btn1:hover {
+            text-shadow: -1px -1px #666;
+            box-shadow: 1px 1px #666;
+        }
+
+        #tbl1 {
+            /* border: 1px solid gray; */
+            /* border-collapse: separate; */
+            /* border-radius: 10px; */
+            width: 500px;
+            /* border-spacing: 0; */
+        }
+
+        #tbl1 td {
+            border: 1px solid gray;
+            width: 100px;
+            padding: 5px;
+            /* border-radius: 10px; */
+        }
+
+        #tbl1 tr:first-child td:first-child {
+            /* background-color: gold; */
+            border-top-left-radius: 20px;
+        }
+
+        #tbl1 tr:first-child td:last-child {
+            /* background-color: gold; */
+            border-top-right-radius: 20px;
+        }
+
+        #tbl1 tr:last-child td:first-child {
+            /* background-color: gold; */
+            border-bottom-left-radius: 20px;
+        }
+
+        #tbl1 tr:last-child td:last-child {
+            /* background-color: gold; */
+            border-bottom-right-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="box1" class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit officia sequi ipsa quos qui consequuntur atque delectus dolorem assumenda amet suscipit sint, ducimus numquam debitis ad maxime ut in non!</div>
+    <div id="box2" class="box">Vel molestias ea dolorum sapiente! Quidem tempora magni, aut dolorum natus dolorem nisi! Molestias sapiente possimus incidunt ipsum saepe, ducimus cupiditate temporibus et, eum, ipsam excepturi commodi cumque nulla facilis!</div>
+    <div id="box3" class="box">Rem, similique. Iure, provident mollitia incidunt id sequi accusamus voluptatum vero quod molestiae aliquid suscipit inventore quidem numquam exercitationem dolorem distinctio deserunt fugit quo, vel facere! Iure possimus veniam accusamus!</div>
+    <div id="box4" class="box">Alias a possimus distinctio deleniti non illum tempora rem fuga porro est amet voluptatum mollitia laboriosam vero magni facere tempore, asperiores libero quod ipsa officia. Laboriosam laborum recusandae voluptas libero.</div>
+    <div id="box5" class="box">Consectetur pariatur quia temporibus quas quis dolores nihil eaque quo explicabo ratione voluptates, possimus ut accusantium eveniet dicta voluptate facilis maxime mollitia ipsam est ad ipsum reprehenderit suscipit molestias. Neque?</div>
+
+
+    <div id="list">
+        <img src="../images/dog01.jpg">
+        <img src="../images/dog02.jpg">
+        <img src="../images/dog03.jpg">
+        <img src="../images/dog04.jpg">
+        <img src="../images/dog05.jpg">
+    </div>
+
+    
+    <h1>컨트롤</h1>
+
+    <div><input type="text" id="txt1"></div>
+    <div><input type="button" id="btn1" value="Administrator Button"></input></div>
+
+
+    <h1>표</h1>
+
+    <table id="tbl1">
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

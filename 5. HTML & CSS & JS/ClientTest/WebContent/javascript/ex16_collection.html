@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>이미지</h1>
+    <img src="../images/catty01.png">
+    <img src="../images/catty02.png">
+    <img src="../images/catty03.png">
+    <img src="../images/catty04.png">
+    <img src="../images/catty05.png">
+
+    <h1>링크</h1>
+    <a href="#">네이버</a>
+    <a name="a">A 표지판</a>
+    <a href="#">다음</a>
+    <a name="b">B 표지판</a>
+    <a href="#">구글</a>
+
+    <h1>폼</h1>
+    <form name="form1">
+        <input type="text" name="txt1">
+        <input type="text" name="txt2">
+        <input type="button" value="전송" name="btn1">
+    </form>
+
+    <script>
+        //JavaScript가 문서 내용을 기반으로 자동 생성하는 배열
+        //1. window.document.images : 문서상의 모든 <img> 태그 배열
+        //2. window.document.links : 문서상의 모든 <a href=""> 태그 배열
+        //3. window.document.anchors : 문서상의 모든 <a name="" id=""> 태그 배열
+        //4. window.document.forms : 문서상의 모든 <form> 태그 배열
+        //5. window.document.forms[1].elements : 특정 폼의 하위 입력 태그 배열
+        //6. window.document.all : 문서상의 모든 태그 배열, 비표준(MS), 대부분 브라우저 지원
+
+        console.log(window.document.images.length);
+        console.log(window.document.images);
+
+        console.log(window.document.links.length);
+        console.log(window.document.anchors.length);
+
+        //window.document.form1
+        console.log(window.document.forms.length);
+        // window.document.form1
+        window.document.forms[0].txt1.value = "확인";
+
+        console.log(window.document.forms[0].elements.length);
+
+        //24
+        //1. 모든 태그 집합(BOM에 없는 태그조차)
+        //2. 계층에 상관없이 하나의 집합
+        console.log(window.document.all.length);
+
+        var alist = window.document.all;
+
+        for (var i=0; i<alist.length; i++) {
+            console.log(alist[i].nodeName); //DOM
+        }
+
+    </script>
+
+</body>
+</html>

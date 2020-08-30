@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+
+	//현재 상황
+	// - 요청 ~ 응답 사이에 지속적으로 특정 데이터를 유지해야 하는 상황
+	// - one -> two
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<%@ include file="inc/asset.jsp" %>
+<style>
+
+</style>
+</head>
+<body>
+
+	<div class="container">
+	
+		
+	
+	</div>
+	
+	<script>
+	
+	</script>
+	
+</body>
+</html>

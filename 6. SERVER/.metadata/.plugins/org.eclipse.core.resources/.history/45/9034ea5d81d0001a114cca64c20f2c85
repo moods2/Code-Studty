@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+	form > div {
+		margin-bottom: 15px;
+	}
+</style>
+</head>
+<body>
+
+	<h1>데이터 전송하기</h1>
+	
+	<form method="POST" action="ex09_action.jsp">
+		<div><input type="text" name="name" placeholder="이름"></div>
+		<div><input type="number" name="age" placeholder="나이"></div>
+		<div><input type="submit" value="보내기"></div>
+	</form>
+	
+	
+	<h1>폼 컨트롤 전송하기</h1>
+	
+	<form method="POST" action="ex09_action.jsp">
+		<div>
+			텍스트 박스:
+			<input type="text" name="txt1">
+		</div>
+		<div>
+			암호 상자:
+			<input type="password" name="pw1">
+		</div>
+		<div>
+			다중 라인:
+			<textarea name="txt2" cols="50" rows="5"></textarea>
+		</div>
+		
+		<div>
+			<input type="submit" value="전송하기">
+		</div>
+	</form>
+	
+	<script>
+	
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="js/Backstretch.js"></script>
+    <!-- Kakao Map -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6d54ec4ee3d75f5d446f2cddfc3e41d4"></script>
+
+    <style>
+
+        body { margin: 0 auto; }
+        h1 { font-family: "Arial Black"; }
+        #main { width: 100%; }
+        #top {
+            /* border: 1px solid black; */
+            min-width: 1600px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        #bottom {
+            /* border: 1px solid black; */
+            height: 200px;
+            background-color: #eee;
+            color: white;
+        }
+        #topmenu {
+            border-bottom: 1px solid black;
+            background-color: white;
+            width: 100%;
+            height: 40px;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+            padding: 40px 0;
+            position: absolute;
+            /* margin-top: -120px; */
+        }
+        .menubar {
+            margin: 0 5px;
+        }
+        #topmenu > span {
+            cursor: pointer;
+        }
+        .switch {
+            /* border: 1px solid white; */
+            position: relative;
+            top: 50%;
+        }        
+        #topleft {
+            display: inline-block;
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 65px;
+            background-image: url("./images//title.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            left : 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #topright {
+            font-size: 13px;
+            position: absolute;
+            right : 5px;
+            top: 42px;
+            cursor: pointer;
+        }
+
+        #search {
+            border: 0;
+            border-bottom: 1px solid white;
+            background-color: transparent;
+            outline: none;
+            color: black;
+
+        }
+
+        #chatbot {
+            width: 88px;
+            height: 88px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #frogue-container, .frogue-chat {
+            position: absolute;
+            left:20px;
+            bottom: 0;
+        }
+
+        #movetop {
+            width: 40px;
+            height: 40px;
+            background-color: gray;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            padding-top: 3px;
+        }
+        #movetop:hover {
+            background-color: orange;
+        }
+        #movetop a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        /* 내용======================================================================================================== */
+
+        #mainBox {
+            width: 1200px;
+            /* text-align: center; */
+            margin: 120px auto;
+            min-height: 890px;
+        }
+
+        #mainBox h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* 글 */
+        #tbl {
+            width: 1200px;
+            margin-top: 100px;
+            border-bottom: 2px solid gray;
+            border-collapse: collapse;
+        }
+
+        #tbl th {
+            height: 40px;
+            background-color: #7E9CB6;
+        }
+
+        #tbl th:nth-child(1) {width: 110px; text-align: center; color: #d2e1ee;}
+        #tbl th:nth-child(2) {width: 700px; text-align: left; color: white;}
+        #tbl th:nth-child(3) {text-align: right; color: white; padding-right: 20px;}
+
+        #tbl tr:nth-child(1) td{
+            border-bottom: 1px solid #ddd;
+        }
+
+        #tbl tr:first-child td:nth-child(1) a{
+            padding-left: 25px;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        #tbl tr:first-child td:nth-child(2),#tbl tr:first-child td:nth-child(3) {text-align: right; width: 100px; height: 40px;}
+
+        #tbl tr:first-child td:nth-child(2) span {
+            color: #7E9CB6;
+        }
+        #tbl tr:first-child td:nth-child(3) span {
+            color: #d18b78;
+            padding-right: 20px;
+        }
+
+        #tbl tr:nth-child(2) p{
+            min-height: 500px;
+            padding: 25px; 
+        }
+
+        /* 버튼 */
+        .btn-primary {
+            outline: none;
+            width: 120px;
+            height: 40px;
+            background-color: #7E9CB6;
+            border-color: #7E9CB6;
+            float: right;
+            outline: none;
+            margin-top: 60px;
+            margin-left: 10px;
+            margin-bottom: 100px;
+
+        }
+
+        .btn-primary::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        #delete {
+            background-color: #d18b78;
+            border-color: #d18b78;
+            outline: none;
+        }
+
+        #list {
+            background-color: #bbb;
+            border-color: #bbb;
+            position: relative;
+            right: 250px;
+            outline: none;
+        }
+
+
+        /* 답변 */
+        #tbl2 {
+            width: 1200px;
+            margin-top: 100px;
+            border-bottom: 2px solid gray;
+            border-collapse: collapse;
+        }
+
+        #tbl2 th {
+            height: 40px;
+            background-color: #d18b78;
+        }
+ 
+        #tbl2 th:nth-child(1) {width: 110px; text-align: center; color: #d2e1ee;}
+        #tbl2 th:nth-child(2) {width: 700px; text-align: left; color: white;}
+        #tbl2 th:nth-child(3) {text-align: right; color: white; padding-right: 20px;}
+
+        #tbl2 tr:nth-child(1) p{
+            min-height: 500px;
+            padding: 25px; 
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="main">
+
+        <!-------------------------------- 화면 상단부 -------------------------------->
+        <div id="top">
+            <div id="topmenu">
+                <!-- 상단메뉴 좌측(메인화면으로 돌아가기) -->
+                <a href="main.html" id="topleft"></a>
+                <!-- 상단메뉴 센터(콘서트, 뮤지컬, 연극, 클래식, 전시) -->
+                <span data-item="item1" class="menubar">콘서트</span>
+                <span data-item="item2" class="menubar">뮤지컬</span>
+                <span data-item="item3" class="menubar">연극</span>
+                <span data-item="item4" class="menubar">클래식</span>
+                <span data-item="item5" class="menubar">전시</span>
+                <!-- 상단메뉴 우측(랭킹, 이벤트, 검색창, 마이페이지) -->
+
+                <div id="topright">
+                    <span data-item="item6" class="menubar">랭킹</span>
+                    <span data-item="item7" class="menubar">이벤트</span>
+                    <input type="text" value="" id="search">
+                    <label for="search" class="glyphicon glyphicon-search"
+                        style="font-size: 14px; cursor: pointer;"></label>
+                    <div class="glyphicon glyphicon-user" 
+                        style="font-size: 14px; cursor: pointer; margin: 0 10px; "></div>
+                </div>
+            </div>
+            
+            <!-- 챗봇 : 단비봇 --------------------------------------------------------------------------------------------------------------------------------->
+            <!-- <img src="./images/face35.png" id="chatbot"> -->
+
+            <div id="frogue-container" class="position-right-bottom"
+                data-chatbot="e4957de9-dad9-448d-a709-e43eeb644f63"
+                data-user="사용자ID"
+                data-init-key="value">
+            </div>
+            <!-- data-init-식별키=값 으로 셋팅하면 챗플로우에 파라미터와 연동가능. 식별키는 소문자만 가능 -->
+            <script>
+                (function(d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'frogue-embed'));
+            </script>
+            <!-- 제일 위로 돌아가기 버튼 -->
+            <div id="movetop"><a href="#top">↑</a></div>
+        </div>
+
+        <!-- 내용============================================================================================================================================= -->
+        <div id="mainBox">
+            <h1>Q&A</h1>
+
+            <!-- <div id = "right"> -->
+
+                <table id="tbl">
+
+                    <thead>
+                        <th>예매방법</th>
+                        <th colspan="2">제목입니다.</th>
+                        <th colspan="2">2020-07-21 19:30</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3"><a href="user_qna_content.html">페이지 새로고침</a></td>
+                            <td>조회수 <span>10</span></td>
+                            <td>답변 <span>완료</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" style="min-height: 600px;">
+                                <p>
+                                내용입니다.
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <table id="tbl2">
+
+                    <thead>
+                        <th>답변</th>
+                        <th colspan="2">[ <span>제목입니다.</span> ] 에 대한 답변입니다.</th>
+                        <th colspan="2">2020-07-21 19:30</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5" style="min-height: 600px;">
+                                <p>
+                                답변입니다.
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                        
+                <button class="btn btn-primary" id="update">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    수정하기
+                </button>
+                <button class="btn btn-primary" id="delete">
+                <span class="
+                glyphicon glyphicon-trash"></span>
+                삭제하기
+                </button>
+                <button class="btn btn-primary" id="list">
+                <span class="glyphicon glyphicon-list"></span>
+                목록
+                </button>
+        
+        
+                
+            <!-- </div> -->
+
+
+        </div>
+
+
+
+
+<!-------------------------------- 화면 하단부 -------------------------------->
+        <div id="bottom">
+            <div style="width: 1600px; margin: auto;">
+                <!-- 회사 마크 -->
+                <img src="./images/title2.png" style="transform: translate(0, 40px);">
+            </div>
+        </div>
+    </div>
+
+            <!-- <div id="place"></div> -->
+
+    <script>
+
+        //상단 메뉴 css
+        $(".menubar").mouseover(function() {
+        $(this).css("border-bottom", "5px solid orange");
+        });
+        $(".menubar").mouseout(function() {
+            $(this).css("border-bottom", "");
+        });
+
+        //챗봇 클릭시 행동
+        $("#chatbot").dblclick(function() {
+            alert("챗봇입니다!");
+        });
+        //챗봇 이동 가능
+        $("#chatbot").draggable();
+
+        $("#movetop").click(function() {
+            //<a> 본연의 기능을 제거
+			event.preventDefault();
+
+            $("html,body").animate({
+                scrollTop: 0
+            }, 1000);
+        });
+
+        // 내용==================================================================================================================================================================
+
+
+            
+        // var flag = false;
+
+        $(document).scroll(function() {
+            //메뉴가 시야에서 사라지는 순간 -> 메뉴를 붙박이로 만들기
+            // if (!flag) {
+                if ($(document).scrollTop() > $("#tbl").position().top) {
+                    $("#topmenu").css({
+                        width: "100%",
+                        position: "fixed",
+                        top: "0px",
+                        bottom: "",
+                        zIndex: "1"
+                    });
+                    // $("#topmenu").animate({
+                    //     top: "0px"
+                    // }, 1000, function() {
+                    //     flag=true;
+                    // });
+                };
+            // };
+
+            //상단 헤더(top)이 눈에 보일때 쯤
+            if ($(document).scrollTop() <= $("#tbl").position().top) {
+                $("#topmenu").css({
+                    position: "absolute",
+                    top: "0px",
+                    bottom: ""
+                });
+                // flag = false;                
+            }
+        });
+
+        // 수정하기 링크
+        $("#update").click(function() {
+            $(location).attr('href','user_qna_update.html');
+        });
+        // 목록 링크
+        $("#list").click(function() {
+            $(location).attr('href','user_qna.html');
+        });
+        // 삭제
+        $("#delete").click(function() {
+            // alert("삭제하시겠습니까?");
+
+            if (confirm("삭제하시겠습니까?")) {
+                $(location).attr('href','user_qna.html');
+            } else {
+            }
+
+        });
+
+ 
+
+
+
+    </script>
+
+
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>

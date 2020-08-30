@@ -1,0 +1,55 @@
+package com.test.codestudy.member;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/member/login.do")
+public class Login extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//1. 데이터 가져오기(id, pw)
+		//2. DB 작업 > select
+		//3. 결과 반환 > 완료 처리
+		
+		//1.
+		String id = req.getParameter("id");
+		String pw = req.getParameter("pw");
+		
+		//2. DB 작업 -> DAO 위임
+		MemberDAO dao = new MemberDAO();
+		MemberDTO dto = new MemberDTO();
+		dto.setId(id);
+		dto.setPw(pw);
+		
+		int result = dao.login(dto);
+		
+		//3.
+		if (result == 1) {
+			//로그인 O
+			
+		} else {
+			
+			//로그인 X
+			PrintWriter writer = resp.getWriter();
+			writer.print("<html>");
+			writer.print("<body>");
+			writer.print("<script>");
+			writer.print("alert('failed'); history.back();");
+			writer.print("</script>");
+			writer.print("</body>");
+			writer.print("</html>");
+			writer.close();
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	1. WebContent > hello.html
+	
+	2. http://localhost:8090/ServletTest/hello.html
+	
+	3. WebContent > sub > hi.html
+
+</body>
+</html>

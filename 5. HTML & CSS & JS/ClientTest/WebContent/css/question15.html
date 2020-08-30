@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #table {
+            border: 0px solid black;
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        #title {
+            font-variant: small-caps;
+        }
+
+        .box {
+            border: 1px solid #999999;
+            height: 150px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+
+        .box input[name=rb] {
+            display: none;
+        }
+
+        .box label {
+            border: 1px solid #999999;
+            font-variant: small-caps;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 28px 74px 28px;
+            border-radius: 5px;
+            position: relative;
+            left: -1px;
+            bottom: 1px;
+            background-color: #EEEEEE;
+            cursor: pointer;
+            display: block;
+            width: 100px;
+        }
+
+        .box div {
+            border: 0px solid black;
+            float: right;
+            position: relative;
+            left: 9px;
+            bottom: 152px;
+            width: 190px;
+            height: 150px;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all 200s;
+        }
+
+        #disc1 { background-image: url(../images/lp01.png); }
+        #disc2 { background-image: url(../images/lp02.png); }
+        #disc3 { background-image: url(../images/lp03.png); }
+        #disc4 { background-image: url(../images/lp04.png); }
+        
+        input[type=radio]:checked + label {
+            background-color: tomato;
+            color: white;
+        }
+
+        input[type=radio]:checked + label + div {
+            transform: rotate(36000deg);
+            transition-timing-function: linear;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="table">
+        <div id="title"><h1>Music</h1></div>
+        <div class="box">
+            <input type="radio" id="rb1" name="rb" checked>
+            <label for="rb1">Play</label>
+            <div class="disc" id="disc1"></div>
+        </div>
+        <div class="box">
+            <input type="radio" id="rb2" name="rb">
+            <label for="rb2">Play</label>
+            <div class="disc" id="disc2"></div>
+        </div>
+        <div class="box">
+            <input type="radio" id="rb3" name="rb">
+            <label for="rb3">Play</label>
+            <div class="disc" id="disc3"></div>
+        </div>
+        <div class="box">
+            <input type="radio" id="rb4" name="rb">
+            <label for="rb4">Play</label>
+            <div class="disc" id="disc4"></div>
+        </div>
+    </div>
+
+</body>
+</html>

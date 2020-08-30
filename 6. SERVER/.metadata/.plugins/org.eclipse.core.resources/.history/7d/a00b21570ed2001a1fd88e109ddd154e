@@ -1,0 +1,18 @@
+새 프로젝트 생성
+1. Dynamic Web Project > "Address"
+2. 필기.txt
+3. 패키지 : com.test.address
+4. 뷰폴더 : WebContent > WEB-INF > "views" 폴더 생성
+5. lib
+	- taglibs-standard-impl-1.2.5.jar
+	- ojdbc6.jar (C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib)
+6. Bootstrap
+	- 
+
+
+주소록(***** 암기)
+- CRUD
+- MVC
+- Oracle
+
+- DB 작업

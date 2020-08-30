@@ -1,0 +1,48 @@
+package com.test.codestudy.board;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.test.codestudy.DBUtil;
+
+public class BoardDAO {
+	
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public BoardDAO() {
+		
+		DBUtil util = new DBUtil();
+		conn = util.open();
+		
+	}
+	
+	public void close() {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	//WriteOk 서블릿 -> 글쓰기 위임
+	public int write(BoardDTO dto) {
+		
+		try {
+			
+			String sql = "";
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return 0;
+	}
+
+}

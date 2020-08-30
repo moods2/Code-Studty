@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+		#box {
+			border: 5px solid black;
+			width: 150px; height: 150px;
+			background: gold;
+			position: absolute;
+			left: 0; top: 0;
+		}
+
+        #cat {
+            position: absolute;
+        }
+
+	</style>
+</head>
+<body>
+	
+    <div id="box"></div>
+    <img src="../images/catty01.png" id="cat">
+
+	<script>
+
+		//Drag & Drop
+		var box = document.getElementById("box");
+        var cat = document.getElementById("cat");
+		
+        var isDown = false;
+		var oldX, oldY;
+
+		// box.onmousedown = function() {
+		// 	isDown = true;
+		// };
+
+		// box.onmouseup = function() {
+		// 	isDown = false;
+		// };
+
+		// box.onmousemove = function() {
+		// 	if (isDown) {
+				// box.style.left = event.clientX - 80 + "px";
+				// box.style.top = event.clientY - 80 + "px";
+		// 	}
+		// };
+
+        var temp;
+
+		window.onmousedown = function() {
+
+            // console.log(event.srcElement.nodeName);
+
+			if (event.srcElement.id == "box"
+                || event.srcElement.id == "cat") {
+                temp = event.srcElement; //box or cat
+                isDown = true;
+
+                oldX = event.offsetX;
+                oldY = event.offsetY;
+            }
+		};
+
+		window.onmouseup = function() {
+            isDown = false;
+		};
+
+		window.onmousemove = function() {
+            if (isDown) {
+                temp.style.left = event.clientX - oldX + "px";
+				temp.style.top = event.clientY - oldY + "px";
+
+                //고스트 이미지 제거 (두가지 다 같음)
+                event.preventDefault(); //현재 발생하는 기본적인 행동을 하지마시오.
+                return false; //현재 발생하는 기본적인 행동을 하지마시오.
+            }
+		};
+
+
+	</script>
+</body>
+</html>
+

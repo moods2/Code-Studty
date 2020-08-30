@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #title {
+            color: #333333;
+            font-family: '돋움';
+            font-size: 12px;
+            font-weight: bold;
+            padding-bottom: 3px;
+        }
+
+        #menu {
+            width: 590px;
+            margin-bottom: 20px;
+        }
+
+        #menu #content {
+            border: 1px solid #DDDDDD;
+            margin-top: 3px;
+            width: 588px;
+            padding-top: 20px;
+            padding-bottom: 18px;
+            margin-bottom: 20px;
+
+        }
+
+        #menu #content .item {
+            font-size: 12px;
+            font-family: '돋움';
+            border: 0px solid black;
+            width: 190px;
+            height: 50px;
+            float: left;
+            margin-right: 6px;
+            margin-bottom: 3px;
+        }
+
+        #content > .item img {
+            float: left;
+            margin-right: 6px;
+            margin-left: 15px;
+        }
+
+        #name {
+            font-weight: bold;
+            color: #666666;
+            display: inline;
+        }
+
+        #score {
+            font-weight: bold;
+            color: red;
+            display: inline;
+        }
+
+        #statement {
+            font-size: 11px;
+            color: #666666;
+            width: 180px;
+        }
+
+        #title #cursor {
+            width: 10px;
+            height: 10px;
+            background-image: url(../images/ui-icons_3d3d3d_256x240.png);
+            background-position: -38px -18px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="title"><div id="cursor"></div>서울/경기지역</div>
+    <div id="menu">
+        <div id="content">
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">빨래지수</div>
+                <div id="score">90</div>
+                <div id="statement">밀린 빨래하세요</div>
+            </div>
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">운동지수</div>
+                <div id="score">80</div>
+                <div id="statement">야외 경기를 즐겨요</div>
+            </div>
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">세차지수</div>
+                <div id="score">90</div>
+                <div id="statement">세차 후의 상쾌함을 느껴 보세요</div>
+            </div>
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">우산지수</div>
+                <div id="score">10</div>
+                <div id="statement">필요 없을 듯 합니다</div>
+            </div>
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">수면지수</div>
+                <div id="score">80</div>
+                <div id="statement">쾌적한 편입니다</div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div id="title"><div id="cursor"></div>계절별 생활지수</div>
+        <div id="content">
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">자외선지수</div>
+                <div id="score">70</div>
+                <div id="statement">자외선 노출 대비 하세요</div>
+            </div>
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">불쾌지수</div>
+                <div id="score">40</div>
+                <div id="statement">불쾌함을 느끼기 힘듭니다</div>
+            </div>
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">냉방지수</div>
+                <div id="score">20</div>
+                <div id="statement">냉방 없이 지낼 만 합니다</div>
+            </div>
+            <div class="item">
+                <img src="../images/ico_index0.gif">
+                <div id="name">식중독지수</div>
+                <div id="score">0</div>
+                <div id="statement">걱정 없어요</div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+
+</body>
+</html>

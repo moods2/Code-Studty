@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            선택자
+            2. ID 선택자
+                - 태그에 명시된 id 속성을 참조하는 선택자
+                - 태그명#아이디
+                - *#아이디
+        */
+        h1#title1 { color: red; }
+        *#title2 { color: blue; }
+
+        h1 { font-style: italic; }
+
+        /* div#content1 { color: red; }
+        div#content2 { color: blue; } */
+
+        /* 
+            3. 클래스 선택자
+                - 태그에 명시된 class 속성을 참조하는 선택자
+                - 태그명.클래스
+        */
+        .content { color: green; }
+    </style>
+</head>
+<body>
+    
+    <h1 id="title1">회사 소개</h1>
+    <div id="content1" class="content">대표 : 홍길동</div>
+    <div id="content2" class="content">위치 : 역삼동</div>
+
+    <hr>
+
+    <h1 id="title2">대표 소개</h1>
+    <div>인삿말 어쩌구 저쩌구</div>
+
+    <p class="content">문단입니다.</p>
+
+
+</body>
+</html>

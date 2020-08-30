@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cat {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #cat1 { z-index: 1; }
+        #cat2 { left: 125px; top: 90px; }
+        #cat3 { left: 200px; top: 150px; z-index: 2; }
+
+        #box {
+            border: 10px solid black;
+            width: 1250px;
+        }
+
+        #box .cats {
+            display: block;
+            float: left;
+            opacity: .6; /* 불투명도(0~1) */
+        }
+
+        #box .cats:hover {
+            opacity: 1;
+            position: relative;
+            left: 0;
+            top: -10px;
+        }
+
+        .content {
+            opacity: .7;
+        }
+
+        .content > span {
+            /* color: red; */
+            /* text-decoration: underline; */
+            border-bottom: 1px dashed gray;
+        }
+
+        .content > span:hover {
+            opacity: 1;
+            color: red;
+        }
+
+        .data {
+            outline: none;
+            border: 1px solid #ccc;
+            padding: 3px;
+        }
+
+        .data:focus {
+            background-color: burlywood;
+            border-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="../images/cat01.jpg" class="cat" id="cat1">
+    <img src="../images/cat02.jpg" class="cat" id="cat2">
+    <img src="../images/cat03.jpg" class="cat" id="cat3">
+
+    <hr style="margin-top: 400px;">
+
+    <div id="box">
+        <img src="../images/cat01.jpg" class="cats"><img src="../images/cat02.jpg" class="cats"><img src="../images/cat03.jpg" class="cats">
+        <img src="../images/cat04.jpg" class="cats">
+        <img src="../images/cat05.jpg" class="cats">
+        <div style="clear: both;"></div>
+    </div>
+
+    <hr>
+
+    <!-- :hover / :focus -->
+
+    <h1>제목입니다.</h1>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae culpa dolorem id distinctio aspernatur quo vero laborum eius non deleniti. Doloribus fuga laudantium commodi ipsum, id molestias delectus maxime obcaecati.
+    Ipsam perferendis laudantium, enim consequatur consequuntur quam maiores eum nihil natus optio sed dolor facilis minima repudiandae nemo incidunt eligendi fuga? Porro, dicta hic. Perferendis unde fugit veniam magnam facilis?
+    Accusamus non porro eos, dolorem, commodi necessitatibus amet eius ipsam veniam fugit exercitationem. Error exercitationem omnis labore praesentium ipsam expedita consectetur sunt iusto, accusamus fugit <span>corrupti</span> harum illo at sapiente.
+    Corporis modi possimus distinctio consequuntur quo. Laudantium, sunt itaque quia delectus incidunt minus, culpa exercitationem nam ipsa cum suscipit quam eum quibusdam. Laboriosam neque, illum quis sed molestias consequuntur expedita?
+    Dolore voluptatibus fuga deserunt. Optio iure rerum praesentium tenetur, voluptas qui error est <span>incidunt</span> fugiat provident facere tempora? Quam quisquam vel tempora vitae ex tempore minus iusto nemo dolor repudiandae!
+    Perspiciatis, est natus, sit sunt itaque, voluptas esse corrupti pariatur aliquid libero ullam laboriosam quo ab explicabo fuga quibusdam magni quaerat eos vel porro! Quibusdam accusamus beatae veniam eaque est.
+    Nesciunt, voluptatem deleniti quas cumque <span>corrupti</span> eveniet. Aperiam non cum eos maxime quas itaque ab modi facilis consequatur veniam consectetur, quisquam vel repellendus officiis voluptatibus repudiandae, commodi debitis, deleniti quam.
+    Voluptate dolorem consequatur laudantium doloribus adipisci maiores, magnam ut minus reiciendis excepturi atque illum animi dolor fugiat numquam hic rem alias nam, est dolores exercitationem sint vel aliquam! Aperiam, quia?
+    Corporis numquam iusto voluptatum? Error neque alias et maxime aspernatur quod eveniet reprehenderit vitae dolor blanditiis repellat nemo mollitia assumenda explicabo hic, distinctio <span>consequuntur</span> ducimus. Nemo eum praesentium natus facere?
+    Iure iusto soluta dolores et ut architecto, totam aperiam, enim optio incidunt temporibus! Inventore veniam molestias voluptates deleniti. Molestiae natus quo impedit quisquam officia dolorem nemo modi voluptatem, placeat enim.</p>
+
+    <hr>
+
+    <h1>입력 화면</h1>
+
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    <div>데이터 : <input type="text" class="data"></div>
+    <div>짧은 데이터 : <input type="text" class="data" size="10"></div>
+    <div>긴 데이터 : <input type="text" class="data" size="50"></div>
+    
+</body>
+</html>

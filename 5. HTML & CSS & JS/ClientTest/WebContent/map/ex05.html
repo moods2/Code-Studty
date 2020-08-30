@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+	<script src="../bootstrap/js/jquery-1.12.4.js"></script>
+	<script src="../bootstrap/js/bootstrap.js"></script>
+
+	<!-- Kakao Map -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=677f13babe8d6030c2e568b2a353e2ef"></script>
+    
+    <!-- 좌표 데이터 -->
+    <script src="data.js"></script>
+
+    <style>
+
+        #map {
+            width: 100%;
+            height: 450px;
+        }
+
+        #plist > div {
+            cursor: pointer;
+            margin: 10px 10px;
+            border-bottom: 1px dashed #ccc;
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+
+        <div id="container">
+            <h1>Kakao Map <small>지도 클릭 이벤트 + 마커 표시</small></h1>
+            
+            <table class="table table-bordered">
+                <tr>
+                    <td style="width: 80%;">
+                        <div id="map"></div>
+                    </td>
+                    <td style="width: 20%;" id="plist"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="msg" class="well"></div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script>
+
+            var container = document.getElementById('map');
+    
+            var options = {
+                center: new kakao.maps.LatLng(37.499402, 127.033160),
+                level: 3
+            };
+    
+            var map = new kakao.maps.Map(container, options);
+
+            //data.js -> 우측 명단 출력
+            list.forEach(function(item, index) {
+
+                $("#plist").append(`<div data-index="${index}" class="glyphicon glyphicon-pushpin">${item.name}</div>`);
+
+            });
+
+            var marker = null;
+
+            $("#plist > div").click(function() {
+
+                // alert($(this).data("index"));
+                // alert(list[$(this).data("index")].name);
+                // alert(list[$(this).data("index")].position.lat);
+                // alert(list[$(this).data("index")].position.lng);
+
+                //이전 마커 존재하면?
+                if (marker != null) {
+                    marker.setMap(null); //마커 삭제
+                }
+
+                var latlng = new kakao.maps.LatLng(
+                    list[$(this).data("index")].position.lat,
+                    list[$(this).data("index")].position.lng
+                )
+
+                marker = new kakao.maps.Marker({
+                    position: latlng
+                })
+
+                marker.setMap(map);
+                map.panTo(latlng);
+
+                //클릭 이벤트
+                kakao.maps.event.addListener(marker, "rightclick", 
+                function(evt) {
+                    // alert();
+                    //누구를 클릭했는지?
+                    // alert(event.srcElement);
+                    // alert(evt.srcElement);
+                    // alert(this);
+                    // alert(this.constructor);
+
+                    // this -> 클릭한 마커
+                    this.setMap(null);
+
+                });
+
+                marker.setDraggable(true);
+
+            });
+    
+        </script>
+
+</body>
+</html>

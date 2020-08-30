@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box1{
+            /* width: 200px;
+            height: 200px; */
+            /* width: 100%; */
+            /* height: auto; */
+            /* 객체의 크기 지정 : width는 필수 지정, height 상황에 따라 */
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            /* auto, scroll, hidden, visible */
+            overflow: scroll;
+
+            margin-bottom: 70px;
+        }
+
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+        }
+
+        #tbl1 td {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="box1">상자입니다.</div>
+
+    <table id="tbl1">
+        <tr>
+            <td>1</td>
+            <td><div style="border: 1px solid red; width: 100px; height: 100px; overflow: auto;">
+                홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.
+                홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.
+                홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.홍길동입니다.
+            </div></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+</body>
+</html>

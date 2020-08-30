@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		<img>, Image
+		- 이미지를 출력하는 태그
+		- 단독태그
+		- 인라인 태그
+	
+		img.src 속성, source
+		- 이미지 URL(절대경로 or 상대경로)
+		
+		img.alt 속성, Alternate Text
+		- 대체 텍스트
+		- 이미지를 설명하는 텍스트(메타 데이터)
+		- 장애인용 텍스트
+	
+	 -->
+	 
+	 <h1>고양이</h1>
+	 <img src="images/cat.jpg" alt="야옹이">
+	 <img src="images/cat2.jpg" alt="고양이">
+	 
+	 <h1>강아지</h1>
+	 <img src="images/dog01.jpg"><br>
+	 <img src="images/dog01.jpg" width="250" height="188"><br>
+	 <img src="images/dog01.jpg" width="500" height="376"><br>
+	 <img src="images/dog01.jpg" width="2500" height="1880"><br>
+	 <img src="images/dog01.jpg" width="25" height="19"><br>
+	 
+	 <!-- 종횡비 틀어짐 -->
+	 <img src="images/dog01.jpg" width="250" height="500"><br>
+	 
+	 <img src="images/dog01.jpg" width="500"><br>
+	 <img src="images/dog01.jpg" height="500"><br>
+	 
+	 <img src="images/dog01.jpg" alt="" width="250" height="500"><br>
+	 
+	 <h1>링크</h1>
+	 
+	 <!-- 빈링크(크롬은 맨위로 가는데 에러가 나는 사이트도 있음 -->
+	 <a href="">고양이</a><br>
+	 <a href="#!">고양이</a><br> <!-- 텍스트 링크 -->
+	 <a href="#!"><img src="images/dog01.jpg"></a> <!-- 이미지 링크 -->
+	 
+	 <a href="#!">블럭태그<p>문단</p>블럭태그</a>
+	 
+	 <!-- 
+	 
+	 	웹(브라우저)에서 사용 가능한 이미지 파일 포맷
+	 	- jpg(jpeg), gif, png
+	 	- bmp, tiff 등..(X)
+	 	
+	 	이미지 포맷
+	 	1. 래스터 방식
+	 		- 비트맵 이미지
+	 		- 우리가 흔히 사용하는 이미지 포맷
+	 		- 이미지 = 점들의 집합
+	 		- 사진, 색이 많은 이미지 묘사에 장점
+	 		
+	 	2. 벡터 방식
+	 	3. 
+	 
+	  -->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

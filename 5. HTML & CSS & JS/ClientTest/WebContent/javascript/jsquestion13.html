@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #line input {
+            padding: 10px 25px;
+            font-size: 3em;
+            outline: none;
+            border: 1px solid #BBB;
+            background-color: #BBB;
+        }
+
+        #line input:enabled {
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="line">
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+        <input type="button" value="■" name="btn" disabled>
+    </div>
+
+    <script>
+
+        var btn = document.all.btn;
+        var n = 0;
+
+
+        var timer = setInterval(function() {
+                if (n==0) btn[9].disabled = true;
+                btn[n].disabled = false;
+                if(n >= 1) btn[n-1].disabled = true;
+                n++;
+                if(n>9) n=0;
+            }, 100);
+
+        for (var i=0; i<btn.length; i++) {
+            btn[i].onclick = function() {
+                clearInterval(timer);
+                document.body.bgColor= "cornflowerblue";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

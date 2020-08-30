@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		링크, Link
+		- <a> 태그, anchor(닻), link
+		
+		링크 속성
+		- href : 이동할 URL, Reference a Hyperlink
+			- href의 대상
+				a. HTML 페이지
+				b. 이미지
+				c. 문서
+				d. 압축 파일
+				e. 동영상..
+	
+	 -->
+	 
+	<a href="http://naver.com">네이버(외부링크)</a>
+	<a href="http://python.org">파이썬(외부링크)</a>
+	<br>
+	<a href="ex10_list.html">10번 예제(내부링크)</a>
+	<br>
+	<a href="images/McAdams.jpg">배경 이미지</a>
+	
+	<hr>
+	
+	<h1>경로 표시법</h1>
+	<!-- 
+	
+	1. 절대 경로
+	
+	2. 상대 경로
+	
+	3. 외부 경로
+	
+	4. 로컬 경로
+	
+	 -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

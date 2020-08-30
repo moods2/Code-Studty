@@ -1,0 +1,10 @@
+package com.test.codestudy.member;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/member/registerok.do")
+public class RegisterOk {
+
+	
+	
+}

@@ -1,0 +1,11 @@
+package com.test.address;
+
+public class Address {
+	
+	private String seq;
+	private String name;
+	private String age;
+	private String address;
+	private String regdate;
+
+}

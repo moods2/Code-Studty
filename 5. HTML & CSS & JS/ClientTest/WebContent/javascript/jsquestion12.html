@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div {
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        input {
+            width: 400px;
+            text-align: center;
+            font-size: 15em;
+            border: 0;
+            outline: none;
+            font-weight: bold;
+            color: #444;
+            letter-spacing: -15px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <input type="text" value="10" name="num">
+    </div>
+
+    <script>
+
+        var num = document.all.num;
+
+        var timer = setInterval( function() {
+                num.value--;
+                if (num.value == 0) {
+                    clearInterval(timer);
+                    location.href = "http://google.com";
+                }
+            }, 1000);
+
+        window.onkeydown = function() {
+            if (event.keyCode == 27) {
+                clearInterval(timer);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

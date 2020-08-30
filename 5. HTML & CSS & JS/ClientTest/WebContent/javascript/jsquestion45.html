@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 50px auto;
+        }
+        #tbl td {
+            border:1px solid black;
+            width: 126px;
+            height: 126px;
+            position: relative;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+        #tbl td img {
+            display: block;
+        }
+        .icon {
+            transition: all .5s;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table id="tbl">
+        <tbody id="tbody">
+            <tr>
+                <td><img src="../images/rect_icon01.png" class="icon"></td>
+                <td><img src="../images/rect_icon02.png" class="icon"></td>
+                <td><img src="../images/rect_icon03.png" class="icon"></td>
+                <td><img src="../images/rect_icon04.png" class="icon"></td>
+                <td><img src="../images/rect_icon05.png" class="icon"></td>
+            </tr>
+            <tr>
+                <td><img src="../images/rect_icon06.png" class="icon"></td>
+                <td><img src="../images/rect_icon07.png" class="icon"></td>
+                <td><img src="../images/rect_icon08.png" class="icon"></td>
+                <td><img src="../images/rect_icon09.png" class="icon"></td>
+                <td><img src="../images/rect_icon10.png" class="icon"></td>
+            </tr>
+            <tr>
+                <td><img src="../images/rect_icon11.png" class="icon"></td>
+                <td><img src="../images/rect_icon12.png" class="icon"></td>
+                <td><img src="../images/rect_icon13.png" class="icon"></td>
+                <td><img src="../images/rect_icon14.png" class="icon"></td>
+                <td><img src="../images/rect_icon15.png" class="icon"></td>
+            </tr>
+            <tr>
+                <td><img src="../images/rect_icon16.png" class="icon"></td>
+                <td><img src="../images/rect_icon17.png" class="icon"></td>
+                <td><img src="../images/rect_icon18.png" class="icon"></td>
+                <td><img src="../images/rect_icon01.png" class="icon"></td>
+                <td><img src="../images/rect_icon02.png" class="icon"></td>
+            </tr>
+            <tr>
+                <td><img src="../images/rect_icon03.png" class="icon"></td>
+                <td><img src="../images/rect_icon04.png" class="icon"></td>
+                <td><img src="../images/rect_icon05.png" class="icon"></td>
+                <td><img src="../images/rect_icon06.png" class="icon"></td>
+                <td><img src="../images/rect_icon07.png" class="icon"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var icon = document.getElementsByClassName("icon");
+        var temp;
+        var timer = 0;
+
+        for (var i=0; i<icon.length; i++) {
+
+            icon[i].onclick = function() {
+
+                if (timer == 0) {
+
+                    temp = event.srcElement;
+                    
+                    event.srcElement.style.transform = "translate(126px, 126px)";
+                    
+                    timer++;
+                    
+                    setTimeout(function() {
+                        temp.style.transform = "translate(0px, 0px)";
+                        timer = 0;
+                    }, 1000)
+    
+                }
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* WebContent > css > main.css */
+
+.container {
+	width: 500px;
+}
+
+.header {
+	border-bottom: 1px solid #DDD;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.content {
+	
+}
+
+.content .table.add th {
+	width: 120px;
+}
+.content .table.add td {
+	width: 380px;
+}

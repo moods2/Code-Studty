@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body { 
+            transition: all 1s;
+        }
+
+        #menu {
+            width: 680px;
+            height: 136px;
+            margin: 0px auto;
+            transform: translate(0, -110px);
+        }
+        #menu img {
+            border: 5px solid white;
+            float: left;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav id="menu">
+            <img src="../images/rect_icon01.png" class="item" data-no="1">
+            <img src="../images/rect_icon02.png" class="item" data-no="2">
+            <img src="../images/rect_icon03.png" class="item" data-no="3">
+            <img src="../images/rect_icon04.png" class="item" data-no="4">
+            <img src="../images/rect_icon05.png" class="item" data-no="5">
+        </nav>
+    </header>
+
+    <script>
+
+        var item = document.getElementsByClassName("item");
+
+        var color = [ "#A67F62", "#BE4F3B", "#E7C758", "#666666", "#63AFD1" ];
+
+        for (var i=0; i<item.length; i++) {
+
+            //하나 선택
+            item[i].onclick = function() {
+
+                //튀어나올 메뉴 빼고 나머지 메뉴를 0,0으로 이동
+                for (var i=0; i<item.length; i++) {
+                    if (item[i] != event.srcElement) {
+                        item[i].style.transform = "translate(0px, 0px)";
+                    }
+                }
+                console.log(event.srcElement.style.transform);
+
+                if (event.srcElement.style.transform != "translate(0px, 90px)") {
+                    event.srcElement.style.transform = "translate(0px, 90px)";
+                    document.body.style.backgroundColor = color[event.srcElement.dataset["no"] - 1];
+                } else {
+                    event.srcElement.style.transform = "translate(0px, 0px)";
+                    document.body.style.backgroundColor = "white";
+                }
+
+            };
+
+        };
+
+    </script>
+
+</body>
+</html>

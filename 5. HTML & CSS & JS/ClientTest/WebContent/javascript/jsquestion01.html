@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txtbox {
+            border: 0px;
+            width: 210px;
+            font-size: 11em;
+            font-weight: bold;
+            outline: none;
+            color: #444;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="text-align: center;">
+        <input type="text" value="00" readonly id="txtbox">
+    </div>
+    <div style="text-align: center;">
+        <img src="../images/0.png" id="ten"> <img src="../images/0.png" id="one">
+    </div>
+
+    <script>
+
+        var txtbox = document.all.txtbox;
+        var ten = document.images.ten;
+        var one = document.images.one;
+
+        var n = 0;
+        window.onclick = function() {
+            n++;
+            if (n==100) n=0;
+            one.src = "../images/" + (n % 10) + ".png";
+            ten.src = "../images/" + (parseInt(n / 10)) + ".png";
+
+            txtbox.value = addZero(n % 100);
+
+            function addZero(num) {
+                if (n < 10) return "0" + num;
+                else return num;
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

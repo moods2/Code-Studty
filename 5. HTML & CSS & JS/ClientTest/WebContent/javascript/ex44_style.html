@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="box"></div>
+
+
+    <script>
+
+        // var box = document.getElementById("box");
+        var isDown = false;
+
+        window.onmousedown = function() {
+            isDown = true;
+            
+            box = document.createElement("div");
+            box.id = "box";
+            box.style.left = event.clientX + "px";
+            box.style.top = event.clientY + "px";
+            box.style.width = "0px";
+            box.style.height = "0px";
+
+            document.body.appendChild(box);
+        };
+
+        window.onmouseup = function() {
+            isDown = false;
+        };
+
+        window.onmousemove = function() {
+
+            if (isDown) {
+                // box.style.left = event.clientX + "px";
+                // box.style.top = event.clientY + "px";
+
+                box.style.width = event.clientX - parseInt(box.style.left) - 2 + "px";
+                box.style.height = event.clientY - parseInt(box.style.top) - 2 + "px";
+            }
+        };
+
+    </script>
+
+</body>
+</html>

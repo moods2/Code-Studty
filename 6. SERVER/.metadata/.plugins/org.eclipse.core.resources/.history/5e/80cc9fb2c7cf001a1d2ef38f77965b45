@@ -1,0 +1,36 @@
+package com.test.servlet;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Ex02 extends HttpServlet {
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		resp.setCharacterEncoding("UTF-8");
+		PrintWriter writer = resp.getWriter();
+		
+		//test.html 읽기
+//		C:\eclipse\test.html
+//		File file = new File("test.html");
+//		System.out.println(file.getAbsolutePath());
+		
+		Scanner scan = new Scanner(new FileReader("D:\\class\\server\\ServletTest\\test.html"));
+		
+		while (scan.hasNext()) {
+			System.out.println(scan.nextLine());
+		}
+		
+		
+	}
+	
+}

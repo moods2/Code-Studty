@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		<table>, 표
+		- 표 만들 때 사용
+		- 레이아웃 만들 때 사용 -> 잘 안씀 -> <div> + CSS 사용
+		
+		1. <table>
+			- 큰상자
+			- 전체 컨테이너
+		2. <tr>
+			- 중간 상자
+			- 행 역할
+		3. <td>
+			- 작은 상자
+			- 셀 역할
+			- 테이블의 데이터는 <td>가 가진다.
+			
+	 -->
+	 
+	 <h1>2행 2열 테이블</h1>
+	 
+	 <table border="0" width="200" height="200" bgcolor="yellow" cellspacing="0"'>
+	 	<tr bgcolor="red">
+	 		<td width="100" height="100" bgcolor="blue">1</td>
+	 		<td width="100">2</td>
+	 	</tr>
+	 	<tr>
+	 		<td height="100">3</td>
+	 		<td>4</td>
+	 	</tr>
+	 </table>
+	 
+	 
+	 
+	 
+	 
+	 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

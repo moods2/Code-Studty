@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #table {
+            width: 750px;
+            margin: 0 auto;
+        }
+
+        #about {
+            border-left: 3px dotted gray;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        #clock {
+            border: 30px dashed #999999;
+            height: 750px;
+            margin-bottom: 50px;
+        }
+
+        #hour, #min, #sec {
+            border: 15px solid #555555;
+            width: 50px;
+            margin: 200px auto;
+            border-radius: 50px;
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+            font-variant: small-caps;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        #hour {
+            height: 120px;
+            background-color: tomato;
+            left: 459px;
+            transition-property: all;
+            transition-duration: 21600s;
+            transition-timing-function: linear;
+            transform-origin: center bottom;
+        }
+
+        #min {
+            height: 190px;
+            background-color: cornflowerblue;
+            left: 459px;
+            top: 120px;
+            transition-property: all;
+            transition-duration: 360s;
+            transition-timing-function: linear;
+            transform-origin: center bottom;
+        }
+
+        #sec {
+            height: 280px;
+            background-color: gold;
+            left: 459px;
+            top: 30px;
+            transition-property: all;
+            transition-duration: 60s;
+            transition-timing-function: linear;
+            transform-origin: center bottom;
+        }
+
+        #clock:hover #hour, #clock:hover #min, #clock:hover #sec {
+            transform: rotate(36000deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="table">
+        <h1>transform(rotate) + transform-origin + transition</h1>
+        <div id="about">시계침을 돌리시오.</div>
+        <div id="clock">
+            <div id="hour">Hour</div>
+            <div id="min">Min</div>
+            <div id="sec">Sec</div>
+        </div>
+    </div>
+
+</body>
+</html>

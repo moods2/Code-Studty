@@ -1,0 +1,28 @@
+package com.test.codestudy.member;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/member/login.do")
+public class Login extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//1. 데이터 가져오기(id, pw)
+		//2. DB 작업 > select
+		//3. 결과 반환 > 완료 처리
+		
+		//1.
+		String id = req.getParameter("id");
+		String pw = req.getParameter("pw");
+		
+	}
+
+}

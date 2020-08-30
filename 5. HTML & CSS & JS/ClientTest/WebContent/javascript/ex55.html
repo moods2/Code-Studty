@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- javascript > ex55.html -->
+	<script>
+
+		/*
+		
+		정규 표현식, Regular Expression
+		- 정규식
+		- 패턴에 일치하는 문자열을 검사하는 표현식
+
+
+		정규 표현식 구성 요소(문법)
+        - select .. where tel like '%12%34%'
+        
+        1. 모든 문자
+            - 검색하고자 하는 문자
+            - 모든 문자 가능
+
+        2.
+            - 와일드 카드
+            - 모든 문자
+            - ex) ...
+            ex) .길동 -> 홍길동, 김길동, 박길동..
+
+        앞의 요소의 출현 횟수 지정
+        3. 없음
+            - 출현횟수 : 1
+            - 생략 불가능, 중복 불가능
+            - ex) abc -> 
+
+        4. ?
+            - 출현횟수 : 0~1
+            - 생략 가능, 중복 불가능
+            - ex) a?bc -> abc, bc, aabc, aaaabc, acb
+            - ex) 홍?길동 -> 길동, 홍길동
+            - ex) 가?나다? -> 가나다, 가나, 나다, 나
+
+        5. +
+            - 출현횟수 : 1~무한대
+            - 생략 불가능, 중복 가능
+            - ex) a+bc -> bc, abc, aabc, aaabc, aaaaaaaaaaaaaaaaabc
+            - ex) 홍+길동 -> 길동, 홍길동, 홍홍홍홍길동
+            - ex) 홍?길+동 -> 홍길동, 길길길길동
+
+        6. *
+            - 출현횟수 : 0~무한대
+            - 생략 가능, 중복 가능
+            - ex) a*bc -> bc, abc, aabc, aaabc, aaaaaaaaaaaaaaaabc
+
+        7. ()
+            - 그룹
+            - ex) (홍길동)?입니다 -> 입니다, 홍길동입니다
+            - ex) (홍길동)+입니다 -> 입니다, 홍길동입니다, 홍길동홍길동홍길동입니다
+            
+        8. |
+            - choice
+            - ex) (홍길동|아무개|테스트)입니다 -> 홍길동입니다, 아무개입니다, 테스트입니다.
+            - ex)  (김|박|정|홍)길동
+            - ex) (010|011|019)-1234-5678
+
+        ---------------------------------------------------------------
+
+        앞의 요소의 출현 횟수 지정 -> 더 구체적인 횟수 지정 가능
+        9. {n}
+            - n : 출현횟수(자연수)
+            - a{3}bc -> bc, abc, aabc, aaabc, aaaabc, aaaaabc
+            - ex) aaabc
+
+        10. {n,}
+            - n : 출현횟수(자연수)
+            - n : 최소 출현 횟수
+            - ex) a{2,}bc -> bc, abc, aabc, aaabc, aaaabc, aaaaabc
+
+        11. {n,m}
+            - n,m : 출현횟수(자연수)
+            - n : 최소 출현 횟수
+            - m : 최대 출현 횟수
+            - ex) a{2,3}bc -> bc, abc, aabc, aaabc, aaaabc, aaaaabc
+            - ex) a{2,5}b{0,1}c{1,}
+            - ex) a{2,5}b?c+
+
+
+        ---------------------------------------------------------------
+
+        선택 + 그룹
+
+        12. [요소나열], (요소나열)
+            - choice
+            - ex) (a|b|c)de, (홍길동|아무개|테스트)님
+            - ex) [abc]de, [(홍길동)(아무개)(테스트)]님
+
+            - ex) 숫자 검색
+                [0123456789]{2,3} -> 제 몸무게는 70kg입니다.
+                키는 180cm입니다. 저는 20살입니다.
+
+            - ex) 주민등록번호 검색
+            [0123456789]{6}-[0123456789]{7} -> 제 전화번호는
+            010-1234-5678이고, 주민번호는 950101-1234567입니다.
+
+            - ex) [0123456789] : 모든 숫자
+            - ex) [13579] : 홀수
+            - ex) [24680] : 짝수
+
+            - ex) 영어
+                [abcdefghijklmnopqrstuvwxyz]{4,7}
+                [ABCDEFGHIJKLMNOPQRSTUVWXYZ]{4,7}
+                [ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz]{4,7}
+
+            - ex) 숫자 : [0-9]
+            - ex) 영소문자 : [a-z]
+            - ex) 영대문자 : [A-Z]
+            - ex) 영문자 : [A-Za-z]
+            - ex) 한글 : [가-힣]
+                [가-힣]{3,5}
+
+            - ex) 식별자 -> 영어 + 숫자 + _[A-Za-z0-9]
+
+            - ex) 회원 가입 -> 아이디 입력
+                1. 영문자 + 숫자 + _
+                2. 시작은 숫자 불가능
+                3. 4자 ~ 12자 이내
+
+                [A-Za-z_][A-Za-z0-9_]{3,11}
+
+        13. [^요소나열]
+            - 나열된 요소 빼고 나머지 전부
+            ex) [^A-Za-z]{2,10}
+
+        14. 공백
+            - \s
+            ex) [홍김박]\s?길동
+                홍길동, 김길동, 박길동, 길동, 홍 길동, 김 길동
+
+        15. 줄임
+            - [0-9] -> \d
+            - [3-6] <-> \d
+            ex) 010-[0-9]{3,4}-[0-9]{4}
+            ex) 010-\d{3,4}-\d{4}
+
+            - [A-Za-z0-9_] -> \w
+            ex) [A-Za-z0-9_]{3,5}
+            ex) \w{3,5}
+
+        16. ^
+            - 대상 문자열이 반드시 ^ 뒤의 요소로 시작해야 한다.
+            - ex) ^abc -> abc, testabc, abctest
+
+        17. $
+            - 대상 문자열이 반드시 $ 앞의 요소로 끝나야 한다.
+            - ex) abc$ -> abc, testabc, abctest
+
+            
+        정규 표현식 예제 사이트
+        - http://regexlib.com
+
+        \w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}
+
+        test@gmail.com, hong1234@naver.com, aaaadaum.net
+
+
+		*/
+
+	</script>
+</body>
+</html>

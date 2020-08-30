@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body {
+		margin: 0px;
+		overflow-x: hidden; 
+		overflow-y: auto;
+		transition: all 1s;
+	}
+
+	section {
+		transition: all 1s linear;
+        font-weight: bold;
+        color: #444;
+	}
+	
+	#menu {
+		width: 126px;
+		transform: translate(-100px, 0px);
+	}
+	
+	#menu .item {
+		float: left;
+		transition: all 1s;
+		cursor: pointer;
+		transition-timing-function: ease-in;
+		border: 1px solid white;
+		margin-top: -1px;
+	}
+
+    </style>
+</head>
+<body>
+    
+    <nav id="menu">
+        <img src="../images/rect_icon01.png" class="item" data-color="#A67F62">
+        <img src="../images/rect_icon02.png" class="item" data-color="#BE4F3B">
+        <img src="../images/rect_icon03.png" class="item" data-color="#E7C758">
+        <img src="../images/rect_icon04.png" class="item" data-color="#666666">
+        <img src="../images/rect_icon05.png" class="item" data-color="#63AFD1">
+    </nav>
+    <section id="content">
+		<h1>Lorem ipsum dolor sit amet.</h1>
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ipsum aut harum, officiis soluta voluptate quo adipisci quidem impedit! Minima dolore eos provident unde esse repudiandae, porro ducimus assumenda quaerat!
+		<br>
+		<br>
+		Est omnis distinctio veniam ipsam? Dignissimos fugiat ullam rerum amet fuga quasi voluptates architecto exercitationem, repellat alias cumque eveniet corrupti deleniti voluptatum pariatur delectus dolores eos libero consequatur maxime similique?
+		<br>
+		<br>
+		Temporibus sed quidem praesentium suscipit, vitae eligendi, fugit pariatur incidunt corporis minima excepturi recusandae amet, debitis voluptatibus? Suscipit facilis repellat placeat blanditiis. Amet cupiditate in quis quo eligendi dolore ad.
+		<br>
+		<br>
+		Obcaecati, rerum. Et, ipsum illo dicta cupiditate, aut voluptate ullam tenetur obcaecati necessitatibus sed quis, nihil culpa! Corrupti adipisci qui ducimus cum sunt, fugit soluta nam dicta recusandae optio repudiandae!
+		<br>
+		<br>
+		Dolor, sapiente iure. Beatae minus neque excepturi repellat quibusdam molestiae in, molestias incidunt totam hic error dolores quam voluptate commodi fugit veniam sed suscipit recusandae laboriosam. Eaque nam tempore mollitia.
+		<br>
+		<br>
+		Itaque ipsa libero totam odit magnam, minima eligendi beatae commodi molestiae vel dignissimos non velit maxime pariatur reprehenderit eos magni, maiores dolorum numquam est praesentium? Quaerat provident dolorum nesciunt dicta!
+		<br>
+		<br>
+		Et dicta eius delectus perspiciatis recusandae ab, consequuntur deleniti corporis, suscipit nam in quo provident tenetur minus harum ut velit error autem, repudiandae explicabo ad. Nulla doloremque impedit quisquam voluptates.
+		<br>
+		<br>
+		Optio ipsa asperiores minima. Exercitationem harum iusto architecto vel quis iure? Provident repudiandae iure fugiat facilis fugit? Nesciunt consequatur voluptatibus tempora debitis tenetur, tempore molestias velit sunt ipsa, atque recusandae.
+		<br>
+		<br>
+		Sed facilis maxime quasi, veniam expedita dolores exercitationem voluptatibus cupiditate, deleniti labore, corrupti aliquam delectus architecto dignissimos nobis tempore molestiae ratione reprehenderit. Odit sed a itaque repudiandae voluptas dicta aspernatur?
+		<br>
+		<br>
+		Hic, suscipit pariatur repellendus assumenda accusamus, debitis eligendi sit cupiditate asperiores libero, quod dicta ut laborum esse consectetur et alias similique? Fuga magni delectus doloremque saepe, voluptatum sint omnis fugit!
+		<br>
+		<br>
+    </section>
+    
+    <script>
+
+        var item = document.getElementsByClassName("item");
+        var temp;
+
+        for (var i=0; i<item.length; i++) {
+
+            item[i].onclick = function() {
+                
+                for (var j=0; j<item.length; j++) {
+                    item[j].style.transform = "translate(0,0)";
+                }
+
+                if (event.srcElement != temp) {
+                    event.srcElement.style.transform = "translate(90px, 0)";
+                    document.body.style.backgroundColor = event.srcElement.dataset["color"];
+                } else {
+                    document.body.style.backgroundColor = "white";
+                }
+
+                temp = event.srcElement;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

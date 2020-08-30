@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body { margin-bottom: 300px; }
+
+        .box { border: 1px solid black; width: 500px; height: 300px;
+        margin: 20px; }
+
+        #box1 {
+            background-image: url(../images/catty01.png),
+                              url(../images/catty03.png),
+                              url(../images/catty05.png);
+            background-repeat: no-repeat;
+            background-position: left top, right top, bottom right;
+        }
+
+        #box2 {
+            background-image: url(../images/cat01_big.jpg);
+            /* background-size: 500px 300px; */
+            /* background-size: 25px 15px; */
+            /* background-size: 500px 30px; */
+            /* background-size: 100% 100%; */
+            /* background-size: 500px auto; */
+            background-size: auto 300px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: beige;
+        }
+
+        #box3 {
+            /* 
+            contain: 배경 이미지가 있는 공간의 단축을 100%으로 출력 +
+            반복되는 영역 발생
+            - 배경이미지의 크기가 상자와 같게 만들되 -> 이미지가 
+            짤리지 않고 출력되게..
+            background-size: auto 상자높이;
+
+            cover: 배경 이미지가 있는 공간의 장축을 100%으로 출력 + 
+            반복 영역 미발생
+            - 배경이미지의 일부가 짤리면서 꽉찬 이미지로 출력되게..
+            background-size: 상자너비 auto;
+            */
+            background-image: url(../images/cat01_big.jpg);
+            background-size: contain;
+            background-position: center center;
+        }
+
+        #thumbnail {
+            border: 1px solid gray;
+            width: 516px;
+        }
+
+        #thumbnail::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #thumbnail > div {
+            border: 1px solid gray;
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* #thumbnail > div:nth-child(1) {
+            padding-top: 10px;
+            height: 140px;
+        }
+        #thumbnail > div:nth-child(2) {
+            padding-top: 30px;
+            height: 120px;
+        }
+        #thumbnail > div:nth-child(3) {
+            padding-top: 50px;
+            height: 100px;
+        }
+
+        #thumbnail > div:nth-child(1) > img { 
+            height: 100%;
+        }
+        #thumbnail > div:nth-child(2) > img { 
+            width: 100%;
+        }
+        #thumbnail > div:nth-child(3) > img {
+            width: 100%;
+        } */
+
+        #thumbnail > div {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        #thumbnail > div:nth-child(1) {
+            background-image: url(../images/sp.png);
+        }
+        #thumbnail > div:nth-child(2) {
+            background-image: url(../images/mobile_1440421138.jpg);
+        }
+        #thumbnail > div:nth-child(3) {
+            background-image: url(../images/main.png);
+        }
+
+        /* 풀 사이즈 배경 이미지 */
+        html {
+            /* border: 10px solid blue; */
+            background-image: url(../images/wall17.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        body {
+            border: 10px solid red;
+        }
+
+        /* 
+        배경색
+        1. solid color : 단색
+        2. gradient : 색의 변화를 시각적으로 표현
+            - 선형
+            - 원형
+        */
+        #box4 {
+            background: linear-gradient(white, black);
+        }
+        #box5 {
+            background: linear-gradient(black, white);
+        }
+        #box6 {
+            background: linear-gradient(35deg, red, green, blue, yellow, orange);
+        }
+        #box7 {
+            background: radial-gradient(red, yellow);
+        }
+        #box8 {
+            background: radial-gradient(circle, white, #5726CF, #5726CF);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="box1" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam assumenda  {
+        border: 1px solid gray;
+        width: 100px;
+        height: 150px;
+        float: left;
+        margin: 10px;
+    }quisquam provident eveniet aliquam obcaecati animi quibusdam porro velit quam laudantium nemo, eum voluptatibus voluptas nulla id debitis voluptate illum?</div>
+    <div id="box2" class="box">Fugiat officiis dicta dolore illo laborum sed ipsum quas aperiam? Ab corrupti debitis voluptatum. Pariatur necessitatibus, itaque autem alias fuga ad ea, velit officiis modi odio voluptatum, quis deleniti suscipit!</div>
+    <div id="box3" class="box">Quis eveniet commodi, consectetur cum ex, ipsum quidem ipsa nesciunt dolore praesentium, ad rerum! Iure nihil, ipsam iste tenetur reprehenderit, recusandae odio facilis quam doloremque quia incidunt accusantium et ducimus.</div>
+
+
+    <h1>썸네일</h1>
+
+    <div id="thumbnail">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+
+    <h1>상자</h1>
+
+    <div id="box4" class="box">상자1</div>
+    <div id="box5" class="box">상자2</div>
+    <div id="box6" class="box">상자3</div>
+    <div id="box7" class="box">상자4</div>
+    <div id="box8" class="box">상자5</div>
+
+</body>
+</html>

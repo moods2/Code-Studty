@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div {
+            border: 1px solid black;
+            margin: 15px;
+            padding: 15px;
+        }
+        #me { border: 10px solid cornflowerblue; }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <div>
+            <div></div>
+            <div></div>
+            <div id="me">
+                <div class="child"></div>
+                <div class="child">
+                    <div></div>
+                </div>
+                <div id="third"></div>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+
+        //자식 검색
+        // $("#me").children().css("border", "10px solid tomato");
+        // $("#me").children().children().css("border", "10px solid gold");
+
+        //children() : 자식만
+        //find() : 자손들 중에 검색
+        // $("#me").find("#third").css("border", "10px solid green");
+        // $("#me").find(".child").css("border", "10px solid gold");
+
+        // $("#me").find("div").css("border", "10px solid green");
+        // $("#me").find("div:eq(0)").css("border", "10px solid green");
+        // $("#me").find("div:last").css("border", "10px solid green");
+
+        //부모 검색
+        // $("#me").parent().css("border", "10px solid orange");
+        // $("#me").parents().css("border", "10px solid orange");
+        // $("#me").parentsUntil("body").css("border", "10px solid orange");
+
+        //형제 검색
+        $("#me").prev().css("border", "10px solid pink");
+        $("#me").next().css("border", "10px solid pink");
+
+        $("#me").prevAll().css("border", "10px solid pink");
+        $("#me").nextAll().css("border", "10px solid pink");
+
+        $("#me").siblings().css("background-color", "gold");
+
+        
+        //jQuery Documentation
+        //1. Selector
+        //2. Manipulation
+        //3. Traversing
+
+
+    </script>
+    
+</body>
+</html>

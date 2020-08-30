@@ -1,0 +1,52 @@
+package com.test.jsp;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+@WebServlet("/ex23_formok.do")
+public class Ex23_FormOk extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		String path = req.getRealPath("/files");
+		
+		int size = 1024 * 1024 * 100; //100MB
+		
+		String subject = "";
+		String name = "";
+		
+		ArrayList<String> filename = new ArrayList<String>();
+		ArrayList<String> orgfilename = new ArrayList<String>();
+		
+		req.setCharacterEncoding("UTF-8");
+		
+		try {
+			
+			MultipartRequest multi = new MultipartRequest(
+									req,
+									path,
+									size,
+									"UTF-8",
+									new DefaultFileRenamePolicy()
+									);
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		
+	}
+
+}

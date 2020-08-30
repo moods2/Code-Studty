@@ -1,0 +1,104 @@
+package com.test.codestudy.board;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import com.test.codestudy.DBUtil;
+
+public class BoardDAO {
+	
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public BoardDAO() {
+		
+		DBUtil util = new DBUtil();
+		conn = util.open();
+		
+	}
+	
+	public void close() {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	//WriteOk 서블릿 -> 글쓰기 위임
+	public int write(BoardDTO dto) {
+		
+		try {
+			
+			String sql = "insert into tblBoard (seq, subject, content, regdate, readcount, heart, mseq)"
+					+ "values (seqBoard.nextVal, ?, ?, default, default, default, ?)";
+			
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getSubject());
+			pstat.setString(2, dto.getContent());
+			pstat.setString(3, dto.getMseq());
+			
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return 0;
+	}
+
+	//List 서블릿 -> 게시판 목록 주세요.
+	public ArrayList<BoardDTO> list() {
+		
+		try {
+			
+			String sql = "select seq, heart, subject, "
+					+ "(select name from tblMember where seq = tblBoard.mseq) as name, "
+					+ "regdate, readcount from tblBoard order by seq desc";
+			
+			stat = conn.createStatement();
+			rs = stat.executeQuery(sql);
+			
+			ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
+			
+			//rs -> list 복사
+			while (rs.next()) {
+				//레코드 1줄 -> BoardDTO 1개
+				BoardDTO dto = new BoardDTO();
+				dto.setSeq(rs.getString("seq"));
+				dto.setHeart(rs.getInt("heart"));
+				dto.setSubject(rs.getString("subject"));
+				dto.setName(rs.getString("name"));
+				dto.setRegdate(rs.getString("regdate"));
+				dto.setReadcount(rs.getInt("readcount"));
+			}
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return null;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

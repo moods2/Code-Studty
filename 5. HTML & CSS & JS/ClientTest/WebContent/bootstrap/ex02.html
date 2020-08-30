@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+
+        /*
+        
+        기본 설정
+        html, body
+        1. width: 100%
+        2. height: auto
+
+        */
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        main {
+            /* border: 1px solid black; */
+            width: 800px;
+            height: 100%;
+            margin: 0 auto;
+            background-color: white;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            box-shadow: 0px 0px 3px #777;
+        }
+
+        #title {
+            margin: 0;
+            padding: 20px;
+            padding-top: 35px;
+        }
+
+        #tblList {
+            width: 760px;
+            margin: 15px auto;
+        }
+
+        #tblList th:nth-child(1) { width: 60px; }
+        #tblList th:nth-child(2) { width: 440px; }
+        #tblList th:nth-child(3) { width: 90px; }
+        #tblList th:nth-child(4) { width: 110px; }
+        #tblList th:nth-child(5) { width: 60px; }
+
+        #tblList th, #tblList td { text-align: center; }
+
+        #tblList td:nth-child(2) { text-align: left; }
+
+        .btns {
+            /* border: 1px solid black; */
+            width: 760px;
+            margin: 0 auto;
+        }
+
+        .btns button:last-child {
+            float: right;
+        }
+
+        .search {
+            width: 400px;
+            margin: 10px auto;
+        }
+
+        .pagebar {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- 게시판: 글 목록 페이지(시작 페이지) -->
+    <main>
+        <h1 id="title">Bootstrap Board <small>CSS + JavaScript</small></h1>
+
+        <table id="tblList" class="table table-bordered table-striped">
+            <thead>
+                <th>번호</th>
+                <th>제목</th>
+                <th>이름</th>
+                <th>날짜</th>
+                <th>읽음</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td>게시판 작업 중입니다.</td>
+                    <td>홍길동</td>
+                    <td>2020-07-15</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>안녕하세요. 반갑습니다.</td>
+                    <td>아무개</td>
+                    <td>2020-07-14</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>질문있습니다.</td>
+                    <td>호호호</td>
+                    <td>2020-07-11</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>게시판 작업 중입니다.</td>
+                    <td>홍길동</td>
+                    <td>2020-07-15</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>안녕하세요. 반갑습니다.</td>
+                    <td>아무개</td>
+                    <td>2020-07-14</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>질문있습니다.</td>
+                    <td>호호호</td>
+                    <td>2020-07-11</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>게시판 작업 중입니다.</td>
+                    <td>홍길동</td>
+                    <td>2020-07-15</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>안녕하세요. 반갑습니다.</td>
+                    <td>아무개</td>
+                    <td>2020-07-14</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>질문있습니다.</td>
+                    <td>호호호</td>
+                    <td>2020-07-11</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>게시판 작업 중입니다.</td>
+                    <td>홍길동</td>
+                    <td>2020-07-15</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>안녕하세요. 반갑습니다.</td>
+                    <td>아무개</td>
+                    <td>2020-07-14</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>질문있습니다.</td>
+                    <td>호호호</td>
+                    <td>2020-07-11</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>게시판 작업 중입니다.</td>
+                    <td>홍길동</td>
+                    <td>2020-07-15</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>안녕하세요. 반갑습니다.</td>
+                    <td>아무개</td>
+                    <td>2020-07-14</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>질문있습니다.</td>
+                    <td>호호호</td>
+                    <td>2020-07-11</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <nav class="pagebar">
+			<ul class="pagination">
+				<li>
+				<a href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+				</li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li class="active"><a href="#">7</a></li>
+				<li><a href="#">8</a></li>
+				<li><a href="#">9</a></li>
+				<li><a href="#">10</a></li>
+				<li>
+				<a href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+				</li>
+			</ul>
+			</nav>
+
+        <!-- 검색창 -->
+        <div class="search">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+                </div>
+            </div>
+        </div>
+
+        <div class="btns">
+            <button class="btn btn-defalut">
+                <span class="glyphicon glyphicon-home"></span>
+                Home
+            </button>
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-ok"></span>
+                Write
+            </button>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #game {
+            width: 770px;
+            margin: 0 auto;
+        }
+        
+        #num1, #num2, #num3, #num4, #num5 {
+            display: inline-block;
+            border: 1px solid black;
+            margin-right: -3px;
+            width: 150px;
+            height: 50px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .pixel {
+            border: 1px solid black;
+            width: 75px;
+            height: 75px;
+            background-image: url(../images/rect_icon07.png);
+            background-size: contain;
+            display: inline-block;
+            margin-right: -7px;
+            margin-bottom: -5px;
+            background-repeat: no-repeat;
+            transition-duration: 1s;
+        }
+
+        #num1:hover ~ .one {
+            background-position: center 100px;
+        }
+
+        #num2:hover ~ .two {
+            background-position: center 100px;
+        }
+
+        #num3:hover ~ .three {
+            background-position: center 100px;
+        }
+
+        #num4:hover ~ .four {
+            background-position: center 100px;
+        }
+
+        #num5:hover ~ .five {
+            background-position: center 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="game">
+        <div id="menu">
+            <div id="num1">1</div>
+            <div id="num2">2</div>
+            <div id="num3">3</div>
+            <div id="num4">4</div>
+            <div id="num5">5</div>
+            <hr>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel four five"></div>
+            <div class="pixel four five"></div>
+            <div class="pixel"></div>
+            <div class="pixel one"></div>
+            <div class="pixel one"></div>
+            <div class="pixel four"></div>
+            <div class="pixel two three four"></div>
+            <div class="pixel two three"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel one two three four five"></div>
+            <div class="pixel one two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel two four four"></div>
+            <div class="pixel two four four"></div>
+            <div class="pixel four"></div>
+            <div class="pixel one four"></div>
+            <div class="pixel one four"></div>
+            <div class="pixel four"></div>
+            <div class="pixel three four five"></div>
+            <div class="pixel three four five"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel one two three five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three four five"></div>
+            <div class="pixel two three five"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+</body>
+</html>

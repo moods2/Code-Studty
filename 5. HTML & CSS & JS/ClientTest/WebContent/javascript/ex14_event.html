@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JavaScript Event</h1>
+    <form name="form1">
+        <div><input type="text" name="txt1"></div>
+        <div><input type="button" name="btn1" value="클릭"></div>
+
+        <hr>
+
+        <div><input type="text" name="txt2"></div>
+        <div><input type="button" name="btn2" value="클릭" 
+            onclick="f1();"></div>
+    </form>
+
+    <script>
+
+        function f1() {
+            window.document.form1.txt2.value = 100;
+        }
+
+        //자바스크립트 코딩 패턴
+        //1. 어떤 태그 + 어떤 이벤트 + 어떤 일
+        //  a. 이벤트를 매핑할 태그를 검색한다.(BOM or DOM)
+        //  b. 태그에 매핑할 이벤트를 구현한다.
+        //  c. 매핑 이벤트에 할일을 구현한다.
+
+        //a.
+        var txt1 = window.document.form1.txt1;
+        var btn1 = window.document.form1.btn1;
+
+        var now = new Date();
+
+        if (now.getSeconds() % 2 == 0) {
+            //b.
+            btn1.onclick = function() {
+                //c.
+                txt1.value = new Date();
+            };
+        } else {
+            btn1.onclick = function() {
+                txt1.value = "꽝";
+            };
+        }
+
+    </script>
+
+</body>
+</html>

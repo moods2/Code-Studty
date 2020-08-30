@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="js/Backstretch.js"></script>
+    <!-- Kakao Map -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6d54ec4ee3d75f5d446f2cddfc3e41d4"></script>
+
+    <style>
+
+        * {
+            outline: none;
+        }
+
+        body { margin: 0 auto; }
+        h1 { font-family: "Arial Black"; }
+        #main { width: 100%; }
+        #top {
+            /* border: 1px solid black; */
+            min-width: 1600px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        #bottom {
+            /* border: 1px solid black; */
+            height: 200px;
+            background-color: #eee;
+            color: white;
+        }
+        #topmenu {
+            border-bottom: 1px solid black;
+            background-color: white;
+            width: 100%;
+            height: 40px;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+            padding: 40px 0;
+            position: absolute;
+            /* margin-top: -120px; */
+        }
+        .menubar {
+            margin: 0 5px;
+        }
+        #topmenu > span {
+            cursor: pointer;
+        }
+        .switch {
+            /* border: 1px solid white; */
+            position: relative;
+            top: 50%;
+        }        
+        #topleft {
+            display: inline-block;
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 65px;
+            background-image: url("./images//title.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            left : 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #topright {
+            font-size: 13px;
+            position: absolute;
+            right : 5px;
+            top: 42px;
+            cursor: pointer;
+        }
+
+        #search {
+            border: 0;
+            border-bottom: 1px solid white;
+            background-color: transparent;
+            outline: none;
+            color: black;
+
+        }
+
+        #chatbot {
+            width: 88px;
+            height: 88px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        #frogue-container, .frogue-chat {
+            position: absolute;
+            left:20px;
+            bottom: 0;
+        }
+
+        #movetop {
+            width: 40px;
+            height: 40px;
+            background-color: gray;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            padding-top: 3px;
+        }
+        #movetop:hover {
+            background-color: orange;
+        }
+        #movetop a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        /* 내용======================================================================================================== */
+
+        #mainBox {
+            width: 1200px;
+            /* text-align: center; */
+            margin: 120px auto;
+            min-height: 890px;
+        }
+
+        #mainBox h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #board {
+            /* border: 1px solid #ccc; */
+            border-collapse: collapse;
+            width: 1200px;
+        }
+
+        #board th {
+            background-color: #7E9CB6;
+            border-right: 1px solid #ffffff;
+            text-align: center;
+            height: 40px;
+            color: white;
+        }
+        #board td {
+            border-bottom: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            height: 35px;
+            text-align: center;
+            color: rgb(68, 68, 68);
+        }
+
+        #board th:nth-child(1) {width: 60px;}
+        #board th:nth-child(2) {width: 120px;}
+        #board th:nth-child(4) {width: 110px;}
+        #board th:nth-child(5) {width: 110px;}
+        #board th:nth-child(6) {width: 60px;}
+        /* #board tr:nth-child(even) {background-color: #e3e8f1;} */
+
+        #board td:nth-child(3) {text-align: left; padding: 0px 10px;}
+        #board td:last-child {border-right: none;}
+
+        /* 탭 */
+        #tabMenu {
+            width: 1200px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+        #tabMenu::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .tabMenu {
+            border-bottom: 2px solid #eee;
+            width: 150px;
+            height: 70px;
+            float: left;
+            text-align: center;
+            padding-top: 25px;
+            border-right: none;
+            color: black;
+            margin-top: 50px;
+        }
+
+        .tabMenu:first-child{
+            /* background-color: orange; */
+            color: #7E9CB6;
+            border-bottom: 2px solid #7E9CB6;
+        }
+
+        /* 검색 */
+        #searchFAQ {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        #searchFAQBox {
+            width: 630px;
+            height: 60px;
+            border: 2px solid black;
+            padding: 0px 20px;
+            padding-right: 80px;
+        }
+
+        #searchFAQ div {
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            display: block;
+            float: left;
+            position: relative;
+            left: 885px;
+            /* text-align: center center; */
+        }
+
+        #searchFAQ::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        #searchFAQ span {
+            position: relative;
+            top: 15px;
+        }
+
+        .pagebar {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .pagination > .active > a {
+            background-color: #7E9CB6;
+            border-color: #7E9CB6;
+        }
+
+        .pagination > li > a, .pagination > li > span {
+            color: #7E9CB6;
+        }
+
+        #write {
+            outline: none;
+            width: 100px;
+            height: 40px;
+            background-color: #7E9CB6;
+            border-color: #7E9CB6;
+            float: right;
+            outline: none;
+            margin-top: 30px;
+        }
+
+        #write::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+        .move {
+            width: 150px;
+            position: relative;
+            top: -210px;
+            right: 0px;
+            border: none;
+            border-bottom: 1px solid #7E9CB6;
+            float: right;
+            outline: none;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .move span {
+            margin-right: 10px;
+        }
+
+        .move:hover {
+            background-color: #7E9CB6;
+        }
+
+
+        #grid1 {
+            width: 1200px;
+            /* text-align: center; */
+            display: grid;
+            grid-column: 600px 600px;
+            grid-row: 200px;
+            margin-top: 100px;
+            margin-bottom: -100px;
+        }
+
+        #grid1 h2 {
+            font-size: 15px;
+        }
+
+        #ratio4 {
+            grid-column: 1/2;
+            
+            /* grid-row: 1/2; */
+        }
+
+        #ratio5{
+            grid-column: 2/3;
+            /* grid-row: 2/5; */
+        }
+
+        /* 문의 분류별 */
+         #ratio4 .highcharts-figure, .highcharts-data-table table {
+            min-width: 320px; 
+            max-width: 500px;
+            /* margin: 1em auto; */
+        }
+
+        #container4 {
+            height: 400px;
+        }
+
+        #ratio4 .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #EBEBEB;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+        #ratio4 .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+        #ratio4 .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+        #ratio4 .highcharts-data-table td, #ratio4 .highcharts-data-table th, .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+        #ratio4 .highcharts-data-table thead tr,#ratio4  .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        #ratio4 .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+
+        /* 월별 문의 */
+        #ratio5 .highcharts-figure, #ratio5 .highcharts-data-table table {
+            min-width: 360px; 
+            max-width: 800px;
+            /* margin: 1em auto; */
+        }
+
+        #ratio5 .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #EBEBEB;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+        #ratio5 .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+        #ratio5 .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+        #ratio5 .highcharts-data-table td, #ratio5 .highcharts-data-table th, #ratio5 .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+        #ratio5 .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        #ratio5 .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div id="main">
+
+        <!-------------------------------- 화면 상단부 -------------------------------->
+        <div id="top">
+            <div id="topmenu">
+                <!-- 상단메뉴 좌측(메인화면으로 돌아가기) -->
+                <a href="main.html" id="topleft"></a>
+                <!-- 상단메뉴 센터(콘서트, 뮤지컬, 연극, 클래식, 전시) -->
+                <span data-item="item1" class="menubar">콘서트</span>
+                <span data-item="item2" class="menubar">뮤지컬</span>
+                <span data-item="item3" class="menubar">연극</span>
+                <span data-item="item4" class="menubar">클래식</span>
+                <span data-item="item5" class="menubar">전시</span>
+                <!-- 상단메뉴 우측(랭킹, 이벤트, 검색창, 마이페이지) -->
+
+                <div id="topright">
+                    <span data-item="item6" class="menubar">랭킹</span>
+                    <span data-item="item7" class="menubar">이벤트</span>
+                    <input type="text" value="" id="search">
+                    <label for="search" class="glyphicon glyphicon-search"
+                        style="font-size: 14px; cursor: pointer;"></label>
+                    <div class="glyphicon glyphicon-user" 
+                        style="font-size: 14px; cursor: pointer; margin: 0 10px; "></div>
+                </div>
+            </div>
+            
+            <!-- 챗봇 : 단비봇 --------------------------------------------------------------------------------------------------------------------------------->
+            <!-- <img src="./images/face35.png" id="chatbot"> -->
+
+            <div id="frogue-container" class="position-right-bottom"
+                data-chatbot="e4957de9-dad9-448d-a709-e43eeb644f63"
+                data-user="사용자ID"
+                data-init-key="value">
+            </div>
+            <!-- data-init-식별키=값 으로 셋팅하면 챗플로우에 파라미터와 연동가능. 식별키는 소문자만 가능 -->
+            <script>
+                (function(d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'frogue-embed'));
+            </script>
+            <!-- 제일 위로 돌아가기 버튼 -->
+            <div id="movetop"><a href="#top">↑</a></div>
+        </div>
+
+        <!-- 내용============================================================================================================================================= -->
+        <div id="mainBox">
+            <h1>Q&A</h1>
+
+            <div id="searchFAQ">
+                <input type="text" placeholder="궁금하신 내용을 입력해주세요" id="searchFAQBox">
+                <div><span class="glyphicon glyphicon-search"></span></div>
+            </div>
+
+            <button id="myQna" class="move">
+                <span class="
+                glyphicon glyphicon-th-list"></span>
+                My 문의 내역
+            </button>
+            <button id="FAQ" class="move">
+                <span class="
+                glyphicon glyphicon-th-list"></span>
+                PAQ 이동
+            </button>
+            <div style="clear:both;"></div>
+
+            <div id="tabMenu">
+                <div class="tabMenu" data-tab="tab1">전체</div>
+                <div class="tabMenu" data-tab="tab2">예매방법</div>
+                <div class="tabMenu" data-tab="tab3">결제방법</div>
+                <div class="tabMenu" data-tab="tab4">수수료</div>
+                <div class="tabMenu" data-tab="tab5">취소/환불</div>
+                <div class="tabMenu" data-tab="tab6">티켓수령</div>
+                <div class="tabMenu" data-tab="tab7">티켓반매/재휴문의</div>
+                <div class="tabMenu" data-tab="tab8">기타</div>
+            </div>
+
+
+            <table id="board">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>문의유형</th>
+                        <th>제목</th>
+                        <th>날짜</th>
+                        <th>답변완료</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 글쓰기 -->
+
+            <button class="btn btn-primary" id="write">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Write
+            </button>
+
+            <!-- 페이징바 -->
+            <nav class="pagebar">
+                <ul class="pagination">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;&laquo;</span>
+                      </a>
+                    </li>
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">6</a></li>
+                  <li><a href="#">7</a></li>
+                  <li><a href="#">8</a></li>
+                  <li><a href="#">9</a></li>
+                  <li><a href="#">10</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div id="grid1">
+
+                <div id="ratio4">
+                    <h2>문의분류별 문의율</h2>
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+                    <figure class="highcharts-figure">
+                        <div id="container4"></div>
+                    </figure>
+
+                </div>
+
+                <div id="ratio5">
+                    <h2>월별 문의율</h2>
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+                    <figure class="highcharts-figure">
+                        <div id="container5"></div>
+                    </figure>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+<!-------------------------------- 화면 하단부 -------------------------------->
+        <div id="bottom">
+            <div style="width: 1600px; margin: auto;">
+                <!-- 회사 마크 -->
+                <img src="./images/title2.png" style="transform: translate(0, 40px);">
+            </div>
+        </div>
+    </div>
+
+            <!-- <div id="place"></div> -->
+
+    <script>
+
+        //상단 메뉴 css
+        $(".menubar").mouseover(function() {
+        $(this).css("border-bottom", "5px solid orange");
+        });
+        $(".menubar").mouseout(function() {
+            $(this).css("border-bottom", "");
+        });
+
+        var flag = false;
+ 
+        //이미지에 마우스 올릴때
+        $(".img").mouseover(function() {
+            $(this).css("box-shadow", "1px 1px 1px 2px gray");
+        });
+        //이미지에 마우스 뗄때
+        $(".img").mouseout(function() {
+            $(this).css("box-shadow", "");
+        });
+        
+        //이미지 클릭시 이동
+        $(".img").click(function() {
+            location.href = "#";
+        });
+
+        //챗봇 클릭시 행동
+        $("#chatbot").dblclick(function() {
+            alert("챗봇입니다!");
+        });
+        //챗봇 이동 가능
+        $("#chatbot").draggable();
+
+        $("#movetop").click(function() {
+            //<a> 본연의 기능을 제거
+			event.preventDefault();
+
+            $("html,body").animate({
+                scrollTop: 0
+            }, 1000);
+        });
+
+        var flag = false;
+
+        $(document).scroll(function() {
+            //메뉴가 시야에서 사라지는 순간 -> 메뉴를 붙박이로 만들기
+            // if (!flag) {
+                if ($(document).scrollTop() > $("#searchFAQ").position().top) {
+                    $("#topmenu").css({
+                        width: "100%",
+                        position: "fixed",
+                        top: "0px",
+                        bottom: "",
+                        zIndex: "1"
+                    });
+                    // $("#topmenu").animate({
+                    //     top: "0px"
+                    // }, 1000, function() {
+                    //     flag=true;
+                    // });
+                };
+            // };
+
+            //상단 헤더(top)이 눈에 보일때 쯤
+            if ($(document).scrollTop() <= $("#searchFAQ").position().top) {
+                $("#topmenu").css({
+                    position: "absolute",
+                    top: "0px",
+                    bottom: ""
+                });
+                // flag = false;                
+            }
+        });
+
+        // 내용==================================================================================================================================================================
+        
+        // 글쓰기 링크
+        $("#write").click(function() {
+            $(location).attr('href','user_qna_write.html');
+        });
+        // 마이리스트 링크
+        $("#myQna").click(function() {
+            $(location).attr('href','user_qan_mylist.html');
+        });
+        // FAQ 링크
+        $("#FAQ").click(function() {
+            $(location).attr('href','user_infoUse.html');
+        });
+
+        //탭
+        $(".tabMenu").click(function(){
+            $(".tabMenu").css({
+                "border-bottom" : "2px solid #eee",
+                "color": "black"
+            })
+            $(this).css({
+                "border-bottom" : "2px solid #7E9CB6",
+                "color": "#7E9CB6"
+            })
+        });
+ 
+
+                // 문의 분류별
+                Highcharts.chart('container4', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false
+            },
+            title: {
+                text: 'Type of Question',
+                align: 'center',
+                verticalAlign: 'middle',
+                y: 60
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        distance: -50,
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'white'
+                        }
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    center: ['50%', '75%'],
+                    size: '110%'
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                innerSize: '50%',
+                data: [
+                    ['예매방법', 58.9],
+                    ['결제방법', 13.29],
+                    ['수수료', 13],
+                    ['취소/환불', 3.78],
+                    ['티켓수령', 3.42],
+                    ['티켓판매/재휴문의', 3],
+                    {
+                        name: '기타',
+                        y: 4.61,
+                        dataLabels: {
+                            enabled: false
+                        }
+                    }
+                ]
+            }]
+        });
+
+        // 월별 문의
+        Highcharts.chart('container5', {
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'Monthly inquiry rate'
+            },
+            subtitle: {
+                text: 'Woman & Man'
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: '회수'
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    },
+                    enableMouseTracking: false
+                }
+            },
+            series: [{
+                name: 'Woman',
+                data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+            }, {
+                name: 'Man',
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            }]
+        });
+
+
+    </script>
+
+
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>

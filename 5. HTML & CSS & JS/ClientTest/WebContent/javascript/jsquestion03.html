@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl {
+            border: 0px solid gray;
+            width: 600px;
+            margin: 100px auto;
+        }
+
+        #left {
+            border: 1px solid gray;
+            width: 160px;
+            height: 245px;
+            display: inline-block;
+        }
+
+        #menu1, #menu2, #menu3, #menu4, #menu5 {
+            border: 1px solid gray;
+            border-radius: 5px;
+            width: 138px;
+            height: 35px;
+            margin: 10px;
+            text-align: center;
+            color: #444;
+            background-color: #eee;
+            font-weight: bold;
+            display: block;
+            cursor: pointer;
+        }
+
+        #right {
+            border: 1px solid gray;
+            display: inline-block;
+            width: 420px;
+            height: 205px;
+            text-align: center;
+            padding: 25px 0 15px 0;
+            position: relative;
+            left: -1px;
+            bottom: 3px;
+        }
+
+        img {
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="tbl">
+        <div id="left">
+            <div id="menu1" name="dog01" data-file="dog01_big.jpg" data-num="1">강아지1</div>
+            <div id="menu2" name="dog02" data-file="dog02_big.jpg" data-num="2">강아지2</div>
+            <div id="menu3" name="dog03" data-file="dog03_big.jpg" data-num="3">강아지3</div>
+            <div id="menu4" name="dog04" data-file="dog04_big.jpg" data-num="4">강아지4</div>
+            <div id="menu5" name="dog05" data-file="dog05_big.jpg" data-num="5">강아지5</div>
+        </div><div id="right">
+            <img src="../images/dog01.jpg" name="img">
+        </div>
+    </div>
+
+    <script>
+
+        function bigdog() {
+            for (var i=1; i<=5; i++) {
+                document.all["menu" + i].onclick = function() {
+                    event.srcElement.src= window.open("../images/" + event.srcElement.dataset["file"], "dog0" + i, "width=1600, height=1200");
+                };
+
+                document.all["menu" + i].onmouseover = function() {
+                    document.images["img"].src = "../images/dog0" + event.srcElement.dataset["num"] + ".jpg";
+                };
+            };
+       }
+       bigdog();
+
+    </script>
+
+</body>
+</html>

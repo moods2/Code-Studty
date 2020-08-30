@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl {
+            border: 0px solid black;
+            border-collapse: collapse;
+        }
+
+        #tbl td {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <table id="tbl">
+        <tbody id="tbody">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var tbody = document.getElementById("tbody");
+        var column = 2;
+        var row = 2;
+
+        window.onkeydown = function() {
+
+            var n = 1;
+
+            if (event.keyCode == 37) { //좌
+                column--;
+                if (column < 1) column = 1;
+                table();
+
+            } else if (event.keyCode == 38) { //상
+                row--;
+                if (row < 1) row = 1;
+                table();
+                
+            } else if (event.keyCode == 39) { //우
+                column++;
+                table();
+                
+            } else if (event.keyCode == 40) { //하
+                row++;
+                table();
+
+            }
+
+
+            function table() {
+                tbody.innerHTML = "";
+                var temp = "";
+                for (var i=0; i<row; i++) {
+                    temp = "<tr>";
+                    for (var j=0; j<column; j++) {
+                        temp += "<td>";
+                        temp += n;
+                        temp += "</td>";
+                        n++;
+                    }
+                    temp += "</tr>";
+                    tbody.innerHTML += temp;
+                }
+            };
+
+
+        };
+
+    </script>
+
+</body>
+</html>

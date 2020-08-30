@@ -1,0 +1,11 @@
+Dynamic Web Project 구조
+
+1. Java Resources
+	a. src : 자바 소스 폴더
+	b. Libraries
+		1. Apache Tomcat(필수)
+			- 웹사이트 관련 jar
+		2. JRE(필수)
+			- 자바 관련 jar
+			
+2. 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<style>
+		#box1 { 
+			border: 1px solid black; 
+			width: 400px; height: 400px; 
+			background: gold; 
+			transform: translate(300px, 200px); 
+		}
+		#cat1, #cat2 {
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+
+    <img src="../images/catty01.png" id="cat1">
+    <img src="../images/catty02.png" id="cat2">
+
+	<div id="box1"></div>
+
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+
+		$("#cat1, #cat2").draggable({
+            cursor: "move",
+            opacity: .3
+        });
+
+        $("#box1").droppable({
+            drop: function(event, ui) {
+                // alert(ui.draggable.attr("id"));
+                ui.draggable.draggable({
+                    containment: "#box1" //지정한 부모 밖으로 못나감
+                });
+                $(this).css("background-color", "tomato");
+            }
+        });
+
+        $("#cat1, #cat2").dblclick(function() {
+            $(this).draggable({
+                containment: "" //부모 지정 해제
+            })
+        })
+
+	</script>
+</body>
+</html>

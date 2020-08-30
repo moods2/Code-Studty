@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #all {
+            border: 0px solid black;
+            width: 550px;
+            margin: 0 auto;
+        }
+        
+        #line {
+            border-left: 3px dotted #808080;
+            padding-left: 10px;
+        }
+
+        .rainbow {
+            padding: 25px;
+            transition: all 1s;
+        }
+
+        #box1 {
+            margin-top: 20px;
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        #box2 {
+            width: 450px;
+            height: 450px;
+            background-color: orange;
+            background-position: center center;
+            margin: 0 auto;
+            
+        }
+        #box3 {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+        }
+        #box4 {
+            width: 350px;
+            height: 350px;
+            background-color: green;
+        }
+        #box5 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+        #box6 {
+            width: 250px;
+            height: 250px;
+            background-color: purple;
+        }
+        #box7 {
+            width: 200px;
+            height: 200px;
+            background-color: #EE82EE;
+        }
+
+        #box2:hover { border-radius: 10%; }
+        #box3:hover { border-radius: 20%; }
+        #box4:hover { border-radius: 30%; }
+        #box5:hover { border-radius: 40%; }
+        #box6:hover { border-radius: 50%; }
+        #box7:hover { border-radius: 60%; }
+
+    </style>
+</head>
+<body>
+
+    <div id="all">
+        <div id="title">
+            <h1>transition + :hover + border-radius</h1>
+        </div>
+        <div id="line">아래 상자에 마우스를 올리면 변화를 주시오.
+        </div>
+        <div id="box1" class="rainbow">
+            <div id="box2" class="rainbow">
+                <div id="box3" class="rainbow">
+                    <div id="box4" class="rainbow">
+                        <div id="box5" class="rainbow">
+                            <div id="box6" class="rainbow">
+                                <div id="box7" class="rainbow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

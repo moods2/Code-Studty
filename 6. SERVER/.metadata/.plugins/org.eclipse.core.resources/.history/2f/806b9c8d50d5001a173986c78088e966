@@ -1,0 +1,56 @@
+package com.test.codestudy.board;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.test.codestudy.DBUtil;
+
+public class BoardDAO {
+	
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public BoardDAO() {
+		
+		DBUtil util = new DBUtil();
+		conn = util.open();
+		
+	}
+	
+	public void close() {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	//WriteOk 서블릿 -> 글쓰기 위임
+	public int write(BoardDTO dto) {
+		
+		try {
+			
+			String sql = "insert into tblBoard (seq, subject, content, regdate, readcount, heart, mseq)"
+					+ "values (seqBoard.nextVal, ?, ?, default, default, default, ?)";
+			
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getSubject());
+			pstat.setString(2, dto.getContent());
+			pstat.setString(3, dto.getMseq());
+			
+			return pstat.executeUpdate();
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return 0;
+	}
+
+}

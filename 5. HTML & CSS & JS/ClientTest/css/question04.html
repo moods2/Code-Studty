@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #table {
+            border: 1px solid #F0F0F0;
+            font-family: '돋움';
+            font-size: 13px;
+            width: 588px;
+        }
+
+        #table #header {
+            border: 0px solid black;
+            margin: 22px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        #table #content .item {
+            border-right: 1px solid #F0F0F0;
+            display: inline-block;
+            width: 113px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #table #content .item.last {
+            border-right: 0;
+        }
+
+        .item > .day span {
+            color: #777;
+        }
+
+        .item > .day #today {
+            background-color: #00C73C;
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 11px;
+            padding: 4px 6px 4px 6px;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            border: 0px solid black;
+            float: left;
+            margin: 15px 0 -8px 30px;
+        }
+
+        #content .item #high, #content .item #low {
+            border: 0px solid black;
+            display: inline-block;
+            margin: 22px 10px 0 0;
+        }
+
+        #high { color: #41B5EE; }
+        #low { color: #8F8F8F; }
+
+        #content .item .temp {
+            font-weight: bold;
+            margin-top: 20px;
+            color: #444444;
+            
+        }
+
+    </style>   
+</head>
+<body>
+    
+    <div id="table">
+        <div id="header">
+            주간날씨
+        </div>
+        <div id="content">
+            <div class="item">
+                <div class="day">목 <span id="today">오늘</span></div>
+                <img src="../images/icon_wt_22.svg">
+                <div id="high">70%</div>
+                <div style="clear: both;"></div>
+                <img src="../images/icon_wt_22.svg">
+                <div id="high">60%</div>
+                <div style="clear: both;"></div>
+                <div class="temp">21˚/25˚</div>
+            </div>
+            <div class="item">
+                <div class="day">금 <span>내일</span></div>
+                <img src="../images/icon_wt_22.svg">
+                <div id="high">60%</div>
+                <div style="clear: both;"></div>
+                <img src="../images/icon_wt_07.svg">
+                <div id="low">30%</div>
+                <div style="clear: both;"></div>
+                <div class="temp">21˚/28˚</div>
+            </div>
+            <div class="item">
+                <div class="day">토 <span>모레</span></div>
+                <img src="../images/icon_wt_07.svg">
+                <div id="low">30%</div>
+                <div style="clear: both;"></div>
+                <img src="../images/icon_wt_05.svg">
+                <div id="low">30%</div>
+                <div style="clear: both;"></div>
+                <div class="temp">21˚/29˚</div>
+            </div>
+            <div class="item">
+                <div class="day">일 <span>6.28.</span></div>
+                <img src="../images/icon_wt_05.svg">
+                <div id="low">30%</div>
+                <div style="clear: both;"></div>
+                <img src="../images/icon_wt_09.svg">
+                <div id="high">60%</div>
+                <div style="clear: both;"></div>
+                <div class="temp">21˚/31˚</div>
+            </div>
+            <div class="item last">
+                <div class="day">월 <span>6.29.</span></div>
+                <img src="../images/icon_wt_05.svg">
+                <div id="low">30%</div>
+                <div style="clear: both;"></div>
+                <img src="../images/icon_wt_09.svg">
+                <div id="high">60%</div>
+                <div style="clear: both;"></div>
+                <div class="temp">21˚/29˚</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

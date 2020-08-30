@@ -1,0 +1,64 @@
+1. 새프로젝트 생성
+  - Dynamic Web Project > "AjaxTest"
+
+2. 패키지 생성
+  - com.test.ajax
+
+3. views 생성
+  - WEB-INF > views
+
+4. 라이브러리 복사
+  - WEB-INF > lib
+	a. ojdbc6.jar
+	b. cos.jar
+	c. jstl-1.2.jar
+
+5. 부트스트랩
+  - WebContent
+	a. css 폴더 복사
+	b. js 폴더 복사
+	c. fonts 폴더 복사
+
+6. AjaxTest > 필기.txt
+
+7. AjaxTest > db.sql
+
+8. 파일 생성
+  - com.test.ajax
+  	a. AjaxDAO.java
+  	b. ResearchDTO.java
+  	c. Ex01.java(서블릿)
+  	d. DBUtil.java(복사)
+  - views
+  	a. template.jsp
+  	b. ex01.jsp  	
+  	
+
+
+Ajax, Asynchronous JavaScript and XML
+- 비동기 자바스크립트 & XML
+- 자바스크립트와 XML을 사용해서 비동기 통신을 하는 기술
+- 브라우저와 웹서버와 데이터를 주고 받는 기술(Background 동작)
+
+동기 vs 비동기
+- 차이점
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

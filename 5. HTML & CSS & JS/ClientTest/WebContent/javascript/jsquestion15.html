@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            border: 0px solid black;
+            width: 570px;
+            margin: 100px auto;
+        }
+
+        div:first-child {
+            border: 1px solid gray;
+            margin: 10px 0;
+            font-size: 120px;
+            font-weight: bold;
+            letter-spacing: -15px;
+            padding: 0 10px 20px 10px;
+            color: #444;
+        }
+        
+        div:first-child > input {
+            border: 0;
+            text-align: center;
+            font-size: 120px;
+            color: #444;
+            width: 130px;
+        }
+
+        div:last-child > input {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px 50px;
+            color: #444;
+            background-color: white;
+            border: 1px solid #888;
+            outline: none;
+        }
+
+        div:last-child > input:disabled {
+            background-color: #EEE;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form1">
+        <div>
+            <input type="text" name="hour" value="00"> :
+            <input type="text" name="min" value="00"> :
+            <input type="text" name="sec" value="00">
+        </div>
+        <div>
+            <input type="button" value="시작" name="start">
+            <input type="button" value="멈춤" name="stop" disabled>
+            <input type="button" value="종료" name="end" disabled>
+        </div>
+    </form>
+
+    <script>
+
+        var hour = document.form1.hour;
+        var min = document.form1.min;
+        var sec = document.form1.sec;
+
+        var btnStart = document.form1.start;
+        var btnStop = document.form1.stop;
+        var btnEnd = document.form1.end;
+
+        var timer = 0;
+        var n = 0;
+
+        btnStart.onclick = function() {
+
+            if(timer == 0) {
+                timer = setInterval(function() {
+                    hour.value = addZero(n / 100 / 60);
+                    min.value = addZero(n / 100 % 60);
+                    sec.value = addZero(n % 100);
+                    n++;
+                }, 10);
+            }
+            btnStart.disabled = true;
+            btnStop.disabled = false;
+            btnEnd.disabled = false;
+
+        }
+
+        function addZero(num) {
+            if (num < 10) return "0" + num;
+            else return num;
+        }
+
+        btnStop.onclick = function() {
+            clearInterval(timer);
+            timer = 0;
+            btnStart.disabled = false;
+            btnStop.disabled = true;
+            btnEnd.disabled = false;
+        }
+
+        btnEnd.onclick = function() {
+            clearInterval(timer);
+            timer = 0;
+            sec.value = "00";
+            min.value = "00";
+            hour.value = "00";
+            btnStart.disabled = false;
+            btnStop.disabled = true;
+            btnEnd.disabled = true;
+        }
+
+    </script>
+
+</body>
+</html>

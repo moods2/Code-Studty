@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        window.addEventListener("mousedown", function() {
+
+            if (event.buttons == 1) {
+
+                var img = document.createElement("img");
+
+                img.className = "img";
+
+                var n = parseInt(Math.random() * 39) + 1;
+                console.log(n);
+
+                img.setAttribute("src", "../images/face" + format(n) + ".png");
+
+                img.style.left = event.clientX - 75 + "px";
+                img.style.top = event.clientY - 75 + "px";
+
+                document.body.appendChild(img);
+            }
+
+        });
+
+        function format(n) {
+            if (n < 10) return "0" + n
+                else return n;
+        }
+
+    </script>
+
+</body>
+</html>

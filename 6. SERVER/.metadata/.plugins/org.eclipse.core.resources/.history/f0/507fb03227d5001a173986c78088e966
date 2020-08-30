@@ -1,0 +1,18 @@
+package com.test.codestudy.member;
+
+//DB 작업 담당 객체
+// - 서블릿 X
+// - 일반 클래스 O
+public class MemberDAO {
+	
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public MemberDAO() {
+		//DB 연결
+		
+	}
+
+}

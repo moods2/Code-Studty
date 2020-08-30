@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl { border-collapse: collapse; }
+
+        #tbody td {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        #tbody td img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-image: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <input type="button" value="walk" id="btn">
+    <hr>
+    <table id="tbl">
+        <tbody id="tbody">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var btn = document.getElementById("btn");
+        var td = document.getElementsByTagName("td");
+        var i = 0;
+        var timer = 0;
+        var c = 255;
+        var foot = "left";
+
+        btn.onclick = function() {
+
+            timer = setInterval(function() {
+
+                for (var j=0; j<td.length; j++) {
+                    td[j].innerHTML = "";
+                }
+
+                td[i].style.backgroundColor = "rgb(" + c + ", " + c + ", " + c + ")";
+                c-=5;
+                
+                if (c < 0) clearInterval(timer);
+                
+                td[i].innerHTML = "<img src='../images/foot_" + foot + ".png'>";
+                
+                i++;
+                if (i == 5) i = 0;
+
+                if (foot == "left") foot = "right"
+                else foot = "left";
+
+            }, 500)
+
+        }
+
+    </script>
+
+</body>
+</html>

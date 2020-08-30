@@ -1,0 +1,2532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>벤, 정확한 슬픔의 발라더  | YES24 채널예스</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="imagetoolbar" content="no" />
+    <meta name="naver-site-verification" content="e04c29e1f8c12dc19821d8968d7e79fd115bdd1b"/>
+    <link rel="shortcut icon" href="http://image.yes24.com/sysimage/top/favicon16.ico" type="image/x-icon" />
+    <link rel="icon" href="http://image.yes24.com/sysimage/top/favicon16.ico" type="image/x-icon" />
+    
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@yes24chyes">
+    <meta property="twitter:title" content="벤, 정확한 슬픔의 발라더  | YES24 채널예스">
+    <meta property="twitter:description" content="벤의 목소리 그 안에서 펑펑 울어도 좋다. 결코 당신이 약해서 통곡하는 게 아니다. 벤의 목소리가 당신을 그렇게 만든 것뿐이다.    (2019. 01. 03)">
+    <meta property="twitter:image:src" content="http://image.yes24.com/images/chyes24/0/1/0/a/010a06583fbbb0dcb8cf9900d2f24c24.jpg">
+    <meta property="fb:admins" content="yes24now" />
+    <meta property="og:title" content="벤, 정확한 슬픔의 발라더  | YES24 채널예스"/>
+    <meta property="og:type" content="book" />
+    <meta property="og:url" content="http://ch.yes24.com/Article/View/37821"/>
+    <meta property="og:image" content="http://image.yes24.com/images/chyes24/0/1/0/a/010a06583fbbb0dcb8cf9900d2f24c24.jpg"/>
+    <meta property="og:site_name" content="ChannelYes" />
+    <meta property="og:description" content="벤의 목소리 그 안에서 펑펑 울어도 좋다. 결코 당신이 약해서 통곡하는 게 아니다. 벤의 목소리가 당신을 그렇게 만든 것뿐이다.    (2019. 01. 03)"/>
+    <meta property="me2:post_body" content='"벤, 정확한 슬픔의 발라더  | YES24 채널예스":http://ch.yes24.com/Article/View/37821'/>
+    <meta property="me2:post_tag" content="chyes" />
+    <meta property="me2:image" content="http://image.yes24.com/images/chyes24/0/1/0/a/010a06583fbbb0dcb8cf9900d2f24c24.jpg"/>
+    <script type="text/javascript" charset="utf-8" src="http://static.plugin.me2day.com/js/plugins_v1.js"></script>
+    <meta name="description" content="벤의 목소리 그 안에서 펑펑 울어도 좋다. 결코 당신이 약해서 통곡하는 게 아니다. 벤의 목소리가 당신을 그렇게 만든 것뿐이다.    (2019. 01. 03)" />
+    <meta name="keywords"  content="벤,발라더,슬픔,꿈처럼" />
+
+	<link href="http://image.yes24.com/images/chyes24/Content/common.css?ver=20180810s" rel="stylesheet" type="text/css" />
+    
+    <link href="http://image.yes24.com/images/chyes24/Content/gnb.css?ver=20120627" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/wingbanner.js" type="text/javascript"></script>
+	<script src="/Scripts/jquery-1.7.js" type="text/javascript"></script>
+    <script src="/Scripts/jsrender.js" type="text/javascript"></script>
+	<script src="/Scripts/jquery-ui-1.8.16.js" type="text/javascript"></script>
+    <script src="/Scripts/globalize.js" type="text/javascript"></script>
+    <script src="/Scripts/gnb.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-qshandler.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.watermark.js" type="text/javascript"></script>
+	<script src="/Scripts/globalize_yes24_channelyes.js?ver=20200608" type="text/javascript"></script>
+	<script type="text/javascript" src="http://www.yes24.com/JavaScript/util.js"></script>
+    <script type="text/javascript" src="http://www.yes24.com/24/Scripts/YES24.Common-1.6.js?ver=20160429"></script>
+    <script type="text/javascript">
+        $(function(){
+            yes24GU.setConfig('http://www.yes24.com', 'https://www.yes24.com');
+            CCodeParsing();
+            setwingBanner();
+        });
+    </script>
+    
+    <link href="http://image.yes24.com/images/chyes24/Content/article.css" rel="stylesheet" type="text/css" />
+    <link href="http://image.yes24.com/images/chyes24/Content/themes/base/jquery.ui.modalbox.css" rel="stylesheet" type="text/css" />
+    <link href="http://image.yes24.com/images/chyes24/Content/NanumGothic.css?ver=20160325" rel="stylesheet" type="text/css" />
+
+
+
+
+    <script type="text/javascript" src="/Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        function addToCartByGoodsNo(goodsNo,ordCount,islayerUI,layerid, categoryNumber) {
+            if (goodsNo <= 0) { alert('상품을 선택하세요.'); return; }
+            if (categoryNumber == null) { categoryNumber = ""; }
+
+            yes24GU.checkValidGoods(goodsNo, false,
+                function (isSuccess, data) {
+                    if (isSuccess) {
+                        var cartData = yes24GU.getCartDataByNo(goodsNo, 1, ordCount, '');
+
+                        if (islayerUI) {
+                            var msg = yes24GU.ajaxCartData(cartData, categoryNumber);
+                            if (msg == '') $("#" + layerid).show();
+                            else alert(msg);
+                       
+	                    } else {
+	                        yes24GU.submitCartData(cartData, categoryNumber);
+	                    }
+                    }
+                    else {
+                        yes24GU.showCartError(data.ErrorCodes[0], data.Goods[0], '');
+                    }
+                },
+                function (data) { }
+            );
+        }
+           
+        function addToMyListByGoodsNo(goodsNo) {
+            yes24GU.checkValidGoods(goodsNo, false,
+                function (isSuccess, data) {
+                    if (isSuccess) {
+                        centerNewWinNoScroll(YES_BLOG_URL + '/yes24/listAddGoodsPop.aspx?goodsno=' + goodsNo, 'addinlist', "320", "180");
+                    }
+                    else {
+                        yes24GU.showCartError(data.ErrorCodes[0], data.Goods[0], '');
+                    }
+                },
+                function (data) { }
+            );
+        }
+
+        function buyWithoutCartByGoodsNo(goodsNo, ordCount, categoryNumber, entrNo, memNo) {
+            if (goodsNo <= 0) { alert('상품을 선택하세요.'); return; }
+            if (!loginCheck()) {
+                if (categoryNumber == "018") {
+                    var result = "";
+                    if (window.showModalDialog) {
+                        var fileName = "/Common/FTPopUp_Login.aspx";
+                        var dlgStyle = "dialogHeight: 292px; dialogWidth:282px; dialogTop: ((availHeight /2) - (dialogHeight/2 ) )px; dialogLeft: ((availWidth /2) - (dialogWidth/2 ) )px; scroll:0; help:0; status:0;";
+                        result = showModalDialog(fileName, window, dlgStyle);
+                    }
+                }
+                else if (!loginCheck()) {
+                    if (entrNo != null && memNo != null) {
+                        if (yes24GU.checkSeller(entrNo, memNo) == "Y") { alert('중고샵판매자 본인의 상품은 구매하실 수 없습니다.'); }
+                        else {
+                            yes24GU.checkUsedHub(goodsNo, YES_DIRECT_ORDER_URL + yes24GU.getOrderData(goodsNo, "1", ordCount, categoryNumber, "N", ''));
+                        }
+                    } else {
+                        yes24GU.checkUsedHub(goodsNo, YES_DIRECT_ORDER_URL + yes24GU.getOrderData(goodsNo, "1", ordCount, categoryNumber, "N", ''));
+                    }
+                }
+            } else {
+                if (entrNo != null && memNo != null) {
+                    if (yes24GU.checkSeller(entrNo, memNo) == "Y") { alert('중고샵판매자 본인의 상품은 구매하실 수 없습니다.'); }
+                    else { yes24GU.checkUsedHub(goodsNo, YES_DIRECT_ORDER_URL + yes24GU.getOrderData(goodsNo, "1", ordCount, categoryNumber, "Y", '')); }
+                } else {
+                    yes24GU.checkUsedHub(goodsNo, YES_DIRECT_ORDER_URL + yes24GU.getOrderData(goodsNo, "1", ordCount, categoryNumber, "Y", ''));
+                }
+            }
+        };
+
+        //중고샵 허브 바로 구매
+        GoodsUtil.prototype.checkUsedHub = function (goodsNo, url) {
+            this.checkValidGoods(goodsNo, false,
+                function (isSuccess, data) {
+                    if (isSuccess) {
+                        location.href = url;
+                    }
+                    else {
+                        yes24GU.showCartError(data.ErrorCodes[0], data.Goods[0], '');
+                    }
+                },
+                function (data) { }
+            );
+        };
+
+
+        function canBuyGoodsByAge(ageLmtYn,userAge,lmtAge){
+            var bRet = true;
+            try {
+                if (ageLmtYn == "Y")
+        //            if (lmtAge > userAge && lmtAge >= 19)
+                        bRet = false;
+            } catch (Exception) { alert("연령 체크 오류 입니다."); }
+            return bRet;
+        }
+
+        // 성인인증 관련
+        function checkAdultAuth(ageLmtYn, lmtAge, userAge) {
+            if (!this.canBuyGoodsByAge(ageLmtYn,userAge,lmtAge)) {
+                if (!loginCheck()) { 
+                    alert("["+lmtAge+"세 이상] 나이제한 상품입니다. 로그인 후 이용하세요.");
+                    document.location.href = "https://www.yes24.com/Templates/FTLogin.aspx?ReturnURL=" + encodeURIComponent(location.href);
+                    return false;
+                } else {
+                    if (userAge >= lmtAge){   
+                        if(lmtAge >= 19) {     
+                            var AdultAuthYN = GetCookie("AdultAuthYN");  
+                            if (AdultAuthYN == "N") {
+                                alert("[" + lmtAge + "세 이상] 나이제한 상품입니다.");
+                                return false;
+                            }
+                            else if(AdultAuthYN != "Y") {
+                                location.href = "https://www.yes24.com/Member/Adult.aspx?ReturnURL=" + encodeURIComponent(location.href);
+                                return false;
+                            }
+                        } 
+                    } else {
+                        alert("["+lmtAge+"세 이상] 나이제한 상품입니다.");
+                        return false;
+                    }
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            $.ajaxSetup({ cache: false });
+
+            var $font = $('a.btnFontName[href=NanumGothic] img');
+            $font.attr('src', $font.attr('src').replace('_off', '_on'));
+
+            $('a.btnFontName').click(function () {
+                var $this = $(this);
+
+                var fontName = $this.attr('href');
+                $('#articleTop').css('font-family', fontName);
+                $('div.viewType04').css('font-family', fontName);
+                $.cookie("fontName", fontName);
+
+                if (fontName == 'NanumGothic') {
+                    $('#nanumTooltip').hide();
+                }
+
+                $('a.btnFontName img').each(function () {
+                    var $img = $(this);
+                    if ($img.parent().attr('href') == fontName) {
+                        $img.attr('src', $img.attr('src').replace('_off', '_on'));
+                    }
+                    else {
+                        $img.attr('src', $img.attr('src').replace('_on', '_off'));
+                    }
+                });
+                return false;
+            });
+
+            var varSize = 0;
+            $('p.cont').css('font-size', parseFloat($.cookie("fontSize-1")) + 'px');
+            $('ul.writer').css('font-size', parseFloat($.cookie("fontSize-1")) + 'px');
+            $('#articleTop p.title').css('font-size', parseFloat($.cookie("fontSize-2")) + 'px');
+            $('#articleTop s.title').css('font-size', parseFloat($.cookie("fontSize-3")) + 'px');
+            $('.viewType04 span').each(function() {
+                var sFont= $(this).css('font-size');
+                if(sFont != "" && sFont != undefined && sFont != null)
+                {
+                    varSize =  parseFloat(sFont) + (parseFloat($.cookie("fontSize-4")) / 10);
+                    $(this).css('font-size', varSize + 'px');
+                }
+            });
+            $('.viewType04 font').each(function() {
+                var sFont= $(this).css('font-size');
+                if(sFont != "" && sFont != undefined && sFont != null)
+                {
+                    varSize =  parseFloat(sFont) + (parseFloat($.cookie("fontSize-5")) / 10);
+                    $(this).css('font-size', varSize + 'px');
+                }
+            });
+            $('.viewType04 p').each(function() {
+                var sFont= $(this).css('font-size');
+                if(sFont != "" && sFont != undefined && sFont != null)
+                {
+                    varSize =  parseFloat(sFont) + (parseFloat($.cookie("fontSize-6")) / 10);
+                    $(this).css('font-size', varSize + 'px');
+                }
+            });
+
+            $('a.btnFontSize').click(function () {
+                
+                var fontSize = $.cookie("fontSize");
+                if (!fontSize) fontSize = "100";
+                fontSize = $('p.cont').css('font-size').replace("px", "");
+
+                var addSize = parseInt($(this).attr('href'));
+                var varSize =  parseFloat(fontSize) + (parseFloat(addSize) / 10);
+                
+                $('p.cont').css('font-size', varSize + 'px');
+                $('ul.writer').css('font-size', varSize + 'px');
+                $.cookie("fontSize-1", varSize);
+
+                var titleFont= $('#articleTop p.title').css('font-size');
+                varSize =  parseFloat(titleFont) + (parseFloat(addSize) / 10);
+                $('#articleTop p.title').css('font-size', varSize + 'px');
+                $.cookie("fontSize-2", varSize);
+
+                var sTitleFont= $('#articleTop p.stitle').css('font-size');
+                varSize =  parseFloat(sTitleFont) + (parseFloat(addSize) / 10);
+                $('#articleTop p.stitle').css('font-size', varSize + 'px');
+                $.cookie("fontSize-3", varSize);
+
+                $('.viewType04 span').each(function() {
+                    var sFont= $(this).css('font-size');
+                    if(sFont != "" && sFont != undefined && sFont != null)
+                    {
+                        varSize =  parseFloat(sFont) + (parseFloat(addSize) / 10);
+                        $(this).css('font-size', varSize + 'px');
+                    }
+                });
+                
+                if(!isNaN($.cookie("fontSize-4"))) {
+                    $.cookie("fontSize-4", parseFloat($.cookie("fontSize-4")) + addSize);   
+                }
+                else{
+                    $.cookie("fontSize-4", addSize);
+                }
+
+                $('.viewType04 font').each(function() {
+                    var sFont= $(this).css('font-size');
+                    if(sFont != "" && sFont != undefined && sFont != null)
+                    {
+                        varSize =  parseFloat(sFont) + (parseFloat(addSize) / 10);
+                        $(this).css('font-size', varSize + 'px');
+                    }
+                });
+                if(!isNaN($.cookie("fontSize-5"))) {
+                    $.cookie("fontSize-5", parseFloat($.cookie("fontSize-5")) + addSize);   
+                }
+                else{
+                    $.cookie("fontSize-5", addSize);
+                }
+
+                $('.viewType04 p').each(function() {
+                    var sFont= $(this).css('font-size');
+                    if(sFont != "" && sFont != undefined && sFont != null)
+                    {
+                        varSize =  parseFloat(sFont) + (parseFloat(addSize) / 10);
+                        $(this).css('font-size', varSize + 'px');
+                    }
+                });
+                if(!isNaN($.cookie("fontSize-6"))) {
+                    $.cookie("fontSize-6", parseFloat($.cookie("fontSize-6")) + addSize);   
+                }
+                else{
+                    $.cookie("fontSize-6", addSize);
+                }
+                
+                //var contentSize = parseFloat($(".viewType04").css('font-size').replace("px", ""));
+                //varSize = parseFloat(contentSize) + (parseFloat(addSize) / 10);
+                
+
+                return false;
+            });
+
+            $('img.fontSize').hover(
+                function () { $(this).attr('src', $(this).attr('src').replace('_off', '_on')); },
+                function () { $(this).attr('src', $(this).attr('src').replace('_on', '_off')); }
+            );
+
+            $('#printLink').click(function () {
+                var $this = $(this);
+                $chyes.dialogPrint($this.attr('href'));
+                return false;
+            });
+
+            //            $('.AuthInfoLink').click(function () {
+            //                var $this = $(this);
+            //                $chyes.dialogManInfo($this.attr('href'));
+            //                return false;
+            //            });
+
+            $('#scrapLink').click(function () {
+                var $this = $(this);
+                var pos = $this.position();
+
+                $('#scrapLayer').css({
+                    position: "absolute",
+                    top: (pos.top + $this.height()) + "px",
+                    left: pos.left + "px"
+                }).toggle();
+
+                return false;
+            });
+
+            $('#scrapYesblog').click(function () {
+                var url = $chyes.getHost('blog') + "/yes24/ChyesScrapPop.aspx?art_no=37821";
+                $chyes.popupWindow(url, 330, 220, "scrapBlog");
+                return false;
+            });
+
+            $('#scrapCopy').click(function () {
+                var artUrl = $chyes.getHost('chyes') + '/Article/View/37821';
+                var content = '<p><img width="29" height="16" align="absMiddle" src="http://image.yes24.com/images/chyes_new/03_BookMedia/scrap/Bl_Source.gif"/>' + '<a href="' + artUrl + '" target="_blank">' + artUrl + '</a></p>'
+                            + $('div.viewType04').html();
+
+                copyToClipboard(content);
+                alert('HTML 입력창에서 붙여 넣기(Ctrl+V)를 실행하십시오');
+                return false;
+            });
+
+            $('a[rel=scrapItem]').click(function () {
+                $('#scrapLayer').hide();
+            });
+
+            $("#currentCategoryLinkUrl").attr('href', $("#currentCategoryLinkUrlAnchor").attr('href'));
+
+            $('a.btnCart').click(function () {
+                var $this = $(this);
+                if(checkAdultAuth($this.attr("age_lmt_yn"),$this.attr("lmt_age"),0) == false) {
+                    return false;
+                }
+
+                addToCartByGoodsNo($this.attr("goods"), 1, false);
+                return false;
+            });
+
+            $('a.btnList').click(function () {
+                if (!loginCheck()) {
+                    if (confirm('로그인이 필요합니다.\r\n로그인 하시겠습니까?')) {
+                        document.location.href = "https://www.yes24.com/Templates/FTLogin.aspx?ReturnURL=" + encodeURIComponent(location.href);
+                        return false;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+
+                var $this = $(this);
+                if(checkAdultAuth($this.attr("age_lmt_yn"),$this.attr("lmt_age"),0) == false) {
+                    return false;
+                }
+
+                addToMyListByGoodsNo($(this).attr("goods"));
+                return false;
+            });
+
+            $('a.btnBuy').click(function () {
+                var $this = $(this);
+
+                if(checkAdultAuth($this.attr("age_lmt_yn"),$this.attr("lmt_age"),0) == false) {
+                    return false;
+                }
+
+                buyWithoutCartByGoodsNo($this.attr("goods"), 1, '', -1, 0);
+                return false;
+            });
+
+            $('a[rel=movie_gallery]').click(function () {
+                var $this = $(this);
+                $chyes.dialogMovie($this.attr('href'));
+                return false;
+            });
+
+            $('a[rel=photo_gallery]').click(function () {
+                var $this = $(this);
+                $chyes.dialogPhoto($this.attr('href'));
+                return false;
+            });
+
+            $('#btnNanumGothic').mouseover(function () {
+                var $this = $(this);
+                var pos = $this.position();
+
+                if ($.cookie("fontName") != 'NanumGothic') {
+                    $('#nanumTooltip').css({ top: (pos.top + $this.height()) + "px" }).show();
+                }
+            });
+
+            $('#btnNanumGothicClose').click(function () {
+                $('#nanumTooltip').hide();
+            });
+
+    });
+    </script>
+
+</head>
+<body>
+    <div id="wrapCon">
+        
+        <script type="text/javascript" src="http://www.yes24.com/Javascript/Common/gnb_concise.js?ver=40"></script>
+	    <div id="conWrap">
+<div id="header" style="display:none">
+    <div class="global">
+        <h1><a href="http://www.yes24.com/" target="_blank"><img src="http://image.yes24.com/images/chyes24/content/images/gnb/logo.gif" alt="yes24" /></a></h1>
+
+        <ul class="gnb_left">
+            <li class="first"><a href="#"><img src="http://image.yes24.com/images/chyes24/content/images/gnb/interiorbook.gif" alt="국내도서" /></a></li>
+            <li><a href="http://www.yes24.com/24/category/bestseller?Gcode=000_002_012" target="_blank"><img src="http://image.yes24.com/images/chyes24/content/images/gnb/bestsaller.gif" alt="베스트 셀러" /></a></li>
+            <li><a href="http://blog.yes24.com/blogmain/?Gcode=100_011" target="_blank"><img src="http://image.yes24.com/images/chyes24/content/images/gnb/yesblog.gif" alt="yes블로그" /></a></li>
+        </ul>
+
+        <ul class="gnb_sns">
+            <li><a href="http://www.facebook.com/yes24" title="facebook" target="_blank"><img src="http://image.yes24.com/sysimage/detailN/Icon_facebook.gif" width="18" height="18" border="0" alt="" title=""/></a></li>
+            <li><a href="http://www.twitter.com/yes24now" title="twitter" target="_blank"><img src="http://image.yes24.com/sysimage/detailN/Icon_twitter.gif" width="18" height="18" border="0" alt="" title=""/></a></li>
+            <li><a href="http://www.me2day.net/yes24now" title="me2day" target="_blank"><img src="http://image.yes24.com/sysimage/detailN/Icon_me2day.gif" width="18" height="18" border="0" alt="" title=""/></a></li>
+        </ul>
+
+        <!-- 2depth -->
+        <ul class="top_mlist">
+            <li><span><a href="http://www.yes24.com/Main/Book.aspx?CategoryNumber=001&Gcode=100_001" target="_blank">국내도서</a></span></li>
+            <li><span><a href="http://www.yes24.com/Main/Foreign.aspx?CategoryNumber=002&Gcode=100_002" target="_blank">외국도서</a></span></li>
+            <li><span><a href="http://www.yes24.com/main/used.aspx?CategoryNumber=018&Gcode=100_018" target="_blank">중고샵</a></span></li>
+            <li><span><a href="http://www.yes24.com/Main/eBook.aspx?CategoryNumber=017&Gcode=100_017" target="_blank">eBook </a></span></li>
+            <li><span><a href="http://edu.yes24.com/main/main.aspx?Gcode=100_003" target="_blank">e러닝</a></span></li>
+            <li><span><a href="http://www.yes24.com/Main/Music.aspx?CategoryNumber=003&Gcode=100_004" target="_blank">음반 </a></span></li>
+            <li><span><a href="http://www.yes24.com/Main/Dvd.aspx?CategoryNumber=004&Gcode=100_005" target="_blank">DVD</a></span></li>
+            <li><span><a href="http://www.yes24.com/Main/Gift.aspx?CategoryNumber=006&Gcode=100_006" target="_blank">GIFT</a></span></li>
+            <li><span><a href="http://www.yes24.com/Main/beauty.aspx?CategoryNumber=008&Gcode=100_007" target="_blank">화장품</a></span></li>
+            <li><span><a href="http://movie.yes24.com/?Gcode=100_008" target="_blank">영화 </a></span></li>
+            <li><span><a href="http://ticket.yes24.com/?Gcode=100_009" target="_blank">공연</a></span></li>
+            <li><span><a href="http://estory.yes24.com" target="_blank">e연재</a></span></li>
+        </ul>
+        <!--/ 2depth -->
+
+        <!-- /gnb_left -->
+        <ul class="gnb_right">
+                    <li class="first"><a id="btnLogin" href="https://www.yes24.com/Templates/FTLogin.aspx?ReturnURL=http%3a%2f%2fch.yes24.com%2fArticle%2fView%2f37821"><img src="http://image.yes24.com/images/chyes24/content/images/gnb/b_utilLogin.gif" alt="로그인" /></a></li>
+                    <li><a href="https://www.yes24.com//Member/FTMemAcc.aspx?Gcode=000_001_002">회원가입</a></li>
+            <li><a href="http://www.yes24.com/Member/FTMypageMain.aspx?Gcode=001_001_005">마이페이지</a></li>
+            <li><a href="http://www.yes24.com/Templates/FTCusMain.aspx?Gcode=001_001_008">고객센터</a></li>
+        </ul>
+        <input id="LoginYnH" name="LoginYnH" type="hidden" value="N" />
+        <!-- /gnb_right -->
+    </div>
+    <!-- /global -->
+</div>
+<script type="text/javascript">
+    var _RECOM_WORDS_ = ['표정훈의 세상에서 두 번째로 글 잘 쓰기', '김지은의 모두 함께 읽는 책', '유희경의 이달의 시집서점', '오은의 옹기종기', '책읽아웃', '김하나의 측면돌파', '허남웅의 영화경', '이주의 신간', '장강명의 소설가라는 이상한 직업', '작가의 추천사', '주말 뭐 읽지? '];
+
+    $(document).ready(function () {
+        $('bmenu a img').hover();
+
+        var slider;
+        var changed = false;
+
+        searchWordsRandomize();
+        slider = setInterval(searchWordsRandomize, 3000);
+
+        $('#q').mouseup(function (e) {
+            e.preventDefault();
+        }).keydown(function () {
+            clearInterval(slider);
+        }).focus(function () {
+            clearInterval(slider);
+        }).blur(function () {
+            if (!changed) { slider = setInterval(searchWordsRandomize, 3000); }
+        });
+
+        function searchWordsRandomize() {
+            var i = Math.floor(_RECOM_WORDS_.length * Math.random())
+            $('#q').val(_RECOM_WORDS_[i]);
+        }
+    });
+</script>
+<script type="text/javascript">
+    function allByCulture() {
+        location.href = "/Article/ListAllCulture?patNo=1924&cdNo=0&curPage=1&sort=recent";
+    }
+    function allByInterview() {
+        location.href = "/Article/ListAllCulture?patNo=1926&cdNo=0&curPage=1&sort=recent";
+    }
+    function allByColumn() {
+        location.href = "/Article/ListAllCulture?patNo=1928&cdNo=0&curPage=1&sort=recent";
+    }
+</script>
+
+		<div id="topArea">
+            <div style="position:relative;"><span style="position:absolute;left:59px;top:85px"><img src="http://image.yes24.com/sysimage/gnb/2nd/icon_new.gif" alt="" title="" border="0"></span></div>
+	        <div id="tcon">
+                <div class="banner"><a href="http://www.yes24.com/campaign/01_Book/2019/1111Reading.aspx" Ccode='1'><img src="http://image.yes24.com/images/chyes24/e/f/8/1/ef810d9724967cab72fa8570169d3b64.jpg" alt="" width="220" height="90" /></a></div>
+
+		        <div class="logo"><a href="/"><img src="http://image.yes24.com/images/chyes24/content/images/common/logo2.gif" alt="채널예스" /></a></div>
+		        <div class="tsearch">
+                    <form id="searchForm" method="get" action="/Search">
+			            <div class="search">
+				            <p class="txt">
+                                <input id="q" name="q" type="text" class="text" title="검색어 입력" value=""/>
+                                <input id="sort" name="sort" type="hidden" value="exact" />
+				            </p>
+			            </div>
+			            <div class="btn"><a href="#" title="search"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_search.gif" alt="검색" /></a>
+                        </div>
+                        <input type="hidden" name="Ccode" value="000_003" />
+                    </form>
+		        </div>
+	        </div>
+	        <div class="searchDrop">
+		        <ul>
+			        <li><a href="#">전체</a></li>
+			        <li><a href="#">국내도서</a></li>
+			        <li><a href="#">외국도서</a></li>
+                    <li><a href="#">중고샵</a></li>
+			        <li><a href="#">e러닝</a></li>
+			        <li><a href="#">eBook</a></li>
+			        <li><a href="#">음반</a></li>
+			        <li><a href="#">DVD</a></li>
+			        <li><a href="#">GIFT</a></li>
+			        <li><a href="#">화장품</a></li>
+			        <li><a href="#">영화</a></li>
+			        <li><a href="#">공연</a></li>
+			        <li><a href="#">블로그</a></li>
+			        <li><a href="#">채널예스</a></li>
+                    <li><a href="#">e연재</a></li>
+		        </ul>
+	        </div>
+            <style>
+            #t_detail01 {width:140px;position:absolute;left:102px;top:128px;_top:127px;z-index:9999;} /* 문화뉴스 */
+            #t_detail02 {width:140px;position:absolute;left:186px;top:128px;_top:127px;z-index:9999;} /* 인터뷰 */
+            #t_detail03 {width:140px;position:absolute;left:253px;top:128px;_top:127px;z-index:9999;} /* 칼럼 */
+            #t_detail05 {width:140px;position:absolute;left:401px;top:128px;_top:127px;z-index:9999;} /* 갤러리 */
+            #t_detail06 {width:140px;position:absolute;left:469px;top:128px;_top:127px;z-index:9999;} /* 동화 */
+            #t_detail07 {width:140px;position:absolute;left:525px;top:128px;_top:127px;z-index:9999;} /* 문화행사 초대 */
+            </style>
+			<div id="tmenu">
+                <ul class="bmenu">
+					<li><a onmouseout="javascript:menuOut(0);" onmouseover="javascript:menuOver(0);" ccode="0.1" href="/Article/ListAll"><img alt="전체 기사" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_00_off.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_00_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_00_off.gif"></a></li>
+					<li><a class="allByCulture" title="문화 뉴스" onmouseout="javascript:menuOut(1);" onmouseover="javascript:menuOver(1);" ccode="4.1" href="#?Ccode=000_004_001"><img alt="문화 뉴스" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_01_off.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_01_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_01_off.gif"></a></li>
+					<li><a class="allByInterview" title="인터뷰" onmouseout="javascript:menuOut(2);" onmouseover="javascript:menuOver(2);" ccode="4.2" href="#?Ccode=000_004_002"><img alt="인터뷰" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_02_off.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_02_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_02_off.gif"></a></li>
+					<li><a class="allByColumn" title="칼럼" onmouseout="javascript:menuOut(3);" onmouseover="javascript:menuOver(3);" ccode="4.3" href="#?Ccode=000_004_003"><img alt="칼럼" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_03_off.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_03_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_03_off.gif"></a></li>
+					<li><a title="명사의 서재" onmouseout="javascript:menuOut(4);" onmouseover="javascript:menuOver(4);" ccode="4.4" href="/Famous/?Ccode=000_004_004"><img alt="명사의 서재" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_04_off_.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_04_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_04_off_.gif"></a></li>
+					<li><a title="갤러리" onmouseout="javascript:menuOut(5);" onmouseover="javascript:menuOver(5);" ccode="4.5" href="#?Ccode=000_004_005"><img alt="갤러리" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_05_off.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_05_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_05_off.gif"></a></li>
+					<li><a title="동화" onmouseout="javascript:menuOut(6);" onmouseover="javascript:menuOver(6);" ccode="4.6" href="#?Ccode=000_004_006"><img alt="동화" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_06_off.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_06_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_06_off.gif"></a></li>
+					<li class="last"><a title="문화행사 초대" onmouseout="javascript:menuOut(7);" onmouseover="javascript:menuOver(7);" ccode="4.8" href="/Culture/?Ccode=000_004_008"><img alt="문화행사 초대" src="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_08_off.gif" oniq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_08_on.gif" offiq="http://image.yes24.com/images/chyes24/content/images/gnb/tmenu_08_off.gif"></a></li>
+				</ul>
+		        <ul class="smenu">
+			        <li><a ccode="4.9" href="/Notice/?Ccode=000_004_009">공지</a></li>
+			        <li><a ccode="4.10" href="/Tab/TabIndex?Ccode=000_004_010">tab</a></li>			       
+			        <li><a ccode="4.12" href="/MyChannel/?Ccode=000_004_012">MY 채널</a></li>
+			        <li class="last"><a ccode="4.13" href="/Webzine/Index/?Ccode 000_004_013">월간 채널예스</a></li>
+		        </ul>
+				<!-- 문화 뉴스 하위메뉴 -->
+				<div id="t_detail01" style="display:none;" onmouseover="javascript:menuOver(1);" onmouseout="javascript:menuOut(1);">
+					<div class="menuDetail">
+						<p class="top"><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top.gif" alt="" /></p>
+						<div class="listBox">
+							<p><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top2.gif" alt="" /></p>
+					        <ul>
+                                <li><a onclick="javascript:allByCulture();"><span>문화뉴스 전체</span></a></li>
+                                        <li><a href="/Article/List/2685" Ccode='4.3' title="카드뉴스로 보는 책"><span>카드뉴스로 보는 책</span></a></li>
+                                        <li><a href="/Article/List/2935" Ccode='4.3' title="주말 뭐 읽지?"><span>주말 뭐 읽지?</span></a></li>
+                                        <li><a href="/Article/List/2949" Ccode='4.3' title="예스24 북클러버"><span>예스24 북클러버</span></a></li>
+                                        <li><a href="/Article/List/2175" Ccode='4.3' title="YES24 소식"><span>YES24 소식</span></a></li>
+                                        <li><a href="/Article/List/2723" Ccode='4.3' title="책읽아웃"><span>책읽아웃</span></a></li>
+                                        <li><a href="/Article/List/1959" Ccode='4.3' title="작가와의 만남"><span>작가와의 만남</span></a></li>
+                                        <li><a href="/Article/List/1947" Ccode='4.3' title="문화 단신"><span>문화 단신</span></a></li>
+                                        <li><a href="/Article/List/2184" Ccode='4.3' title="특집 기획"><span>특집 기획</span></a></li>
+                                        <li><a href="/Article/List/2379" Ccode='4.3' title="프롤로그"><span>프롤로그</span></a></li>
+                                        <li><a href="/Article/List/2177" Ccode='4.3' title="주목, 이주의 신간"><span>주목, 이주의 신간</span></a></li>
+                                        <li><a href="/Article/List/2350" Ccode='4.3' title="오늘의 문화 이슈 "><span>오늘의 문화 이슈 </span></a></li>
+						        
+					        </ul>
+						</div>
+					</div>
+					<p class="listBot"></p>
+				</div>
+				<!-- //문화 뉴스 하위메뉴 -->
+				<!-- 인터뷰 하위메뉴 -->
+				<div id="t_detail02" style="display:none;" onmouseover="javascript:menuOver(2);" onmouseout="javascript:menuOut(2);">
+					<div class="menuDetail">
+						<p class="top"><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top.gif" alt="" /></p>
+						<div class="listBox">
+							<p><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top2.gif" alt="" /></p>
+					        <ul>
+                                <li><a onclick="javascript:allByInterview();"><span>인터뷰 전체</span></a></li>
+                                    <li><a href="/Article/List/1958" Ccode='4.3' title="만나고 싶었어요!"><span>만나고 싶었어요!</span></a></li>
+                                    <li><a href="/Article/List/2779" Ccode='4.3' title="동네 책방 추천 "><span>동네 책방 추천 </span></a></li>
+                                    <li><a href="/Article/List/2567" Ccode='4.3' title="7문 7답"><span>7문 7답</span></a></li>
+                                    <li><a href="/Article/List/2454" Ccode='4.3' title="명사의 서재"><span>명사의 서재</span></a></li>
+					        </ul>
+						</div>
+					</div>
+					<p class="listBot"></p>
+				</div>
+				<!-- //인터뷰 하위메뉴 -->
+				<!-- 칼럼 하위메뉴 -->
+				<div id="t_detail03" style="display:none;" onmouseover="javascript:menuOver(3);" onmouseout="javascript:menuOut(3);">
+					<div class="menuDetail">
+						<p class="top"><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top.gif" alt="" /></p>
+						<div class="listBox">
+							<p><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top2.gif" alt="" /></p>
+					            <ul>
+                                    <li><a onclick="javascript:allByColumn();"><span>칼럼 전체</span></a></li>
+                                        <li><a href="/Article/List/2162" Ccode='4.3' title="책"><span>책</span></a></li>
+                                        <li><a href="/Article/List/2172" Ccode='4.3' title="영화"><span>영화</span></a></li>
+                                        <li><a href="/Article/List/2163" Ccode='4.3' title="음악"><span>음악</span></a></li>
+                                        <li><a href="/Article/List/2164" Ccode='4.3' title="공연"><span>공연</span></a></li>
+                                        <li><a href="/Article/List/2168" Ccode='4.3' title="여행/취미/건강"><span>여행/취미/건강</span></a></li>
+                                        <li><a href="/Article/List/2165" Ccode='4.3' title="대중문화"><span>대중문화</span></a></li>
+                                        <li><a href="/Article/List/2166" Ccode='4.3' title="시사/과학/미술/교육"><span>시사/과학/미술/교육</span></a></li>
+                                        <li><a href="/Article/List/2669" Ccode='4.3' title="불후의 칼럼"><span>불후의 칼럼</span></a></li>
+                                        <li><a href="/Article/List/2171" Ccode='4.3' title="연재종료"><span>연재종료</span></a></li>
+					            </ul>
+						</div>
+					</div>
+					<p class="listBot"></p>
+				</div>
+				<!-- //칼럼 하위메뉴 -->
+				<!-- 갤러리 하위메뉴 -->
+				<div id="t_detail05" style="display:none;" onmouseover="javascript:menuOver(5);" onmouseout="javascript:menuOut(5);">
+					<div class="menuDetail">
+						<p class="top"><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top.gif" alt="" /></p>
+						<div class="listBox">
+							<p><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top2.gif" alt="" /></p>
+					        <ul>
+						        <li><a href="/Gallery/MovieIndex/" Ccode='4.5' title="동영상"><span>동영상</span></a></li>
+						        <li><a href="/Gallery/PhotoIndex/" Ccode='4.5' title="포토"><span>포토</span></a></li>
+					        </ul>
+						</div>
+					</div>
+					<p class="listBot"></p>
+				</div>
+				<!-- //갤러리 하위메뉴 -->
+				<!-- 동화 하위메뉴 -->
+				<div id="t_detail06" style="display:none;" onmouseover="javascript:menuOver(6);" onmouseout="javascript:menuOut(6);">
+					<div class="menuDetail">
+						<p class="top"><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top.gif" alt="" /></p>
+						<div class="listBox">
+							<p><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top2.gif" alt="" /></p>
+					        <ul>
+						        <li><a href="/Animation/Index/All?lngGb=2" Ccode='4.6' title="한글 동화"><span>한글 동화</span></a></li>
+						        <li><a href="/Animation/Index/All?lngGb=4" Ccode='4.6' title="영어 동화"><span>영어 동화</span></a></li>
+					        </ul>
+						</div>
+					</div>
+					<p class="listBot"></p>
+				</div>
+				<!-- //동화 하위메뉴 -->
+				<!-- 문화행사 초대 하위메뉴 -->
+				<div id="t_detail07" style="display:none;" onmouseover="javascript:menuOver(7);" onmouseout="javascript:menuOut(7);">
+					<div class="menuDetail">
+						<p class="top"><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top.gif" alt="" /></p>
+						<div class="listBox">
+							<p><img src="http://image.yes24.com/images/chyes24/content/images/common/tmenu_2depth_top2.gif" alt="" /></p>
+					        <ul>
+						        <li><a href="/Culture/Invite/Meeting" Ccode='4.8'><span>작가와의 만남</span></a></li>
+						        <li><a href="http://www.yes24.com/Campaign/00_corp/yesShowCase/yesShowCase.aspx" target="_blank"  Ccode='4.8'><span>사인회 초대</span></a></li>
+                                
+                                <li><a href="/Culture/Movie/?Ccode=000_004_008" Ccode='4.8'><span>영화 시사회</span></a></li>
+						        <li><a href="/Culture/Ticket/" Ccode='4.8'><span>공연 초대</span></a></li>
+						        <li><a href="/Culture/Suggest/" Ccode='4.8'><span>행사 제안</span></a></li>
+					        </ul>
+						</div>
+					</div>
+					<p class="listBot"></p>
+				</div>
+				<!-- //문화행사 초대 하위메뉴 -->
+				<!-- /2012.02.09 수정 -->
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		        <div id="conArea">
+			        <div id="realCon">
+				        <div id="subCon">
+					        
+    
+    
+
+
+
+
+<div id="subCon">
+    <div id="viewSetting">
+        <div id="nanumTooltip" class="nanumTooltip hide">
+            <p>
+                <img src="http://image.yes24.com/images/chyes24/content/images/common/img_tooltip.png" alt="" /><span><a id="btnNanumGothicClose" href="#"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_close4.gif" alt="닫기" /></a></span></p>
+        </div>
+        <p class="fl">
+                <a href="/Article/List/1928" title="칼럼">칼럼</a>
+                 >
+                <a href="/Article/List/2669" title="불후의 칼럼">불후의 칼럼</a>
+                 >
+                <a href="/Article/List/2762" title="서효인의 가요대잔치">서효인의 가요대잔치</a>
+        </p>
+        <ul>
+            <li class="font">
+                <ul>
+                    <li><a class="btnFontName" href="dotum" title="돋움">
+                        <img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_dotum_off.gif" alt="돋움" /></a></li>
+                    <li><a id="btnNanumGothic" class="btnFontName" href="NanumGothic" title="나눔고딕">
+                        <img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_nanum_off.gif" alt="나눔고딕" /></a></li>
+                </ul>
+            </li>
+            <li class="size">
+                <dl>
+                    <dt>
+                        <img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_text.gif" alt="글자" /></dt>
+                    <dd>
+                        <a class="btnFontSize" href="10" title="크게">
+                            <img class="fontSize" src="http://image.yes24.com/images/chyes24/content/images/btn/btn_btext_off.gif" alt="크게" /></a></dd>
+                    <dd>
+                        <a class="btnFontSize" href="-10" title="작게">
+                            <img class="fontSize" src="http://image.yes24.com/images/chyes24/content/images/btn/btn_stext_off.gif" alt="작게" /></a></dd>
+                </dl>
+            </li>
+            <li><a href="/Article/List/2762" id="currentCategoryLinkUrlAnchor" title="전체 기사 보기">
+                <img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_article_all.gif" alt="전체 기사 보기" /></a></li>
+        </ul>
+    </div>
+    <div id="articleView">
+        <div id="articleTop" style="font-family: NanumGothic;">
+            <p class="title">벤, 정확한 슬픔의 발라더 </p>
+            <p class="stitle"><월간 채널예스> 2019년 1월호 </p>
+            <div class="snsList">
+                <ul>
+	<li><a href="javascript:SNSToPostOpen('facebook', 650, 300);" title="페이스북"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_fb.gif" alt="페이스북" /></a></li>
+    <li><a href="javascript:SNSToPostOpen('twitter', 600, 250);" title="트위터"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_tw.gif" alt="트위터" /></a></li>
+    <li><a id="btnCopyUrl" href="javascript:ClipBoard('http://ch.yes24.com/Article/View/37821');"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_url.gif" alt="복사" style="vertical-align:bottom"></a></li>
+</ul>
+<script type="text/javascript">
+    var checkUrlCopy = false;
+    function ClipBoard(str) {
+        try {
+            checkUrlCopy = true;
+            window.clipboardData.setData('Text', str);
+        }
+        catch (e) {
+            checkUrlCopy = true;
+            document.execCommand('copy');
+        }
+    }
+
+    $(document).ready(function () {
+        try{
+            window.addEventListener('copy', function (e) {
+                if (checkUrlCopy && e.clipboardData != null) {
+                    e.preventDefault();
+                    e.clipboardData.setData('text/plain', 'http://ch.yes24.com/Article/View/37821');
+                    alert("주소가 복사되었습니다!\nCtrl+V로 원하는 곳에 붙여넣으세요");
+                    checkUrlCopy = false;
+                }
+            });
+        }
+        catch (e) {
+            window.attachEvent("copy", function (e) {
+                if (checkUrlCopy && e.clipboardData != null) {
+                    e.preventDefault();
+                    e.clipboardData.setData('text/plain', 'http://ch.yes24.com/Article/View/37821');
+                    alert("주소가 복사되었습니다!\nCtrl+V로 원하는 곳에 붙여넣으세요");
+                    checkUrlCopy = false;
+                }
+            });
+        }
+    });
+</script>
+
+            </div>
+            <p class="cont">벤의 목소리 그 안에서 펑펑 울어도 좋다. 결코 당신이 약해서 통곡하는 게 아니다. 벤의 목소리가 당신을 그렇게 만든 것뿐이다.    (2019. 01. 03)</p>
+            <ul class="writer">
+                <li><strong>글</strong> | <a >서효인(시인, 문학편집자)</a></li>
+                <li><strong>사진</strong> | <a >기획사 제공</a></li>
+            </ul>
+        </div>
+        <div id="articleCont">
+            
+
+            
+
+                <!-- type04 -->
+            <div class="viewType04" style="font-family: NanumGothic;">
+                
+                <div class="txtBox">
+                    <p class="cont">
+                        <p style="text-align: center; line-height: 1.8;"><span style="color: rgb(0, 0, 0); font-size: 11pt;"><img style="clear: none; float: none;" alt="벤.jpg" src="http://image.yes24.com/images/chyes24/4/6/7/3/4673d105b1d90ef0aa2743321cf07827.jpg"></span></p>
+<p style="text-align: justify; line-height: 1.8;"><span style="color: rgb(93, 93, 93); font-size: 9pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 사진 제공_ MAJOR9 </span></p>
+<p style="text-align: justify; line-height: 1.8;">&nbsp;</p>
+<p style="text-align: justify; line-height: 1.8;">&nbsp;</p>
+<p style="text-align: justify; line-height: 1.8;"><span style="color: rgb(0, 0, 0); font-size: 11pt;">벤은 노래를 잘 부른다. 정말 잘 부른다. 거의 모든 가사가 귀에 들어온다. 친숙한 목소리로 노래를 시작하지만 고음까지 쉽게 올라간다. 호흡이 가쁘다는 인상 한 번 없이 한 곡을 완창하며, 라이브와 녹음의 차이가 거의 없다. 목소리는 애절하지만 깨끗하다. 감정에 호소하지만 흐느끼지 않는다. 뭘 더 어떻게 표현해야 하나? 그의 가창력을 표현할 정확한 말들을 찾기 위해 잠시 그의 활동 이력을 거슬러 올라가도 좋을 것이다. </span></p>
+<p style="text-align: justify; line-height: 1.8;">&nbsp;</p>
+<table width="170" align="right" border="0" cellPadding="0" g="6" Goods="" cellSpacin="">
+<tbody>
+<tr>
+<td align="center"><a class="tx-link" href="http://www.yes24.com/Cooperate/Yes24Gateway.aspx?pid=131297 &amp;ReturnURL=http://www.yes24.com/24/goods/67263839" target="_blank"><img width="150" src="http://image.yes24.com/goods/67263839" border="0" bheight="210"></a></td></tr>
+<tr>
+<td align="center" vAlign="67263839" top=""><a href="http://www.yes24.com/Cooperate/Yes24Gateway.aspx?pid=131297 &amp;ReturnURL=http://www.yes24.com/24/goods/67263839" target="new"></a></td></tr></tbody></table>
+<p style="text-align: justify; line-height: 1.8;"><span style="color: rgb(0, 0, 0); font-size: 11pt;">벤의 시작은 요새 가수들과 별반 다르지 않게 역시나 걸그룹이었는데, ‘베베미뇽’이라는 기이한 이름만 남기고 2011년 해체되며 사라졌다. 벤은 거기서 당연히 메인 보컬이었지만, 누가 신경이나 썼겠는가. 걸그룹의 메인 보컬은 걸그룹의 숫자만큼 많은데. 그 후 5년이라는 시간이 지나 벤은, 드라마 &lt;또 오해영&gt;의 OST, &lt;꿈처럼&gt;을 불렀다. 그전까지 ‘퍼펙트 싱어’ 같은 다소 화려하고 복잡한 방식의 노래 자랑 예능의 출연자로 가끔 얼굴을 비추던 가수 벤은 이 OST로 비로소 사람들에게 익숙한 목소리가 된다. 앞서 벤의 장점의 첫머리에 둔 가사 전달력이 히트 드라마의 주제곡과 만나 빛을 발했다. 예컨대 “눈을 뜨면 희미해져 버릴 꿈처럼 놔 줘/ 그게 아니면 곁에 있어 줘 지금.” 같은 가사가 정확히 들리면 오해영을 연기한 서현진의 얼굴이 곁에 있는 것처럼 느껴질 수밖에 없다. 게다가 드라마까지 인기를 끌었으니, 벤의 목소리로 드라마를 떠올리는 사람이 매우 많았음은 물론이다. </span></p>
+<p style="text-align: justify; line-height: 1.8;">&nbsp;</p>
+<p style="text-align: justify; line-height: 1.8;"><span style="color: rgb(0, 0, 0); font-size: 11pt;">2018년 여름 이후 음원 시장에 소리 없는 강자는 벤이었다. 그녀의 첫 번째 정규 앨범 ‘RECIPE’의 타이틀곡 &lt;열애 중&gt;으로 자신이 OST 전용 발라드 가수가 아님을, 그 이상의 크나큰 그릇임을 확실히 증명한다. 이은미의 스테디 히트곡 &lt;애인 있어요&gt;를 떠올리게 만드는 반어적 제목은, 슬픔에 가득한 첫 소절에 이르러 이 열애가 그 열애가 아님을 직감하게 한다. 애인이 없는데 있다고 구슬피 우기는 이은미처럼, 벤도 연애가 끝났는데 연애도 아닌 심지어 ‘열애’ 중이라고 처연히 말한다. 훌륭한 멜로디를 갖추었다는 전제 하에, 발라드에 슬픔을 부여하는 것은 노랫말일 것이다. 가사에 담긴 이별의 슬픔과 고통을 단단한 동시에 담담히 전달하는 것이 가창력의 척도임은 물론이다. 벤은 여기에 굉장한 장점을 보인다. 여기에 벤의 목소리는 한국의 발라드의 전형성을 그대로 계승하고 있는데, 어디 흠잡을 데 없는 완벽한 전형성이라서 아이러니컬하게도 그 자체가 개성이 되어버린다. </span></p>
+<p style="text-align: justify; line-height: 1.8;">&nbsp;</p>
+<p style="text-align: justify; line-height: 1.8;"><span style="color: rgb(0, 0, 0); font-size: 11pt;">&lt;열애 중&gt;이 차트에서 사라지기도 전, 벤은 신곡 &lt;180도&gt;를 녹음해 돌아왔다. 이제는 역주행이라 할 것 없이 발표하자마자 순위권에 진입했다. 비로소 대중은 벤이 발라드를 즐길 준비가 된 듯하다. 인상적인 것은 역시 결점을 찾을 수 없는 가사 전달력. “넌 뭐가 미안해 왜 맨날 미안해/ 헤어지는 날조차 너는 이유를 몰라.”라는 가사로부터 리스너의 귀는 헤어지는 이유를 마저 듣기 위해 쫑긋댈 수밖에 없을 것이다. 헤어짐의 이유는 별것이 없다. 제목처럼 180도 변해버린 애인의 태도 때문이다. “이젠 180도 달라진 너의 표정 그 말투”에서 이별은 시작됐다. 보통 이런 성격의 가사는 이른바 ‘걸 크러시’한 댄스곡으로 만들어져 당당히 남자를 차버리는 노래가 되기 쉬운데, 벤은 이마저도 슬프다. 한국식 R&amp;B라 지칭되는 많은 발라드에서 가수는 흐느끼는 창법으로 슬픔을 유도하지만, 가사가 들리지 않으면 많은 경우 실패다. 벤은 가사는 정확하고 음성은 슬프다. 음역은 넓고 표현은 풍부하다. 그저 가만히 듣고 있노라면 당분간 이별할 일 없는 솔로든, 이별해서는 큰일 날 기혼자든, 그 누구든 벤이 전달하는 정확한 슬픔에 빠지지 않을 도리가 없는 것이다. 이런 가수를 참으로 오래 기다렸다. 벤으로 인해서 더 이상의 기다림은 필요 없어졌다. </span></p>
+<p style="text-align: justify; line-height: 1.8;">&nbsp;</p>
+<p style="text-align: justify; line-height: 1.8;"><span style="color: rgb(0, 0, 0); font-size: 11pt;">가요는 슬픈 노래를 계속해서 대중에게 공급할 의무가 있다. 오늘밤도 누군가는 실연의 아픔을 겪었을 것이고, 그들에게는 함께 울어줄 음악이 필요할 테니까. 이 중요한 역할을 이제 벤이 할 것이다. 벤이 있어 다행이다. 벤이 있어 우리는 마음껏 정확하게 슬퍼할 수 있다. 지금 사랑하는 이와 헤어진 사람이라면, 혹은 헤어짐을 미리 대비하는 사람이라면 위에 언급한 곡 외에도 벤이 부른 다음과 같은 노래를 기억해 둘 필요가 있다. &lt;지금은 가지 마&gt;, &lt;소개받기로 했어&gt;, &lt;안 괜찮아&gt; 등등. 이 플레이리스트와 함께, 벤의 목소리 그 안에서 펑펑 울어도 좋다. 결코 당신이 약해서 통곡하는 게 아니다. 벤의 목소리가 당신을 그렇게 만든 것뿐이다. 벤은 슬픔을 정확하게 노래하는 가수니까. </span></p>
+<p style="text-align: justify; line-height: 1.8;">&nbsp;</p>
+<p style="text-align: justify; line-height: 1.8;"><br></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><a class="tx-link" href="http://www.podbbang.com/ch/15135" target="_blank"><img style="clear: none; float: none;" alt="배너_책읽아웃-띠배너.jpg" src="http://image.yes24.com/images/chyes24/a/d/d/5/add56fd9ac8e95bdf2f30e361f937632.jpg"></a></p>
+<p><br><br>
+<style>
+td#contentsArea .otherNewsArea { border:solid 1px #dcdcdc;background-color:#fff; }
+td#contentsArea .otherNewsArea dt { padding:0 0 0 12px;height:45px;line-height:45px;border-bottom:solid 1px #dcdcdc;font-size:15px;color:#000;font-weight:bold; }
+td#contentsArea .otherNewsArea dt { height:45px;line-height:45px;border-bottom:solid 1px #dcdcdc;font-size:15px;color:#000;font-weight:bold; }
+td#contentsArea .otherNewsArea dd { padding:20px 0;text-align:center; }
+td#contentsArea .otherNewsArea dd ul { margin:0 auto;width:606px;text-align:center; }
+td#contentsArea .otherNewsArea dd ul li { float:left;width:202px;text-align:center; }
+td#contentsArea .otherNewsArea dd ul li a { display:block;margin:0 auto;width:160px; }
+td#contentsArea .otherNewsArea dd ul li a .otherNews_img {  }
+td#contentsArea .otherNewsArea dd ul li a .otherNews_img img { width:160px;height:113px;cvertical-align:top; }
+td#contentsArea .otherNewsArea dd ul li a .otherNews_txt { display:block;margin-top:8px;min-height:17px;max-height:34px;line-height:17px;font-size:13px; }
+
+.mag_detail .otherNewsArea { border:solid 1px #dcdcdc;background-color:#fff; }
+.mag_detail .otherNewsArea dt { padding:0 0 0 12px;height:45px;line-height:45px;border-bottom:solid 1px #dcdcdc;font-size:15px;color:#000;font-weight:bold; }
+.mag_detail .otherNewsArea dt { height:45px;line-height:45px;border-bottom:solid 1px #dcdcdc;font-size:15px;color:#000;font-weight:bold; }
+.mag_detail .otherNewsArea dd { padding:20px 0;text-align:center; }
+.mag_detail .otherNewsArea dd ul { margin:0 auto;width:606px;text-align:center; }
+.mag_detail .otherNewsArea dd ul li { float:left;width:202px;text-align:center; }
+.mag_detail .otherNewsArea dd ul li a { display:block;margin:0 auto;width:160px; }
+.mag_detail .otherNewsArea dd ul li a .otherNews_img {  }
+.mag_detail .otherNewsArea dd ul li a .otherNews_img img { width:160px;height:113px;cvertical-align:top; }
+.mag_detail .otherNewsArea dd ul li a .otherNews_txt { display:block;margin-top:8px;min-height:17px;max-height:34px;line-height:17px;font-size:13px; }
+
+#wrapCon #articleCont .viewType04 .otherNewsArea { border:solid 1px #dcdcdc;background-color:#fff; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dt { padding:0 0 0 12px;height:45px;line-height:45px;border-bottom:solid 1px #dcdcdc;font-size:15px;color:#000;font-weight:bold; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dt { height:45px;line-height:45px;border-bottom:solid 1px #dcdcdc;font-size:15px;color:#000;font-weight:bold; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dd { padding:20px 0;text-align:center; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dd ul { margin:0 auto;width:606px;text-align:center; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dd ul li { float:left;width:202px;text-align:center; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dd ul li a { display:block;margin:0 auto;width:160px; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dd ul li a .otherNews_img {  }
+#wrapCon #articleCont .viewType04 .otherNewsArea dd ul li a .otherNews_img img { width:160px;height:113px;cvertical-align:top; }
+#wrapCon #articleCont .viewType04 .otherNewsArea dd ul li a .otherNews_txt { display:block;margin-top:8px;min-height:17px;max-height:34px;line-height:17px;font-size:13px; }
+
+#mMbody #artContent .otherNewsArea { ;background-color:#fff; }
+#mMbody #artContent .otherNewsArea { font-size:14px;font-weight:bold;color:#000; }
+#mMbody #artContent .otherNewsArea dt { height:38px;line-height:38px;font-size:14px;font-weight:bold;color:#000;border-bottom:solid 1px #dcdcdc; }
+#mMbody #artContent .otherNewsArea dd { padding:10px 0 0 0; }
+#mMbody #artContent .otherNewsArea dd li { padding-bottom:10px;text-align:left; }
+#mMbody #artContent .otherNewsArea dd li a { display:block;margin:0 10px; }
+#mMbody #artContent .otherNewsArea dd li a:after { content:'';clear:both;display:block; }
+#mMbody #artContent .otherNewsArea dd li a .otherNews_img { float:left;width:80px; }
+#mMbody #artContent .otherNewsArea dd li a .otherNews_img img { width:80px !important;height:57px !important; }
+#mMbody #artContent .otherNewsArea dd li a .otherNews_txt { display:block; }
+#mMbody #artContent .otherNewsArea dd li a .otherNews_txt { margin-left:90px;padding-top:8px;line-height:19px;font-size:14px;color:#000; }
+</style>
+ </p>
+<p></p>
+<div class="otherNewsArea">
+<dl>
+<dt>추천기사</dt>
+<dd>
+<ul class="clearfix">
+<li><a href="http://ch.yes24.com/Article/View/37682"><span class="otherNews_img"><img alt="채널예스 기사 제목" src="http://image.yes24.com/images/chyes24/f/d/e/3/fde3eadec9415ecfcd8deb990cefd722.jpg" border="0"></span> <span class="otherNews_txt">2018년을 빛낸 올해의 가요는? </span></a></li>
+<li><a href="http://ch.yes24.com/Article/View/37471"><span class="otherNews_img"><img alt="채널예스 기사 제목" src="http://image.yes24.com/images/chyes24/7/f/e/e/7fee5ab697cbe733fb17882131186c2a.jpg" border="0"></span> <span class="otherNews_txt">미세 먼지를 몰아내는 첼로</span></a></li>
+<li><a href="http://ch.yes24.com/Article/View/37470"><span class="otherNews_img"><img alt="채널예스 기사 제목" src="http://image.yes24.com/images/chyes24/e/f/1/b/ef1b97be23a6a79e882b07e02613c8b2.jpg" border="0"></span> <span class="otherNews_txt">&lt;보헤미안 랩소디&gt;, 퀸의 위대함을 다시 한 번 </span></a></li></ul></dd></dl></div><br><br>
+<div style="text-align: right;"><span style="color: rgb(160, 160, 160); font-size: 12pt; font-weight: bold;">‘대한민국 No.1 문화웹진’ YES24 채널예스 </span><br><br></div><!-- ############################## 관련 기사 영역 끝 ############################## -->
+                    </p>
+                </div>
+            </div>
+            
+            <!-- // type04 -->
+            <input type="hidden"  id="hiddenAge" />
+
+<p class="articleTag"><strong>관련태그:&nbsp;</strong>
+        <a href="/Search/Tag/?q=%eb%b2%a4">벤</a>,        <a href="/Search/Tag/?q=%eb%b0%9c%eb%9d%bc%eb%8d%94">발라더</a>,        <a href="/Search/Tag/?q=%ec%8a%ac%ed%94%94">슬픔</a>,        <a href="/Search/Tag/?q=%ea%bf%88%ec%b2%98%eb%9f%bc">꿈처럼</a></p>
+
+
+<!-- 버튼/등록된댓글 -->
+<div class="replyInfo">
+	<div class="btnList">
+		<ul>
+			<li><a href="javascript:" title="관심 기사 등록"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_article_w.gif" alt="관심 기사 등록" onclick="MyChannelSimpleAdd(192, 37821, 3000, myFavArticleAdd);" /></a></li>
+			<li><a id="scrapLink" href="#" title="블로그 스크랩"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_scrap_blog.gif" alt="블로그 스크랩" /></a></li>
+			<li><a id="printLink" href="/Expansion/Print" title="프린트"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_print.gif" alt="프린트" /></a></li>
+			<li class="last"><a href="" id="currentCategoryLinkUrl" title="전체 기사 보기"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_article_all.gif" alt="전체 기사 보기" /></a></li>
+		</ul>
+	</div>
+	
+	<div id="scrapLayer" class="replyInfo2Depth blogLayer hide">
+		<ul>
+			<li><a id="scrapYesblog" href="#" rel="scrapItem">YES 블로그</a></li>
+			<li><a id="scrapCopy" href="#" rel="scrapItem">타 블로그</a></li>
+		</ul>
+	</div>
+</div>
+<div class="sns">
+	<div class="text"><img src="http://image.yes24.com/images/chyes24/content/images/common/sns_text.gif" alt="이 기사가 마음에 드셨다면 아래 SNS 버튼을 눌러 추천해주세요." /></div>
+	<div class="snsCont">
+        <div class="snsSelectBox">
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3a%2f%2fch.yes24.com%2fArticle%2fView%2f37821&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;locale=ko_KR" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ch.yes24.com/Article/View/37821" data-via="yes24now" data-lang="ko">트윗하기</a>
+            <script>            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+            
+            
+        </div>
+
+        
+
+    <script type="text/javascript">
+        var isLogin = loginCheck();
+        var isArticle = 'True';
+        var reviewDesc = '독자 리뷰는 로그인 하신 후 남기실 수 있습니다.';
+        var isEnabled = false;
+
+        $(document).ready(function () {
+
+            var sDate = new Date('2020-04-02T00:00:00Z');
+            var eDate = new Date('2020-04-14T23:59:59Z');
+    
+            isEnabled = false;
+            
+            var tDate = new Date();
+            if (sDate <= tDate && tDate < eDate) {
+                reviewDesc = '총선 기간에는 독자 리뷰가 일시적으로 제한됩니다.';
+                isEnabled = true;
+            }
+
+            $('#replyEvent').click(function(){
+                var pos = $('#replyEvent').position();
+                $('#userEventInfo').css({
+                    position: "absolute",
+                    top: (pos.top + 20) + "px",
+                    left: (pos.left - 290) + "px"
+                }).toggle();
+                return false;
+            });
+
+            $('#btnEventClose').click(function(){
+                $('#userEventInfo').hide();
+                return false;
+            });
+
+            ReplyLoad();
+            //JSRenderHelperSetting();
+
+            if (!isLogin) {
+                $("textarea[txtarea=replyCont]").watermark(reviewDesc);
+            }
+
+            $("#replyMore").click(function () {
+                var talkNo = $("#replyView").children("div").last().attr("talkNo");
+
+                if (talkNo == null) {
+                    ReplyLoad();
+                    return false;
+                }
+
+                ReplyNext(talkNo);
+            });
+
+            var check = false;
+            if(isEnabled == false)
+                {
+                $("textarea[txtarea=replyCont]").focus(function () {
+                if (!isLogin && check == false) {
+                    alert("로그인 후 작성 가능합니다.");
+                    check = true;
+                    document.location.href = "https://www.yes24.com/Templates/FTLogin.aspx?returnUrl=" + document.location;
+                }
+            }).keydown(function () {
+                    $(this).val('');
+                    return false;
+            });
+                }
+        });
+        
+        //다음 댓글 로드
+        function ReplyNext(talkNo){
+            $.ajax({
+                url: "/Ajax/GetReplyNext?rfrcNo=37821" + "&rfrcGbNo=3000" + "&contGbNo=236" + "&talkNo=" + talkNo,
+                success: function (data) {
+                    if (data != null && data.length > 0) {
+                        $("#replyView").html($("#replyView").html() + data);
+                        
+                        if (!loginCheck()) {
+                            $("textarea[txtarea=replyReplyCont]").watermark(reviewDesc);
+                            $("textarea[txtarea=replyCont]").watermark(reviewDesc);
+                        }
+
+                        $("textarea[txtarea=replyReplyCont]").focus(function () {
+                                return false;
+                        }).keydown(function () {
+                                $(this).val('');
+                                return false;
+                        });
+                    }
+                }
+            });
+        }
+
+        //댓글 삭제
+        function replyDelete(value){
+            var no = $(value).attr("talkNo");
+            
+            if (confirm("하위 댓글이 있을 경우 하위 댓글도 삭제됩니다. 삭제 하시겠습니까?")) {
+                $.ajax({
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    url: "/Ajax/ReplyDelete?talkNo=" + no + "&rfrcNo=37821&rfrcGbNo=3000&contGbNo=236",
+                    data: "{}",
+                    dataType: "json",
+                    success: function (data) {
+                        if(data.State != false){
+                            var talkNo = ''
+                            var replyCount = $("#replyView").children("div").length;
+
+                            if(replyCount == 1){
+                                talkNo = $("#replyView").children("div").attr("talkNo");
+                                ReplyNext(talkNo);
+                            }
+                            $(value).parent().parent().parent().remove();
+                            $("#ReplyCount a").html($("#ReplyCount a").html() != 0 ? $("#ReplyCount a").html() - 1 : 0);
+                        }
+                    }
+                });
+            }
+        }
+
+        //댓글의 댓글 삭제
+        function replyReplyDelete(value){
+            var no = $(value).attr("talkNo");
+            var patNo = $(value).attr("patNo");
+            if(confirm("삭제 하시겠습니까?")){
+                $.ajax({
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    url: "/Ajax/ReplyDelete?talkNo=" + no,
+                    data: "{}",
+                    dataType: "json",
+                    success: function (data) {
+                        if(data.State){
+                            $(value).parent().parent().remove();
+
+                            var childCount = parseInt($(".replyMore .childCount[talkNo=" + patNo + "]").html());
+                            $(".replyMore .childCount[talkNo=" + patNo + "]").html(childCount != 0 ? childCount - 1 : 0);
+                        }
+                    }
+                });
+            }
+        }
+        
+        //댓글 보기
+        function replyToggle(value){
+            $("div .replyReply[talkNo=" + $(value).attr("talkNo") + "]").toggle();
+            
+            var txt = $(value).parent().children("a:first-child").html();
+
+            if(txt == "답글 닫기"){
+                txt = "답글 열기";
+            }
+            else{
+                txt = "답글 닫기";
+            }
+            $(value).parent().children("a:first-child").html(txt);
+        }
+
+        //댓글 등록
+        function Regist(value) {
+                alert(reviewDesc);
+                return false;
+            if(isEnabled)
+            {
+                alert(reviewDesc);
+                return false;
+            }
+            var no = $(value).attr("talkNo");
+            var txt = $(value).parent().children("textarea").val();
+
+            if (txt.replace(/^ *| *$/g, '') == '') {
+                alert("리뷰를 작성 해주세요.");
+                return false;
+            }
+
+            if (txt.length <= 20 || txt.length >= 1000) {
+                alert("최소 20자 이상 최대 1000자 미만 작성하셔야 합니다.")
+                return false;
+            }
+
+            $(value).parent().children("textarea").val('');
+
+            $.ajax({
+                type: 'POST',
+                url: "/Ajax/ReplyRegist",
+                data: "cont=" + escape(txt) + "&talkNo=" + no + "&rfrcNo=37821" + "&rfrcGbNo=3000" + "&contGbNo=236",
+                success: function (data) {
+                    if (data.State == "Authenticated") {
+                        alert(reviewDesc);
+                        return false;
+                    }
+                    if (no != 0) {
+                        //댓글에 댓글
+                        $(".replyReply[talkNo=" + no + "]").children(".replyReplyView").prepend(data);
+                                                
+                        $(".replyMore .childCount[talkNo=" + no + "]").html(parseInt($(".replyMore .childCount[talkNo=" + no + "]").html()) + 1);
+                    }
+                    else {
+                        var curCount = $("#replyView").children("div").length;
+                        var replyCount = $("#ReplyCount a").html();
+                        replyCount++;
+
+                        if (curCount != 0 && curCount % 5 == 0) {
+                            $("#replyView").children("div").last().remove();
+                            curCount--;
+                        }
+
+                        $("#replyView").prepend(data);
+
+                        curCount++;
+                        if (replyCount > curCount) {
+                            $(".replyBtnMore").show();
+                        }
+                        else {
+                            $(".replyBtnMore").hide();
+                        }
+                    }
+                    $("#ReplyCount a").html(replyCount);
+                    
+                    alert('독자 리뷰가 등록되었습니다.');
+                }
+            });
+        }
+
+        //댓글 로드
+        function ReplyLoad(value, count) {
+            $.ajax({                
+                url: "/Ajax/GetReply?rfrcNo=37821&rfrcGbNo=3000&contGbNo=236" + "&count=" + count,                
+                success: function (data) {
+                    if (data != null && data.length != 0) {                        
+                        $("#replyView").html(data);
+                        
+                                $("textarea[txtarea=replyReplyCont]").watermark(reviewDesc);
+
+                        $("textarea[txtarea=replyReplyCont]").focus(function(){
+                                return false;
+                        }).keydown(function () {
+                                $(this).val('');
+                                return false;
+                        });
+                    }
+                }
+            });
+        }
+        
+    </script>
+    <script id="ReplyParentTemplate" type="text/x-jquery-tmpl" comment="댓글 부모 템플릿">
+    <div class="replyList replyListOut" talkNo="{{=TALK_COMT_NO}}">
+    <p class="text">{{=$ctx.useBrTag(CONT)!}}
+            {{#if $ctx.newCheck(REG_DTS)}}
+			<img src="http://image.yes24.com/images/chyes24/Content/images/common/icon_new_02.png" alt="새글" />
+            {{/if}}
+			<span class="replyMore">답글 닫기 (<a class="childCount" talkNo="{{=TALK_COMT_NO}}">{{=$ctx.length($data)}}</a>)&nbsp;&nbsp;<a href="#" onclick="replyToggle(this); return false;" talkNo="{{=TALK_COMT_NO}}"><img  src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_reply_more.gif" alt="댓글 더 보기" /></a></span>
+    </p>
+	<p class="info">
+			<strong>{{=WRT_NM}}</strong>
+			<span class="date">{{=$ctx.date(REG_DTS)}}</span>
+            {{#if $ctx.userCheck(REG_MNG_NO, "") }}
+			<span><a href="javascript:" talkNo="{{=TALK_COMT_NO}}" patNo="{{=PAT_NO}}" onclick="replyDelete(this); return false;"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_delete.gif" alt="삭제"  /></a></span>
+            {{/if}}
+    </p>
+    <div class="replyReply" talkNo="{{=TALK_COMT_NO}}" style="display:none" >
+		<span class=""><img src="http://image.yes24.com/images/chyes24/Content/images/common/bg_reply_top.gif" alt="" /></span>
+		<div class="replyInput">
+			<textarea class="input_textarea" txtarea="replyReplyCont" talkNo="{{=TALK_COMT_NO}}" ></textarea>
+			<a href="javascript:" talkNo="{{=TALK_COMT_NO}}" onclick="Regist(this); return false;"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_submit_02.gif" alt="등록" /></a>
+		</div>
+    <div class="replyReplyView">
+    {{each Children tmpl="#ReplyChildrenTemplate"}}
+    </div>
+    </div>
+    </div>
+    </script>
+    
+    <script id="ReplyChildrenTemplate" type="text/x-jquery-tmpl" comment="댓글 자식 템플릿">
+    <p class="replyText">
+	{{=$ctx.useBrTag(CONT)!}}
+    {{#if $ctx.newCheck(REG_DTS)}}
+	<img src="http://image.yes24.com/images/chyes24/Content/images/common/icon_new_02.png" alt="새글" />
+    {{/if}}
+	<span class="replyInfo"><span>{{=WRT_NM}}</span> | {{=$ctx.date(REG_DTS)}}&nbsp;
+    {{#if $ctx.userCheck(REG_MNG_NO, "") }}
+    <a href="javascript:" talkNo="{{=TALK_COMT_NO}}" patNo="{{=PAT_NO}}" onclick="replyReplyDelete(this); return false;"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_reply_delete.gif" alt="삭제" /></a>
+    {{/if}}
+    </span>
+	</p>
+    </script>
+
+    <script id="ArticleReplyParentTemplate" type="text/x-jquery-tmpl" comment="기사 댓글 부모 템플릿">
+    <div class="replyList" talkNo="{{=TALK_COMT_NO}}">
+    <p class="text2">{{=$ctx.useBrTag(CONT)!}}
+            {{#if $ctx.newCheck(REG_DTS)}}
+			<img src="http://image.yes24.com/images/chyes24/Content/images/common/icon_new_02.png" alt="새글" />
+            {{/if}}
+			<span class="replyMore">답글 닫기 (<a class="childCount" talkNo="{{=TALK_COMT_NO}}">{{=$ctx.length($data)}}</a>)&nbsp;&nbsp;<a href="#" onclick="replyToggle(this); return false;" talkNo="{{=TALK_COMT_NO}}"><img  src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_reply_more.gif" alt="댓글 더 보기" /></a></span>
+    </p>
+	<p class="info">
+			<strong>{{=WRT_NM}}</strong>
+			<span class="date">{{=$ctx.date(REG_DTS)}}</span>
+            {{#if $ctx.userCheck(REG_MNG_NO, "") }}
+			<span><a href="javascript:" talkNo="{{=TALK_COMT_NO}}" patNo="{{=PAT_NO}}" onclick="replyDelete(this); return false;"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_delete.gif" alt="삭제"  /></a></span>
+            {{/if}}
+    </p>
+    <div class="replyReply" talkNo="{{=TALK_COMT_NO}}" style="display:none" >
+		<span class=""><img src="http://image.yes24.com/images/chyes24/Content/images/common/bg_reply_top.gif" alt="" /></span>
+		<div class="replyInput2">
+			<textarea class="input_textarea" txtarea="replyReplyCont" talkNo="{{=TALK_COMT_NO}}" ></textarea>
+			<a href="javascript:" talkNo="{{=TALK_COMT_NO}}" onclick="Regist(this); return false;"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_submit_02.gif" alt="등록" /></a>
+		</div>
+    <div class="replyReplyView">
+    {{each Children tmpl="#ReplyChildrenTemplate"}}
+    </div>
+    </div>
+    </div>
+    </script>
+    
+    <script id="ArticleReplyChildrenTemplate" type="text/x-jquery-tmpl" comment="기사 댓글 자식 템플릿">
+    <p class="replyText">
+	{{=$ctx.useBrTag(CONT)!}}
+    {{#if $ctx.newCheck(REG_DTS)}}
+	<img src="http://image.yes24.com/images/chyes24/Content/images/common/icon_new_02.png" alt="새글" />
+    {{/if}}
+	<span class="replyInfo2"><span>{{=WRT_NM}}</span> | {{=$ctx.date(REG_DTS)}}&nbsp;
+    {{#if $ctx.userCheck(REG_MNG_NO, "") }}
+    <a href="javascript:" talkNo="{{=TALK_COMT_NO}}" patNo="{{=PAT_NO}}" onclick="replyReplyDelete(this); return false;"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_reply_delete.gif" alt="삭제" /></a>
+    {{/if}}
+    </span>
+	</p>
+    </script>
+    
+<!-- 댓글 -->
+<div class="articleReply">
+
+	<div class="replyTitle">
+		<h3><img src="http://image.yes24.com/images/chyes24/Content/images/common/h3_reply.gif" alt="독자 리뷰" /></h3>
+		<p class="count" id="ReplyCount">(<a>0</a>개)</p><a id="textCount"></a>
+		<ul class="replySort">
+			
+			
+            <li id="replyEvent" class="hide"><a href="#"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_reply_event.gif" alt="독자 의견 이벤트" /></a></li>
+		</ul>
+        <!-- 채널예스 독자 리뷰 혜택 안내 -->
+<div id="userEventInfo" class="popType04 hide">
+	<div class="top">
+		<p class="tit"><img src="http://image.yes24.com/images/chyes24/content/images/popup/tit_reviewInfo.gif" alt="채널예스 독자 리뷰 혜택 안내" /></p>
+		<p class="btn-close"><a id="btnEventClose" href="#" title="닫기"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_close.gif" alt="닫기" /></a></p>
+	</div>
+	<div class="popCont">
+		
+		<div class="infoBoard">
+			<table cellpadding="0" cellspacing="0" border="0" width="346">
+			<colgroup><col width="137" /><col width="90" /><col width="119" /></colgroup>
+			<thead>
+				<tr>
+					<th><img src="http://image.yes24.com/images/chyes24/content/images/popup/th_01.gif" alt="부분" /></th>
+					<th><img src="http://image.yes24.com/images/chyes24/content/images/popup/th_02.gif" alt="인원" /></th>
+					<th><img src="http://image.yes24.com/images/chyes24/content/images/popup/th_03.gif" alt="혜택 (YES포인트)" /></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>댓글왕</strong></td>
+					<td>1</td>
+					<td><span>30,000원</span></td>
+				</tr>
+				<tr>
+					<td><strong>우수 댓글상</strong></td>
+					<td>11</td>
+					<td><span>10,000원</span></td>
+				</tr>
+				<tr>
+					<td><strong>노력상</strong></td>
+					<td>12</td>
+					<td><span>5,000원</span></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- // 채널예스 독자 리뷰 혜택 안내 -->
+
+	</div>
+	<div class="replySubmit">
+		<textarea txtarea="replyCont" class="input_textarea"></textarea>&nbsp;<a href="javascript:" talkNo="0" onclick="Regist(this); return false;"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_reply_submit.gif" alt="등록" /></a>		
+	</div>    
+    <div id="replyView">
+    
+    </div>
+	<div class="replyBtnMore"><a href="javascript:"  id="replyMore"><img src="http://image.yes24.com/images/chyes24/Content/images/btn/btn_discuss_more.gif" alt="더보기"/></a></div>
+    
+</div>
+
+    </div>
+</div>
+<!-- // 버튼/등록된댓글 -->
+<p class="line"><img src="http://image.yes24.com/images/chyes24/content/images/common/line_dot.gif" alt="" /></p>
+<!-- 관련기사/블로그 -->
+<div class="articleBlog">
+	<dl>
+		<dt><img src="http://image.yes24.com/images/chyes24/content/images/common/txt_article_blog.gif" alt="관련 기사/ 블로그" /></dt>
+
+        <dd><strong>[기사]</strong> <a href="/Article/View/37820" target="_blank">전자책 분야는 기억 훈련법 소개한 『실수연발 건망증 … 』 1위 </a></dd>
+        <dd><strong>[기사]</strong> <a href="/Article/View/37819" target="_blank">귤은 언제 어른이 되는가</a></dd>
+        <dd><strong>[기사]</strong> <a href="/Article/View/37817" target="_blank">사라지고 싶은 날 살아지고 싶은 책</a></dd>
+        <dd><strong>[기사]</strong> <a href="/Article/View/37813" target="_blank">[책읽아웃] 걱정이 밀려올 때, 이 책! </a></dd>
+	</dl>
+</div>
+<!-- //관련기사/블로그 -->
+
+
+
+<script type="text/javascript">
+    function writeTypeSelect(type) {
+        switch (type) {
+            case 1:
+                $("#writeInfoType1").show();
+                $("#writeInfoType2").hide();
+                break;
+
+            case 2:
+                $("#writeInfoType1").hide();
+                $("#writeInfoType2").show();
+                break;
+        }
+    }
+</script>
+
+<div class="writerInfo" id="writeInfoType1">
+    <ul class="writerTab">
+        <li class="first select"><a href="javascript:writeTypeSelect(1);" title="글쓴이 정보">글쓴이 정보</a></li>
+    </ul>
+
+    <div class="writerCont">
+        <div class="textBox">
+            <dl class="type01">
+                <dt><img src="http://image.yes24.com/images/chyes24/d/3/8/8/d3882bfcbb732540952e24839a626e65.png" alt="" width="105" height="120" onerror='this.src = "http://image.yes24.com/images/chyes24/content/images/common/default_90_113.gif";' /></dt>
+                <dd>
+                    <strong>글 | 서효인(시인, 문학편집자)</strong>
+                    <p>민음사에서 문학편집자로 일하며 동시에 시와 산문을 쓰는 사람. 1981년 목포에서 태어났다. 2006년 『시인세계』 신인상을 통해 등단했다. 시집 『소년 파르티잔 행동 지침』 『백 년 동안의 세계대전』 『여수』, 산문집 『이게 다 야구 때문이다』 『잘 왔어 우리 딸』 등을 펴냈다. 김수영문학상, 천상병시문학상, 대산문학상을 수상했다. 매일같이 여러 책을 만나고 붙들고 꿰어서 내보내는 삶을 살고 있다. </p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+           
+        <!-- 추천 포토 -->
+        <div class="recommPhoto">
+	        <div class="top">
+		        <span class="tit"><img src="http://image.yes24.com/images/chyes24/content/images/common/txt_recommPhoto.gif" alt="" /></span>
+		        <span class="viewAll"><a href="/Gallery/PhotoIndex/">포토 전체 보기</a></span>
+	        </div>
+	        <ul>
+		        <li>
+			        <p><a href="/Gallery/PhotoSlide/10128" rel="photo_gallery" title="이현아"><img src="http://image.yes24.com/images/chyes24/9/a/f/f/9aff6d557b80da75e1f1e6b294a72d52_160_133.jpg" alt="" width="112" height="84" /></a></p>
+			        <p><a href="/Gallery/PhotoSlide/10128" rel="photo_gallery" title="이현아">이현아</a></p>
+		        </li>
+		        <li>
+			        <p><a href="/Gallery/PhotoSlide/10143" rel="photo_gallery" title="김상욱, 유지원"><img src="http://image.yes24.com/images/chyes24/c/8/e/d/c8edee041086589bd2b5d2abe918699b_160_133.jpg" alt="" width="112" height="84" /></a></p>
+			        <p><a href="/Gallery/PhotoSlide/10143" rel="photo_gallery" title="김상욱, 유지원">김상욱, 유지원</a></p>
+		        </li>
+		        <li>
+			        <p><a href="/Gallery/PhotoSlide/10136" rel="photo_gallery" title="정지돈"><img src="http://image.yes24.com/images/chyes24/f/1/0/d/f10df21f48461ace5fe55ab5345c0525_160_133.jpg" alt="" width="112" height="84" /></a></p>
+			        <p><a href="/Gallery/PhotoSlide/10136" rel="photo_gallery" title="정지돈">정지돈</a></p>
+		        </li>
+		        <li>
+			        <p><a href="/Gallery/PhotoSlide/10135" rel="photo_gallery" title="이경제"><img src="http://image.yes24.com/images/chyes24/3/6/9/2/36922722bbd26c619970833e7df75c25_160_133.jpg" alt="" width="112" height="84" /></a></p>
+			        <p><a href="/Gallery/PhotoSlide/10135" rel="photo_gallery" title="이경제">이경제</a></p>
+		        </li>
+		        <li class="last">
+			        <p><a href="/Gallery/PhotoSlide/10125" rel="photo_gallery" title="김헌"><img src="http://image.yes24.com/images/chyes24/a/d/e/c/adec580800222b4e9ae313857e449c28_160_133.jpg" alt="" width="112" height="84" /></a></p>
+			        <p><a href="/Gallery/PhotoSlide/10125" rel="photo_gallery" title="김헌">김헌</a></p>
+		        </li>
+	        </ul>
+        </div>
+        <!-- // 추천 포토 -->
+
+<!-- 추천 동영상 -->
+<div class="recommMovie">
+    <div class="top">
+        <span class="tit"><img src="http://image.yes24.com/images/chyes24/content/images/common/txt_recommMovie.gif" alt="추천 동영상" /></span>
+        <span class="viewAll"><a href="/Gallery/MovieIndex/">동영상 전체 보기</a></span>
+    </div>
+    <ul>
+        <li>
+            <p class="movieButtonBox" style="width: 299px; border: none;">
+                <a href="/Gallery/MovieViewPop/10142" rel="movie_gallery" Ccode="10.2"  class="lnkMovieGallery hide"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_play_button_off.png" /></a>
+                <a href="/Gallery/MovieViewPop/10142" rel="movie_gallery"><img src="http://image.yes24.com/images/chyes24/c/c/b/3/ccb304cfb71cd9f09ec39cb134f17718_640_360.jpg" alt="" width="264" height="148" /></a>
+            </p>
+            <p><a href="/Gallery/MovieViewPop/10142" rel="movie_gallery">김상욱, 유지원 인터뷰</a></p>
+        </li>
+        <li>
+            <p class="movieButtonBox" style="width: 299px; border: none;">
+                <a href="/Gallery/MovieViewPop/10095" rel="movie_gallery" Ccode="10.2"  class="lnkMovieGallery hide"><img src="http://image.yes24.com/images/chyes24/content/images/btn/btn_play_button_off.png" /></a>
+                <a href="/Gallery/MovieViewPop/10095" rel="movie_gallery"><img src="http://image.yes24.com/images/chyes24/7/6/a/8/76a848a673e9e94194638651775279ba_640_360.png" alt="" width="264" height="148" /></a>
+            </p>
+            <p><a href="/Gallery/MovieViewPop/10095" rel="movie_gallery">[쇼생탈출] 빈센트 반 고흐 4편</a></p>
+        </li>
+    </ul>
+</div>
+<!-- 추천 동영상 -->
+           
+            <!-- 하단 띠배너-->
+            <!-- // 하단 띠배너 -->
+            
+        </div>
+            <!-- 다음뉴스검색 제휴 이미지코드삽입 -->
+            <!-- 다음뉴스검색 제휴 이미지코드삽입 -->
+    </div>
+</div>
+
+
+				        </div>
+			        </div>
+			        <div id="rightCon">
+				        
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('a[rel=pnav]').click(function () {
+            $('ul.group1 ul:visible').hide();
+            $('a[rel=pnav]').removeClass('on');
+
+            var $this = $(this);
+            $this.addClass('on');
+            $this.next().toggle();
+
+            var child = $('a[parentNo=' + $this.attr('no') + ']');
+            return child.length == 0;
+        });
+
+        var $art = $('a#2762');
+        if ($art.attr('rel')) {
+            $art.addClass('on').next().show();
+        } else {
+            var $pArt = $('a#' + $art.attr('parentNo'));
+            $art.parent().addClass('on');
+            $pArt.addClass('on').next().show();
+        }
+    });
+</script>
+        <div class="mb30">
+        <div id="sortBox">
+        <p><img id="columns" src="http://image.yes24.com/images/chyes24/content/images/common/tit_colum.gif" alt="" /></p>
+        <ul class="group1">
+                <li><a name="menuTag" href="/Article/List/2162" id="2162" parentNo="1928"  no="2162" title="책" rel="pnav">책</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2961" id="2961" title="지금 시작하는 생각 인문학" parentNo="2162" no="2961">지금 시작하는 생각 인문학</a></li>
+                            <li><a href="/Article/List/2959" id="2959" title="작가의 추천사" parentNo="2162" no="2959">작가의 추천사</a></li>
+                            <li><a href="/Article/List/2807" id="2807" title="장강명의 소설가라는 이상한 직업" parentNo="2162" no="2807">장강명의 소설가라는 이상한 직업</a></li>
+                            <li><a href="/Article/List/2940" id="2940" title="세상에서 두 번째로 글 잘 쓰기" parentNo="2162" no="2940">세상에서 두 번째로 글 잘 쓰기</a></li>
+                            <li><a href="/Article/List/2943" id="2943" title="인아영의 잘 읽겠습니다" parentNo="2162" no="2943">인아영의 잘 읽겠습니다</a></li>
+                            <li><a href="/Article/List/2945" id="2945" title="석윤이의 그림이 되는 책" parentNo="2162" no="2945">석윤이의 그림이 되는 책</a></li>
+                            <li><a href="/Article/List/2948" id="2948" title="김지은의 모두 함께 읽는 책" parentNo="2162" no="2948">김지은의 모두 함께 읽는 책</a></li>
+                            <li><a href="/Article/List/2958" id="2958" title="엄지혜의 기억하는 말들" parentNo="2162" no="2958">엄지혜의 기억하는 말들</a></li>
+                            <li><a href="/Article/List/2799" id="2799" title="유희경의 이달의 시집서점 " parentNo="2162" no="2799">유희경의 이달의 시집서점 </a></li>
+                            <li><a href="/Article/List/2960" id="2960" title="책장 위 고양이" parentNo="2162" no="2960">책장 위 고양이</a></li>
+                            <li><a href="/Article/List/2936" id="2936" title="셀럽의 책" parentNo="2162" no="2936">셀럽의 책</a></li>
+                            <li><a href="/Article/List/2756" id="2756" title="책이 뭐길래" parentNo="2162" no="2756">책이 뭐길래</a></li>
+                            <li><a href="/Article/List/2946" id="2946" title="편집자의 기획" parentNo="2162" no="2946">편집자의 기획</a></li>
+                            <li><a href="/Article/List/2947" id="2947" title="마케터 픽 7" parentNo="2162" no="2947">마케터 픽 7</a></li>
+                            <li><a href="/Article/List/2944" id="2944" title="출판 트렌드를 읽다" parentNo="2162" no="2944">출판 트렌드를 읽다</a></li>
+                            <li><a href="/Article/List/2801" id="2801" title="채널예스 인친소" parentNo="2162" no="2801">채널예스 인친소</a></li>
+                            <li><a href="/Article/List/2796" id="2796" title="백세희의 떡볶이만큼 좋은 시" parentNo="2162" no="2796">백세희의 떡볶이만큼 좋은 시</a></li>
+                            <li><a href="/Article/List/2787" id="2787" title="소복이가 책 읽어줍니다" parentNo="2162" no="2787">소복이가 책 읽어줍니다</a></li>
+                            <li><a href="/Article/List/2941" id="2941" title="나도 에세이스트" parentNo="2162" no="2941">나도 에세이스트</a></li>
+                            <li><a href="/Article/List/1956" id="1956" title="MD 리뷰 대전 " parentNo="2162" no="1956">MD 리뷰 대전 </a></li>
+                            <li><a href="/Article/List/2671" id="2671" title="내가 만든 책" parentNo="2162" no="2671">내가 만든 책</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2172" id="2172" parentNo="1928"  no="2172" title="영화" rel="pnav">영화</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2964" id="2964" title="손희정의 더 페이보릿" parentNo="2172" no="2964">손희정의 더 페이보릿</a></li>
+                            <li><a href="/Article/List/2655" id="2655" title="허남웅의 영화경(景)" parentNo="2172" no="2655">허남웅의 영화경(景)</a></li>
+                            <li><a href="/Article/List/2957" id="2957" title="전고운의 부귀영화" parentNo="2172" no="2957">전고운의 부귀영화</a></li>
+                            <li><a href="/Article/List/2955" id="2955" title="황석희의 영화 번역담" parentNo="2172" no="2955">황석희의 영화 번역담</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2163" id="2163" parentNo="1928"  no="2163" title="음악" rel="pnav">음악</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2123" id="2123" title="주목, 이주의 앨범" parentNo="2163" no="2123">주목, 이주의 앨범</a></li>
+                            <li><a href="/Article/List/2962" id="2962" title="윤덕원의 읽은 만큼 들린다" parentNo="2163" no="2962">윤덕원의 읽은 만큼 들린다</a></li>
+                            <li><a href="/Article/List/2125" id="2125" title="뮤직 스페셜" parentNo="2163" no="2125">뮤직 스페셜</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2164" id="2164" parentNo="1928"  no="2164" title="공연" rel="pnav">공연</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2149" id="2149" title="윤하정의 공연 세상" parentNo="2164" no="2149">윤하정의 공연 세상</a></li>
+                            <li><a href="/Article/List/2533" id="2533" title="이주의 티켓박스" parentNo="2164" no="2533">이주의 티켓박스</a></li>
+                            <li><a href="/Article/List/2937" id="2937" title="쇼생탈출" parentNo="2164" no="2937">쇼생탈출</a></li>
+                            <li><a href="/Article/List/2950" id="2950" title="바바, 오늘 공연은 뭐봐?" parentNo="2164" no="2950">바바, 오늘 공연은 뭐봐?</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2168" id="2168" parentNo="1928"  no="2168" title="여행/취미/건강" rel="pnav">여행/취미/건강</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2956" id="2956" title="이수련의 엇갈린 관계" parentNo="2168" no="2956">이수련의 엇갈린 관계</a></li>
+                            <li><a href="/Article/List/2942" id="2942" title="초록빛 힐링의 섬 아일랜드에서 멈추다" parentNo="2168" no="2942">초록빛 힐링의 섬 아일랜드에서 멈추다</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2165" id="2165" parentNo="1928"  no="2165" title="대중문화" rel="pnav">대중문화</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2002" id="2002" title="솔직히 말해서" parentNo="2165" no="2002">솔직히 말해서</a></li>
+                            <li><a href="/Article/List/2691" id="2691" title="이승한의 얼굴을 보라" parentNo="2165" no="2691">이승한의 얼굴을 보라</a></li>
+                            <li><a href="/Article/List/2828" id="2828" title="박희아의 비하인드 아이돌" parentNo="2165" no="2828">박희아의 비하인드 아이돌</a></li>
+                            <li><a href="/Article/List/2867" id="2867" title="효녀병 말기 환자입니다만" parentNo="2165" no="2867">효녀병 말기 환자입니다만</a></li>
+                            <li><a href="/Article/List/2963" id="2963" title="곽민지의 혼자 쓰는 삶" parentNo="2165" no="2963">곽민지의 혼자 쓰는 삶</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2166" id="2166" parentNo="1928"  no="2166" title="시사/과학/미술/교육" rel="pnav">시사/과학/미술/교육</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2951" id="2951" title="이것도 직장 내 괴롭힘인가요?" parentNo="2166" no="2951">이것도 직장 내 괴롭힘인가요?</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2669" id="2669" parentNo="1928"  no="2669" title="불후의 칼럼" rel="pnav">불후의 칼럼</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2625" id="2625" title="송현민의 inter-classic" parentNo="2669" no="2625">송현민의 inter-classic</a></li>
+                            <li><a href="/Article/List/2657" id="2657" title="홍승찬의 클래식 대가를 만나다" parentNo="2669" no="2657">홍승찬의 클래식 대가를 만나다</a></li>
+                            <li><a href="/Article/List/2581" id="2581" title="내일 뭐 읽지?" parentNo="2669" no="2581">내일 뭐 읽지?</a></li>
+                            <li><a href="/Article/List/2592" id="2592" title="김중혁의 대화 완전정복" parentNo="2669" no="2592">김중혁의 대화 완전정복</a></li>
+                            <li><a href="/Article/List/2649" id="2649" title="독자 인터뷰" parentNo="2669" no="2649">독자 인터뷰</a></li>
+                            <li><a href="/Article/List/2718" id="2718" title="정지혜의 사적인서점 " parentNo="2669" no="2718">정지혜의 사적인서점 </a></li>
+                            <li><a href="/Article/List/2726" id="2726" title="김현성의 어쿠스틱 노트" parentNo="2669" no="2726">김현성의 어쿠스틱 노트</a></li>
+                            <li><a href="/Article/List/2729" id="2729" title="김교석의 산다는 게  다 그런 거지 " parentNo="2669" no="2729">김교석의 산다는 게  다 그런 거지 </a></li>
+                            <li><a href="/Article/List/2656" id="2656" title="그림책 작가를 만나다" parentNo="2669" no="2656">그림책 작가를 만나다</a></li>
+                            <li><a href="/Article/List/2736" id="2736" title="박선아의 (    ) 산책" parentNo="2669" no="2736">박선아의 (    ) 산책</a></li>
+                            <li><a href="/Article/List/2742" id="2742" title="신예희의 독립생활자" parentNo="2669" no="2742">신예희의 독립생활자</a></li>
+                            <li><a href="/Article/List/2747" id="2747" title="김현의 더 멀리" parentNo="2669" no="2747">김현의 더 멀리</a></li>
+                            <li><a href="/Article/List/2751" id="2751" title="IT 트렌드 &amp; Books" parentNo="2669" no="2751">IT 트렌드 & Books</a></li>
+                            <li><a href="/Article/List/2752" id="2752" title="박현주의 초보운전자의 독서법" parentNo="2669" no="2752">박현주의 초보운전자의 독서법</a></li>
+                            <li><a href="/Article/List/2762" id="2762" title="서효인의 가요대잔치" parentNo="2669" no="2762">서효인의 가요대잔치</a></li>
+                            <li><a href="/Article/List/2660" id="2660" title="신상이라는 안정제" parentNo="2669" no="2660">신상이라는 안정제</a></li>
+                            <li><a href="/Article/List/2665" id="2665" title="조영주의 성공한 덕후 " parentNo="2669" no="2665">조영주의 성공한 덕후 </a></li>
+                            <li><a href="/Article/List/2666" id="2666" title="이경미의 어쨌든" parentNo="2669" no="2666">이경미의 어쨌든</a></li>
+                            <li><a href="/Article/List/2674" id="2674" title="이라영의 정치적인 식탁" parentNo="2669" no="2674">이라영의 정치적인 식탁</a></li>
+                            <li><a href="/Article/List/2681" id="2681" title="은유의 다가오는 것들" parentNo="2669" no="2681">은유의 다가오는 것들</a></li>
+                            <li><a href="/Article/List/2688" id="2688" title="오승원의 반딧불 의원" parentNo="2669" no="2688">오승원의 반딧불 의원</a></li>
+                            <li><a href="/Article/List/2689" id="2689" title="김희진의 돌봄 인문학 " parentNo="2669" no="2689">김희진의 돌봄 인문학 </a></li>
+                            <li><a href="/Article/List/2690" id="2690" title="아빠, 만화 안 그리고 뭐해?" parentNo="2669" no="2690">아빠, 만화 안 그리고 뭐해?</a></li>
+                            <li><a href="/Article/List/2694" id="2694" title="유계영의 빌려온 시" parentNo="2669" no="2694">유계영의 빌려온 시</a></li>
+                            <li><a href="/Article/List/2698" id="2698" title="이기준의 두루뭉술" parentNo="2669" no="2698">이기준의 두루뭉술</a></li>
+                            <li><a href="/Article/List/2701" id="2701" title="그래, 난 취했는지도 몰라" parentNo="2669" no="2701">그래, 난 취했는지도 몰라</a></li>
+                            <li><a href="/Article/List/2702" id="2702" title="윤한의 음악을 듣는 시간" parentNo="2669" no="2702">윤한의 음악을 듣는 시간</a></li>
+                            <li><a href="/Article/List/2629" id="2629" title="김연수의 문음친교 시즌2 " parentNo="2669" no="2629">김연수의 문음친교 시즌2 </a></li>
+                            <li><a href="/Article/List/2630" id="2630" title="김서령의 우주 서재" parentNo="2669" no="2630">김서령의 우주 서재</a></li>
+                            <li><a href="/Article/List/2631" id="2631" title="황인찬의 시로 말하다" parentNo="2669" no="2631">황인찬의 시로 말하다</a></li>
+                            <li><a href="/Article/List/2634" id="2634" title="강병철의 육아의 정석" parentNo="2669" no="2634">강병철의 육아의 정석</a></li>
+                            <li><a href="/Article/List/2639" id="2639" title="남녀, 여행사정" parentNo="2669" no="2639">남녀, 여행사정</a></li>
+                            <li><a href="/Article/List/2645" id="2645" title="다시 읽는 인터뷰" parentNo="2669" no="2645">다시 읽는 인터뷰</a></li>
+                            <li><a href="/Article/List/2646" id="2646" title="정택용의 책과 마주치다" parentNo="2669" no="2646">정택용의 책과 마주치다</a></li>
+                            <li><a href="/Article/List/2405" id="2405" title="정답 없는 육아" parentNo="2669" no="2405">정답 없는 육아</a></li>
+                            <li><a href="/Article/List/2707" id="2707" title="허영만의 3천만원" parentNo="2669" no="2707">허영만의 3천만원</a></li>
+                            <li><a href="/Article/List/2741" id="2741" title="정이현의 오늘 살 책" parentNo="2669" no="2741">정이현의 오늘 살 책</a></li>
+                            <li><a href="/Article/List/2771" id="2771" title="황석영의 마터 2-10" parentNo="2669" no="2771">황석영의 마터 2-10</a></li>
+                            <li><a href="/Article/List/2734" id="2734" title="그림으로 보는 인터뷰" parentNo="2669" no="2734">그림으로 보는 인터뷰</a></li>
+                            <li><a href="/Article/List/2731" id="2731" title="김병수의 에피파니 " parentNo="2669" no="2731">김병수의 에피파니 </a></li>
+                            <li><a href="/Article/List/2580" id="2580" title="임경선의 성실한 작가생활" parentNo="2669" no="2580">임경선의 성실한 작가생활</a></li>
+                            <li><a href="/Article/List/2653" id="2653" title="영화는 보통" parentNo="2669" no="2653">영화는 보통</a></li>
+                            <li><a href="/Article/List/2938" id="2938" title="출간 후 알게 된 것들 " parentNo="2669" no="2938">출간 후 알게 된 것들 </a></li>
+                            <li><a href="/Article/List/2719" id="2719" title="프랑소와 엄의 북관리사무소 " parentNo="2669" no="2719">프랑소와 엄의 북관리사무소 </a></li>
+                            <li><a href="/Article/List/2503" id="2503" title="하지현의 마음을 읽는 서가" parentNo="2669" no="2503">하지현의 마음을 읽는 서가</a></li>
+                            <li><a href="/Article/List/2607" id="2607" title="마포 김 사장의 야매 책방" parentNo="2669" no="2607">마포 김 사장의 야매 책방</a></li>
+                            <li><a href="/Article/List/2615" id="2615" title="권석천의 무간도" parentNo="2669" no="2615">권석천의 무간도</a></li>
+                            <li><a href="/Article/List/2616" id="2616" title="윤용인의 노비문장" parentNo="2669" no="2616">윤용인의 노비문장</a></li>
+                            <li><a href="/Article/List/2617" id="2617" title="펭귄의 일상영화" parentNo="2669" no="2617">펭귄의 일상영화</a></li>
+                            <li><a href="/Article/List/2748" id="2748" title="이슬아의 매일 뭐라도" parentNo="2669" no="2748">이슬아의 매일 뭐라도</a></li>
+                            <li><a href="/Article/List/2780" id="2780" title="엄지혜의 돌봄의 말들" parentNo="2669" no="2780">엄지혜의 돌봄의 말들</a></li>
+                            <li><a href="/Article/List/2526" id="2526" title="박상의 턴테이블" parentNo="2669" no="2526">박상의 턴테이블</a></li>
+                            <li><a href="/Article/List/2110" id="2110" title="뚜루와 함께 고고씽~" parentNo="2669" no="2110">뚜루와 함께 고고씽~</a></li>
+                            <li><a href="/Article/List/2332" id="2332" title="내 인생의 클래식 101" parentNo="2669" no="2332">내 인생의 클래식 101</a></li>
+                            <li><a href="/Article/List/2648" id="2648" title="책을 만드는 사람들" parentNo="2669" no="2648">책을 만드는 사람들</a></li>
+                            <li><a href="/Article/List/2761" id="2761" title="김진형의 틈입하는 편집자" parentNo="2669" no="2761">김진형의 틈입하는 편집자</a></li>
+                            <li><a href="/Article/List/2757" id="2757" title="조영주의 적당히 산다" parentNo="2669" no="2757">조영주의 적당히 산다</a></li>
+                            <li><a href="/Article/List/2579" id="2579" title="김도언의 시인의 얼굴" parentNo="2669" no="2579">김도언의 시인의 얼굴</a></li>
+                            <li><a href="/Article/List/2406" id="2406" title="이동진의 빨간책방" parentNo="2669" no="2406">이동진의 빨간책방</a></li>
+                            <li><a href="/Article/List/2793" id="2793" title="예스24 BOOKCLUB 101" parentNo="2669" no="2793">예스24 BOOKCLUB 101</a></li>
+                            <li><a href="/Article/List/2650" id="2650" title="김남인의 직장언어 탐구생활" parentNo="2669" no="2650">김남인의 직장언어 탐구생활</a></li>
+                            <li><a href="/Article/List/2606" id="2606" title="이승한의 예능, 매혹의 기술" parentNo="2669" no="2606">이승한의 예능, 매혹의 기술</a></li>
+                            <li><a href="/Article/List/2783" id="2783" title="장르소설 여행 가이드북" parentNo="2669" no="2783">장르소설 여행 가이드북</a></li>
+                            <li><a href="/Article/List/2732" id="2732" title="박연준의 특별한 평범함" parentNo="2669" no="2732">박연준의 특별한 평범함</a></li>
+                        </ul>
+                </li>
+                <li><a name="menuTag" href="/Article/List/2171" id="2171" parentNo="1928"  no="2171" title="연재종료" rel="pnav">연재종료</a>
+                        <ul class="group2 hide">
+                            <li><a href="/Article/List/2447" id="2447" title="고종석의 한국어 글쓰기 " parentNo="2171" no="2447">고종석의 한국어 글쓰기</a></li>
+                            <li><a href="/Article/List/2388" id="2388" title="김현진의 책 뒤집어보기 " parentNo="2171" no="2388">김현진의 책 뒤집어보기</a></li>
+                            <li><a href="/Article/List/2755" id="2755" title="베스트 블로그 리뷰" parentNo="2171" no="2755">베스트 블로그 리뷰</a></li>
+                            <li><a href="/Article/List/2952" id="2952" title="책만들기 어떻게 시작할까" parentNo="2171" no="2952">책만들기 어떻게 시작할까</a></li>
+                            <li><a href="/Article/List/2773" id="2773" title="제주 오름을 걷다" parentNo="2171" no="2773">제주 오름을 걷다</a></li>
+                            <li><a href="/Article/List/2786" id="2786" title="이용한의 야옹합니다" parentNo="2171" no="2786">이용한의 야옹합니다</a></li>
+                            <li><a href="/Article/List/2774" id="2774" title="오세용의 IT 이야기" parentNo="2171" no="2774">오세용의 IT 이야기</a></li>
+                            <li><a href="/Article/List/2775" id="2775" title="EBS 강사 교육법" parentNo="2171" no="2775">EBS 강사 교육법</a></li>
+                            <li><a href="/Article/List/2800" id="2800" title="박희아의 무대 위의 아이돌" parentNo="2171" no="2800">박희아의 무대 위의 아이돌</a></li>
+                            <li><a href="/Article/List/2292" id="2292" title="이이후의 나, 꼰대" parentNo="2171" no="2292">이이후의 나, 꼰대</a></li>
+                            <li><a href="/Article/List/2116" id="2116" title="김지원의 Tasting NYC" parentNo="2171" no="2116">김지원의 Tasting NYC</a></li>
+                            <li><a href="/Article/List/1993" id="1993" title="백영옥의 between page" parentNo="2171" no="1993">백영옥의 between page</a></li>
+                            <li><a href="/Article/List/2766" id="2766" title="노지양의 번역 한 줄" parentNo="2171" no="2766">노지양의 번역 한 줄</a></li>
+                            <li><a href="/Article/List/2540" id="2540" title="나는 하지 않는 편이 좋겠습니다" parentNo="2171" no="2540">나는 하지 않는 편이 좋겠습니다</a></li>
+                            <li><a href="/Article/List/2610" id="2610" title="최민석의 절도일기(竊圖日記)" parentNo="2171" no="2610">최민석의 절도일기(竊圖日記)</a></li>
+                            <li><a href="/Article/List/2413" id="2413" title="박신영의 이 언니를 보라" parentNo="2171" no="2413">박신영의 이 언니를 보라</a></li>
+                            <li><a href="/Article/List/2467" id="2467" title="김지우의 드라마, 당신의 이야기" parentNo="2171" no="2467">김지우의 드라마, 당신의 이야기</a></li>
+                            <li><a href="/Article/List/2525" id="2525" title="임재청의 세계문학 인생 콘서트" parentNo="2171" no="2525">임재청의 세계문학 인생 콘서트</a></li>
+                            <li><a href="/Article/List/2560" id="2560" title="권계현의 영국 영어 이야기" parentNo="2171" no="2560">권계현의 영국 영어 이야기</a></li>
+                            <li><a href="/Article/List/1998" id="1998" title="남인숙의 Book Making Story" parentNo="2171" no="1998">남인숙의 Book Making Story</a></li>
+                            <li><a href="/Article/List/2001" id="2001" title="김봉석의 하드보일드로 세상읽기" parentNo="2171" no="2001">김봉석의 하드보일드로 세상읽기</a></li>
+                            <li><a href="/Article/List/2547" id="2547" title="홍준호의 싱글 필름 크리티끄" parentNo="2171" no="2547">홍준호의 싱글 필름 크리티끄</a></li>
+                            <li><a href="/Article/List/2572" id="2572" title="북 어워드" parentNo="2171" no="2572">북 어워드</a></li>
+                            <li><a href="/Article/List/2500" id="2500" title="현정의 무엇이든 두근두근" parentNo="2171" no="2500">현정의 무엇이든 두근두근</a></li>
+                            <li><a href="/Article/List/2457" id="2457" title="정이현의 남자 남자 남자" parentNo="2171" no="2457">정이현의 남자 남자 남자</a></li>
+                            <li><a href="/Article/List/2385" id="2385" title="판타스틱 장르백서" parentNo="2171" no="2385">판타스틱 장르백서</a></li>
+                            <li><a href="/Article/List/2391" id="2391" title="웹툰으로 보는 미스테리 클래식" parentNo="2171" no="2391">웹툰으로 보는 미스테리 클래식</a></li>
+                            <li><a href="/Article/List/2480" id="2480" title="김봉석의 장르 키워드 사전" parentNo="2171" no="2480">김봉석의 장르 키워드 사전</a></li>
+                            <li><a href="/Article/List/2474" id="2474" title="이동환의 과학, 영화와 만나다" parentNo="2171" no="2474">이동환의 과학, 영화와 만나다</a></li>
+                            <li><a href="/Article/List/2603" id="2603" title="책은 사람을 만든다" parentNo="2171" no="2603">책은 사람을 만든다</a></li>
+                            <li><a href="/Article/List/2564" id="2564" title="난다의 두 번 본 영화" parentNo="2171" no="2564">난다의 두 번 본 영화</a></li>
+                            <li><a href="/Article/List/2717" id="2717" title="멍과 야옹 사이 " parentNo="2171" no="2717">멍과 야옹 사이 </a></li>
+                            <li><a href="/Article/List/2147" id="2147" title="최재훈의 시네마트" parentNo="2171" no="2147">최재훈의 시네마트</a></li>
+                            <li><a href="/Article/List/1985" id="1985" title="김연수의 文音親交 프로젝트" parentNo="2171" no="1985">김연수의 文音親交 프로젝트</a></li>
+                            <li><a href="/Article/List/2412" id="2412" title="독자와 만나다" parentNo="2171" no="2412">독자와 만나다</a></li>
+                            <li><a href="/Article/List/2439" id="2439" title="전건우의 예능과 인생" parentNo="2171" no="2439">전건우의 예능과 인생</a></li>
+                            <li><a href="/Article/List/2148" id="2148" title="정성렬의 아비정전" parentNo="2171" no="2148">정성렬의 아비정전</a></li>
+                            <li><a href="/Article/List/1974" id="1974" title="정혜윤 PD의 침대와 책" parentNo="2171" no="1974">정혜윤 PD의 침대와 책</a></li>
+                            <li><a href="/Article/List/2398" id="2398" title="윤중희의 언어학으로 세상 보기" parentNo="2171" no="2398">윤중희의 언어학으로 세상 보기</a></li>
+                            <li><a href="/Article/List/2510" id="2510" title="김애리의 서른 여자 공부법" parentNo="2171" no="2510">김애리의 서른 여자 공부법</a></li>
+                            <li><a href="/Article/List/2284" id="2284" title="이예진의 Stage Story" parentNo="2171" no="2284">이예진의 Stage Story</a></li>
+                            <li><a href="/Article/List/1994" id="1994" title="진중권의 독창적인 책 읽기" parentNo="2171" no="1994">진중권의 독창적인 책 읽기</a></li>
+                            <li><a href="/Article/List/2593" id="2593" title="하루 한 상" parentNo="2171" no="2593">하루 한 상</a></li>
+                            <li><a href="/Article/List/2482" id="2482" title="김지원을 읽고 쓰고 그리다 " parentNo="2171" no="2482">김지원을 읽고 쓰고 그리다 </a></li>
+                            <li><a href="/Article/List/2489" id="2489" title="론리플래닛 매거진" parentNo="2171" no="2489">론리플래닛 매거진</a></li>
+                            <li><a href="/Article/List/2455" id="2455" title="김경주의 극장뎐 " parentNo="2171" no="2455">김경주의 극장뎐 </a></li>
+                            <li><a href="/Article/List/2443" id="2443" title="고아라의 드라마 돋보기" parentNo="2171" no="2443">고아라의 드라마 돋보기</a></li>
+                            <li><a href="/Article/List/2647" id="2647" title="퐈정리의 트렌드 프로파일" parentNo="2171" no="2647">퐈정리의 트렌드 프로파일</a></li>
+                            <li><a href="/Article/List/2308" id="2308" title="어바웃 90년대" parentNo="2171" no="2308">어바웃 90년대</a></li>
+                            <li><a href="/Article/List/2124" id="2124" title="명반 리뷰" parentNo="2171" no="2124">명반 리뷰</a></li>
+                            <li><a href="/Article/List/2150" id="2150" title="미쓰리의 문화살롱" parentNo="2171" no="2150">미쓰리의 문화살롱</a></li>
+                            <li><a href="/Article/List/2530" id="2530" title="스밀라의 키치한 레시피" parentNo="2171" no="2530">스밀라의 키치한 레시피</a></li>
+                            <li><a href="/Article/List/2519" id="2519" title="서유미의 한 몸의 시간" parentNo="2171" no="2519">서유미의 한 몸의 시간</a></li>
+                            <li><a href="/Article/List/2471" id="2471" title="전건우의 대중소설로 사색하기" parentNo="2171" no="2471">전건우의 대중소설로 사색하기</a></li>
+                            <li><a href="/Article/List/1988" id="1988" title="정혜윤 PD의 어느 날 …을 알게 되었다" parentNo="2171" no="1988">정혜윤 PD의 어느 날 …을 알게 되었다</a></li>
+                            <li><a href="/Article/List/1999" id="1999" title="서진의 위대한 남자들의 러브레터" parentNo="2171" no="1999">서진의 위대한 남자들의 러브레터</a></li>
+                            <li><a href="/Article/List/2260" id="2260" title="19번지로 놀러오세요" parentNo="2171" no="2260">19번지로 놀러오세요</a></li>
+                            <li><a href="/Article/List/2013" id="2013" title="서지원의 스토리텔링 요리법" parentNo="2171" no="2013">서지원의 스토리텔링 요리법</a></li>
+                            <li><a href="/Article/List/1968" id="1968" title="듀나의 투덜투덜" parentNo="2171" no="1968">듀나의 투덜투덜</a></li>
+                            <li><a href="/Article/List/2512" id="2512" title="이택광의 영어로 철학하기" parentNo="2171" no="2512">이택광의 영어로 철학하기</a></li>
+                            <li><a href="/Article/List/2478" id="2478" title="차우진의 사운드 &amp; 노이즈 " parentNo="2171" no="2478">차우진의 사운드 & 노이즈 </a></li>
+                            <li><a href="/Article/List/1979" id="1979" title="장정일의 독서일기" parentNo="2171" no="1979">장정일의 독서일기</a></li>
+                            <li><a href="/Article/List/2528" id="2528" title="홍준호의 구식이 아니라 클래식" parentNo="2171" no="2528">홍준호의 구식이 아니라 클래식</a></li>
+                            <li><a href="/Article/List/1991" id="1991" title="차승우의 록큰롤 스타" parentNo="2171" no="1991">차승우의 록큰롤 스타</a></li>
+                            <li><a href="/Article/List/2456" id="2456" title="김태훈의 편견" parentNo="2171" no="2456">김태훈의 편견</a></li>
+                            <li><a href="/Article/List/1996" id="1996" title="이영희의 도쿄를 읽다" parentNo="2171" no="1996">이영희의 도쿄를 읽다</a></li>
+                            <li><a href="/Article/List/1997" id="1997" title="정혜윤의 사랑이 있던 자리야,  잊지 마" parentNo="2171" no="1997">정혜윤의 사랑이 있던 자리야,  잊지 마</a></li>
+                            <li><a href="/Article/List/2444" id="2444" title="생각하는 10대를 위한 고전 특강" parentNo="2171" no="2444">생각하는 10대를 위한 고전 특강</a></li>
+                            <li><a href="/Article/List/2006" id="2006" title="손철주 이주은의 만났고, 그래서 생각이 났다" parentNo="2171" no="2006">손철주 이주은의 만났고, 그래서 생각이 났다</a></li>
+                            <li><a href="/Article/List/2009" id="2009" title="고형욱의 이야기가 있는 유럽 미술관" parentNo="2171" no="2009">고형욱의 이야기가 있는 유럽 미술관</a></li>
+                            <li><a href="/Article/List/2010" id="2010" title="고경태의 아버지의 스크랩" parentNo="2171" no="2010">고경태의 아버지의 스크랩</a></li>
+                            <li><a href="/Article/List/2508" id="2508" title="김소연의 내향적 삶을 옹호함" parentNo="2171" no="2508">김소연의 내향적 삶을 옹호함</a></li>
+                            <li><a href="/Article/List/2395" id="2395" title="최민석의 영사기(映思記)" parentNo="2171" no="2395">최민석의 영사기(映思記)</a></li>
+                            <li><a href="/Article/List/2397" id="2397" title="최효종의 추파" parentNo="2171" no="2397">최효종의 추파</a></li>
+                            <li><a href="/Article/List/2113" id="2113" title="굽시니스트 오만잡상툰" parentNo="2171" no="2113">굽시니스트 오만잡상툰</a></li>
+                        </ul>
+                </li>
+
+        </ul>
+    </div>
+    
+        <p><img src="http://image.yes24.com/images/chyes24/content/images/common/bg_sortBox_b.gif" alt="" /></p>
+        </div>
+<!-- 배너 -->
+<div class="mrboxType04" style="display:none;">
+    <script language="JavaScript1.1" src="http://adgirl.yes24.com/RealMedia/ads/adstream_jx.ads/www.yes24.com/ChYes@Right"></script>
+</div>
+<!-- //배너 -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        //var bookSelector = Math.floor(Math.random() * 4) == 0 ? ":first" : ":last";
+        //$('div.todaybooks' + bookSelector).show();
+        //$('div#recomm ul.more li' + bookSelector).addClass('on');
+        //$("#todaybook" + index).show();
+        var index = "1";
+        $('div#recomm ul.more li').eq(1-1).addClass('on');
+        $('a[rel=todaybooks]').click(function () {
+            var $this = $(this);
+
+            $('div#recomm ul.more li').removeClass();
+            $this.parent().addClass('on');
+
+            $('div.todaybooks').hide();
+            $($this.attr('href')).show();
+
+            return false;
+        });
+        $('a[rel=todaybooks]').eq(1-1).click();
+    });
+</script>
+<!-- YES 24 추천 상품 -->
+<div id="recomm">
+    <p class="tit">오늘의 책</p>
+    <ul class="more">
+        <li><a href="#todaybook1" rel="todaybooks" id="lnk1">1</a></li>
+        <li><a href="#todaybook2" rel="todaybooks" id="lnk2">2</a></li>
+        <li><a href="#todaybook3" rel="todaybooks" id="lnk3">3</a></li>
+        <li><a href="#todaybook4" rel="todaybooks" id="lnk4">4</a></li>
+    </ul>
+    <div class="list">
+            <div id="todaybook1" class="todaybooks hide">
+                <ul>
+                    <li>
+                        <p class="book"><a href="http://www.yes24.com/product/goods/90391442" target="_blank"><img src="http://image.yes24.com/goods/90391442/S/94x90" alt=""  /></a></p>
+                        <p class="info">
+                            <strong><a href="http://www.yes24.com/product/goods/90391442" target="_blank">달 너머로 달리는 말</a></strong>
+                            <span class="writer"><a href="http://www.yes24.com/product/goods/90391442" target="_blank">김훈 저</a></span>
+                            <span class="price"><strong>12,600원</strong><br />(10%<img src='http://image.yes24.com/sysimage/wel2/i_dc.gif'/>5%<img src='http://image.yes24.com/sysimage/wel2/i_point.gif'/>)</span>
+                        </p>
+                    </li>
+                </ul>
+                <p class="title"><a href="http://www.yes24.com/product/goods/90391442" target="_blank">단단하고 예리한 문장의 힘, 김훈 장편소설</a></p>
+                <p class="contents">가상의 두 나라 초(草)와 단(旦)의 전쟁을 배경으로 펼쳐지는 야만과 문명의 충돌, 그에 저항하는 생명의 힘. 작가는 장수를 태우고 전장을 누비는 두 마리 말을 통해 참혹하고 허망한 전쟁의 그늘진 얼굴을 그린다. 새롭게 창조한 상상의 공간에서 전개되는 속도감 있는 이야기가 시선을 붙드는 책.</p>
+            </div>
+            <div id="todaybook2" class="todaybooks hide">
+                <ul>
+                    <li>
+                        <p class="book"><a href="http://www.yes24.com/product/goods/90512066" target="_blank"><img src="http://image.yes24.com/goods/90512066/S/94x90" alt=""  /></a></p>
+                        <p class="info">
+                            <strong><a href="http://www.yes24.com/product/goods/90512066" target="_blank">슈퍼 토끼 </a></strong>
+                            <span class="writer"><a href="http://www.yes24.com/product/goods/90512066" target="_blank">유설화 글그림 </a></span>
+                            <span class="price"><strong>11,700원</strong><br />(10%<img src='http://image.yes24.com/sysimage/wel2/i_dc.gif'/>5%<img src='http://image.yes24.com/sysimage/wel2/i_point.gif'/>)</span>
+                        </p>
+                    </li>
+                </ul>
+                <p class="title"><a href="http://www.yes24.com/product/goods/90512066" target="_blank">경주에 진 그 토끼는 어떻게 되었을까?</a></p>
+                <p class="contents">"내가 거북이에게 지다니 말도 안 돼!" 꿈에도 생각지 못한 패배를 맛본 토끼는 어떻게 됐을까요? 체면이 말이 아니었을 텐데 말이지요. 변명도 해 보고 생떼도 부려 보지만 누구도 그의 말에 귀 기울여 주지 않고, 결국 달리기를 그만두기로 하는데... 슈퍼 토끼가 들려주는 실패를 딛고 일어서는 법!</p>
+            </div>
+            <div id="todaybook3" class="todaybooks hide">
+                <ul>
+                    <li>
+                        <p class="book"><a href="http://www.yes24.com/product/goods/90385746" target="_blank"><img src="http://image.yes24.com/goods/90385746/S/94x90" alt=""  /></a></p>
+                        <p class="info">
+                            <strong><a href="http://www.yes24.com/product/goods/90385746" target="_blank">5년 후 나는 어디에 있을 것인가</a></strong>
+                            <span class="writer"><a href="http://www.yes24.com/product/goods/90385746" target="_blank">이용덕 저</a></span>
+                            <span class="price"><strong>15,300원</strong><br />(10%<img src='http://image.yes24.com/sysimage/wel2/i_dc.gif'/>5%<img src='http://image.yes24.com/sysimage/wel2/i_point.gif'/>)</span>
+                        </p>
+                    </li>
+                </ul>
+                <p class="title"><a href="http://www.yes24.com/product/goods/90385746" target="_blank">시간이 해결해주는 것은 없습니다</a></p>
+                <p class="contents">세계 최고 AI 반도체 회사의 지사장으로 누구보다 빠른 변화의 흐름을 지켜본 혁신가. 그가 지난 10년간 수많은 젊은이들을 만나고, 그들의 미래에 대해 함께 나눈 이야기를 이 책에 담았다. 지금 그리고 5년 후 새로운 세상에서 무엇을 해야 할지 고민하는 사람들에게 이정표가 되어 줄 것이다.</p>
+            </div>
+            <div id="todaybook4" class="todaybooks hide">
+                <ul>
+                    <li>
+                        <p class="book"><a href="http://www.yes24.com/product/goods/90451967" target="_blank"><img src="http://image.yes24.com/goods/90451967/S/94x90" alt=""  /></a></p>
+                        <p class="info">
+                            <strong><a href="http://www.yes24.com/product/goods/90451967" target="_blank">철학 VS 실천</a></strong>
+                            <span class="writer"><a href="http://www.yes24.com/product/goods/90451967" target="_blank">강신주 저</a></span>
+                            <span class="price"><strong>34,200원</strong><br />(10%<img src='http://image.yes24.com/sysimage/wel2/i_dc.gif'/>5%<img src='http://image.yes24.com/sysimage/wel2/i_point.gif'/>)</span>
+                        </p>
+                    </li>
+                </ul>
+                <p class="title"><a href="http://www.yes24.com/product/goods/90451967" target="_blank">철학은 어떻게 세계를 바꾸나</a></p>
+                <p class="contents">강신주가 4년만에 돌아왔다. 이번에는 19세기 유럽 정치경제학이다. 변혁을 향한 열기가 들끓던 그때, 파리코뮌과 마르크스가 있었다. '강신주의 역사철학 정치철학' 시리즈의 첫 번째 책인 이 책에서는 파리코뮌과 함께 마르크스 사상의 진면모와 현재성을 탐구한다.</p>
+            </div>
+    </div>
+</div>
+<!-- // YES 24 추천 상품 -->
+<p><font color="#ffffff">.</font></p>
+<div class="mrboxType01">
+<div class="conBox">
+<ul>
+<li><a href="http://ch.yes24.com/Animation/Index/All?lngGb=2" target="_blank"><img src="http://image.yes24.com/momo/TopCate469/MidCate010/46892693.jpg"></a></li></ul></div></div><!-- 투데이 포커스 -->
+<div id="article">
+    <p class="tit">주목! 투데이 포커스</p>
+    <div class="list">
+        <ul>
+            <li class="with-photo">
+                <p class="title"><a href="http://blog.yes24.com/document/11934450" target="_blank">어떻게 아빠랑 단둘이 여행을 가?</a></p>
+                <p class="photo"><a href="http://blog.yes24.com/document/11934450" target="_blank"><img src="http://image.yes24.com/blogimage/admin/ubrBu1s2.jpg" width="60" alt="늙은 자신이 짐이 될까 두려워하는 그들의 손을 오늘 밤 따뜻하게 잡아드리자." /></a></p>
+                <p class="text">늙은 자신이 짐이 될까 두려워하는 그들의 손을 오늘 밤 따뜻하게 잡아드리자.</p>
+            </li>
+            <li class="with-photo">
+                <p class="title"><a href="http://blog.yes24.com/document/11925993" target="_blank">만화로 배우는 와인의 역사</a></p>
+                <p class="photo"><a href="http://blog.yes24.com/document/11925993" target="_blank"><img src="http://image.yes24.com/blogimage/admin/NB0r5MD8.jpg" width="60" alt="와인에 대한 이해를 배가할 수 있을 좋은 정보 항아리를 얻었다." /></a></p>
+                <p class="text">와인에 대한 이해를 배가할 수 있을 좋은 정보 항아리를 얻었다.</p>
+            </li>
+            <li class="with-photo">
+                <p class="title"><a href="http://blog.yes24.com/document/11808214" target="_blank">오늘의 브랜드 내일의 브랜딩</a></p>
+                <p class="photo"><a href="http://blog.yes24.com/document/11808214" target="_blank"><img src="http://image.yes24.com/blogimage/admin/7yivPImj.jpg" width="60" alt="경쟁이 아닌 자기다움에 대해 꾸준히 모색하라" /></a></p>
+                <p class="text">경쟁이 아닌 자기다움에 대해 꾸준히 모색하라</p>
+            </li>
+            <li class="with-photo last">
+                <p class="title"><a href="http://blog.yes24.com/document/11933403" target="_blank">혜민 스님의 따뜻한 응원</a></p>
+                <p class="photo"><a href="http://blog.yes24.com/document/11933403" target="_blank"><img src="http://image.yes24.com/blogimage/admin/N0Vu5E9g.jpg" width="60" alt="365일 따뜻한 응원의 말씀을 책상 위에서 볼 수 있어 좋습니다!" /></a></p>
+                <p class="text">365일 따뜻한 응원의 말씀을 책상 위에서 볼 수 있어 좋습니다!</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- // 투데이 포커스 -->
+
+
+<!-- 명사의 서재 -->
+<div class="mrboxType02">
+	<p class="mtit"><img src="http://image.yes24.com/images/chyes24/content/images/main/mtit_fam.gif" alt="명사의 서재" /></p>
+	<p class="more"><a href="/Famous/Index/404" Ccode='9.1' title="자세히">자세히</a></p>
+	<p><a href="/Famous/Index/404" Ccode='9.2'><img src="http://image.yes24.com/images/chyes24/b/7/4/f/b74f388169f5e6a0139ccd04c36059ba_208_340.jpg" alt="" width="208" height="340" /></a></p>
+</div>
+<!-- // 명사의 서재 --><p><br></p><!-- YES 24 부서별 광고 -->
+<div id="recomm">
+    <a href="http://ticket.yes24.com/Pages/Events/HotEvent/PromotionInfo.aspx?id=2577" target="_blank"><img src="http://image.yes24.com/images/chyes24/4/d/1/7/4d17e4d5d49672c2d49445ade8ced340.jpg" alt="문화지원프로젝트" /></a>
+</div>
+<!-- // YES 24 부서별 광고 -->
+
+			        </div>
+		        </div>
+		    
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnGoMobile").bind("click", function () {
+            var goMobile = getCookie("CHYES_GO_MOBILE_YN");
+            setCookie("CHYES_GO_MOBILE_YN", "Y", 1);
+            document.location.href = "http://m.ch.yes24.com";
+        });
+    });
+</script>
+<div id="footer">
+	<div id="footCont">
+		예스이십사(주) | 등록번호: 서울아00732 | 등록일: 2009년 1월 5일 | 최초발행일: 2006년 9월 5일 | 제호: YES24 채널예스 | 발행인: 김석환 | 편집인: 김정희 
+        <br />개인정보보호책임자 : 권민석 | 청소년보호책임자 : 권민석
+        <br />서울특별시 영등포구 은행로 11, 5층,6층(여의도동, 일신빌딩) | 문의 1544-3800 
+	</div>
+	<p class="footContNavi">
+            <a href="/About/">채널예스 소개</a>
+            | <a href="http://www.yes24.com/notice/service.aspx ">서비스약관</a>
+		    | <a href="http://www.yes24.com/notice/privacypolicy.aspx">개인정보취급방침</a>
+		    | <a href="http://www.yes24.com/notice/mailcollection.aspx">이메일주소 수집거부</a>
+		    | <a href="http://www.yes24.com/Templates/FTMy1vs1AskBlog.aspx">신고 및 문의</a>
+		    | <a href="http://www.yes24.com/Templates/FTFaq.aspx?FAQ_GB=15">도움말</a>
+	</p>
+	<p class="footContCopy">Copyright ⓒ 1999-2020 YES24 채널예스. All rights reserved.</p>
+</div>
+<div class="hide machine">KALIOPE2</div>
+
+
+    
+
+	    </div>
+    </div>
+<div class="wingCommon" id="wingLft" style="position: absolute; top: 190px;"><ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2948">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/3/e/f/f/3eff3ea6ccc427fc35d5cd90c48a5da2.png" />
+			<strong class="txt">
+                김지은의</br>함께 읽는 책
+			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2723">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/2/8/8/7/28876aebf23e64423d75690d6d534d52.png" />
+			<strong class="txt">
+                책읽아웃
+			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2964">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/a/6/3/e/a63ea9c291a76734940dd371a6e283e9.png" />
+			<strong class="txt">
+                손희정의</br>더 페이보릿
+			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2177">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/b/9/e/4/b9e4fdb0aea2fc544cb64ae4d39275cc.png" />
+			<strong class="txt">
+                예스24 직원의</br>추천 책
+			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2959">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/b/2/a/8/b2a86a5871310ccaee0a14b04b0f6ad4.png" />
+			<strong class="txt">
+                작가의<br/>추천사
+			</strong>
+		</a>
+	</li>
+
+
+</div>
+<div class="wingCommon" id="wingRgt" style="position: absolute; top: 190px;"><ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2807">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/1/6/f/a/16fa042f8344fb95bc0bcc86f2cd1bd2.png">
+			<strong class="txt">
+장강명의<br/>이상한 직업			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2956">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/e/6/5/8/e6583e43431c2e31aa47b7ebee7c80fb.png">
+			<strong class="txt">
+이수련의<br/>엇갈린 관계			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2962">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/5/6/a/0/56a0fab41234710c979f0adc0ef7799b.png">
+			<strong class="txt">
+윤덕원의<br/>읽은 만큼 들린다			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2957">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/1/6/c/9/16c97609ea498b50236947c14acc4298.png">
+			<strong class="txt">
+전고운 감독의<br/>부귀영화			</strong>
+		</a>
+	</li>
+<ul class="wingLi">	<li>
+		<a href="http://ch.yes24.com/Article/List/2945">
+			<img border="0" alt="" src="http://image.yes24.com/images/chyes24/a/6/1/3/a6137624085b3d9e0871862372e9a614.png">
+			<strong class="txt">
+석윤이의</br>그림이 되는 책			</strong>
+		</a>
+	</li>
+<!--DIV class=fb_area>
+    <a href="https://www.facebook.com/chyes24" target="_blank"><STRONG>채널예스<br/> 페이스북</STRONG></a>
+    <DIV onmsanimationiteration=null onbeforeeditfocus=null aria-haspopup="" onbeforeactivate=null onbeforepaste=null oncopy=null ondatasetchanged=null onmouseleave=null ondragstart=null onmsanimationend=null ondatasetcomplete=null aria-required="" aria-expanded="" onscroll=null onrowsdelete=null onmouseup=null onbeforecut=null onclick=null spellcheck=true onmoveend=null role="" aria-disabled="" tabIndex=0 lang="" onkeypress=null aria-valuenow="" aria-checked="" onmstransitionstart=null onlayoutcomplete=null onmsanimationstart=null aria-busy="" onmouseover=null onfocusin=null onmsmanipulationstatechanged=null onrowenter=null aria-describedby="" ondblclick=null onmove=null aria-flowto="" onpage=null dataFormatAs="" onmstransitionend=null ondragleave=null ondrag=null ondragend=null onresize=null onpaste=null onmouseenter=null onresizeend=null onmousemove=null onresizestart=null onerrorupdate=null aria-secret="" onkeyup=null aria-hidden="" onbeforedeactivate=null onmousedown=null aria-pressed="" oncut=null onrowsinserted=null oncellchange=null aria-readonly="" onfocus=null dataSrc="" onmouseout=null aria-valuemin="" disabled aria-selected="" ondragover=null onrowexit=null onfilterchange=null aria-controls="" onfocusout=null aria-relevant="" x-ms-acceleratorkey="" onblur=null ondragenter=null title="" ondataavailable=null aria-live="" onpropertychange=null aria-multiselectable="" onreadystatechange=null class="fb_edge_widget_with_comment fb_iframe_widget" aria-invalid="" onselectstart=null onhelp=null ondeactivate=null hideFocus onbeforeupdate=null onafterupdate=null onkeydown=null language="" oncontrolselect=null oncontextmenu=null aria-valuemax="" aria-activedescendant="" onbeforecopy=null onmovestart=null onactivate=null oninvalid=null oncuechange=null onlosecapture=null ondrop=null accessKey="" aria-owns="" aria-labelledby="" dataFld="" onmousewheel=null noWrap onsubmit="null" onchange="null" data-show-faces="true" data-width="80" data-layout="box_count" data-send="false" data-href="https://www.facebook.com/yes24" onmspointerhover="null" onmsgotpointercapture="null" onmspointermove="null" onmscontentzoom="null" onvolumechange="null" onmspointerdown="null" onmsgesturedoubletap="null" onseeking="null" onmsinertiastart="null" aria-grabbed="null" implementation="null" ondurationchange="null" aria-label="null" onpause="null" onemptied="null" ontimeupdate="null" onabort="null" onmsgestureend="null" onmsgesturechange="null" onseeked="null" onmsgesturehold="null" onplaying="null" aria-orientation="null" aria-multiline="null" onended="null" onmsgesturestart="null" onloadstart="null" onerror="null" onmspointercancel="null" aria-dropeffect="null" onreset="null" oncanplay="null" x-ms-aria-flowfrom="null" onmspointerout="null" onratechange="null" draggable="null" onmsgesturetap="null" onsuspend="null" oninput="null" aria-sort="null" onwaiting="null" onmsregionupdate="null" onprogress="null" aria-valuetext="null" onplay="null" class="fb-like" aria-autocomplete="null" onload="null" onmspointerup="null" oncanplaythrough="null" onloadeddata="null" onmspointerover="null" onmslostpointercapture="null" onselect="null" aria-atomic="null" onloadedmetadata="null" onstalled="null" nofocusrect="null" fb-xfbml-state="rendered">
+        <SPAN style="HEIGHT: 82px; WIDTH: 62px">
+            <IFRAME id=f1b0f27e383be9a title="Like this content on Facebook." 
+                class=fb_ltr 
+                onload="" 
+                style="BORDER-TOP: medium none; 
+                HEIGHT: 62px; 
+                BORDER-RIGHT: medium none; 
+                BORDER-BOTTOM: medium none; 
+                BORDER-LEFT: medium none; 
+                WIDTH: 59px" 
+                src="http://www.facebook.com/plugins/like.php?api_key=&amp;locale=ko_KR&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D25%23cb%3Df3430e9fbfa0b9e%26origin%3Dhttp%253A%252F%252Fsimon.yes24.com%252Ff1fca215eb98896%26domain%3Dsimon.yes24.com%26relation%3Dparent.parent&amp;href=https%3A%2F%2Fwww.facebook.com%2Fchyes24&amp;node_type=1&amp;width=80&amp;layout=box_count&amp;colorscheme=light&amp;show_faces=false&amp;send=false&amp;extended_social_context=false" frameBorder=0 allowTransparency name=f3b1dd914b62284 scrolling=no></IFRAME>
+        </SPAN>
+    </DIV>
+
+</!--DIV>
+<!-- 팟 캐스트 추가 영역 시작 -->
+<div class="Podcast_area">
+	<a href="http://www.podbbang.com/ch/15135" target="_blank">
+		<strong class="podcast_txt">팟캐스트<br/>들으러가기</strong>
+		<span class="podcast_img"><img src="http://image.yes24.com/images/chyes/wing/bn_podcast.gif" border="0" alt="책읽아웃"></span>
+	</a>
+</div>
+<!-- 팟 캐스트 추가 영역 끝 --></div>    
+        <script type="text/javascript">
+        _n_p1 = "서효인의 가요대잔치";
+        _n_p2 = "벤, 정확한 슬픔의 발라더 ";
+    </script>      
+
+
+        <!-- DO NOT MODIFY THIS SCRIPT CODE. -->
+    <!-- COPYRIGHT (C) 1999-2008 NETHRU INC. ALL RIGHTS RESERVED. -->
+    <script src="http://www.yes24.com/Javascript/ExtMall/wlo.js?v=20140524_01" type="text/javascript"></script>
+    <script type="text/javascript">
+        _n_sid = "08070200045";
+        _n_uid_cookie = "Mallinmall_CKMI";
+        _n_info1_cookie = "PID";
+        n_logging();
+    </script>
+    <!-- WEMS TRACKING SCRIPT CODE END -->
+
+    <script type="text/javascript">
+
+    //var _gaq = _gaq || [];
+    //_gaq.push(['_setAccount', 'UA-27986463-1']);
+    //_gaq.push(['_trackPageview']);
+
+    //(function () {
+    //    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    //    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    //})();
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-27986463-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("a").click(function (e) {
+            var paramData = {
+                "link": e.currentTarget.href,
+                "location": document.location.href
+            };
+            var url = "/Ajax/GetUrl";
+            $.post(
+                url, paramData, function (data) {
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

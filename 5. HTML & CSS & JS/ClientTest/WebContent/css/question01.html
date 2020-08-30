@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #rate {
+            width: 340px;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            padding-top: 6px;
+        }
+
+        #rate .content {
+            border: 0px solid black;
+            font-size: 13px;
+            margin-top: 10px;
+            font-family: '돋움';
+            display: inline-block;
+        }
+
+        #rate .content .company {
+            font-weight: bold;
+            color: #555555;
+            text-align: left;
+            width: 100px;
+            display: inline-block;
+        }
+
+        #rate .content .num {
+            text-align: right;
+            width: 75px;
+            display: inline-block;
+        }
+
+        #rate .content .num2 {
+            text-align: right;
+            width: 70px;
+            display: inline-block;
+        }
+
+        #rate .content #date {
+            color: #777777;
+            width: 80px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .plus {
+            color: red;
+        }
+
+        .minus {
+            color: blue;
+        }
+
+        #rate .content.last {
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="rate">
+        <div class="content">
+            <div class="company"><span>HB테크놀러지</span></div>
+            <div class="num plus">+17.42%</div>
+            <div class="num2 plus">+21.26%</div>
+            <div id="date">16.10.20</div>
+        </div>
+        <div class="content">
+            <div class="company"><span>우리산업</span></div>
+            <div class="num plus">+17.38%</div>
+            <div class="num2 minus">-18.10%</div>
+            <div id="date">16.10.12</div>
+        </div>
+        <div class="content">
+            <div class="company"><span>AP시스템</span></div>
+            <div class="num plus">+14.81%</div>
+            <div class="num2 plus">+13.20%</div>
+            <div id="date">16.12.07</div>
+        </div>
+        <div class="content">
+            <div class="company"><span>유니트론텍</span></div>
+            <div class="num plus">+13.47%</div>
+            <div class="num2 minus">-5.90%</div>
+            <div id="date">16.09.26</div>
+        </div>
+        <div class="content last">
+            <div class="company"><span>심텍</span></div>
+            <div class="num plus">+12.73%</div>
+            <div class="num2 plus">+40.75%</div>
+            <div id="date">16.10.24</div>
+        </div>
+    </div>
+
+</body>
+</html>

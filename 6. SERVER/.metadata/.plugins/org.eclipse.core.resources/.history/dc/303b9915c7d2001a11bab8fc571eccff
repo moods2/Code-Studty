@@ -1,0 +1,30 @@
+package com.test.address;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class EditOk extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		//1. 데이터 가져오기(seq, name, age, address)
+		//2. DB 작업 > update
+		//3. JSP 호출
+		
+		String seq = req.getAttribute("seq");
+		String name = req.getAttribute("name");
+		String age = req.getAttribute("age");
+		String address = req.getAttribute("address");
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/edit.jsp");
+		dispatcher.forward(req, resp);
+		
+	}
+
+}

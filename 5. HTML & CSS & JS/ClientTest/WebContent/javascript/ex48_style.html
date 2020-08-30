@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .drag {
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="../images/catty01.png" class="drag">
+    <img src="../images/catty02.png" class="drag">
+    <img src="../images/catty03.png" class="drag">
+    <img src="../images/catty04.png" class="drag">
+    <img src="../images/catty05.png" class="drag">
+    <img src="../images/catty06.png" alt="" class="drag">
+	<img src="../images/catty07.png" alt="" class="drag">
+	<h1 class="drag">고양이들</h1>
+	<input type="button" value="버튼" class="drag">
+
+    <script>
+
+        var isDown = false;
+        var ox, oy; //객체 내의 누른 위치
+        var obj; //현재 드래그되는 객체
+        var zindex = 1;
+
+
+        window.onmousedown = function() {
+            //드래그 대상(.drag)을 눌렀는지?
+            if (event.srcElement.className == "drag") {
+                
+                isDown = true;
+
+                obj = event.srcElement; //눌린 고양이
+                ox = event.offsetX;
+                oy = event.offsetY;
+
+                event.srcElement.style.zIndex = zindex;
+                zindex++;
+            }
+        };
+
+        window.onmouseup = function() {
+            isDown = false;
+        };
+
+        window.onmousemove = function() {
+            if (isDown) {
+                obj.style.left = event.clientX - ox + "px";
+                obj.style.top = event.clientY - oy + "px";
+
+                event.preventDefault();
+                return false;
+            }
+        };
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.test.codestudy.board;
+
+public class BoardDAO {
+
+}

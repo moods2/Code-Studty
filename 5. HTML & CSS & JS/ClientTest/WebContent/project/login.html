@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+
+        body {
+            background-color: #F8F8F8;
+        }
+        #top {
+            /* border: 1px solid black; */
+            width: 450px;
+            height: 100px;
+            margin: 50px auto;
+        }
+        #topleft {
+            display: inline-block;
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 65px;
+            background-image: url("../images//title.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+        }
+        #topleft + h1 {
+            font-size: 25px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            top: -10px;
+            left: 10px;
+            color: #333;
+        }
+        #create {
+            float: right;
+            position: relative;
+            top: 30px;
+            outline: none;
+        }
+
+        #login {
+            border: 1px solid #C8C8C8;
+            border-radius: 10px;
+            background-color: white;
+            width: 450px;
+            height: 450px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: -30px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+        #login > div {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        #username, #password {
+            margin: 0px auto;
+            padding: 10px 0 10px 50px;
+            width: 305px;
+            display: block;
+            margin-bottom: 20px;
+            outline: none;
+            border: 1px solid #C8C8C8;
+            border-radius: 3px;
+        }
+        #username {
+            background-image: url("../images/user.png");
+            background-position-x: 5px;
+            background-position-y: 2px;
+            background-repeat: no-repeat;
+        }
+        #password {
+            background-image: url("../images/password.png");
+            background-position: -4px -8px;
+            background-repeat: no-repeat;
+        }
+        #login > div:nth-child(3) {
+            width: 300px;
+            text-align: left;
+            font-size: 14px;
+        }
+        #enter {
+            padding: 13px 20px;
+            width: 305px;
+            border: 1px solid #C8C8C8;
+            border-radius: 3px;
+            outline: none;
+        }
+        #login > div:nth-child(5) {
+            width: 305px;
+        }
+        #login > div:nth-child(5) > div {
+            float: left;
+            font-size: 13px;
+        }
+        #login > div:nth-child(5) a {
+            text-decoration: none;
+            color: black;
+        }
+        #footer {
+            width: 900px;
+            margin: 0 auto;
+        }
+        #copyright {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+            letter-spacing: -.1px;
+        }
+        #copyright > span {
+            font-weight: bold;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <div id="top">
+        <!-- 상단메뉴 좌측(메인화면으로 돌아가기) -->
+        <a href="main.html" id="topleft"></a>
+        <!-- 상단메뉴 좌측(로그인 문구) -->
+        <h1>로그인</h1>
+        <input type="button" value="회원가입" class="btn btn-default" id="create">
+    </div>
+    <div id="login">
+        <h1>Sign In</h1>
+        <div>
+            <input type="text" placeholder="아이디" id="username" autocomplete=”off”>
+            <input type="password" placeholder="비밀번호" id="password">
+        </div>
+        <div>
+            <input type="checkbox" name="saveid" id="saveid">
+            <label for="saveid">아이디 저장</label>
+        </div>
+        <div>
+            <input type="button" value="SIGN IN" id="enter">
+        </div>
+        <div>
+            <div><a href="">아이디 찾기</a> | <a href="">비밀번호 찾기</a></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="copyright">
+            Copyright &copy; <span>AT-Ticket Corp.</span> All rights reserved.
+        </div>
+    </div>
+
+    <script>
+
+        //회원가입 클릭시
+        $("#create").click(function() {
+            location.href = "create_account.html";
+        });
+
+        //로그인 시 메인페이지로 이동
+        $("#enter").click(function() {
+            console.log($("#username").val());
+            console.log($("#password").val());
+
+            if($("#username").val().length < 1) {
+                console.log("아이디를 입력하세요.");
+                $("#username").focus();
+                return false;
+            };            
+            if($("#password").val().length < 1) {
+                console.log("비밀번호를 입력하세요.");
+                $("#password").focus();
+                return false;
+            };
+            
+            if ($("#saveid").prop("checked")) {
+                console.log("아이디 저장");
+            } else {
+                console.log("아이디 미저장");
+            };
+            // location.href = "main.html";
+            
+        });
+
+    </script>
+
+
+</body>
+</html>

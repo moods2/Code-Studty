@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		링크, Link
+		- <a> 태그, anchor(닻), link
+		
+		링크 속성
+		- href : 이동할 URL, Reference a Hyperlink
+	
+	 -->
+	 
+	<a href="http://naver.com">네이버</a>
+	<a href="http://python.org">파이썬</a>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #cat {
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* transition: all 1s linear; */
+        }
+
+        #btn {
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="../images/catty01.png" id="cat">
+    <input type="button" value="시작" id="btn">
+
+    <script>
+
+        var cat = document.getElementById("cat");
+        var btn = document.getElementById("btn");
+
+        var moveX = [];
+        var moveY = [];
+
+        window.onmousemove = function() {
+
+            if (event.ctrlKey) {
+                moveX.push(event.clientX);
+                moveY.push(event.clientY);                
+            }
+
+        };
+
+        var timer = 0;
+
+        btn.onclick = function() {
+
+            timer = setInterval(function() {
+
+                console.log(moveX);
+                console.log(moveY);
+
+                cat.style.left = moveX[0] + "px";
+                cat.style.top = moveY[0] + "px";
+
+                moveX.shift();
+                moveY.shift();
+
+                if (moveX.length == 0) {
+                    clearInterval(timer);
+                }
+
+            }, 10)
+
+        };
+
+    </script>
+
+</body>
+</html>

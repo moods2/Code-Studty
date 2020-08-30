@@ -1,0 +1,18 @@
+HTML
+- Hyper Text Markup Language
+	- Hyper Text : 링크
+	- Markup Language : 표기 형태
+-SGML > 표현에 관련된 기능들만 발췌 + 모아놓은 언어 + 사용법 쉬움
+
+Markup Language
+- 마크업 표기법(<>)을 사용해서 정의된 언어
+- SGML > 메타 언어 > HTML, XML
+
+
+HTML 1.0 > HTML 2.0 > .. > HTML 4.01(***) > XHTML 1.0 > HTML5
+
+HTML 개발 환경
+- 텍스트 편집기
+- 메모장
+
+HTML 실행 환경

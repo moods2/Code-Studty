@@ -1,0 +1,115 @@
+package com.test.jsp;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+@WebServlet("/ex22_formok.do")
+public class Ex22_FormOk extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//파일 업로드 처리
+		//1. 업로드된 파일을 어디에 저장할지 결정
+		// - 웹 결로 표기(X) -> 로컬 파일 경로 표기(O)
+		// - WebContent > files
+		
+		//가상 경로 & 상대 경로
+		//String path = "/files";
+		//String path = "D:\\class\\server\\JSPTest\\WebContent\\files";
+		//D:\class\server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JSPTest\files
+		String path = req.getRealPath("/files");
+		System.out.println(path);
+		
+		//2. 업로드할 파일의 최대 크기
+		// - 최대한 작게
+		// - 게시판(100MB)
+		// - 바이트
+		int size = 1024 * 1024 * 100; //100MB
+		
+		//3. 변수 선언
+		String subject = ""; //제목
+		String name = ""; //이름
+		String filename = ""; //첨부파일명
+		String orgfilename = ""; //첨부파일명
+		
+		//<form enctype="multipart/form-data">
+		// -> 기존의 req.getParameter() 메소드가 동작을 안한다.
+		//subject = req.getParameter("subject");
+		//System.out.println(subject); //null
+		
+		req.setCharacterEncoding("UTF-8");
+		
+		try {
+			
+			//기존의 request를 대신할 객체
+			//cos.jar
+			//MultipartRequest 객체를 만드는 순간 파일업로드도 같이 진행된다.
+			MultipartRequest multi = new MultipartRequest(
+									req, //기존의 request 객체
+									path, //업로드 폴더
+									size, //업로드 크기
+									"UTF-8", //인코딩
+									new DefaultFileRenamePolicy()
+									);
+			
+			subject = multi.getParameter("subject");
+			System.out.println(subject);
+			name = multi.getParameter("name");
+			
+			//첨부파일명
+			filename = multi.getFilesystemName("attach");
+			System.out.println(filename);
+			
+			orgfilename = multi.getOriginalFileName("attach");
+			System.out.println(orgfilename);
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		req.setAttribute("subject", subject);
+		req.setAttribute("name", name);
+		req.setAttribute("filename", filename);
+		req.setAttribute("orgfilename", orgfilename);
+		
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/ex22_formok.jsp");
+		dispatcher.forward(req, resp);
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

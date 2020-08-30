@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div {
+            width: 128px;
+            height: 128px;
+            background-image: url("../images/work.png");
+            transition: translate .5s;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="walk1"></div>
+    <div id="walk2"></div>
+    <div id="walk3"></div>
+    <div id="walk4"></div>
+
+    <script>
+
+        var walk1 = document.getElementById("walk1");
+        var x1 = 0;
+        var y1 = 0;
+
+        var timer1 = setInterval(function() {
+            walk1.style.backgroundPosition = x1 + "px " + y1 + "px";
+            x1 -= 128;
+            if (x1 <= -(128*4)) {
+                x1 = 0;
+                y1 += 128;
+                if (y1 <= -(128*2)) {
+                    y1 = 0;
+                };
+            };
+        }, 100);
+
+
+
+        var walk2 = document.getElementById("walk2");
+        var x2 = 0;
+        var y2 = 0;
+        var road = 0;
+        var move;
+
+        walk2.onclick = function() {move = true};
+
+        var timer2 = setInterval(function() {
+            walk2.style.backgroundPosition = x2 + "px " + y2 + "px";
+            x2 -= 128;
+            if (x2 <= -(128*4)) {
+                x2 = 0;
+                y2 += 128;
+                if (y2 <= -(128*2)) {
+                    y2 = 0;
+                };
+            };
+            if (move) {
+                walk2.style.transform = "translate(" + road + "px, 0)";
+                road += 5;
+            }
+        }, 100);
+
+
+
+        var walk3 = document.getElementById("walk3");
+        var x3 = 0;
+        var y3 = 0;
+        var road2 = 0;
+        var stop = 0;
+
+        walk3.onclick = function() { stop++; };
+
+        var timer3 = setInterval(function() {
+
+            if (stop > 0) {
+                walk3.style.backgroundPosition = x3 + "px " + y3 + "px";
+                x3 -= 128;
+                if (x3 <= -(128*4)) {
+                    x3 = 0;
+                    y3 += 128;
+                    if (y3 <= -(128*2)) {
+                        y3 = 0;
+                    };
+                };
+            }
+            if (stop > 1) {
+                walk3.style.transform = "translate(" + road2 + "px, 0)";
+                road2 += 5;
+            }
+        }, 100);
+
+
+
+        var walk4 = document.getElementById("walk4");
+        var x4 = 0;
+        var y4 = 0;
+        var road3 = 0;
+        var go;
+        var back = false;
+
+        walk4.onclick = function() {go = true};
+
+        var timer4 = setInterval(function() {
+            walk4.style.backgroundPosition = x4 + "px " + y4 + "px";
+            x4 -= 128;
+            if (x4 <= -(128*4)) {
+                x4 = 0;
+                y4 += 128;
+                if (y4 <= -(128*2)) {
+                    y4 = 0;
+                };
+            };
+            if (go) {
+
+                back = false;
+
+                walk4.style.transform = "translate(" + road3 + "px, 0)";
+                road3 += 5;
+
+                if (road3 >= 600) back = true;
+            }
+
+            if (back) {
+
+                go = false;
+
+                walk4.style.transform = "translate(" + road3 + "px, 0) rotateY(180deg)";
+                road3 -= 5;
+
+                if (road3 == 0) go = true;
+            }
+        }, 100);
+
+    </script>
+
+</body>
+</html>

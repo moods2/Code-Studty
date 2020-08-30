@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box { border: 1px solid black; width: 300px; height: 300px; }
+        #bar { 
+            width: 50px; height: 200px; margin: 50px auto;
+            background: cornflowerblue;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transform-origin: center center;
+        }
+
+        #box:hover #bar {
+            /* transform: rotate(360deg); */
+            transform: scale(2, 2);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="box">
+        <div id="bar"></div>
+    </div>
+
+</body>
+</html>

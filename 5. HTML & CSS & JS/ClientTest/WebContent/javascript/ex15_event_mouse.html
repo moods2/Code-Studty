@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txt1 { width: 800px; height: 500px; outline: none;}
+    </style>
+</head>
+<body>
+    
+    <h1>마우스 이벤트</h1>
+
+    <form name="form1">
+        <textarea name="txt1" id="txt1"></textarea>
+        <hr>
+        <input type="button" value="클릭" name="btn1">
+    </form>
+
+    <script>
+
+        var txt1 = window.document.form1.txt1;
+        var btn1 = window.document.form1.btn1;
+
+        //마우스 관련
+        // - onmouseXXX
+        // 1. onmouseover : 해당 객체 영역에 마우스 커서가 진입하는 순간 발생
+        // 2. onmouseout : 해당 객체 영역에서 마우스 커서가 빠져나갈때 발생
+        // 3. onmousedown : 해당 객체 영역에서 마우스 버튼을 눌렀을 때 발생
+        // 4. onmouseup : 해당 객체 영역에서 마우스 버튼을 떼는 순간 발생
+        // 5. onmousemove : 해당 객체 영역에서 마우스 커서를 움직일 때 발생
+        
+        //onclick - 마우스 or 키보드 이벤트
+
+        //마우스 관련 이벤트
+        // - event 객체(사건 관련 정보 제공)
+        // 1. buttons
+        // 2. 좌표
+        //  - event.x, event.y : 문서 좌측 상단 기준, 비표준(MS)
+        //  - event.clientX, event.clientY : 문서 좌측 상단 기준, 표준(FM),
+        //      가장 많이 사용, position=absolute
+        //  - event.screenX, event.screenY : 화면 좌측 상단 기준
+        //  - offsetX, offsetY : 이벤트 발생 객체의 좌측 상단기준, 많이 사용,
+        //      position=relative
+
+        txt1.onmouseover = function() {
+            // window.document.body.bgColor = "tomato";
+            window.document.form1.txt1.value = "마우스 오버 : " + event.x;
+        };
+        txt1.onmouseout = function() {
+            window.document.body.bgColor = "white";
+        };
+        txt1.onclick = function() {
+            window.document.body.bgColor = "cornflowerblue";
+        };
+
+        txt1.onmousedown = function() {
+            // if (event.buttons == 2 || event.buttons == 3) {
+            //     alert("오른쪽 마우스 사용 금지!!!")
+            // }
+            // txt1.value = "마우스 다운: " + event.buttons;
+
+            txt1.value = "마우스 좌표: " + event.screenX + "," + event.screenY;
+        };
+        txt1.onmouseup = function() {
+            txt1.value = "마우스 업: " + event.buttons;
+        };
+
+        txt1.onmousemove = function() {
+            txt1.value = event.offsetX + ", " + event.offsetY
+                + "\n" + txt1.value;
+
+            if (event.offsetX < 400) {
+                window.document.bgColor = "tomato";
+            } else {
+                window.document.bgColor = "royalblue";
+            }
+        };
+
+        // window.document.body.onmousemove = function() {
+        //     txt1.cols = event.clientX;
+        // }
+
+    </script>
+
+</body>
+</html>

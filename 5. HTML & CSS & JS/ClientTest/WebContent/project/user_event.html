@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/Backstretch.js"></script>
+    <style>
+
+        * {
+            outline: none;
+        }
+        body { margin: 0 auto; }
+        h1 { font-family: "Arial Black"; font-weight: bold; }
+        #main { width: 100%; }
+        #top {
+            /* border: 1px solid black; */
+            min-width: 1600px;
+            height: 650px;
+            margin: 0 auto;
+        }
+        #middle {
+            /* border: 1px solid black; */
+            width: 1600px;
+            margin: 0 auto;
+        }
+        #bottom {
+            /* border: 1px solid black; */
+            height: 200px;
+            background-color: #eee;
+            color: white;
+            width: 100%;
+            min-width: 1600px;
+        }
+        #topmenu {
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+            width: 100%;
+            min-width: 1600px;
+            height: 40px;
+            color: black;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 40px 0;
+            position: absolute;
+        }
+        .menubar {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        #topleft {
+            display: inline-block;
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 65px;
+            background-image: url("../images//title.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            left : 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #topright {
+            font-size: 13px;
+            position: absolute;
+            right : 5px;
+            top: 42px;
+            cursor: pointer;
+        }
+        .prev {
+            float: left;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+        .after {
+            float:right;
+            padding-right: 20px;
+            cursor: pointer;
+        }
+        #search {
+            border: 0;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            outline: none;
+            color: black;
+        }
+        .img {
+            width: 230px;
+            height: 330px;
+            /* border: 1px solid black; */
+            background-color: cornflowerblue;
+            display: inline-block;
+            margin: 10px 0 0 10px;
+            cursor: pointer;
+        }
+        #banner {
+            height: 400px;
+            background-image: url("../images//banner.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-top: 20px;
+        }
+        #middle input {
+            outline: none;
+        }
+        #movetop {
+            width: 40px;
+            height: 40px;
+            background-color: gray;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            padding-top: 3px;
+        }
+        #movetop:hover {
+            background-color: orange;
+        }
+        #movetop a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        #frogue-container, .frogue-chat {
+            position: absolute;
+            left:20px;
+            bottom: 0;
+        }
+        .recomand {
+            /* border: 1px solid black; */
+            width: 1600px;
+            /* margin-bottom: 20px; */
+            height: 400px;
+            overflow: hidden;
+        }
+        .recomand h1 {
+            padding: 40px;
+        }
+        .rank, .region {
+            display: inline-block;
+            /* border: 1px solid black; */
+            height: 200px;
+            width: 150px;
+            margin-right: 140px;
+            background-color: cornflowerblue;
+            cursor: pointer;
+        }
+        #rankpage {
+            width: 3600px;
+            /* border: 1px solid black; */
+        }
+        .rank:first-child {
+            margin-left: -450px;
+        }
+        .region:last-child {
+            margin-right: 0;
+        }
+        .name {
+            /* border:1px solid black; */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            left: 49px;
+            top: 75px;
+            background-image: url("../images/서울.png");
+            background-position: center center;
+            color: white;
+        }
+        .slider {
+            margin: 0px auto;
+            position: relative;
+            top: 150px;
+        }
+        .slick-slide img {
+            transform: scale(.9);
+            transition: all .5s;
+        }
+        .slick-center img {
+            transform: scale(1);
+            transition: all .5s;
+        }
+        .event-main-tit {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', sans-serif;
+    margin-bottom: 38px;
+}
+
+.event-division {
+    text-align: center;
+    font-size: 0;
+    margin-bottom: 60px;
+}
+.eventmenubar {
+            margin: 0 5px;
+}
+
+.event-main-list {
+    /* display: inline-block; */
+    width: 1500px;
+    margin: 0px auto;
+}
+
+
+
+
+
+.evemark{
+    margin-top: 5px;
+    border: 1px solid red;
+    color: red;
+    width: 80px;
+    text-align: center;
+    
+}
+
+.evetxt{
+    color: rgba(156, 156, 156, 0.76);
+    font-size: 11px;
+}
+#eventbox {
+    display: inline-block;
+    width: 400px;
+    margin-left: 80px;
+}
+   
+.pbar {
+    width: 370px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+<!-------------------------------- 화면 상단부 -------------------------------->
+        <div id="top">
+            <div id="topmenu">
+                <!-- 상단메뉴 좌측(메인화면으로 돌아가기) -->
+                <a href="main.html" id="topleft"></a>
+                <!-- 상단메뉴 센터(콘서트, 뮤지컬, 연극, 클래식, 전시) -->
+                <div id="topcenter">
+                    <span data-lo="user_concert.html" class="menubar">콘서트</span>
+                    <span data-lo="user_musical.html" class="menubar">뮤지컬</span>
+                    <span data-lo="user_theater.html" class="menubar">연극</span>
+                    <span data-lo="user_classic.html" class="menubar">클래식</span>
+                    <span data-lo="user_Exhibition.html" class="menubar">전시</span>
+                </div>
+                <!-- 상단메뉴 우측(랭킹, 이벤트, 검색창, 마이페이지) -->
+                <div id="topright">
+                    <span data-lo="user_ranking.html" class="menubar">랭킹</span>
+                    <span data-lo="user_event.html" class="menubar">이벤트</span>
+                    <input type="text" value="" id="search">
+                    <label for="search" class="glyphicon glyphicon-search"
+                        style="font-size: 14px; cursor: pointer;"></label>
+                        <div class="glyphicon glyphicon-user" id="mypage" 
+                        style="font-size: 14px; cursor: pointer; margin: 0 10px; "></div>
+                </div>
+            </div>
+            <!-- 메인화면 슬라이더 -->
+            <div class="slider">
+                <div><img src="../images/eventslide1.png"></div>
+                <div><img src="../images/eventslide2.png"></div>
+                <div><img src="../images/eventslide3.png"></div>
+                <div><img src="../images/eventslide4.png"></div>
+                <div><img src="../images/eventslide5.png"></div>
+            </div>
+        </div>
+        <hr>
+<!-------------------------------- 내용부분 -------------------------------->
+        <p class="event-main-tit">이벤트</p>
+        <div class="event-division">
+            <a href="#" class="on">"전체보기"::after</a>
+            
+
+        </div>
+        <div class="event-main-list">                
+                    <div id="eventbox">
+                        <img src="../images/eventsmall1.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">프로모션</p>
+                            <p class="evetit">컴백스테이지</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="20" max="100" class="pbar"></progress>                         
+                            </div>
+                            <p class="eve-mlist-dday">44일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall2.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">뮤지컬 <베르테르> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="20" max="100" class="pbar"></progress>                           
+                            </div>
+                            <p class="eve-mlist-dday">44일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall3.png" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">연극 <가족사진> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="40" max="100" class="pbar"></progress>                          
+                            </div>
+                            <p class="eve-mlist-dday">44일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall4.png" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">뮤지컬 <오페라의 유령> - 대구 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="10" max="100" class="pbar"></progress>                            
+                            </div>
+                            <p class="eve-mlist-dday">64일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall5.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">뮤지컬 <더 모먼트> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="80" max="100" class="pbar"></progress>                            
+                            </div>
+                            <p class="eve-mlist-dday">8일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall6.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">연극 <라스트 세션> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="92" max="100" class="pbar"></progress>                           
+                            </div>
+                            <p class="eve-mlist-dday">2일 남음</p>
+                        </div>                   
+                    </div> 
+                    <div id="eventbox">
+                        <img src="../images/eventsmall7.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">뮤지컬 <펀홈> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="20" max="100" class="pbar"></progress>                        
+                            </div>
+                            <p class="eve-mlist-dday">44일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall8.png" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">락뮤지컬 <프리즌> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="40" max="100" class="pbar"></progress>                         
+                            </div>
+                            <p class="eve-mlist-dday">34일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall9.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">연극 <그남자 그여자> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="60" max="100" class="pbar"></progress>                           
+                            </div>
+                            <p class="eve-mlist-dday">24일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall10.png" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">Super Junior Beyond Live</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="20" max="100" class="pbar"></progress>                             
+                            </div>
+                            <p class="eve-mlist-dday">44일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall11.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit"> 뮤지컬 <6시퇴근> 기대평 이벤트</6></p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="60" max="100" class="pbar"></progress>                             
+                            </div>
+                            <p class="eve-mlist-dday">34일 남음</p>
+                        </div>                   
+                    </div>
+                    <div id="eventbox">
+                        <img src="../images/eventsmall12.jpg" alt="">
+                        <div class="eve-mlist-box">
+                            <p class="evemark">초대이벤트</p>
+                            <p class="evetit">연극 <나의 PS파트너> 기대평 이벤트</p>
+                            <p class="evetxt">2020.07-15 ~ 2020.08.31</p>
+                            <div class="evepc" data-percent="20">
+                                <progress value="40" max="100" class="pbar"></progress>                           
+                            </div>
+                            <p class="eve-mlist-dday">44일 남음</p>
+                        </div>                   
+                    </div>  
+        </div>
+<!-------------------------------- 화면 하단부 -------------------------------->
+        <div id="bottom">
+            <div>
+                <!-- 회사 마크 -->
+                <img src="../images/title2.png" style="transform: translate(0, 40px);">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/slick.min.js"></script>
+    <script>
+
+        //상단 메뉴 css
+        $(".menubar").mouseover(function() {
+            $(this).css("border-bottom", "5px solid orange");
+        });
+        $(".menubar").mouseout(function() {
+            $(this).css("border-bottom", "");
+        });
+        //상단 메뉴 클릭시
+        $(".menubar").click(function() {
+            location.href = $(this).data("lo");
+        });
+
+        var flag = false;
+
+        $(document).scroll(function() {
+            //메뉴가 시야에서 사라지는 순간 -> 메뉴를 붙박이로 만들기
+            if ($(document).scrollTop() > $("#middle").position().top) {
+                $("#topmenu").css({
+                    width: "100%",
+                    position: "fixed",
+                    top: "0px",
+                    bottom: "",
+                    zIndex: "1",
+                    "background-color": "white"
+                });
+                $(window).resize(function() {
+                    if($(window).width() < 970) {
+                        // console.log($(window).width());
+                        $("#topcenter").css("transform", "translate(-100px, 0)");
+                    } else {
+                        $("#topcenter").css("transform", "translate(0, 0)");
+                    }
+                });
+            };
+
+            //상단 헤더(top)이 눈에 보일때 쯤
+            if ($(document).scrollTop() <= $("#middle").position().top) {
+                $("#topmenu").css({
+                    position: "absolute",
+                    top: "0px",
+                    bottom: "",
+                    "background-color": "transparent"
+                });
+            }
+        });
+
+
+        //이미지에 마우스 올릴때
+        $(".img, .rank, .region").mouseover(function() {
+            $(this).css("box-shadow", "1px 1px 1px 2px gray");
+        });
+        //이미지에 마우스 뗄때
+        $(".img, .rank, .region").mouseout(function() {
+            $(this).css("box-shadow", "");
+        });
+        
+        //이미지 클릭시 이동
+        $(".img").click(function() {
+            location.href = "#";
+        });
+
+        //주간랭킹
+        var temp = 0;
+        $("#rankprev").click(function() {
+            if (temp == 0) {
+                temp -= 1478;
+            } else {
+                temp += 1478;
+            }
+            $("#rankpage").css("transform", "translate(" + temp + "px, 0)")
+            $("#rankpage").css("transition", "all .5s linear")
+        });
+        $("#rankafter").click(function() {
+            temp -= 1478;
+            if (temp <= -(1478*2)) {
+                temp = 0;
+            }
+            $("#rankpage").css("transform", "translate(" + temp + "px, 0)")
+            $("#rankpage").css("transition", "all .5s linear")
+        });
+        
+        //상단 이미지 슬라이더
+        $('.slider').slick({
+            centerMode: true,
+            infinite : true,
+            autoplay : true,
+            autoplaySpeed : 3000,
+            dots : true,
+            dotsClass : "slick-dots",
+            centerPadding: '180px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '180px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '180px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+        });
+
+        //마이페이지 클릭시 이동
+        $("#mypage").click(function() {
+            location.href = "mypage.html";
+        });
+
+
+    </script>
+
+</body>
+</html>

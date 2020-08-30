@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=677f13babe8d6030c2e568b2a353e2ef"></script>
+</head>
+<body>
+
+    <h1>좌표 이동하기 + 레벨 바꾸기</h1>
+    
+    <div id="map" style="width:1100px;height:600px;"></div>
+
+    <hr>
+
+    <input type="button" value="서울역으로 이동하기" id="btn1">
+    <input type="button" value="역삼역으로 이동하기" id="btn2">
+    <input type="button" value="강남역으로 이동하기" id="btn3">
+
+    <script>
+
+        var container = document.getElementById('map');
+
+        var options = {
+            center: new kakao.maps.LatLng(37.499402, 127.033160),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function() {
+            var seoulStation = new kakao.maps.LatLng(37.555169, 126.970507);
+            // map.setCenter(seoulStation);
+            map.panTo(seoulStation);
+        };
+
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function() {
+            var seoulStation = new kakao.maps.LatLng(37.499402, 127.033160)
+            // map.setCenter(seoulStation);
+            map.panTo(seoulStation);
+        };
+
+        var btn3 = document.getElementById("btn3");
+        btn3.onclick = function() {
+            var seoulStation = new kakao.maps.LatLng(37.497899, 127.027598)
+            // map.setCenter(seoulStation);
+            map.panTo(seoulStation);
+        };
+
+    </script>
+
+</body>
+</html>

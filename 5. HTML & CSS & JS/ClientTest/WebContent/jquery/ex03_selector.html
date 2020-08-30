@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <div id="box4" class="box">상자4</div>
+    <div id="box5" class="box">상자5</div>
+
+    <ul id="ul1">
+        <li>빨강</li>
+        <li>노랑</li>
+        <li>파랑</li>
+        <li>검정</li>
+    </ul>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+
+        //jQuery 함수 + CSS 선택자
+        //1. 태그 선택자
+
+        //list1 -> HTMLCollection -> 배열
+        var list1 = document.getElementsByClassName("box");
+
+        for (var i=0; i<list1.length; i++) {
+            list1[i].style.color = "blue";
+        }
+
+        //list2 -> jQuery 객체(배열 X -> 유사 배열)
+        var list2 = jQuery("div");
+
+        for (var i=0; i<list2.length; i++) {
+            list2[i].style.backgroundColor = "yellow";
+        }
+
+        //jQuery() 함수의 반환값을 jQuery 객체이다.(********)
+        // console.log(jQuery("div").constructor);
+
+        var box1_1 = document.getElementById("box1");
+        var box1_2 = jQuery("#box1");
+
+        // console.log(box1_1 == box1_2); //false
+        //서로 바꿔 쓸수없음
+        box1_1.style.color = "orange";
+        box1_2.css("color", "red");
+
+        // box1_1.css("color", "red");
+        // box1_2.style.color = "green";
+
+
+        //태그 선택자
+        // jQuery("div").css("font-size", "3em");
+        // document.getElementsByTagName("div").style.fontSize = "3em";
+
+        // jQuery("div").css("font-style", "italic");
+
+        jQuery("div")
+            .css("font-size", "3em")
+            .css("font-style", "italic");
+
+        //2. id 선택자
+        jQuery("#box3").css("text-decoration", "underline");
+
+        //3. class 선택자
+        // jQuery(".box").css("float", "left");
+
+        //4. 그룹 선택자
+        jQuery("#box1, #box2, #box5").css("font-family", "궁서체");
+
+        //5. 자식 선택자
+        //6. 자손 선택자
+        jQuery("#ul1 > li").css("color", "#888");
+        jQuery("#ul1 li").css("font-style", "italic");
+
+        //7. 형제 선택자
+        //8. 인접 형제 선택자
+        jQuery("li + li").css("font-weight", "bold");
+        jQuery("li ~ li").css("font-weight", "bold");
+
+        //9. CSS3 선택자
+        jQuery("li:nth-child(odd)").css("background-color", "green");        
+
+    </script>
+    
+</body>
+</html>

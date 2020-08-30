@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		<img>, Image
+		- 이미지를 출력하는 태그
+		- 단독태그
+		- 인라인 태그
+	
+		img.src 속성, source
+		- 이미지 URL(절대경로 or 상대경로)
+		
+		img.alt 속성
+		
+	
+	 -->
+	 
+	 <h1>고양이</h1>
+	 <img src="images/cat.jpg">
+	 
+	 <h1>고양이2</h1>
+	 <img src="images/cat2.jpㅁg" alt="고양이">
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

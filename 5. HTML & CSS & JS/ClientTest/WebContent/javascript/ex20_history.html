@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>History</h1>
+    브라우저가 방문한 이력을 관리하는 객체
+    네이버 -> 구글 -> 예제 -> 다음 -> 쿠팡
+
+    <hr>
+
+    <input type="button" value="뒤로가기" name="btnBack">
+    <input type="button" value="앞으로가기" name="btnForward">
+
+    <script>
+
+        var btnBack = document.all.btnBack;
+        var btnForward = document.all.btnForward;
+
+        btnBack.onclick = function() {
+            // history.back();
+            history.go(-2);
+        }
+
+        btnForward.onclick = function() {
+            // history.forward();
+            history.go(2);
+        }
+
+    </script>
+
+</body>
+</html>

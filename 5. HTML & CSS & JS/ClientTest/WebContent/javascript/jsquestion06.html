@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="../images/catty01.png" id="cat1" name="cat1">
+    <img src="../images/catty02.png" id="cat2" name="cat2">
+    <img src="../images/catty03.png" id="cat3" name="cat3">
+    <img src="../images/catty04.png" id="cat4" name="cat4">
+    <img src="../images/catty05.png" id="cat5" name="cat5">
+
+    <script>
+
+        var cat1 = document.images["cat1"];
+        var cat2 = document.images["cat2"];
+        var cat3 = document.images["cat3"];
+        var cat4 = document.images["cat4"];
+        var cat5 = document.images["cat5"];
+
+        cat1.onmouseover = function() { cat1.width += 5; }
+        cat2.onmouseover = function() { cat2.width += 5; }
+        cat3.onmouseover = function() { cat3.width += 5; }
+        cat4.onmouseover = function() { cat4.width += 5; }
+        cat5.onmouseover = function() { cat5.width += 5; }
+
+        cat1.onclick = function() {
+            if (confirm("reset??")) { cat1.width = 128; }
+        }
+        cat2.onclick = function() {
+            if (confirm("reset??")) { cat2.width = 128; }
+        }
+        cat3.onclick = function() {
+            if (confirm("reset??")) { cat3.width = 128; }
+        }
+        cat4.onclick = function() {
+            if (confirm("reset??")) { cat4.width = 128; }
+        }
+        cat5.onclick = function() {
+            if (confirm("reset??")) { cat5.width = 128; }
+        }
+
+    </script>
+
+</body>
+</html>

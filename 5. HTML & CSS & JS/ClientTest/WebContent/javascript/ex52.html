@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //ES6(ECMAScript 2015) 이후에 생긴 문법들..
+
+        //화살표 함수, Arrow Function
+        // - 자바 람다 유사
+        //() -> {} //자바
+        //() => {} //자바스크립트
+
+        //일반 함수
+        //1. 함수 선언문
+        function foo1() {
+            console.log("foo1");
+        };
+
+        //2. 함수 표현식
+        var foo2 = function() {
+            console.log("foo2");
+        };
+
+        foo1();
+        foo2();
+
+        //화살표 함수(= 익명 함수)
+        var foo3 = () => console.log("foo3");
+        foo3();
+
+        //매개변수가 없는 경우
+        var foo = () => console.log("bar");
+        foo();
+
+        //매개변수가 하나인 경우
+        var foo = x => console.log(x);
+        foo(100);
+
+        //매개변수가 여러개인 경우
+        var foo = (a, b) => console.log(a + b);
+        foo(100, 200);
+
+        //반환값 있는 경우
+        var foo = () => { return 10; };
+        console.log(foo());
+
+        var foo = () => 10;
+        var foo = (a, b) => a + b;
+        console.log(foo(100,200));
+
+        //------------------------------------------
+
+        //자바스크립트의 this 키워드
+        console.log(this);
+        console.log(this == window);
+        console.log(this === window);
+
+        //전역 변수
+        var name = "홍길동";
+        //window.name = name;
+        console.log(name);
+        console.log(this.name);
+
+        //전역 함수
+        function hello() {
+            console.log("안녕");
+        }
+
+        hello();
+        this.hello();
+
+        //자바스크립트에서 전역 멤버(변수, 함수)를 선언하면
+        //자동으로 window의 멤버가 된다.
+        // -> window의 프로퍼티가 된다.
+        var hong = {
+            name: "홍길동",
+            age: 20,
+            hi: function() {
+                console.log(this.name + ": Hi~");
+            }
+        };
+        hong.address = "서울시";
+
+        console.log(hong.name);
+        hong.hi();
+        console.log(hong.address);
+
+        console.log(hong);
+
+        //향상된 for문 -> 객체의 프로퍼티 탐색 도구
+        for (var p in hong) {
+            console.log(p);
+        }
+
+        for (var p in window) {
+            console.log(p);
+        }
+        
+        console.clear();
+
+        //최상위 객체인 window가 생략됨
+        // alert();
+        // setTimeout();
+        // clearInterval();
+
+
+
+        //화살표 함수내에서의 this
+
+        var cat = {
+            sound: "야옹",
+            soundPlay: function() {
+                console.log(this.sound);
+            }
+        };
+
+        cat.soundPlay();
+
+        //객체의 메소드를 정의할 때는 절대로 화살표 함수는 사용하지 말것!!
+        // - 화살표 함수내의 this는 해당 객체 참조가 아니라 window 참조(상위 스코프 객체 참조) 이다.
+        var dog = {
+            sound: "멍멍",
+            soundPlay: () => {
+                console.log(this.sound);
+                console.log(this == window);
+            }
+        };
+
+        dog.soundPlay();
+
+        var cat = {
+            sound: "야옹",
+            soundPlay: function() {
+
+                //클로저 사용
+                let temp = this;
+
+                //콜백 함수
+                setTimeout(function() {
+                    // console.log(this.sound);
+                    // console.log(this);
+                    console.log(temp.sound);
+                }, 3000);
+            }
+        };
+        cat.soundPlay();
+
+        var dog = {
+            sound: "멍멍",
+            soundPlay: function() {
+                //bind() 메소드 사용
+
+                setTimeout(function() {
+
+                    console.log(this.sound);
+
+                }.bind(this), 3000);
+            }
+        };
+        dog.soundPlay();
+
+        // btn1.onclick = function() {
+            //this
+        // };
+
+        // btn1.onclick = () => {
+            //this
+        // };
+
+    </script>
+
+</body>
+</html>

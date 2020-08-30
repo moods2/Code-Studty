@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        input {
+            border: 1px solid gray;
+            font-size: 18px;
+            background-color: #EFEFEF;
+            margin-bottom : 10px;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form2">
+        <input type="button" value="서울시 강남구 역삼동" onclick="sel('06232', '서울시 강남구 역삼동')">
+        <input type="button" value="서울시 강남구 대치동" onclick="sel('06291', '서울시 강남구 대치동')">
+        <input type="button" value="서울시 강남구 도곡동" onclick="sel('06267', '서울시 강남구 도곡동')">
+    </form>
+
+    <script>
+
+        function sel(num, address) {
+            opener.document.form1.addressNum.value = num;
+            opener.document.form1.address.value = address;
+            opener.document.form1.detail.focus();
+            window.close();
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            border: 0px solid black;
+            width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        img {
+            border: 10px solid #A9A9A9;
+            margin: 10px;
+        }
+
+        input {
+            border: 10px solid #A9A9A9;
+            color: #444444;
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 10px 68px;
+        }
+        input#reset {
+            margin-right: 5px;
+            outline: none;
+        }
+        input#commit {
+            margin-left: 5px;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form1">
+        <div id="pattern">
+            <img src="../images/rect_icon01.png" name="num7">
+            <img src="../images/rect_icon02.png" name="num8">
+            <img src="../images/rect_icon03.png" name="num9">
+            <img src="../images/rect_icon04.png" name="num4">
+            <img src="../images/rect_icon05.png" name="num5">
+            <img src="../images/rect_icon06.png" name="num6">
+            <img src="../images/rect_icon07.png" name="num1">
+            <img src="../images/rect_icon08.png" name="num2">
+            <img src="../images/rect_icon09.png" name="num3">
+        </div>
+        <div id="menu">
+            <input type="button" id="reset" name="reset" value="RESET">
+            <input type="button" id="commit" name="commit" value="INPUT">
+        </div>
+    </form>
+
+    <script>
+
+        //1.
+        var num7 = document.images["num7"];
+        var num8 = document.images["num8"];
+        var num9 = document.images["num9"];
+        var num4 = document.images["num4"];
+        var num5 = document.images["num5"];
+        var num6 = document.images["num6"];
+        var num1 = document.images["num1"];
+        var num2 = document.images["num2"];
+        var num3 = document.images["num3"];
+
+        //2.
+        var list = document.images;
+
+        var btnReset = document.form1.reset;
+        var btnInput = document.form1.commit;
+        var password = "";
+
+
+        num7.onmouseover = function() { num7.src = "../images/rect_icon10.png"; password += 7;}
+        num8.onmouseover = function() { num8.src = "../images/rect_icon10.png"; password += 8;}
+        num9.onmouseover = function() { num9.src = "../images/rect_icon10.png"; password += 9;}
+        num4.onmouseover = function() { num4.src = "../images/rect_icon10.png"; password += 4;}
+        num5.onmouseover = function() { num5.src = "../images/rect_icon10.png"; password += 5;}
+        num6.onmouseover = function() { num6.src = "../images/rect_icon10.png"; password += 6;}
+        num1.onmouseover = function() { num1.src = "../images/rect_icon10.png"; password += 1;}
+        num2.onmouseover = function() { num2.src = "../images/rect_icon10.png"; password += 2;}
+        num3.onmouseover = function() { num3.src = "../images/rect_icon10.png"; password += 3;}
+
+
+        btnReset.onclick = function() {
+            for (var i=0; i<=9; i++) {
+                list[i].src = "../images/rect_icon0" + (i + 1) + ".png";
+            }
+            password = "";
+            // window.location.reload();
+        }
+
+
+        btnInput.onclick = function() {
+            console.log(password);
+            if(password == "74123") {
+                location.href = "http://google.com";
+            } else {
+                alert("Error!!");
+                window.location.reload();
+            }   
+        }
+        
+    </script>
+
+</body>
+</html>

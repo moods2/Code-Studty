@@ -1,0 +1,40 @@
+package com.test.jsp;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/ex22_formok.do")
+public class Ex22_FormOk extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//파일 업로드 처리
+		//1. 업로드된 파일을 어디에 저장할지 결정
+		// - 웹 결로 표기(X) -> 로컬 파일 경로 표기(O)
+		// - WebContent > files
+		
+		//가상 경로 & 상대 경로
+		//String path = "/files";
+		//String path = "D:\\class\\server\\JSPTest\\WebContent\\files";
+		String path = req.getRealPath("/files");
+		System.out.println(path);
+		
+		//2. 업로드할 파일의 최대 크기
+		// - 최대한 작게
+		// - 게시판(100MB)
+		// - 바이트
+		int size = 1024 * 1024 * 100; //100MB 
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/ex22_formok.jsp");
+		dispatcher.forward(req, resp);
+		
+	}
+
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            border: 0px solid black;
+            width: 550px;
+            margin: 0 auto;
+        }
+
+        .main {
+            border: 1px solid #DEDEDE;
+            text-align: center;
+            padding: 5px 0;
+            margin: 100px 0 10px 0;
+        }
+        
+        input {
+            border: 0px solid #DEDEDE;
+            width: 543px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #444444;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form1">
+        <div class="main">
+            <img src="../images/img01.jpg" name="img1" data-file="img04.jpg" data-origin="img01.jpg">
+            <img src="../images/img02.jpg" name="img2" data-file="img05.jpg" data-origin="img02.jpg">
+            <img src="../images/img03.jpg" name="img3" data-file="img06.jpg" data-origin="img03.jpg">
+        </div>
+        <input type="text" name="txt" value="" readonly>
+    </form>
+
+    <script>
+
+        var txt = document.form1.txt;
+
+        function imgChange() {
+            for (var i=1; i<=3; i++) {
+
+                document.images["img"+i].onmouseover = function() {
+                    event.srcElement.src = "../images/" + event.srcElement.dataset["file"];
+                    if (event.srcElement.dataset["file"] == "img04.jpg") {
+                        txt.value = "'스키'타는 사람이 '당근'으로 변했습니다."
+                    } else if (event.srcElement.dataset["file"] == "img05.jpg") {
+                        txt.value = "'해바라기'가 '피망'으로 변했습니다."
+                    } else if (event.srcElement.dataset["file"] == "img06.jpg") {
+                        txt.value = "'나무'가 '개'가 됐습니다."
+                    }
+                };
+                document.images["img"+i].onmouseout = function() {
+                    event.srcElement.src = "../images/" + event.srcElement.dataset["origin"];
+                };
+
+            };
+        }
+        imgChange();
+
+    </script>
+
+</body>
+</html>

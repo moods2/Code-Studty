@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!--  
+
+		jQuery
+		- 자바스크립트 라이브러리
+		- 자바스크립트 프레임워크
+		- 자바스크립트 작업 -> 쉽고, 빠르고, 편리하게...
+
+        jQuey 설치(프로그램 X)
+        - 적용할 HTML 페이지에 관련 *.js -> import
+        - jquery.js -> <script src="jquery.js"
+
+        http://jquery.com
+
+        1. 파일 직접 다운로드
+            a. 배포 사이트에서 다운로드(jquery.com)
+            b. npm 도구 사용 다운로드
+        2. CDN
+            a. js 파일을 별도의 서버로부터 제공
+
+    -->
+</head>
+<body>
+
+    <input type="button" value="버튼" id="btn">
+
+
+    <!-- 1. -->
+    <!-- <script src="js/jquery-3.5.1.js"></script> -->
+    <!-- 2. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $("#btn").click(function() {
+            alert("jqeury");
+        });
+
+    </script>
+
+</body>
+</html>

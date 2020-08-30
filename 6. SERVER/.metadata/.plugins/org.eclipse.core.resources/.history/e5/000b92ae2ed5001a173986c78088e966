@@ -1,0 +1,8 @@
+package com.test.codestudy.member;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/member/login.do")
+public class Login {
+
+}

@@ -1,0 +1,28 @@
+package com.test.address;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class AddOk extends HttpServlet {
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//AddOk.java
+		//1. 데이터 가져오기
+		//2. DB 작업 > insert
+		//3. JSP 호출하기
+		
+		
+		
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/addok.jsp");
+		dispatcher.forward(req, resp);
+		
+	}
+
+}

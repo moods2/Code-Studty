@@ -1,0 +1,14 @@
+package com.test.codestudy.member;
+
+//여러가지 데이터를 전송하기 위한 상자
+public class MemberDTO {
+	
+	private String seq;
+	private String id;
+	private String name;
+	private String email;
+	private String pw;
+	private String pci;
+	private String regdate;
+
+}

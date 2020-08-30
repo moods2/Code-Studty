@@ -1,0 +1,8 @@
+package com.test.codestudy.member;
+
+//여러가지 데이터를 전송하기 위한 상자
+public class MemberDTO {
+	
+	
+
+}

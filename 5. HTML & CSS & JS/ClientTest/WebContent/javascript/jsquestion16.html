@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form {
+            border: 0px solid black;
+            width: 640px;
+            margin: 100px auto;
+        }
+
+        div:first-child {
+            border: 1px solid gray;
+            width: 640px;
+            margin: 10px 0;
+            font-size: 130px;
+            font-weight: bold;
+            padding: 25px;
+            letter-spacing: 0px;
+            color: #444;
+        }
+        
+        img {
+            width: 95px;
+            height: 139px;
+            position: relative;
+            top: 20px;
+        }
+
+        div:last-child > input {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px 50px;
+            color: #444;
+            background-color: white;
+            border: 1px solid #888;
+            outline: none;
+        }
+
+        div:last-child > input:disabled {
+            background-color: #EEE;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="form1">
+        <div>
+            <img src="../images/0.png" name="hour1"><img src="../images/0.png" name="hour2">:<img src="../images/0.png" name="min1"><img src="../images/0.png" name="min2">:<img src="../images/0.png" name="sec1"><img src="../images/0.png" name="sec2">
+        </div>
+        <div>
+            <input type="button" value="시작" name="start">
+            <input type="button" value="멈춤" name="stop" disabled>
+            <input type="button" value="종료" name="end" disabled>
+        </div>
+    </form>
+
+    <script>
+
+        var hour1 = document.images["hour1"];
+        var hour2 = document.images["hour2"];
+        var min1 = document.images["min1"];
+        var min2 = document.images["min2"];
+        var sec1 = document.images["sec1"];
+        var sec2 = document.images["sec2"];
+
+        var btnStart = document.form1.start;
+        var btnStop = document.form1.stop;
+        var btnEnd = document.form1.end;
+
+        var timer = 0;
+        var n = 0;
+
+        btnStart.onclick = function() {
+
+            if(timer == 0) {
+                timer = setInterval(function() {
+
+                    sec2.src = "../images/" + addZero(n % 100).substr(1, 1) + ".png";
+                    sec1.src = "../images/" + addZero(n % 100).substr(0, 1) + ".png";
+                    min2.src = "../images/" + addZero(n / 100 % 60).substr(1, 1) + ".png";
+                    min1.src = "../images/" + addZero(n / 100 % 60).substr(0, 1) + ".png";
+                    hour2.src = "../images/" + addZero(n / 100 / 60).substr(1, 1) + ".png";
+                    hour1.src = "../images/" + addZero(n / 100 / 60).substr(0, 1) + ".png";
+
+                    n++;
+                }, 10);
+            }
+            btnStart.disabled = true;
+            btnStop.disabled = false;
+            btnEnd.disabled = false;
+
+        }
+
+        function addZero(num) {
+            if (num < 10) return "0" + num
+            else return num + "";
+        }
+
+        btnStop.onclick = function() {
+            clearInterval(timer);
+            timer = 0;
+            btnStart.disabled = false;
+            btnStop.disabled = true;
+            btnEnd.disabled = false;
+        }
+
+        btnEnd.onclick = function() {
+            clearInterval(timer);
+            timer = 0;
+            hour1.src = "../images/0.png"
+            hour2.src = "../images/0.png"
+            min1.src = "../images/0.png"
+            min2.src = "../images/0.png"
+            sec1.src = "../images/0.png"
+            sec2.src = "../images/0.png"
+            btnStart.disabled = false;
+            btnStop.disabled = true;
+            btnEnd.disabled = true;
+        }
+
+    </script>
+
+</body>
+</html>

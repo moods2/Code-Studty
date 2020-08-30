@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="C:\oracleex" version="1.8.0_241">
+<bootpath>
+<entry path="C:\oracleex\lib\resources.jar"/>
+<entry path="C:\oracleex\lib\rt.jar"/>
+<entry path="C:\oracleex\lib\sunrsasign.jar"/>
+<entry path="C:\oracleex\lib\jsse.jar"/>
+<entry path="C:\oracleex\lib\jce.jar"/>
+<entry path="C:\oracleex\lib\charsets.jar"/>
+<entry path="C:\oracleex\lib\jfr.jar"/>
+<entry path="C:\oracleex\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\oracleex\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\oracleex\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

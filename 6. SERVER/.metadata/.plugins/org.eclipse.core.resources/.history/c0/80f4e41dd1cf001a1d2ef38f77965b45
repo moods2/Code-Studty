@@ -1,0 +1,97 @@
+JSP, Java Server Pages
+- 서블릿의 다음 버전
+
+서블릿 장점
+- 자바를 사용할 수 있다. > 웹 적용
+- 자바 기반
+
+서블릿 단점
+- HTML, CSS, JavaScript 작성이 힘듬 > 문자열 취급
+
+JSP 장점
+- HTML, CSS, JavaScript 작성이 쉬움
+- 웹 페이지 기반
+
+JSP 단점
+- 자바 작업이 좀 불편하다. > 툴 기능 부족
+
+
+
+
+JSP 기본 요소
+1. JSP 지시자(지시어), JSP Directive
+2. 스크립트 요소, Scripting Elements
+3. 액션 태그, Action Tags
+
+
+1. JSP 지시자(지시어, JSP Directive
+- <%@ XXX %>
+- JSP 페이지를 실행하기 위해 JSP 컨테이너(톰캣)에게 
+해당 JSP를 처리하기 위한 여러가지 환경 설정을 한다.
+	a. page 지시자
+	b. include 지시자
+	c. taglib 지시자
+
+	
+2. 스크립트 요소, Scripting Elements
+- <% %>
+- 자바 구문을 쓸 수 있게 해준다.(자바 환경을 만든다.)
+	a. 스크립틀릿, Scriptlet(Script + Applet)
+	b. 표현식, Expression
+	c. 선언부, Declaration
+	
+	
+3. 액션 태그, Action Tags
+- <jsp:XXX>, <c:XXX>
+- 프로그래밍 기능을 하는 태그
+- <c:if>, <c:forEach>
+	a. JSP 기본 액션 태그
+	b. JSTL 확장 액션 태그
+	c. 사용자 커스텀 액션 태그
+
+
+
+page 지시자
+- <%@ page 속성="값" 속성="값" 속성="값".. %>
+- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+a. language
+	- JSP 페이지에서 사용할 프로그래밍 언어 지정
+
+b. contentType
+	- 현재 페이지 콘텐츠에 대한 기술
+	- contentType="text/html; charset=UTF-8" //현재 개발 환경
+	- contentType="text/html; charset=ISO-8859-1"
+	- text/html : MIME Type 열거형, 웹서버가 브라우저에게 웹 페이지를 전달할 때
+	이 페이지는 이런 형식의 페이지다.. 라고 알려주는 역할
+	- text/xml, image/jpeg, image/png, image/gif 등..
+	
+MIME는 전자 우편을 위한 인터넷 표준 포맷이다. 전자우편은 7비트 ASCII 문자를 사용하여 전송되기 때문에,
+8비트 이상의 코드를 사용하는 문자나 이진 파일들은 MIME 포맷으로 변환되어 SMTP로 전송된다.
+실질적으로 SMTP로 전송되는 대부분의 전자 우편은 MIME 형식이다. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

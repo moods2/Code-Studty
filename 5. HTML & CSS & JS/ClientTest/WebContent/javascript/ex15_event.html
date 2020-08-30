@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>이벤트</h1>
+
+    <form name="form1">
+        <div>이름: <input type="text" name="txt1" size="10" autocomplete="off"></div>
+        <div>나이: <input type="text" name="txt2" size="10" autocomplete="off"></div>
+        <div>주소: <input type="text" name="txt3" size="10" autocomplete="off"></div>
+        <div>
+            <input type="button" value="Long" name="btnLong">
+            <input type="button" value="Short" name="btnShort">
+        </div>
+    </form>
+
+    <script>
+
+        var txt1 = window.document.form1.txt1;
+        var txt2 = window.document.form1.txt2;
+        var txt3 = window.document.form1.txt3;
+        var btnLong = window.document.form1.btnLong;
+        var btnShort = window.document.form1.btnShort;
+
+        var list = [txt1, txt2, txt3];
+
+        btnLong.onclick = function() {
+            // txt1.size = 50;
+            // txt2.size = 50;
+            // txt3.size = 50;
+
+            // for (var i=0; i<list.length; i++) {
+            //     list[i].size = 30;
+            // }
+
+            // i = 1
+            // window.document.form1.txt1 + i
+            // window.document.form1["txt1" + i]
+
+            // for (var i=1; i<=3; i++) {
+            //     window.document.form1["txt1" + i].size = 15;
+            // }
+
+            // console.log(window.document.form1.elements)
+            var els = window.document.form1.elements;
+
+            for (var i=0; i<els.lenth; i++) {
+                //<input type="text"
+                //<input type="button"
+                console.log(els[i].type);
+                if (els[i].type == "text") {
+                    els[i].size = 50;
+                }
+            }
+        };
+
+        btnShort.onclick = function() {
+            txt1.size = 10;
+            txt2.size = 10;
+            txt3.size = 10;
+        };
+
+        for (var i=0; i<list.length; i++) {
+            // console.log(1);
+            list[i].onfocus = function() {
+                //해당 객체가 포커스를 얻는 경우
+                // window.document.body.bgColor = "yellow";
+
+                // event.srcElement.size = 50;
+            };
+            list[i].onblur = function() {
+                //해당 객체가 포커스를 잃어버린 경우 발생
+                // window.document.body.bgColor = "white";
+                
+                //event.srcElement
+                // - 이벤트를 발생 시킨 객체(태그)
+                // event.srcElement.size = 10;
+
+                //무언가를 입력했는지?
+                if (event.srcElement.value.length > 0) {
+                    //입력O
+                    event.srcElement.readOnly = true;
+                } else {
+                    //입력X
+
+                }
+            };
+
+            list[i].ondblclick = function() {
+                //event.shiftKey
+                //event.ctrlKey
+                //event.altKey
+                if (event.ctrlKey) {
+                    event.srcElement.readOnly = false;
+                }
+            };
+        }
+
+    </script>
+
+</body>
+</html>

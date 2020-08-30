@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: #8FD1D8;
+        }
+
+        #main {
+            border: 0px solid gray;
+            width: 570px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 50px;
+            font-variant: small-caps;
+            color: #4E4E4E;
+            margin-left: 20px;
+        }
+
+        #tape {
+            height: 500px;
+            background-image: url(../images/tape.png);
+            background-repeat: no-repeat;
+        }
+
+        #lefthole {
+            position: absolute;
+            left: 348px;
+            top: 252px;
+        }
+
+        #righthole {
+            position: absolute;
+            left: 585px;
+            top: 252px;
+        }
+
+        #lefthole, #righthole {
+            animation: holekey 1.5s infinite linear;
+        }
+
+        @keyframes holekey {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        #line {
+            background-image: url(../images/tapeline.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 132px;
+            height: 68px;
+            position: relative;
+            left: 218px;
+            top: 128px;
+            animation: linekey 1s infinite alternate linear;
+        }
+
+        @keyframes linekey {
+            0% { background-position: -35px 0; }
+            100% { background-position: -5px 0; }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <h1><i class="fas fa-headphones-alt"></i> Music</h1>
+        <div id="tape">
+            <img id="lefthole" src="../images/tapehole.png">
+            <img id="righthole" src="../images/tapehole.png">
+            <div id="line"></div>
+        </div>
+    </div>
+
+</body>
+</html>

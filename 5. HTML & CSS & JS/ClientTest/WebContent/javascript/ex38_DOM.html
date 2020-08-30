@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        #tbl1 td {
+            border: 1px solid black;
+            width: 126px;
+            height: 126px;
+        }
+        #tbl1 td img {
+            /* 이미지 밑에 엔터한줄이 들어가는걸 방지 */
+            display: block;
+        }
+
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    
+    <h1>테이블</h1>
+
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+
+        //<tr>
+        var tr = document.getElementById("tbl1").firstElementChild.children;
+
+        for (var i=0; i<tr.length; i++) {
+            
+            //<td>
+            var td = tr[i].children;
+
+            for (var j=0; j<td.length; j++) {
+                //<td> x 9
+
+                // td[j].onclick = function() { 
+                //     // alert('click');
+                //     alert(event.buttons);
+                // };
+                
+                //마우스에 관한 정보를 얻어오려면 onmousedown
+                td[j].onmousedown = function() {
+                    // alert('down');
+                    // alert(event.buttons);
+
+                    // event.srcElement.bgColor = "gold";
+
+                    console.log(event.srcElement.nodeName);
+
+                    if (event.buttons == 1) {
+                        if (event.srcElement.nodeName == "TD") {
+                            event.srcElement.innerHTML = "<img src='../images/rect_icon01.png'>";    
+                        } else if (event.srcElement.nodeName == "IMG") {
+                            event.srcElement.parentNode.innerHTML = "<img src='../images/rect_icon01.png'>";
+                        }
+                    } else if (event.buttons == 2) {
+                        if (event.srcElement.nodeName == "TD") {
+                            event.srcElement.innerHTML = "<img src='../images/rect_icon02.png'>";    
+                        } else if (event.srcElement.nodeName == "IMG") {
+                            event.srcElement.parentNode.innerHTML = "<img src='../images/rect_icon02.png'>";
+                        }
+                    } else if (event.buttons == 4) {
+                        if (event.srcElement.nodeName == "IMG") {
+                            event.srcElement.parentNode.innerHTML = "";
+                        }
+                    }
+                }
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

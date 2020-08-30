@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        fieldset {
+            width: 450px;
+            margin: 50px 0 0 50px;
+        }
+
+        fieldset div {
+            margin: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        #txtName, #address {
+            font-size: 1.1em;
+            font-weight: bold;
+            outline: none;
+            width: 200px;
+            padding: 4px;
+            letter-spacing: -1px;
+        }
+
+        #sel1 { font-size: 1.1em; font-weight: bold; padding: 2px 4px;}
+
+        #btn {
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 4px 8px;
+            margin: 10px 0 10px 10px;
+        }
+
+        #tbl1 {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            width: 750px;
+            margin: 20px 0 0 50px;
+        }
+
+        #tbl1 th, #tbl1 td {
+            border: 1px solid gray;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 7px;
+            text-align: center;
+        }
+
+        #tbl1 th { background-color: #DDD; }
+        #tbl1 th:first-child { width: 70px; }
+        #tbl1 th:nth-child(2) { width: 100px; }
+        #tbl1 th:nth-child(3) { width: 70px; }
+        #tbl1 th:nth-child(4) { width: 180px; }
+        #tbl1 th:last-child { width: 300px; }
+
+    </style>
+</head>
+<body>
+    
+    <fieldset>
+        <legend style="font-weight: bold; font-size: 1.1em;">입력 항목</legend>
+        <div>이름 : <input type="text" name="txtName" id="txtName"></div>
+        <div>나이 : <select id="sel1"></select></div>
+        <div>성별 :
+            <input type="radio" name="gender" id="male">
+            <label for="male">남자</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">여자</label>
+        </div>
+        <div>주소 : <input type="text" name="address" id="address"></div>
+
+        <input type="button" name="btn" id="btn" value="추가하기">
+    </fieldset>
+    <table id="tbl1">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>나이</th>
+                <th>성별</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody id="tbody1">
+            <tr>
+                <td colspan="5">등록된 항목이 없습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+
+        var txtName = document.getElementById("txtName");
+        var sel1 = document.getElementById("sel1");
+        var gender = document.all.gender;
+        var address = document.getElementById("address");
+        var btn = document.getElementById("btn");
+        var tbody1 = document.getElementById("tbody1");
+
+        for (var i=20; i<=60; i++) {
+            sel1.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+        }
+
+        var seq = 1;
+        btn.onclick = function() {
+
+            if (seq == 1) { tbody1.innerHTML = ""; }
+
+            var temp = "";
+            temp += "<tr>";
+                temp += "<td>";
+                temp += seq;
+                temp += "</td>";
+                temp += "<td>";
+                temp += txtName.value;
+                temp += "</td>";
+                temp += "<td>";
+                temp += sel1.value;
+                temp += "</td>";
+                temp += "<td>";
+
+                if (gender[0].checked) {
+                    temp += "<img src='../images/gender_m.png'>";
+                } else if (gender[1].checked) {
+                    temp += "<img src='../images/gender_f.png'>";
+                }
+
+                temp += "</td>";
+                temp += "<td>";
+                temp += address.value;
+                temp += "</td>";
+            temp += "</tr>";
+
+            seq++;
+
+            console.log(temp);
+            
+            tbody1.innerHTML += temp;
+            
+        }
+
+    </script>
+
+</body>
+</html>

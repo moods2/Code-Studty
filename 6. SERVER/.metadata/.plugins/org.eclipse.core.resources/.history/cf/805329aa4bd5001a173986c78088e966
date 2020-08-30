@@ -1,0 +1,13 @@
+package com.test.codestudy.board;
+
+public class BoardDTO {
+	
+	private String seq;
+	private String subject;
+	private String content;
+	private String regdate;
+	private String readcount;
+	private String heart;
+	private String mseq;
+
+}

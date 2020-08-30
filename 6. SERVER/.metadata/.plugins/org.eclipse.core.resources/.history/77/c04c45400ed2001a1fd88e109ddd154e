@@ -1,0 +1,12 @@
+새 프로젝트 생성
+1. Dynamic Web Project > "Address"
+2. 필기.txt
+3. 패키지 : com.test.address
+4. 뷰폴더 : WebContent > WEB-INF > "views" 폴더 생성
+
+주소록(***** 암기)
+- CRUD
+- MVC
+- Oracle
+
+- DB 작업

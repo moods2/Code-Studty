@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        박스 모델, Box Model
+        - CSS(HTML)는 모든 태그를 렌더링의 결과로 사각형 형태로 출력한다.
+        1. 테두리(border)
+        2. 너비, 높이(width, height)
+            - width
+            - height
+            - 절대크기(px) or 상대크기(%)
+            - 개체의 크기가 아니다.(****)
+            - 콘텐츠 영역의 크기이다.(****)
+        3. 여백(padding, margin) 
+        */
+
+        /* 
+
+        블럭태그의 너비, 높이 정책
+        1. 너비와 높이를 지정할 수 있다.
+        2. 기본 정책(미지정)
+            a. 너비: 100%
+            b. 높이: 콘텐츠 높이
+                1. 지정됨 : 콘텐츠 높이와 상관없이 박스 높이는 고정
+                2. 지정안됨 : 콘텐츠 높이에 따라 박스 높이도 자동 조절
+
+        인라인태그의 너비, 높이 정책
+        1. 너비와 높이를 지정할 수 없다.
+        2. 기본 정책
+            a. 너비 : 콘텐츠 너비
+            b. 높이 : 콘텐츠 높이
+            - 직접 width, height 지정 불가능
+
+        */
+
+        .box {
+            border: 1px solid black;
+        }
+
+        #box2 {
+            background-color: orange;
+            /* width: 50%; */
+            /* height: 50%; */
+
+            width: 300px;
+            /* height: 200px; */
+        }
+
+        #txt1 {
+            width: 300px;
+            /* height: 50px; */
+            font-size: 3em;
+        }
+
+        #cat10 {
+            width: 300px;
+            height: 300px;
+        }
+
+        p > b {
+            display: inline-block;
+            /* background-color: yellow; */
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>박스 모델</h1>
+    
+    <!-- div#box$.box{상자$}*3 -->
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, harum eveniet veniam cum sapiente minima quam reprehenderit similique fuga a id officiis voluptatibus consectetur nihil error adipisci accusamus vitae eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quia quo laudantium obcaecati velit alias ullam, itaque distinctio magnam esse rerum illo earum, iusto eius exercitationem dolorem sunt beatae nesciunt! lorem</div>
+    <div id="box3" class="box">상자3</div>
+
+    <hr>
+
+    <input type="text" id="txt1">
+    
+    <hr>
+
+    <img src="../images/catty10.png" id="cat10">
+
+    <hr>
+
+    <p>안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. <b>홍길동입니다.</b>안녕하세요. 홍길동입니다.안녕하세요.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다. </p>
+
+</body>
+</html>

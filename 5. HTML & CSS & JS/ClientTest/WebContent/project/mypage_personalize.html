@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+
+        * { outline: none; }
+        #btnpoint, #btninfo, #btncalendar { outline: none; }
+        body { margin: 0 auto; }
+        h1 { font-family: "Arial Black"; font-weight: bold; }
+        #main { width: 100%; }
+        #top {
+            /* border: 1px solid black; */
+            min-width: 1300px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        #middle {
+            /* border: 1px solid black; */
+            width: 1245px;
+            min-height: 1100px;
+            margin: 0 auto;
+            padding: 60px;
+        }
+        #bottom {
+            /* border: 1px solid black; */
+            width: 100%;
+            min-width: 1300px;
+            height: 200px;
+            background-color: #eee;
+            color: white;
+        }
+        #topmenu {
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+            width: 100%;
+            min-width: 1300px;
+            height: 40px;
+            color: black;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 40px 0;
+            position: absolute;
+        }
+        .menubar {
+            margin: 0 5px;
+            cursor: pointer;
+        } 
+        #topleft {
+            display: inline-block;
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 65px;
+            background-image: url("../images//title.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            left : 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #topright {
+            font-size: 13px;
+            position: absolute;
+            right : 5px;
+            top: 42px;
+            cursor: pointer;
+        }
+        #search {
+            border: 0;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            outline: none;
+            color: black;
+        }
+
+        #left {
+            /* border: 1px solid black; */
+            width: 250px;
+            height: 1000px;
+            float: left;
+        }
+        #left > div {
+            border: 1px solid #C7C7C7;
+            width: 100%;
+            height: 200px;
+            background-color: #FDFDFD;
+        }
+        #left > div:first-child {height: 210px; margin-bottom: 35px;}
+        #left > div:nth-child(3) {height: 278px; margin-bottom: 35px;}
+        #userinfo #infohead {
+            background-color: #eee;
+            font-size: 1.7em;
+            font-weight: bold;
+            color: #444;
+            padding: 10px 0 10px 15px;
+            border-top: 2px solid black;
+            border-bottom: 1px solid #C7C7C7;
+            cursor: pointer;
+        }
+        #userinfo p:nth-child(2) {
+            padding: 2px 15px;
+        }
+        #userinfo p:nth-child(2) span {
+            font-weight: bold;
+        }
+        #point p {
+            border: 1px solid #DBE4F3;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 5px 15px 5px;
+        }
+        #userinfo div:last-child {
+            text-align: center;
+        }
+        #left > div:nth-child(2) {
+            border: 5px solid #7A98B4;
+            padding: 15px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 35px;
+        }
+        #left > div:nth-child(2) > p {
+            border-bottom: 1px dotted #DBE4F3;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        #left > div:nth-child(2) > p > span {
+            float: right;
+        }
+        #left > div:nth-child(3) > p:first-child {
+            border-bottom: 1px solid #DBE4F3;
+            font-size: 1.2em;
+            text-decoration: underline;
+            color: rgb(71, 125, 224);
+            font-weight: bold;
+            padding: 8px 10px;
+            margin-bottom: -10px;
+            background-color: #EEEEEE;
+        }
+        #left > div:nth-child(3) > .personaltitle {
+            padding: 5px 15px;
+            margin-top: 10px;
+            border-top: 1px solid #DBE4F3;
+            border-bottom: 1px solid #DBE4F3;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #left > div:nth-child(3) > p:nth-child(2) {
+            border-top: 0;
+        }
+        #left > div:nth-child(3) > a {
+            font-size: 11px;
+            margin-left: 5px;
+            text-decoration: none;
+            color: black;
+        }
+        #left > div:nth-child(3) > a:hover {
+            text-decoration: underline;
+        }
+
+        #left > div:last-child p:first-child {
+            border-bottom: 1px solid #DBE4F3;
+            padding: 5px 0 5px 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        #left > div:last-child p:first-child > span {
+            color: #444;
+            font-size: 1.3em;
+        }
+        #left > div:last-child p:nth-child(2) {
+            text-align: center;
+            font-size: 3em;
+        }
+        .time {
+            /* text-align: center; */
+            border-left: 1px solid #888;
+            margin-bottom: -2px;
+            margin-left: 35px;
+            padding-left: 10px;
+        }
+
+        #right {
+            /* border: 1px solid black; */
+            float: right;
+            width: 850px;
+            height: 993px;
+            margin-left: 15px;
+        }
+        #right > h1 {
+            font-size: 18px;
+            margin-top: 0px;
+            color: #444;
+        }
+        #precaution {
+            border: 1px solid #CCC;
+            background-color: #F8F8F8;
+            width: 100%;
+            margin: 20px 0;
+            padding: 15px;
+        }
+        #precaution > p > i {
+            font-size: 16px;
+            margin-right: 5px;
+            color: #7A98B4;
+        }
+        #precaution > p:first-child {
+            font-weight: bold;
+            text-align: left;
+        }
+        #precaution > p > small {
+            font-weight: normal;
+        }
+        #tel {
+            border: 2px solid #7A98B4;
+            border-radius: 5px;
+            width: 300px;
+            background-color: white;
+            font-weight: bold;
+            font-size: 13px;
+            padding: 15px 10px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        #tel + div {
+            font-size: 11px;
+            color: #999;
+            width: 500px;
+            text-align: left;
+            margin: auto;
+            line-height: 5px;
+        }
+        #list {
+            border-bottom: 1px solid #CCC;
+            width: 100%;
+            min-height: 175px;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        #list > p:first-child > i,
+        #alarm > p:first-child > i {
+            margin-right: 5px;
+            color: #888;
+        }
+        #list > p:first-child,
+        #alarm > p:first-child {
+            color: #444;
+            font-size: 15px;
+            font-weight: bold;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #444;
+        }
+        #alarm > p:first-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+        #list > p:first-child > small,
+        #alarm > p:first-child > small {
+            margin-left: 5px;
+            font-weight: normal;
+            font-size: 11px;
+        }
+        #list > div > ul > li {
+            float: left;
+            width: 350px;
+            height: 103px;
+            list-style: none;
+        }
+        #list > div > ul {
+            padding: 10px;
+        }
+        #list > div > ul > li:nth-child(2n+1) {
+            margin-right: 50px;
+        }
+        #list > div > ul > li input {
+            display: block;
+            margin-bottom: 5px;
+        }
+        #list > div > ul > li > img {
+            width: 80px;
+            height: 100px;
+            float: left;
+            margin-right: 5px;
+        }
+        #list > div > ul > li span {
+            display: block;
+            font-size: 11px;
+            color: #666;
+        }
+        #list > div > ul > li em {
+            font-size: 11px;
+            color: #666;
+            font-style: normal;
+        }
+        #list > div > ul > li em a {
+            text-decoration: underline;
+        }
+        #buttonbox {
+            margin-top: 10px;
+            text-align: right;
+        }
+        #buttonbox > input, #buttonbox > button { outline: none; }
+        #buttonbox > button > span {
+            color: blue;
+        }
+        #tbl1 {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #tbl1 th, #tbl1 td {
+            text-align: center;
+            font-size: 13px;
+            color: #444;
+            padding: 10px 0;
+        }
+        #tbl1 th {
+            background-color: #EEE;
+            border: 1px solid #CCC;
+            border-top: 3px solid #7A98B4;
+        }
+        #tbl1 td { border: 1px solid #CCC; }
+        #tbl1 td:first-child { border-left: 0; }
+        #tbl1 td:last-child { border-right: 0; }
+        #tbl1 th:nth-child(1) { width: 45%; }
+        #tbl1 th:nth-child(4) { width: 10%; }
+        #alarm + div {
+            margin-top: 20px;
+        }
+        #alarm + div > span {
+            font-size: 11px;
+            font-weight: bold;
+        }
+        #infobuttonbox { float: right; }
+        #infobuttonbox button,
+        #infobuttonbox input {
+            outline: none;
+        }
+        #tips {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        #movetop {
+            width: 40px;
+            height: 40px;
+            background-color: gray;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            padding-top: 3px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        #movetop:hover {
+            background-color: orange;
+            cursor: pointer;
+        }
+        #frogue-container, .frogue-chat {
+            position: absolute;
+            left:20px;
+            bottom: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+<!-------------------------------- 화면 상단부 -------------------------------->
+        <div id="top">
+            <div id="topmenu">
+                <!-- 상단메뉴 좌측(메인화면으로 돌아가기) -->
+                <a href="main.html" id="topleft"></a>
+                <!-- 상단메뉴 센터(콘서트, 뮤지컬, 연극, 클래식, 전시) -->
+                <span data-lo="user_concert.html" class="menubar">콘서트</span>
+                <span data-lo="user_musical.html" class="menubar">뮤지컬</span>
+                <span data-lo="user_theater.html" class="menubar">연극</span>
+                <span data-lo="user_classic.html" class="menubar">클래식</span>
+                <span data-lo="user_Exhibition.html" class="menubar">전시</span>
+                <!-- 상단메뉴 우측(랭킹, 이벤트, 검색창, 마이페이지) -->
+                <div id="topright">
+                    <span data-lo="user_ranking.html" class="menubar">랭킹</span>
+                    <span data-lo="user_event.html" class="menubar">이벤트</span>
+                    <input type="text" value="" id="search">
+                    <label for="search" class="glyphicon glyphicon-search"
+                        style="font-size: 14px; cursor: pointer;"></label>
+                    <div class="glyphicon glyphicon-user" id="mypage" 
+                        style="font-size: 14px; cursor: pointer; margin: 0 10px; "></div>
+                </div>
+            </div>
+        </div>
+<!-------------------------------- 내용부분 -------------------------------->
+        <div id="middle">
+            <!-- 마이페이지 좌측 -->
+            <div id="left">
+                <!-- 유저 정보 -->
+                <div id="userinfo">
+                    <p id="infohead">MY공연<small style="color: #BBB"> | MYPAGE</small></p>
+                    <p><span>장x우</span>님은 <span>일반회원</span>입니다.</p>
+                    <div id="point">
+                        <p>Egg포인트 : 0원</p>
+                    </div>
+                    <div>
+                        <input type="button" class="btn btn-default btn-sm" value="포인트 안내▶" id="btnpoint">
+                        <input type="button" class="btn btn-default btn-sm" value="회원정보 수정▶" id="btninfo">
+                    </div>
+                </div>
+                <!-- 유저 메뉴 -->
+                <div id="usermenu">
+                    <p class="usermenu" data-lo="mypage_reservation.html">예매확인/취소<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_coupon.html">할인쿠폰/예매권<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_interest.html">나의 관심 공연<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_watched.html">나의 관람 공연<span>▶</span></p>
+                    <p class="usermenu" data-lo="mypage_personalize.html">나의 맞춤 설정<span>▶</span></p>
+                </div>
+                <!-- 맞춤별 예매 -->
+                <div id="personalize">
+                    <p><span class="glyphicon glyphicon-hand-up"></span> 맞춤별 예매</p>
+                    <p class="personaltitle">지역별예매</p>
+                    └<a href="#">서울</a>,<a href="#">경기/인천</a>,<a href="#">대전/충청/강원</a>,<br><a href="#">부산/대구/울산/경상</a>,<a href="#">광주/전라</a>,<a href="#">제주</a>
+                    <p class="personaltitle" style="margin-top: 20px;">공연장별예매</p>
+                    └<a href="#">세종문화회관</a>,<a href="#">광림아트센터</a>,<a href="#">예술의전당</a>,<br><a href="#">샤롯데씨어터</a>,<a href="#">한전아트센터</a>
+                    <p class="personaltitle" style="margin-top: 20px;">날짜별예매 <input type="button" value="달력보기" class="btn btn-default btn-xs" id="btncalendar"></p>
+                </div>
+                <!-- 고객센터 -->
+                <div id="service">
+                    <p><span>☎</span> 고객센터 전화상담</p>
+                    <p>1544-6399</p>
+                    <p class="time">평일 09:00 ~ 18:00</p>
+                    <p class="time">토요일 09:00 ~ 17:00</p>
+                    <p class="time">일요일 공휴일 휴무</p>
+                </div>
+            </div>
+
+<!----------------------------------------------------------------------------->
+
+            <!-- 마이페이지 우측 -->
+            <div id="right">
+                <h1>나의 맞춤 설정</h1>
+                <div id="precaution">
+                    <p><i class="glyphicon glyphicon-bullhorn"></i>나의 맞춤 알람 설정 <small>티켓 오픈 소식, 관심 공연 등의 정보를 받을 휴대전화번호를 확인해주세요.</small></p>
+                    <div id="tel">SMS 수신 연락처 : 010 - 1234 - 5678</div>
+                    <div>
+                        <p>- 맞춤 알람 SMS는 회원정보상의 SMS 수신동의여부와 상관없이 맞춤 알람 설정에 따라 발송됩니다.</p>
+                        <p>- SMS 받을 휴대전화번호 변경을 원하는 회원님은 <span>[회원정보 변경]</span> 해주세요.</p>
+                    </div>
+                </div>
+                <div id="list">
+                    <p><i class="glyphicon glyphicon-ok-sign"></i>맞춤 알람 공연<small>해당 공연과 관련된 티켓오픈, 주요 이벤트/쿠폰 등에 대해 알려드립니다.</small></p>
+                    <div>
+                        <!-- <p style="padding-top: 40px; text-align: center;">'맞춤 알람 공연'으로 설정된 공연이 없습니다.</p> -->
+                        <ul>
+                            <li>
+                                <img src="http://tkfile.yes24.com/upload2/PerfBlog/202007/20200720/20200720-angel_new_36898.jpg">
+                                <input type="checkbox" name="checkbox" class="check">
+                                <strong>뮤지컬 <어쩌면 해피엔딩> 2020</strong>
+                                <span>2020.06.30 ~ 2020.09.13</span>
+                                <span>예스24스테이지 1관</span>
+                                <em>관련공지: <a href="user_notice.html">04</a>개</em>
+                            </li>
+                            <li>
+                                <img src="http://tkfile.yes24.com/upload2/PerfBlog/202007/20200720/20200720-angel_new_36898.jpg">
+                                <input type="checkbox" name="checkbox" class="check">
+                                <strong>뮤지컬 <어쩌면 해피엔딩> 2020</strong>
+                                <span>2020.06.30 ~ 2020.09.13</span>
+                                <span>예스24스테이지 1관</span>
+                                <em>관련공지: <a href="user_notice.html">04</a>개</em>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="buttonbox">
+                    <button class="btn btn-default btn-sm" id="add">알람공연 추가<span>+</span></button>
+                    <input type="button" class="btn btn-default btn-sm" value="전체선택" id="selectall">
+                    <input type="button" class="btn btn-default btn-sm" value="삭제" id="delete">
+                </div>
+                <div id="alarm">
+                    <p><i class="glyphicon glyphicon-ok-sign"></i>티켓오픈 알람<small>티켓 오픈 시간 <span style="text-decoration: underline;">1시간 전</span>에 미리 알려드립니다.</small></p>
+                    <div>
+                        <table id="tbl1">
+                            <thead>
+                                <th>공연</th>
+                                <th>티켓오픈일시</th>
+                                <th>SMS알람일시</th>
+                                <th>상세보기</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">'티켓오픈 알림 SMS 서비스'를 신청한 공연이 없습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <span>※ 티켓오픈 알림 받을 공연을 추가하거나 티켓 오픈 예정 공연 확인은 공지사항을 확인해주세요.</span>
+                    <div id="infobuttonbox">
+                        <button class="btn btn-default btn-sm" id="checknotice">공지사항 확인</button>
+                        <input type="button" class="btn btn-default btn-sm" value="전체선택" id="alarmselectall">
+                        <input type="button" class="btn btn-default btn-sm" value="삭제" id="alarmdelete">
+                    </div>
+                </div>
+                <div id="tips">
+                    <img src="http://tkfile.yes24.com/img/mypage/img_notice.gif">
+                </div>
+            </div>
+            
+            <!-- 챗봇 : 단비봇 -->
+            <div id="frogue-container" class="position-right-bottom"
+                data-chatbot="e4957de9-dad9-448d-a709-e43eeb644f63"
+                data-user="사용자ID"
+                data-init-key="value">
+            </div>
+            <!-- data-init-식별키=값 으로 셋팅하면 챗플로우에 파라미터와 연동가능. 식별키는 소문자만 가능 -->
+            <script>
+                (function(d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'frogue-embed'));
+            </script>
+            <!-- 제일 위로 돌아가기 버튼 -->
+            <div id="movetop">↑</div>
+        </div>
+<!-------------------------------- 화면 하단부 -------------------------------->
+        <div id="bottom">
+            <div style="width: 100%; min-width: 1300px; margin: auto;">
+                <!-- 회사 마크 -->
+                <img src="../images/title2.png" style="transform: translate(0, 40px);">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        //상단 메뉴 css
+        $(".menubar").mouseover(function() {
+            $(this).css("border-bottom", "5px solid orange");
+        });
+        $(".menubar").mouseout(function() {
+            $(this).css("border-bottom", "");
+        });
+        //상단 메뉴 클릭시
+        $(".menubar").click(function() {
+            location.href = $(this).data("lo");
+        });
+
+        //MY공연 클릭 시
+        $("#infohead").click(function() {
+            location.href = "mypage.html";
+        });
+
+        //마이페이지 클릭시 이동
+        $("#mypage").click(function() {
+            location.href = "mypage.html";
+        });
+
+        //유저메뉴 css
+        $(".usermenu").mouseover(function() {
+            $(this).css("color", "#4E7AD1");
+        });
+        $(".usermenu").mouseout(function() {
+            $(this).css("color", "");
+        });
+        //유저메뉴 클릭시 이동
+        $(".usermenu").click(function() {
+            // console.log($(this).data("lo"));
+            location.href = $(this).data("lo");
+        });
+
+        //movetop
+        $("#movetop").click(function() {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        //팝업창 가운데 배치
+        var popupWidth = 900;
+        var popupheight = 650;
+        var popupX = (window.screen.width / 2) - (popupWidth / 2);
+        var popupY = (window.screen.height / 2) - (popupheight / 2);
+        //관심 공연 담기 팝업창
+        $("#add").click(function() {
+            window.open("mypage_interest_popup.html","_black",`left=${popupX}, top=${popupY}, width=${popupWidth}, height=${popupheight};`);
+        });
+
+        //전체선택
+        $("#selectall").click(function() {
+            if ($(".check").prop("checked")) {
+                $(".check").prop("checked", false);
+            } else {
+                $(".check").prop("checked", true);
+            }
+        });
+
+        //삭제
+        $("#delete").click(function() {
+            if (confirm("관심 공연을 삭제하겠습니까?")) {
+                $("input[type='checkbox']:checked").parent().remove();
+            };
+        });
+
+        //공지사항 확인
+        $("#checknotice").click(function() {
+            location.href = "user_notice.html";
+        });
+
+        //회원정보 수정 클릭시
+        $("#btninfo").click(function() {
+            location.href = "mypage_revision.html";
+        });
+
+
+
+    </script>
+
+</body>
+</html>

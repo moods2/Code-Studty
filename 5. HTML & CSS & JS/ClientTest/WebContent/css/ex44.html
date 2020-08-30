@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#list {
+			/* border: 1px solid black; */
+			width: 740px;
+		}
+		#list::after {
+			content: ' ';
+			display: block;
+			clear: both;
+		}
+		#list div {
+			border: 10px solid tomato;
+			width: 128px;
+			height: 128px;
+			float: left;
+			overflow: hidden;
+		}
+		#list div img {
+			transition-property: transform;
+			transition-duration: .7s;
+			transform: translate(128px, 0px);
+		}
+
+		#list div:hover img {
+			/* display: none; */
+			transform: translate(0px, 0px);
+		}
+
+
+
+		#list2 {
+			border: 10px solid royalblue;
+			width: 128px;
+			height: 128px;
+			overflow: hidden;
+		}
+
+		#list2 #content {
+			/* border: 1px solid black; */
+			width: 640px;
+			transition-property: transform;
+			transition-duration: 1s;
+			transition-timing-function: linear;
+		}
+		#list2 #content::after {
+			content: ' ';
+			display: block;
+			clear: both;
+		}
+
+		#list2 #content img {
+			float: left;
+		}
+
+		#list2:hover #content {
+			transform: translate(-512px, 0px);
+		}
+
+	</style>
+</head>
+<body>
+	<!-- ex44.html -->
+
+	<h1>고양이</h1>
+
+	<div id="list">
+		<div><img src="../images/catty01.png"></div>
+		<div><img src="../images/catty02.png"></div>
+		<div><img src="../images/catty03.png"></div>
+		<div><img src="../images/catty04.png"></div>
+		<div><img src="../images/catty05.png"></div>
+	</div>
+
+
+	<h1>고양이</h1>
+
+	<div id="list2">
+		<div id="content"> <!-- 중요 -->
+			<img src="../images/catty01.png">
+			<img src="../images/catty02.png">
+			<img src="../images/catty03.png">
+			<img src="../images/catty04.png">
+			<img src="../images/catty05.png">
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

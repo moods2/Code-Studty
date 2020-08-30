@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/highcharts-3d.js"></script>
+    <style>
+
+        #search {
+            text-align: center;
+            margin-top: 30px;
+        }
+        #txtsearch { padding: 2px 3px; width: 350px; height: 20px; outline: none;}
+        #btnsearch {
+            background-color: #bbb;
+            color: white;
+            font-weight: bold;
+            padding: 2px 10px;
+            border: 1px solid #888;
+            outline: none;
+        }
+        #title {
+            width: 100px;
+            margin: 10px 30px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            background-color: #7A98B4;
+            border-radius: 5px;
+        }
+        #middle {
+            width: 100%;
+            min-height: 470px;
+        }
+        #container {
+            width: 70%;
+            display: inline-block;
+        }
+        #list {
+            display: inline-block;
+            position: relative;
+            left: 20px;
+            bottom: 20px;
+        }
+        .list {
+            margin-bottom: 0px;
+            /* border: 1px solid black; */
+        }
+        .list img {
+            width: 60px;
+            height: 80px;
+        }
+        .list label {
+            font-size: 12px;
+        }
+        .checkbox { display: inline-block; }
+        /* .list label { display: block; } */
+        #footer {
+            text-align: center;
+        }
+        #add, #close {
+            font-weight: bold;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div id="search">
+            <input type="text" id="txtsearch">
+            <button class="btn btn-default btn-sm" id="btnsearch">검색</button>
+        </div>
+        <div id="title">AT's Pick</div>
+        <div id="middle">
+            <div id="container"></div>
+            <div id="list">
+                <div class="list">
+                    <input type="checkbox" class="checkbox" id="one">
+                    <label for="one"><img src="http://tkfile.yes24.com/upload2/perfblog/202007/20200720/20200720-angel_new_36898.jpg"> 1. 뮤지컬 [어쩌면 해피엔딩]</label>
+                </div>
+                <div class="list">
+                    <input type="checkbox" class="checkbox" id="two">
+                    <label for="two"><img src="http://tkfile.yes24.com/upload2/perfblog/202007/20200720/20200720-angel_new_36911.jpg"> 2. 연극 [라스트 세션]</label>
+                </div>
+                <div class="list">
+                    <input type="checkbox" class="checkbox" id="three">
+                    <label for="three"><img src="http://tkfile.yes24.com/upload2/perfblog/202005/20200518/20200518-35152_1.jpg"> 3. 뮤지컬 [오페라의 유령]</label>
+                </div>
+                <div class="list">
+                    <input type="checkbox" class="checkbox" id="four">
+                    <label for="four"><img src="http://tkfile.yes24.com/upload2/perfblog/202007/20200720/20200720-36752_1.jpg"> 4. 뮤지컬 [미아 파밀리아]</label>
+                </div>
+                <div class="list">
+                    <input type="checkbox" class="checkbox" id="five">
+                    <label for="five"><img src="http://tkfile.yes24.com/upload2/perfblog/202007/20200716/20200716-37206_1.jpg"> 5. 팬타스틱 팬미팅 콘서트</label>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <button class="btn btn-default btn-xs" id="add">관심공연 담기 +</button>
+            <button class="btn btn-default btn-xs" id="close">닫기</button>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+    
+        //차트
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column',
+                options3d: {
+                    enabled: true,
+                    alpha: 25,
+                    beta: 15,
+                    viewDistance: 70,
+                    depth: 40
+                }
+            },
+
+            title: {
+                text: 'Top 5 Most-Viewd(M/F)'
+            },
+
+            xAxis: {
+                categories: ['1. 뮤지컬<br><어쩌면 해피엔딩>', '2. 연극 [라스트 세션]', '3. 뮤지컬<br><오페라의 유령>', '4. 뮤지컬<br>[미아 파밀리아]', '5. 팬타스틱<br>팬미팅 콘서트'],
+                labels: {
+                    skew3d: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+
+            yAxis: {
+                allowDecimals: false,
+                min: 0,
+                title: {
+                    text: 'Percentage',
+                    skew3d: true
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<b>{point.key}</b><br>',
+                pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: {point.y} / {point.stackTotal}'
+            },
+
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    depth: 50
+                }
+            },
+
+            series: [{
+                name: '10th ~ 20th 남성',
+                data: [60, 30, 40, 40, 20],
+                stack: 'male'
+            }, {
+                name: '30th ~ 40th 남성',
+                data: [40, 70, 60, 40, 0],
+                stack: 'male'
+            }, {
+                name: '10th ~ 20th 여성',
+                data: [70, 20, 30, 30, 70],
+                stack: 'female'
+            }, {
+                name: '30th ~ 40th 여성',
+                data: [30, 60, 70, 60, 10],
+                stack: 'female'
+            }]
+        });
+
+        //화면 닫기
+        $("#close").click(function() {
+            window.close();
+        });
+
+    </script>
+
+</body>
+</html>

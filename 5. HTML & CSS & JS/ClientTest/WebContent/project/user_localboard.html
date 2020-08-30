@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/slick-theme.css" />
+        <link rel="stylesheet" href="css/slick.css" />
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/Backstretch.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="../../code/highcharts.js"></script>
+        <script src="../../code/modules/exporting.js"></script>
+        <script src="../../code/modules/export-data.js"></script>
+        <script src="../../code/modules/accessibility.js"></script>
+        <style>
+            #chart {
+                width: 800px;
+            }
+
+            * {
+                outline: none;
+            }
+            body {
+                margin: 0 auto;
+            }
+            h1 {
+                font-family: "Arial Black";
+                font-weight: bold;
+            }
+            #main {
+                width: 100%;
+            }
+            #top {
+                /* border: 1px solid black; */
+                min-width: 1600px;
+                height: 650px;
+                margin: 0 auto;
+            }
+            #middle {
+                /* border: 1px solid black; */
+                width: 1600px;
+                margin: 0 auto;
+            }
+            #bottom {
+                /* border: 1px solid black; */
+                height: 200px;
+                background-color: #eee;
+                color: white;
+            }
+            #topmenu {
+                border-bottom: 1px solid #ddd;
+                background-color: transparent;
+                width: 100%;
+                height: 40px;
+                color: black;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 40px 0;
+                position: absolute;
+            }
+            .menubar {
+                margin: 0 5px;
+            }
+            #topmenu > span {
+                cursor: pointer;
+            }
+            #topleft {
+                display: inline-block;
+                /* border: 1px solid white; */
+                width: 100px;
+                height: 65px;
+                background-image: url("../images//title.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                cursor: pointer;
+            }
+            #topright {
+                font-size: 13px;
+                position: absolute;
+                right: 5px;
+                top: 42px;
+                cursor: pointer;
+            }
+            .prev {
+                float: left;
+                padding-left: 20px;
+                cursor: pointer;
+            }
+            .after {
+                float: right;
+                padding-right: 20px;
+                cursor: pointer;
+            }
+            #search {
+                border: 0;
+                border-bottom: 1px solid black;
+                background-color: transparent;
+                outline: none;
+                color: black;
+            }
+            .img {
+                width: 230px;
+                height: 330px;
+                /* border: 1px solid black; */
+                background-color: cornflowerblue;
+                display: inline-block;
+                margin: 10px 0 0 10px;
+                cursor: pointer;
+            }
+            #banner {
+                height: 400px;
+                background-image: url("../images//banner.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin-top: 20px;
+            }
+            #middle input {
+                outline: none;
+            }
+            #movetop {
+                width: 40px;
+                height: 40px;
+                background-color: gray;
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                padding-top: 3px;
+            }
+            #movetop:hover {
+                background-color: orange;
+            }
+            #movetop a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+            #frogue-container,
+            .frogue-chat {
+                position: absolute;
+                left: 20px;
+                bottom: 0;
+            }
+            .recomand {
+                /* border: 1px solid black; */
+                width: 1600px;
+                /* margin-bottom: 20px; */
+                height: 400px;
+                overflow: hidden;
+            }
+            .recomand h1 {
+                padding: 40px;
+            }
+            .rank,
+            .region {
+                display: inline-block;
+                /* border: 1px solid black; */
+                height: 200px;
+                width: 150px;
+                margin-right: 140px;
+                background-color: cornflowerblue;
+                cursor: pointer;
+            }
+            #rankpage {
+                width: 3600px;
+                /* border: 1px solid black; */
+            }
+            .rank:first-child {
+                margin-left: -450px;
+            }
+            .region:last-child {
+                margin-right: 0;
+            }
+            .name {
+                /* border:1px solid black; */
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                position: relative;
+                left: 49px;
+                top: 75px;
+                background-image: url("../images/서울.png");
+                background-position: center center;
+                color: white;
+            }
+
+            .pbar {
+                width: 370px;
+            }
+
+            #title {
+                margin: 0;
+                padding: 20px;
+                padding-top: 35px;
+            }
+
+            #tblList {
+                width: 1400px;
+                margin: 15px auto;
+            }
+
+            #tblList th:nth-child(1) {
+                width: 30px;
+            }
+            #tblList th:nth-child(2) {
+                width: 40px;
+            }
+            #tblList th:nth-child(3) {
+                width: 300px;
+            }
+            #tblList th:nth-child(4) {
+                width: 90px;
+            }
+            #tblList th:nth-child(5) {
+                width: 80px;
+            }
+            #tblList th:nth-child(6) {
+                width: 40px;
+            }
+            #tblList th:nth-child(7) {
+                width: 40px;
+            }
+
+            tblList th,
+            #tblList td {
+                text-align: center;
+            }
+            #tblList td:nth-child(3) {
+                text-align: left;
+            }
+
+            .btns {
+                /* border: 1px solid black; */
+                width: 750px;
+                margin: 0px auto;
+            }
+
+            .btns button:last-child {
+                float: right;
+            }
+            .searchbox {
+                width: 600px;
+                margin: 0 auto;
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+
+            .search {
+                width: 380px;
+                position: relative;
+                left: 600px;
+                top: 0px;
+            }
+
+            .pagebar {
+                text-align: center;
+            }
+            th {
+                text-align: center;
+            }
+
+            .local {
+                display: inline-block;
+                color: #888888;
+                font-size: 18px;
+                font-weight: bold;
+                border-bottom: 5px solid gray;
+                width: 160px;
+                text-align: center;
+            }
+            .btns {
+                /* border: 1px solid black; */
+                width: 750px;
+                margin: 0px auto;
+                margin-bottom: 50px;
+            }
+
+            .btns button {
+                position: relative;
+                left: 300px;
+                bottom: 60px;
+            }
+
+            #container1 {
+                position: relative;
+                width: 800px;
+
+                height: 400px;
+
+                opacity: 0;
+                right: 420px;
+            }
+            #container2 {
+                position: relative;
+                width: 800px;
+                bottom: 400px;
+                opacity: 0;
+                height: 400px;
+                right: 420px;
+            }
+            #container3 {
+                position: relative;
+                width: 800px;
+                bottom: 820px;
+                opacity: 1;
+                height: 400px;
+                right: 420px;
+            }
+
+            .highcharts-figure,
+            .highcharts-data-table table {
+                min-width: 310px;
+                max-width: 800px;
+                margin: 1em auto;
+            }
+
+            .highcharts-data-table table {
+                font-family: Verdana, sans-serif;
+                border-collapse: collapse;
+                border: 1px solid #ebebeb;
+                margin: 10px auto;
+                text-align: center;
+                width: 100%;
+                max-width: 500px;
+            }
+            .highcharts-data-table caption {
+                padding: 1em 0;
+                font-size: 1.2em;
+                color: #555;
+            }
+            .highcharts-data-table th {
+                font-weight: 600;
+                padding: 0.5em;
+            }
+            .highcharts-data-table td,
+            .highcharts-data-table th,
+            .highcharts-data-table caption {
+                padding: 0.5em;
+            }
+            .highcharts-data-table thead tr,
+            .highcharts-data-table tr:nth-child(even) {
+                background: #f8f8f8;
+            }
+            .highcharts-data-table tr:hover {
+                background: #f1f7ff;
+            }
+            .highcharts-figure,
+            .highcharts-data-table table {
+                min-width: 320px;
+                max-width: 800px;
+                margin: 1em auto;
+            }
+
+            .highcharts-data-table table {
+                font-family: Verdana, sans-serif;
+                border-collapse: collapse;
+                border: 1px solid #ebebeb;
+                margin: 10px auto;
+                text-align: center;
+                width: 100%;
+                max-width: 500px;
+            }
+            .highcharts-data-table caption {
+                padding: 1em 0;
+                font-size: 1.2em;
+                color: #555;
+            }
+            .highcharts-data-table th {
+                font-weight: 600;
+                padding: 0.5em;
+            }
+            .highcharts-data-table td,
+            .highcharts-data-table th,
+            .highcharts-data-table caption {
+                padding: 0.5em;
+            }
+            .highcharts-data-table thead tr,
+            .highcharts-data-table tr:nth-child(even) {
+                background: #f8f8f8;
+            }
+            .highcharts-data-table tr:hover {
+                background: #f1f7ff;
+            }
+
+            input[type="number"] {
+                min-width: 50px;
+            }
+
+            #slideItem {
+                /* border: 1px solid orange; */
+                /* border-radius: 20%; */
+                width: 600px;
+                height: 280px;
+                position: relative;
+                /* left: 1100px;
+                bottom: 1150px; */
+                overflow: hidden;
+                z-index: 10;
+            }
+            .slide {
+                /* border: 1px solid red; */
+                height: 280px; /* 이미지 크기 * 이미지 개수 + 여유 */
+                position: absolute;
+            }
+            .slide li {
+                display: block;
+                /* margin-bottom: 130px; */
+                /* position: absolute; */
+            }
+            .slide > li > img {
+                width: 200px;
+                /* position: absolute; */
+                margin-left: -5px;
+            }
+
+            .slide > li > span {
+                font-size: 18px;
+                margin-top: 120px;
+            }
+
+            .slide > li > span:nth-child(1) {
+                margin-left: -20px;
+            }
+            .slide > li > span:nth-child(2) {
+                margin-left: 30px;
+                display: inline-block;
+                width: 70px;
+            }
+            .slide > li > span:nth-child(3) {
+                margin-left: 27px;
+                display: inline-block;
+                width: 100px;
+            }
+            .slide > li > span:last-child {
+                margin-left: 65px;
+                display: inline-block;
+                width: 65px;
+            }
+            #slidebox {
+                /* border: 1px solid gray; */
+                border-left: 1px solid gray;
+                /* background-color: #eeeeee; */
+                padding-left: 80px;
+                width: 600px;
+                height: 400px;
+                position: relative;
+                left: 950px;
+                bottom: 1250px;
+                z-index: 5;
+            }
+            .rankslide th {
+                font-size: 18px;
+                border-bottom: 2px solid orange;
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+            }
+            .rankslide th:nth-child(1){
+                width: 7%;
+                text-align: center;
+
+                
+            }
+            
+            .rankslide th:nth-child(2){
+                text-align: center;
+                width: 15%;
+            }
+            .rankslide th:nth-child(3){
+                text-align: left;
+                padding-left: 35px;
+                width: 27%;
+            }
+            .rankslide th:nth-child(4){
+                text-align: left;
+                padding-left: 45px;
+                width: 37%;
+            }
+            .rankslide th:nth-child(5){
+                width:23%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <!-------------------------------- 화면 상단부 -------------------------------->
+            <div id="top">
+                <div id="topmenu">
+                    <!-- 상단메뉴 좌측(메인화면으로 돌아가기) -->
+                    <a href="#" id="topleft"></a>
+                    <!-- 상단메뉴 센터(콘서트, 뮤지컬, 연극, 클래식, 전시) -->
+                    <span data-lo="user_concert.html" class="menubar"
+                            >콘서트</span
+                        >
+                        <span data-lo="user_musical.html" class="menubar"
+                            >뮤지컬</span
+                        >
+                        <span data-lo="user_theater.html" class="menubar"
+                            >연극</span
+                        >
+                        <span data-lo="user_classic.html" class="menubar"
+                            >클래식</span
+                        >
+                        <span data-lo="user_Exhibition.html" class="menubar"
+                            >전시</span
+                        >
+                    <!-- 상단메뉴 우측(랭킹, 이벤트, 검색창, 마이페이지) -->
+                    <div id="topright">
+                        <span data-item="item6" class="menubar">랭킹</span>
+                        <span data-item="item7" class="menubar">이벤트</span>
+                        <input type="text" value="" id="search" />
+                        <label
+                            for="search"
+                            class="glyphicon glyphicon-search"
+                            style="font-size: 14px; cursor: pointer;"
+                        ></label>
+                        <div
+                            class="glyphicon glyphicon-user"
+                            style="
+                                font-size: 14px;
+                                cursor: pointer;
+                                margin: 0 10px;
+                            "
+                        ></div>
+                    </div>
+                </div>
+                <!-- 메인화면 슬라이더 -->
+
+                <hr />
+                <!-------------------------------- 내용부분 -------------------------------->
+                <p
+                    class="event-main-tit"
+                    style="margin-top: 150px; font-size: 2em;"
+                ></p>
+
+                <h1 style="text-align: center;">예매율</h1>
+                <div
+                    style="
+                        width: 300px;
+
+                        padding-left: 30px;
+                        float: left;
+                        margin-left: 400px;
+                    "
+                >
+                    <input
+                        type="button"
+                        class="btn"
+                        name="btn1"
+                        value="지역별"
+                        id="btn1"
+                    />
+                    <input
+                        type="button"
+                        class="btn"
+                        name="btn2"
+                        value="성별/연령별"
+                        id="btn2"
+                    />
+                    <input
+                        type="button"
+                        class="btn"
+                        name="btn3"
+                        value="장르별"
+                        id="btn3"
+                    />
+                </div>
+                <div>
+                    <div id="chart"></div>
+                    <figure class="highcharts-figure">
+                        <div id="container1"></div>
+                    </figure>
+                    <figure class="highcharts-figure">
+                        <div id="container2"></div>
+                    </figure>
+                    <figure class="highcharts-figure">
+                        <div id="container3"></div>
+                    </figure>
+                </div>
+                <div id="slidebox">
+                    <h3>실시간 공연 예매 랭킹</h4>
+                        <br>
+                    <table class="rankslide" style="border-bottom: 1px solid gray; width: 600px;">
+                        <tr style="padding: 20px 20px;">
+                            <th>순위</th>
+                            <th>장르</th>
+                            <th>제목</th>
+                            <th>포스터</td>
+                            <th>예매율</th>
+                        </tr>
+                    </table>
+                    <div id="slideItem">
+                        <ul class="slide">
+                            <li>
+                                <span>1</span>
+                                <span>뮤지컬</span>
+                                <span>cats</span>
+                                <img src="../images/notice3.jpg" />
+                                <span>3.8%</span>
+                            </li>
+
+                            <li>
+                                <span>2</span>
+                                <span>뮤지컬</span>
+                                <span>베르테르</span>
+                                <img src="../images/notice1.jpg" alt="" />
+                                <span>2.6%</span>
+                            </li>
+                            <li>
+                                <span>3</span>
+                                <span>뮤지컬</span>
+                                <span>레베카</span>
+                                <img src="../images/music11.jpeg" alt="" />
+                                <span>1.8%</span>
+                            </li>
+                            <li>
+                                <span>4</span>
+                                <span>콘서트</span>
+                                <span>팬텀싱어</span>
+                                <img src="../images/consert6.jpeg" />
+                                <span>1.3%</span>
+                            </li>
+                            <li>
+                                <span>5</span>
+                                <span>뮤지컬</span>
+                                <span>머더발라드</span>
+                                <img src="../images/music10.jpeg" alt="" />
+                                <span>1.2%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="event-main-list"></div>
+            <div
+                style="
+                    width: 1200px;
+                    margin: 80px auto;
+                    margin-bottom: -50px;
+                    padding-left: 20px;
+                "
+            >
+                <div class="local">전체</div>
+                <div class="local">서울</div>
+                <div class="local">경기/인천</div>
+                <div class="local">대전/충청/강원</div>
+                <div class="local">부산/대구/울산/경상</div>
+                <div class="local">광주/전라</div>
+                <div class="local">제주</div>
+            </div>
+
+            <!-- 검색창 -->
+            <div class="searchbox">
+                <span
+                    style="position: relative; top: 40px; right: 380px;"
+                    class="noticemenu"
+                    >등록순</span
+                >
+                <span
+                    style="position: relative; top: 40px; right: 380px;"
+                    class="noticemenu"
+                    >인기순</span
+                >
+                <span
+                    style="position: relative; top: 40px; right: 380px;"
+                    class="noticemenu"
+                    >조회순</span
+                >
+                <div class="search">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="검색"
+                            />
+                            <span class="input-group-addon"
+                                ><i class="glyphicon glyphicon-search"></i
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table id="tblList" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>태그</th>
+                        <th>제목</th>
+                        <th>이름</th>
+                        <th>날짜</th>
+                        <th>읽음</th>
+                        <th>좋아요</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15</td>
+                        <td>후기</td>
+                        <td>뮤지컬 [베르테르] 후기</td>
+                        <td>홍길동</td>
+                        <td>2020-07-15</td>
+                        <td>11</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>후기</td>
+                        <td>그랜드 민트 페스티벌 후기.</td>
+                        <td>아무개</td>
+                        <td>2020-07-14</td>
+                        <td>65</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>후기</td>
+                        <td>님들 오페라의 유령 봄?</td>
+                        <td>호호호</td>
+                        <td>2020-07-11</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>잡담</td>
+                        <td>티켓팅 실패 ㅠㅠ 방탄소년단 티켓 삽니다~</td>
+                        <td>홍길동</td>
+                        <td>2020-07-15</td>
+                        <td>11</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>잡담</td>
+                        <td>싸이 흠뻑쇼 가보신분들 어떤가요?</td>
+                        <td>아무개</td>
+                        <td>2020-07-14</td>
+                        <td>65</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>잡담</td>
+                        <td>서울 볼만한 전시회 추천좀 해주세요</td>
+                        <td>호호호</td>
+                        <td>2020-07-11</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>잡담</td>
+                        <td>디디피에서 요즘 전시회 안하나요?</td>
+                        <td>홍길동</td>
+                        <td>2020-07-15</td>
+                        <td>11</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>잡담</td>
+                        <td>뮤지컬 [캣츠] 40주년 오리지널 내한공연 후기!!!</td>
+                        <td>아무개</td>
+                        <td>2020-07-14</td>
+                        <td>65</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>잡담</td>
+                        <td>뮤지컬 [머더 발라드] 후기!!!</td>
+                        <td>호호호</td>
+                        <td>2020-07-11</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>잡담</td>
+                        <td>에미넴 콘서트 보고싶다</td>
+                        <td>홍길동</td>
+                        <td>2020-07-15</td>
+                        <td>11</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>잡담</td>
+                        <td>손열음 공연 어떤가요?</td>
+                        <td>아무개</td>
+                        <td>2020-07-14</td>
+                        <td>65</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>잡담</td>
+                        <td>마마미아 내한 계획 아시는분></td>
+                        <td>호호호</td>
+                        <td>2020-07-11</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>잡담</td>
+                        <td>뮤지컬 [머더 발라드] 후기</td>
+                        <td>홍길동</td>
+                        <td>2020-07-15</td>
+                        <td>11</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>잡담</td>
+                        <td>뮤지컬 [무인도 탈출기] 후기.</td>
+                        <td>아무개</td>
+                        <td>2020-07-14</td>
+                        <td>65</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>잡담</td>
+                        <td>레미제라블 재밌습니다 ^^</td>
+                        <td>호호호</td>
+                        <td>2020-07-11</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <nav class="pagebar">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="btns">
+                <button class="btn btn-primary">
+                    <span class="glyphicon glyphicon-ok"></span>글쓰기
+                </button>
+            </div>
+            <!-------------------------------- 화면 하단부 -------------------------------->
+            <div id="bottom">
+                <div style="width: 1600px; margin: auto;">
+                    <!-- 회사 마크 -->
+                    <img
+                        src="../images/title2.png"
+                        style="transform: translate(0, 40px);"
+                    />
+                    <!-- 챗봇 : 단비봇 -->
+                        <div
+                            id="frogue-container"
+                            class="position-right-bottom"
+                            data-chatbot="e4957de9-dad9-448d-a709-e43eeb644f63"
+                            data-user="사용자ID"
+                            data-init-key="value"
+                        ></div>
+                        <!-- data-init-식별키=값 으로 셋팅하면 챗플로우에 파라미터와 연동가능. 식별키는 소문자만 가능 -->
+                        <script>
+                            (function (d, s, id) {
+                                var js,
+                                    fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) {
+                                    return;
+                                }
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src =
+                                    "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            })(document, "script", "frogue-embed");
+                        </script>
+                        <!-- 제일 위로 돌아가기 버튼 -->
+                        <div id="movetop">↑</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/slick.min.js"></script>
+        <script>
+            //상단 메뉴 css
+            $(".menubar").mouseover(function () {
+                $(this).css("border-bottom", "5px solid orange");
+            });
+            $(".menubar").mouseout(function () {
+                $(this).css("border-bottom", "");
+            });
+            //상단 메뉴 클릭시
+            $(".menubar").click(function () {
+                location.href = $(this).data("lo");
+            });
+
+            $(".noticemenu").mouseover(function () {
+                $(this).css("border-top", "5px solid orange");
+                $(this).css("color", "black");
+                $(this).css("font-weight", "bold");
+            });
+            $(".noticemenu").mouseout(function () {
+                $(this).css("border-top", "");
+                $(this).css("color", "gray");
+                $(this).css("font-weight", "none");
+            });
+            $(".local").mouseover(function () {
+                $(this).css("border-bottom", "5px solid orange");
+                $(this).css("color", "black");
+                $(this).css("font-weight", "bold");
+            });
+            $(".local").mouseout(function () {
+                $(this).css("border-bottom", "5px solid gray");
+                $(this).css("color", "gray");
+                $(this).css("font-weight", "none");
+            });
+        </script>
+        <script type="text/javascript">
+            Highcharts.chart("container1", {
+                title: {
+                    text: "예매수",
+                },
+
+                subtitle: {
+                    text: "일별 추이",
+                },
+
+                yAxis: {
+                    title: {
+                        text: "예매수",
+                    },
+                },
+
+                xAxis: {
+                    accessibility: {
+                        rangeDescription: "Range: 2010 to 2017",
+                    },
+                },
+
+                legend: {
+                    layout: "vertical",
+                    align: "right",
+                    verticalAlign: "middle",
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false,
+                        },
+                        pointStart: 1,
+                    },
+                },
+
+                series: [
+                    {
+                        name: "서울",
+                        data: [70, 69, 71, 73, 75, 78, 82, 78, 75, 73, 70, 68],
+                    },
+                    {
+                        name: "경기/인천",
+                        data: [40, 29, 24, 33, 42, 39, 32, 41, 51, 55, 58, 52],
+                    },
+                    {
+                        name: "대전/충청/강원",
+                        data: [45, 49, 34, 43, 52, 59, 42, 41, 30, 45, 38, 32],
+                    },
+                    {
+                        name: "부산/대구/울산/경상",
+                        data: [65, 69, 74, 73, 72, 69, 72, 71, 70, 65, 68, 62],
+                    },
+                ],
+
+                responsive: {
+                    rules: [
+                        {
+                            condition: {
+                                maxWidth: 500,
+                            },
+                            chartOptions: {
+                                legend: {
+                                    layout: "horizontal",
+                                    align: "center",
+                                    verticalAlign: "bottom",
+                                },
+                            },
+                        },
+                    ],
+                },
+            });
+        </script>
+        <script type="text/javascript">
+            // Data gathered from http://populationpyramid.net/germany/2015/
+
+            // Age categories
+            var categories = [
+                "10-14",
+                "15-19",
+                "20-24",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-64",
+                "65-69",
+                "70-74",
+                "75-79",
+                "80-84",
+                "85-89",
+            ];
+
+            Highcharts.chart("container2", {
+                chart: {
+                    type: "bar",
+                },
+                title: {
+                    text: "성별/연령별 예매율  통계",
+                },
+                subtitle: {
+                    text: "At-Ticket.com",
+                },
+                accessibility: {
+                    point: {
+                        valueDescriptionFormat:
+                            "{index}. Age {xDescription}, {value}%.",
+                    },
+                },
+                xAxis: [
+                    {
+                        categories: categories,
+                        reversed: false,
+                        labels: {
+                            step: 1,
+                        },
+                        accessibility: {
+                            description: "나이 (남)",
+                        },
+                    },
+                    {
+                        // mirror axis on right side
+                        opposite: true,
+                        reversed: false,
+                        categories: categories,
+                        linkedTo: 0,
+                        labels: {
+                            step: 1,
+                        },
+                        accessibility: {
+                            description: "나이 (여자)",
+                        },
+                    },
+                ],
+                yAxis: {
+                    title: {
+                        text: null,
+                    },
+                    labels: {
+                        formatter: function () {
+                            return Math.abs(this.value) + "%";
+                        },
+                    },
+                    accessibility: {
+                        description: "Percentage population",
+                        rangeDescription: "Range: 0 to 5%",
+                    },
+                },
+
+                plotOptions: {
+                    series: {
+                        stacking: "normal",
+                    },
+                },
+
+                tooltip: {
+                    formatter: function () {
+                        return (
+                            "<b>" +
+                            this.series.name +
+                            ", age " +
+                            this.point.category +
+                            "</b><br/>" +
+                            "Population: " +
+                            Highcharts.numberFormat(Math.abs(this.point.y), 1) +
+                            "%"
+                        );
+                    },
+                },
+
+                series: [
+                    {
+                        name: "남",
+                        data: [
+                            -2.2,
+                            -2.4,
+                            -2.7,
+                            -3.0,
+                            -3.3,
+                            -3.2,
+                            -2.9,
+                            -3.5,
+                            -4.4,
+                            -4.1,
+                            -3.4,
+                            -2.7,
+                            -2.3,
+                            -2.2,
+                            -1.6,
+                            -0.6,
+                        ],
+                    },
+                    {
+                        name: "여",
+                        data: [
+                            2.1,
+                            2.3,
+                            2.6,
+                            2.9,
+                            3.2,
+                            3.1,
+                            2.9,
+                            3.4,
+                            4.3,
+                            4.0,
+                            3.5,
+                            2.9,
+                            2.5,
+                            2.7,
+                            2.2,
+                            1.1,
+                        ],
+                    },
+                ],
+            });
+        </script>
+        <script>
+            Highcharts.chart("container3", {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: "pie",
+                },
+                title: {
+                    text: "장르별",
+                },
+                tooltip: {
+                    pointFormat:
+                        "{series.name}: <b>{point.percentage:.1f}%</b>",
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: "%",
+                    },
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: "pointer",
+                        dataLabels: {
+                            enabled: true,
+                            format:
+                                "<b>{point.name}</b>: {point.percentage:.1f} %",
+                        },
+                    },
+                },
+                series: [
+                    {
+                        name: "Brands",
+                        colorByPoint: true,
+                        data: [
+                            {
+                                name: "콘서트",
+                                y: 61.41,
+                                sliced: true,
+                                selected: true,
+                            },
+                            {
+                                name: "뮤지컬",
+                                y: 13.48,
+                            },
+                            {
+                                name: "전시",
+                                y: 12.45,
+                            },
+                            {
+                                name: "클래식",
+                                y: 5.87,
+                            },
+                            {
+                                name: "연극",
+                                y: 6.79,
+                            },
+                        ],
+                    },
+                ],
+            });
+
+            
+        </script>
+        <script>
+            $("#btn1").mousedown(function () {
+                console.log(1);
+                $("#container3").css("opacity", "0");
+                $("#container2").css("opacity", "0");
+                $("#container1").css("opacity", "1");
+            });
+            $("#btn2").mousedown(function () {
+                $("#container1").css("opacity", "0");
+                $("#container2").css("opacity", "1");
+                $("#container3").css("opacity", "0");
+            });
+            $("#btn3").mousedown(function () {
+                $("#container1").css("opacity", "0");
+                $("#container2").css("opacity", "0");
+                $("#container3").css("opacity", "1");
+            });
+        </script>
+        <script>
+            //실시간 공연 예매 랭킹
+            var idx = 0; // 함수 호출 횟수
+            var i = 0; // 이미지 인덱스
+            var imgNum = 5; // 이미지 개수
+            var imgSize = 280; // 이미지 크기
+
+            var imgs = [
+                "notice3.jpg",
+                "notice1.jpg",
+                "music11.jpeg",
+                "consert6.jpeg",
+                "music10.jpeg",
+            ];
+            var category = [
+                "<span>뮤지컬</span>",
+                "<span>뮤지컬</span>",
+                "<span>뮤지컬</span>",
+                "<span>콘서트</span>",
+                "<span>뮤지컬</span>",
+            ];
+            var titles = [
+                "<span>cats</span>",
+                "<span>베르테르</span>",
+                "<span>레베카</span>",
+                "<span>팬텀싱어</span>",
+                "<span>머더발라드</span>",
+            ];
+            var booking = [
+                "<span>3.8%</span>",
+                "<span>2.6%</span>",
+                "<span>1.8%</span>",
+                "<span>1.3%</span>",
+                "<span>1.2%</span>",
+            ];
+
+            function imgSlide() {
+                idx++;
+                if (i > 4) {
+                    i = 0;
+                }
+                $(".slide").css({ top: "-20px" });
+                $(".slide")
+                    .stop()
+                    .animate({ top: -imgSize + "px" }, "slow");
+
+                if (idx > 1) {
+                    $(".slide>li:first").remove();
+
+                    $(".slide").append(
+                        "<li><span>" +
+                            (i + 1) +
+                            "</span>" +
+                            category[i] +
+                            titles[i] +
+                            '<img style="margin-left:5px" src="../images/' +
+                            imgs[i] +
+                            '" alt="">' +
+                            booking[i] +
+                            "</li>"
+                    );
+                    i++;
+                }
+            }
+            // 3초에 한번 함수를 실행
+            setInterval(function () {
+                imgSlide();
+            }, 4000);
+        </script>
+    </body>
+</html>

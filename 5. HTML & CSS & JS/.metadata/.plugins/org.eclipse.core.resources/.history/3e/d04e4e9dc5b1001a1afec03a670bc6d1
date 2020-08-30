@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>물리적 모양을 지정하는 태그(의미는 중요하지 않음)</h1>
+	일반 텍스트입니다.<br>
+	<b>볼드체입니다.</b>
+	
+	<h1>의미를 지정하는 태그(출력 모양은 중요하지 않음)</h1>
+
+</body>
+</html>

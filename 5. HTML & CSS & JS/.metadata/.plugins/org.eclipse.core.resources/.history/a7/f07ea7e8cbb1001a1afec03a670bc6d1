@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		List, 목록
+		
+		1. <ol>
+			- 순서가 있는 목록
+			- Ordered List
+		2. <ul>
+			- 순서가 없는 목록
+			- Unordered List
+		3. <li>
+			- 목록의 항목
+			- List Item
+	
+	 -->
+	 
+	 <h1>오늘의 할일</h1>
+	 
+	 <ol type="A">
+	 	<li>HTML 복습하기</li>
+	 	<li>마트 장보기
+	 		<ol type="a">
+	 			<li>돼지 고기</li>
+	 			<li>고추장</li>
+	 			<li>과자</li>
+	 		</ol>
+	 	</li>
+	 	<li>강아지 산책시키기</li>
+	 	<li>교재 정리하기</li>	 	
+	 </ol>
+	 
+	 <h1>오늘의 할일</h1>
+	 
+	 <ul>
+	 	<li>HTML 복습하기</li>
+	 	<li>마트 장보기</li>
+	 	<li>강아지 산책시키기</li>
+	 	<li>교재 정리하기</li>	 	
+	 </ul>
+	 
+	 
+	 
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
