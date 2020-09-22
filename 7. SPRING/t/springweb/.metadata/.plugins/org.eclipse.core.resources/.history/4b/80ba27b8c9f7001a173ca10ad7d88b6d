@@ -1,0 +1,21 @@
+package com.test.spring;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Ex06Controller {
+
+	@RequestMapping(value="/ex06.action")
+	public String call() {
+		
+		return "ex06";
+	}
+	
+	@RequestMapping(value="/ex06ok.action")
+	public void callok() {
+		
+		System.out.println("호출댐~");
+	}
+	
+}

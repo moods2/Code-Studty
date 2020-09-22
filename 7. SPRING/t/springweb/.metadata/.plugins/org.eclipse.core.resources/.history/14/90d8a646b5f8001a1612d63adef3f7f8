@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1// EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- 타일즈 레이아웃 정의 -->
+	<definition name="*" template="/WEB-INF/views/layout/main.jsp">
+		<put-attribute name="asset" value="/WEB-INF/views/inc/asset.jsp"></put-attribute>
+		<put-attribute name="mainmenu" value="/WEB-INF/views/inc/mainmenu.jsp"></put-attribute>
+		<put-attribute name="membermenu" value="/WEB-INF/views/inc/membermenu.jsp"></put-attribute>
+		<put-attribute name="info" value="/WEB-INF/views/member/point.jsp"></put-attribute>
+		
+	</definition>
+
+</tiles-definitions>

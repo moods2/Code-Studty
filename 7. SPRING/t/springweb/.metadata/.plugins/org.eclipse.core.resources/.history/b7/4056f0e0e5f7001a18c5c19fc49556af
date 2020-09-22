@@ -1,0 +1,25 @@
+package com.test.spring;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+public class MemoDAO {
+	
+	//JDBC -> Spring JDBC 사용
+	
+	private DriverManagerDataSource dataSource; //Connection 역할
+	private JdbcTemplate template; //Statement + ResultSet 역할
+	
+	public MemoDAO() {
+		//DB 연결
+		this.dataSource = new DriverManagerDataSource();
+		this.dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		this.dataSource.setUrl("jdbc:oracle:thin:@yoginolja.ccyezlxmksh2.ap-northeast-2.rds.amazonaws.com:1521:orcl");
+		this.dataSource.setUsername("yoginolja");
+		this.dataSource.setPassword("1234");
+	}
+	
+	//template 생성
+	this.template = new JdbcTemplate(this.dataSource);
+
+}

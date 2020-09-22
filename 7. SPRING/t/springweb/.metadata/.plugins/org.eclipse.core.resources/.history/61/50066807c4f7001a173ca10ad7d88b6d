@@ -1,0 +1,31 @@
+package com.test.spring;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Ex05Controller {
+	
+	//글쓰기(add + addok)
+	
+	@RequestMapping(value="/board/add.action")
+	public String add() {
+	
+		return "ex05";
+	}
+	
+	//스프링 MVC -> 전송된 데이터를 수신하는 방법!!!
+	@RequestMapping(value="/board/addok.action")
+	public void addok() {
+		
+		//현재 상황
+		//1. 데이터 가져오기
+		//2. DTO 포장
+		//3. DAO 호출 + DTO 전달 -> insert
+		//4. 마무리
+		
+		//방법1. 기존에 사용하던 방식 -> request
+		
+	}
+	
+}

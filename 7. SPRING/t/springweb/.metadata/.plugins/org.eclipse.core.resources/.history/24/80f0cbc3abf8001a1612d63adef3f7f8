@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="/spring/resources/css/bootstrap.css">
+<link rel="stylesheet" href="/spring/resources/css/main.css">
+<script src="/spring/resources/js/bootstrap.js"></script>
+
+</head>
+<body>
+	<main>
+		<div id="mainmenu">
+			<a href="#!">홈</a>
+			<a href="/spring/member/info.action">회원</a>
+			<a href="/spring/admin/log.action">관리자</a>
+			<a href="#!">고객센터</a>
+			<a href="#!">쇼핑몰</a>
+		</div>
+		<div id="submenu">
+			<a href="/spring/member/info.action">본인정보</a><br>
+			<a href="/spring/member/point.action">포인트</a><br>
+			<a href="/spring/member/board.action">게시판</a><br>
+		</div>
+		<div id="content">
+			
+			<h1>회원 페이지</h1>
+			
+			<p>회원 본인 정보를 확인합니다</p>
+			
+		</div>
+	</main>
+</body>
+</html>

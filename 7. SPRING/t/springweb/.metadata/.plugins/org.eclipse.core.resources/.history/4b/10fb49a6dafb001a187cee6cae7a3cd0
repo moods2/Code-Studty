@@ -1,0 +1,52 @@
+package com.test.spring;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class BoardDAO implements IBoardDAO{
+	
+	//BoardController -> BoardDAO -> sqlSessionTemplate
+	@Autowired
+	private SqlSessionTemplate template;
+
+	@Override
+	public int add(BoardDTO dto) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<BoardDTO> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BoardDTO view(String seq) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int edit(BoardDTO dto) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(String seq) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<CategoryDTO> clist() {
+		// TODO Auto-generated method stub
+		return template.selectList("board.clist");
+	}
+
+}

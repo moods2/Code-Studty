@@ -1,0 +1,20 @@
+스프링 게시판
+- Spring MVC + MyBatis + Tiles + Spring File Upload + log4j
+- Spring MVC + MyBatis
+
+
+1. 프로젝트 생성
+	- new > Other > Spring > Spring Legacy Project > Spring MVC Project > "SpringBoard" > "com.test.spring"
+	
+2. 스프링 버전
+	- JAVA : 1.8
+	- Spring : 4.3.8
+	
+3. 라이브러리
+	- pom.xml
+	- JDBC(WEB-INF/lib)
+	- MyBatis
+	- Tiles
+	- File Upload
+	- log4j
+	- lombok

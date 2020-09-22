@@ -1,0 +1,13 @@
+package com.test.spring;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+public class MemoDAO {
+	
+	//JDBC -> Spring JDBC 사용
+	
+	private DriverManagerDataSource dataSource;
+	private JdbcTemplate template;
+
+}

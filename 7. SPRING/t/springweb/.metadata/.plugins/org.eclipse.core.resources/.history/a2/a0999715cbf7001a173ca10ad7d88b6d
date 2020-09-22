@@ -1,0 +1,12 @@
+메모장
+- Spring MVC + Spring JDBC + Lombok
+
+프로젝트 세팅
+
+1. 자바 + 스프링 버전 바꾸기
+
+2. pom.xml
+	- 프로젝트에 필요한 jar 파일을 관리
+	- ojdbc,jar
+	- spring-jdbc.jar
+	- lombok.jar

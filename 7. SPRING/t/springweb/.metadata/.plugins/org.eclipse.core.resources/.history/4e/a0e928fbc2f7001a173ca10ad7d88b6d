@@ -1,0 +1,22 @@
+package com.test.spring;
+
+public class BoardDTO {
+	
+	//중요
+	private String subject;
+	private String content;
+	private String name;
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+}

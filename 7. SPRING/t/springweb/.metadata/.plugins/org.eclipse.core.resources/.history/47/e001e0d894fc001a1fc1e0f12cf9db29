@@ -1,0 +1,15 @@
+package com.test.spring;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class AOPController {
+	
+	
+	//AOPController - Service - DAO - SqlSessionTemplate(Mybatis)
+	@Autowired
+	private IService service;
+	
+
+}

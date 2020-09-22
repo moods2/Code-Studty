@@ -1,0 +1,30 @@
+package com.test.spring;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
+
+//1. 컨트롤러 선언
+public class Ex03Controller implements Controller{
+
+	//2. 요청 메소드(doGet, doPost)
+	@Override
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		//3. 업무 구현
+		int count = 100;
+		
+		//4. JSP 호출하기
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("count",count); //request.setAttribute("count",count);
+		
+		mv.setViewName("ex03");
+		
+		
+		return mv;
+	}
+
+}

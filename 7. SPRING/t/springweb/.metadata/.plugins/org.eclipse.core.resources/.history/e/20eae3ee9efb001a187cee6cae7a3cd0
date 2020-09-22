@@ -1,0 +1,4 @@
+스프링 게시판
+
+1. 프로젝트 생성
+	- new > Other > Spring > Spring Legacy Project > Spring MVC Project > "SpringBoard" > "com.test.spring"

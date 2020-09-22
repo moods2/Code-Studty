@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+
+	<select id="clist" resultType="cdto">
+		select * from tblCategory order by seq asc
+	</select>
+	
+	<insert id="add" parameterType="bdto">
+		insert into tblCode (seq, subject, content, filename, regdate, cseq)
+			values (seqCode.nextVal, #{subject}, #{content}, #{filename}, default, #{cseq})
+	</insert>
+	
+	<select id="list" resultType="bdto">
+		select seq, subject, regdate, cseq, 
+			(select name from tblCategory where seq = c.cseq) as cname, 
+			(select type from tblCategory where seq = c.cseq) as ctype
+			from tblCode c
+				order by seq desc
+	</select>
+	
+	<select id="get" parameterType="String" resultType="bdto">
+		select seq, subject, regdate, cseq, content, filename,
+			(select name from tblCategory where seq = c.cseq) as cname, 
+			(select type from tblCategory where seq = c.cseq) as ctype
+			from tblCode c
+				where seq = #{seq}
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

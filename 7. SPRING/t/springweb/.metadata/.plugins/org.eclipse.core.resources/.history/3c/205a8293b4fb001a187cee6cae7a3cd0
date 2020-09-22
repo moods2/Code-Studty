@@ -1,0 +1,12 @@
+package com.test.spring;
+
+public class BoardDTO {
+	
+	private String seq;
+	private String subject;
+	private String content;
+	private String filename;
+	private String regdate;
+	private String cseq;
+
+}

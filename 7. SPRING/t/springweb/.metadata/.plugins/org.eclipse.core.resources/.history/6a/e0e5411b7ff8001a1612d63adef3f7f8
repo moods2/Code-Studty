@@ -1,0 +1,62 @@
+package com.test.spring;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.stereotype.Repository;
+
+@Repository //@Autowired에 의해서 객체를 생성하겠습니다. -자격 부여
+public class MemoDAO implements IMemo{
+	
+	//JDBC -> Spring JDBC 사용
+	
+	private DriverManagerDataSource dataSource; //Connection 역할
+	private JdbcTemplate template; //Statement + ResultSet 역할
+	
+	public MemoDAO() {
+		//DB 연결
+		this.dataSource = new DriverManagerDataSource();
+		this.dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		this.dataSource.setUrl("jdbc:oracle:thin:@yoginolja.ccyezlxmksh2.ap-northeast-2.rds.amazonaws.com:1521:orcl");
+		this.dataSource.setUsername("yoginolja");
+		this.dataSource.setPassword("1234");
+		
+		//template 생성
+		this.template = new JdbcTemplate(this.dataSource);
+		
+//		try {
+//			System.out.println(this.dataSource.getConnection().isClosed());
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+	}
+
+	@Override
+	public int add(MemoDTO dto) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<MemoDTO> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int edit(MemoDTO dto) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int del(String seq) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+
+}

@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!-- adminmenu.jsp -->
+<div id="submenu">
+	<a href="/spring/admin/info.action">로그</a><br>
+	<a href="/spring/admin/point.action">회원관리</a><br>
+	<a href="/spring/admin/board.action">차트</a><br>
+</div>
+    

@@ -1,0 +1,25 @@
+package com.test.spring;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+//보조업무 객체
+@Aspect
+@Component
+public class Auth {
+	
+	//주업무 메소드 > 포인트컷
+	@Pointcut("execution(public String AOPController.member(..)")
+	public void pc1() {
+		
+	}
+	
+	//Weaving = 보조업무 + 주업무
+	@Before("pc1()")
+	public void check() {
+		System.out.println("인증을 확인합니다.");
+	}
+
+}

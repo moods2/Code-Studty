@@ -1,0 +1,17 @@
+package com.test.spring;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Ex05Controller {
+	
+	//글쓰기(add + addok)
+	
+	@RequestMapping(value-"/board/add.action")
+	public String add() {
+	
+		return "ex05";
+	}
+
+}

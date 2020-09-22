@@ -1,0 +1,22 @@
+package com.test.spring;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class BoardController {
+
+	//요청 메소드(URL)
+	@RequestMapping(value = "/template.action", method = { RequestMethod.GET })
+	public String template(HttpServletRequest request, HttpServletResponse response) {
+
+		
+		//타일즈 레이아웃 설정 파일(WEB-INF/tiles.xml) -> <definition>의 이름
+		return "template";
+	}
+	
+}

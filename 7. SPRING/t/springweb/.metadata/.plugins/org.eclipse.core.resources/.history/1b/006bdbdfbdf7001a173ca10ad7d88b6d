@@ -1,0 +1,18 @@
+package com.test.spring;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+/* @RequestMapping(value = "/list.action") */
+public class BoardController {
+
+	//글 목록
+	@RequestMapping(value = "/list.action")
+	public String list() {
+		
+		return "list"; 
+		
+	}
+	
+}

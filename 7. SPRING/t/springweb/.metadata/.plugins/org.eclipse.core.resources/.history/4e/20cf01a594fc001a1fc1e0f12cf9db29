@@ -1,0 +1,6 @@
+package com.test.spring;
+
+@org.springframework.stereotype.Service
+public class Service implements IService{ 
+
+}

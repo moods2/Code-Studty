@@ -1,0 +1,251 @@
+package com.test.spring;
+
+import java.io.File;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Scanner;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+@Controller
+public class BoardController {
+	
+	//BoardController -> BoardDAO -> SqlSessionTemplate
+	@Autowired
+	private IBoardDAO dao;
+	
+	
+	//요청 메소드(URL)
+	@RequestMapping(value = "/template.action", method = { RequestMethod.GET })
+	public String template(HttpServletRequest request, HttpServletResponse response) {
+
+		//타일즈 레이아웃 설정 파일(WEB-INF/tiles.xml) -> <definition>의 이름		
+		return "template";
+	}
+	
+	
+	@RequestMapping(value = "/add.action", method = { RequestMethod.GET })
+	public String add(HttpServletRequest request, HttpServletResponse response) {
+
+		//글쓰기
+		//1. DB 작업 -> select
+		//2. 카테고리 목록 -> JSP 전달
+		
+		//1.
+		List<CategoryDTO> clist = dao.clist();
+		
+		//2.
+		request.setAttribute("clist", clist);		
+
+		return "add";
+		
+	}//add.action
+	
+	
+	@RequestMapping(value = "/addok.action", method = { RequestMethod.POST })
+	public void addok(HttpServletRequest request, HttpServletResponse response, BoardDTO dto) {
+
+		
+		//1. 데이터 가져오기
+		//2. 업로드 파일 처리
+		//3. DB 작업 -> insert
+		//4. 결과 통보
+		
+		//System.out.println(dto);
+		
+		//<form enctype="X">  -> request(HttpServletRequest)
+		//<form enctype="multipart.."> -> request(MultipartHttpServletRequest)
+		
+		MultipartHttpServletRequest multi = (MultipartHttpServletRequest)request;
+		
+		//첨부 파일
+		// - <input type="file" name="attach">
+		MultipartFile attach = multi.getFile("attach"); //첨부 파일 객체 참조
+		
+		//System.out.println(attach.getName());
+		//System.out.println(attach.getOriginalFilename()); //DB에 추가
+		//System.out.println(attach.getSize());
+		//System.out.println(attach.getContentType());
+		
+		//webapp > files 폴더 생성
+		
+		//첨부된 파일을 임시 폴더에서 files 폴더로 이동하기
+		
+		try {
+			
+			
+			//첨부파일명
+			String filename = attach.getOriginalFilename();
+			
+			//중복되지 않은 파일명 만들어서 반환(뒤에 숫자 붙이기)
+			filename = getFileName(request.getRealPath("files"), filename);
+			
+			
+			//P:\class\springweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SpringBoard\files\계층구조.png
+			File file = new File(request.getRealPath("files") + "\\" + filename);
+			//System.out.println(file.getAbsolutePath());
+			
+			attach.transferTo(file); //임시 폴더 -> files 폴더로 파일을 이동한다. -> 파일 업로드 완료
+			
+			
+			dto.setFilename(filename); //방금 업로드한 파일명을 DTO에도 추가하기
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		
+		//글쓰기(DAO)
+		int result = dao.add(dto);
+		
+		complete(result, response, "list.action");		
+		
+	}
+
+
+	private void complete(int result, HttpServletResponse response, String url) {
+		
+		try {
+			
+			response.setCharacterEncoding("UTF-8");
+			
+			PrintWriter writer = response.getWriter();
+			
+			writer.print("<html>");
+			writer.print("<head>");
+			writer.print("<meta charset='UTF-8'>");
+			writer.print("</head>");
+			writer.print("<body>");
+			writer.print("<script>");
+			
+			if (result == 1) {
+				writer.printf("location.href='/spring/%s';", url);
+			} else if (result == 0){
+				writer.print("alert('실패'); history.back();");
+			}			
+			
+			writer.print("</script>");
+			writer.print("</body>");
+			writer.print("</html>");
+			
+			writer.close();
+			
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+	}
+
+
+	private String getFileName(String realPath, String filename) {
+		
+		//중복된 파일명 -> 뒤에 숫자 붙이기 -> "test.java" -> "test1.java" or "test(1).java"
+		int n = 1;
+		int index = filename.lastIndexOf(".");
+		
+		String name = filename.substring(0, index); //"test"
+		String ext = filename.substring(index); //".java"
+		
+		//중복 검사
+		while (true) {
+			
+			File file = new File(realPath + "\\" + filename);
+			
+			if (file.exists()) {
+				//이미 같은 이름의 파일이 있음
+				filename = name + "(" + n + ")" + ext; //test(1).java -> test(2).java
+				n++;
+			} else {
+				//같은 이름 파일 없음
+				return file.getName(); //중복이 안된다고 결정된 파일명
+			}
+			
+		}
+		
+	}//getFileName
+	
+	
+	
+	
+	@RequestMapping(value = "/list.action", method = { RequestMethod.GET })
+	public String list(HttpServletRequest request, HttpServletResponse response) {
+
+		//목록 보기
+		//1. DB 작업 -> select
+		//2. 목록 반환 -> JSP 전달하기
+		
+		List<BoardDTO> list = dao.list();
+		
+		request.setAttribute("list", list);
+
+		return "list";
+	}//list.action
+	
+	
+	@RequestMapping(value = "/view.action", method = { RequestMethod.GET })
+	public String view(HttpServletRequest request, HttpServletResponse response, String seq) {
+
+		//글 보기
+		//1. 데이터 가져오기(seq)
+		//2. DB 작업 -> select.. where..
+		//3. BoardDTO 반환 -> JSP 호출하기
+		
+		BoardDTO dto = dao.get(seq);
+		
+		
+		//DTO 추가 처리
+		String content = dto.getContent();
+		content = content.replace("\r\n", "<br>");
+		dto.setContent(content);
+		
+		//첨부 파일 내용 읽기
+		String temp = "";
+		try {
+			Scanner scan = new Scanner(new File(request.getRealPath("files") + "\\" + dto.getFilename()));
+			
+			
+			while (scan.hasNextLine()) {
+				temp += scan.nextLine() + "\r\n";
+			}
+			
+			temp = temp.replace("<", "&lt;").replace(">", "&gt;");
+			
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		request.setAttribute("dto", dto);
+		request.setAttribute("code", temp);
+
+		return "view";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
